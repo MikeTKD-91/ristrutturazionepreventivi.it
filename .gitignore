@@ -10,3 +10,6 @@ dist/
 out/
 *.log
 .env*.local
+node_modules/
+.next/
+dist/
