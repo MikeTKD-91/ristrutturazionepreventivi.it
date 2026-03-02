@@ -1,19 +1,20 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, ArrowRight, Check, Building2 } from "lucide-react";
 import { comuni, comuniNapoli, comuniCaserta, comuniAgroAversano } from "@/data/comuni";
 import CalcolatoreStima from "@/components/shared/CalcolatoreStima";
 import { getDataAggiornamento } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Zone Servite | 33 Comuni Napoli Caserta",
-  description: "Operiamo in 33 comuni di Napoli, Caserta e Agro Aversano. Trova il tuo comune e richiedi una stima indicativa gratuita per la tua ristrutturazione.",
+  title: "Zone Servite | Ristrutturazioni Napoli e Provincia, Caserta e Agro Aversano",
+  description: "Operiamo in 33 comuni di Napoli e Provincia, Caserta e Provincia e Agro Aversano. Trova il tuo comune e richiedi una stima gratuita immediata.",
   alternates: {
     canonical: "https://ristrutturazionepreventivi.it/zone-servite/",
   },
   openGraph: {
-    title: "Zone Servite | 33 Comuni Napoli Caserta",
-    description: "Operiamo in 33 comuni di Napoli, Caserta e Agro Aversano.",
+    title: "Zone Servite | Ristrutturazioni Napoli e Provincia, Caserta e Agro Aversano",
+    description: "33 comuni serviti tra Napoli, Caserta e Agro Aversano. Stima gratuita immediata.",
     url: "https://ristrutturazionepreventivi.it/zone-servite/",
     images: [
       {
@@ -43,15 +44,23 @@ export default function ZoneServitePage() {
               Zone Servite
             </h1>
             <p className="text-xl text-white/80">
-              Operiamo in <span className="text-orange font-bold">33 comuni</span> di Napoli, 
-              Caserta e Agro Aversano. Trova il tuo comune e richiedi una stima indicativa gratuita.
+              Operiamo in <span className="text-orange font-bold">33 comuni</span> tra Napoli e Provincia, Caserta e Provincia e Agro Aversano.
             </p>
+            
+            {/* PULSANTE "Stima gratuita immediata" SUBITO DOPO IL TITOLO */}
+            <a
+              href="#calcolatore"
+              className="inline-flex items-center gap-2 bg-orange hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-colors text-lg shadow-lg mt-8"
+            >
+              Stima gratuita immediata
+              <ArrowRight className="h-5 w-5" />
+            </a>
           </div>
         </div>
       </section>
 
       {/* Calcolatore */}
-      <section className="py-12 bg-gray-50">
+      <section id="calcolatore" className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <CalcolatoreStima />
@@ -59,7 +68,7 @@ export default function ZoneServitePage() {
         </div>
       </section>
 
-      {/* Napoli */}
+      {/* Napoli e Provincia */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-3 mb-8">
@@ -93,7 +102,7 @@ export default function ZoneServitePage() {
         </div>
       </section>
 
-      {/* Caserta */}
+      {/* Caserta e Provincia */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-3 mb-8">
@@ -154,7 +163,7 @@ export default function ZoneServitePage() {
                 <h3 className="font-semibold text-navy group-hover:text-orange transition-colors">
                   {comune.nome}
                 </h3>
-                <p className="text-sm text-gray-500 mt-1">Provincia di Caserta</p>
+                <p className="text-sm text-gray-500 mt-1">Agro Aversano</p>
               </Link>
             ))}
           </div>
@@ -178,13 +187,19 @@ export default function ZoneServitePage() {
                 href="/napoli/"
                 className="bg-navy hover:bg-navy/90 text-white px-6 py-3 rounded-xl font-semibold transition-colors"
               >
-                Scopri Napoli
+                Napoli e Provincia
               </Link>
               <Link
                 href="/caserta/"
                 className="bg-navy hover:bg-navy/90 text-white px-6 py-3 rounded-xl font-semibold transition-colors"
               >
-                Scopri Caserta
+                Caserta e Provincia
+              </Link>
+              <Link
+                href="/zone-servite/"
+                className="bg-navy hover:bg-navy/90 text-white px-6 py-3 rounded-xl font-semibold transition-colors"
+              >
+                Agro Aversano
               </Link>
               <a
                 href="https://wa.me/393339809319"
