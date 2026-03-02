@@ -84,7 +84,17 @@ export default async function ComunePage({ params }: Props) {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Ristrutturazione a {comune.nome}
             </h1>
-            <div className="inline-flex items-center gap-2 bg-orange/20 text-orange backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
+            
+            {/* PULSANTE "Stima gratuita immediata" SUBITO DOPO IL TITOLO */}
+            <a
+              href="#calcolatore"
+              className="inline-flex items-center gap-2 bg-orange hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-colors text-lg shadow-lg mt-6"
+            >
+              Stima gratuita immediata
+              <ArrowRight className="h-5 w-5" />
+            </a>
+
+            <div className="inline-flex items-center gap-2 bg-orange/20 text-orange backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mt-6">
               <Check className="h-4 w-4" />
               Costi aggiornati a {dataAggiornamento}
             </div>
@@ -96,6 +106,7 @@ export default async function ComunePage({ params }: Props) {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12">
+            {/* Main Content */}
             <div className="lg:col-span-2 space-y-12">
               {/* Descrizione */}
               <div>
@@ -117,7 +128,7 @@ export default async function ComunePage({ params }: Props) {
                 </p>
               </div>
 
-              {/* Perché sceglierci - FRASE UNIFICATA E MIGLIORATA */}
+              {/* Perché sceglierci */}
               <div>
                 <h2 className="text-2xl font-bold text-navy mb-6">
                   Perché Scegliere Russo FE Costruzione SRL a {comune.nome}
@@ -128,7 +139,7 @@ export default async function ComunePage({ params }: Props) {
                     "Conoscenza delle caratteristiche locali",
                     "Tempi rapidi di intervento",
                     "Materiali di qualità certificata",
-                    "Pratiche, permessi edilizi e direzione completa dei lavori",
+                    "Pratiche e permessi edilizi",
                     "Preventivi trasparenti e dettagliati",
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
@@ -252,7 +263,9 @@ export default async function ComunePage({ params }: Props) {
 
             {/* Sidebar */}
             <div className="space-y-8">
-              <CalcolatoreStima comuneDefault={comune.nome} />
+              <div id="calcolatore">
+                <CalcolatoreStima comuneDefault={comune.nome} />
+              </div>
 
               <div className="bg-navy p-6 rounded-2xl text-white">
                 <h3 className="text-xl font-bold mb-4">
