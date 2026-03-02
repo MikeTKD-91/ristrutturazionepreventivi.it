@@ -7,21 +7,21 @@ import CalcolatoreStima from "@/components/shared/CalcolatoreStima";
 import { getDataAggiornamento } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Ristrutturazioni Caserta e Provincia | Preventivi",
-  description: "Stima indicativa immediata e gratuita per ristrutturazioni a Caserta e in tutta la provincia. 7 servizi, 9 comuni serviti direttamente.",
+  title: "Ristrutturazione a Caserta e Provincia | Preventivo, costi e impresa edile",
+  description: "Ristrutturazione a Caserta e Provincia: stima gratuita immediata in 30 secondi. Impresa edile locale con 7 servizi professionali, pratiche e permessi edilizi. Russo FE Costruzione SRL.",
   alternates: {
     canonical: "https://ristrutturazionepreventivi.it/caserta/",
   },
   openGraph: {
-    title: "Ristrutturazioni Caserta e Provincia | Preventivi",
-    description: "Stima indicativa immediata e gratuita per ristrutturazioni a Caserta e provincia.",
+    title: "Ristrutturazione a Caserta e Provincia | Preventivo, costi e impresa edile",
+    description: "Stima gratuita immediata per ristrutturazioni a Caserta e provincia.",
     url: "https://ristrutturazionepreventivi.it/caserta/",
     images: [
       {
         url: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1200",
         width: 1200,
         height: 630,
-        alt: "Ristrutturazioni Caserta",
+        alt: "Ristrutturazione a Caserta e Provincia",
       },
     ],
   },
@@ -45,9 +45,19 @@ export default function CasertaPage() {
         <div className="absolute inset-0 flex items-end">
           <div className="container mx-auto px-4 pb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Ristrutturazioni Caserta
+              Ristrutturazione a Caserta e Provincia
             </h1>
-            <div className="inline-flex items-center gap-2 bg-orange/20 text-orange backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
+            
+            {/* PULSANTE "Stima gratuita immediata" SUBITO DOPO IL TITOLO */}
+            <a
+              href="#calcolatore"
+              className="inline-flex items-center gap-2 bg-orange hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-colors text-lg shadow-lg mt-6"
+            >
+              Stima gratuita immediata
+              <ArrowRight className="h-5 w-5" />
+            </a>
+
+            <div className="inline-flex items-center gap-2 bg-orange/20 text-orange backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mt-6">
               <Check className="h-4 w-4" />
               Costi aggiornati a {dataAggiornamento}
             </div>
@@ -145,8 +155,9 @@ export default function CasertaPage() {
 
             {/* Sidebar */}
             <div className="space-y-8">
-              {/* Calcolatore */}
-              <CalcolatoreStima comuneDefault="Caserta" />
+              <div id="calcolatore">
+                <CalcolatoreStima comuneDefault="Caserta" />
+              </div>
 
               {/* CTA */}
               <div className="bg-navy p-6 rounded-2xl text-white">
@@ -176,7 +187,7 @@ export default function CasertaPage() {
       <section className="py-20 bg-navy">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Pronto a Ristrutturare a Caserta?
+            Pronto a Ristrutturare a Caserta e Provincia?
           </h2>
           <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
             Richiedi ora una stima indicativa immediata e gratuita per il tuo progetto 
