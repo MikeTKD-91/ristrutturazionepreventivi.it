@@ -40,10 +40,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://ristrutturazionepreventivi.it/servizi/${slug}/`,
       images: [
         {
-          url: servizio.immagine,
+          url: servizio.immagine,                    // ← ora usa la tua foto locale
           width: 800,
           height: 600,
-          alt: servizio.titolo,
+          alt: servizio.alt,                          // ← ALT SEO CORRETTO
         },
       ],
     },
@@ -67,7 +67,7 @@ export default async function ServizioPage({ params }: Props) {
       <section className="relative h-[50vh] min-h-[400px]">
         <Image
           src={servizio.immagine}
-          alt={servizio.titolo}
+          alt={servizio.alt}                          {/* ← AGGIORNATO */}
           fill
           className="object-cover"
           priority
@@ -246,7 +246,7 @@ export default async function ServizioPage({ params }: Props) {
                       <div className="relative h-16 w-16 rounded-lg overflow-hidden flex-shrink-0">
                         <Image
                           src={s.immagine}
-                          alt={s.titolo}
+                          alt={s.alt}                     {/* ← AGGIORNATO */}
                           fill
                           className="object-cover"
                         />
