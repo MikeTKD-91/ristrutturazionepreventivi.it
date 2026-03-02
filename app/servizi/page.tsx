@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://ristrutturazionepreventivi.it/servizi/",
     images: [
       {
-        url: "https://ristrutturazionepreventivi.it/images/servizi/ristrutturazione-appartamento-completo.jpg", // ← FOTO REALE
+        url: "https://ristrutturazionepreventivi.it/images/servizi/ristrutturazione-appartamento-completo.jpg",
         width: 1200,
         height: 630,
         alt: "Ristrutturazione completa appartamento moderno luminoso con open space cucina e soggiorno, finiture di pregio a Napoli e Caserta",
@@ -72,9 +72,10 @@ export default function ServiziPage() {
                 <div className="relative h-64">
                   <Image
                     src={servizio.immagine}
-                    alt={servizio.alt}                     fill
+                    alt={servizio.alt}
+                    fill
                     className="object-cover"
-                    priority={index === 0}                {/* prima immagine più veloce */}
+                    priority={index === 0}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
