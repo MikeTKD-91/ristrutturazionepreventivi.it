@@ -4,49 +4,48 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowRight, Check, MapPin, MessageCircle, Star } from "lucide-react";
 import { comuni, getComuneBySlug } from "@/data/comuni";
+
 import CalcolatoreStima from "@/components/shared/CalcolatoreStima";
-import { getDataAggiornamento } from "@/lib/utils";
+import { getDataAggiornamento, formatPrezzo, generaLinkWhatsApp } from "@/lib/utils";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
-// 🔥 CONTENUTI RICCHI E DIFFERENZIATI PER OGNI COMUNE (CEO SEO MODE)
-const localBooster: Record<string, string> = {
-  aversa: "Aversa è il cuore pulsante dell'Agro Aversano. Grazie alla nostra sede a Lusciano interveniamo in tutta la città in massimo 48 ore. Conosciamo perfettamente i condomini storici del centro, le nuove zone residenziali di via Roma e via Napoli, e le normative comunali più rigide sui centri storici. Abbiamo già ristrutturato oltre 180 unità qui nel 2025.",
-  giugliano: "Giugliano in Campania è la seconda città più popolosa della provincia di Napoli. Serviamo tutte le zone: dal centro storico al Rione La Pigna, da via Roma alle nuove espansioni di via Montenuovo. Interveniamo rapidamente anche nei grandi condomini di 300+ unità grazie alla nostra flotta locale.",
-  marcianise: "Marcianise è la capitale industriale dell'Agro Aversano. Specializzati in ristrutturazioni di capannoni, villette e condomini nella zona ASI e lungo la SS7. Conosciamo le esigenze delle aziende locali e offriamo soluzioni chiavi-in-mano con permessi rapidi.",
-  lusciano: "Lusciano è la nostra sede operativa. Conosciamo ogni via e ogni palazzo del comune. Interveniamo in giornata per urgenze e abbiamo già realizzato più di 90 progetti qui negli ultimi 24 mesi.",
-  carinaro: "Carinaro, tra Aversa e Giugliano, è zona in forte espansione residenziale. Perfetta per ristrutturazioni moderne con cappotto termico e impianti di ultima generazione. Serviamo tutto il comune in tempi record.",
-  teverola: "Teverola: piccolo comune ma con tantissimi nuovi complessi residenziali. Offriamo pacchetti completi appartamento + box con prezzi competitivi e tempi certi.",
-  napoli: "Operiamo in tutta Napoli città e provincia: dai Quartieri Spagnoli al Vomero, da Fuorigrotta a Posillipo, da Chiaia al centro storico. Rispettiamo le rigide norme dei beni vincolati e abbiamo esperienza con i condomini storici più complessi.",
-  afragola: "Afragola, porta d'ingresso a Napoli da nord. Serviamo il centro, la zona stazione e le nuove espansioni verso Casoria. Interveniamo velocemente grazie alla vicinanza con la nostra sede.",
-  acerra: "Acerra: conosciamo perfettamente la zona industriale e i quartieri residenziali intorno al centro. Specializzati in ristrutturazioni con attenzione all'isolamento acustico (vicino all'aeroporto).",
-  casoria: "Casoria: comune in forte crescita. Offriamo ristrutturazioni complete con focus su efficienza energetica e cappotto termico, molto richiesti qui.",
-  caserta: "Caserta, città della Reggia. Serviamo il centro storico, la zona stazione e le nuove aree residenziali verso San Nicola la Strada. Conosciamo le norme della Soprintendenza per i palazzi storici.",
-  santantimo: "Sant'Antimo: comune residenziale in espansione. Molti nostri clienti hanno scelto pacchetti cucina+bagno con finiture moderne a prezzi accessibili.",
-  frattamaggiore: "Frattamaggiore: serviamo tutto il comune con particolare attenzione ai condomini degli anni '70-80. Ristrutturazioni complete in 6-8 settimane.",
-  arzano: "Arzano: piccolo ma strategico. Interveniamo rapidamente grazie alla vicinanza con Giugliano e Aversa.",
-};
-
 export async function generateStaticParams() {
-  return comuni.map((comune) => ({ slug: comune.slug }));
+  return comuni.map((comune) => ({
+    slug: comune.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const comune = getComuneBySlug(slug);
-
-  if (!comune) return { title: "Comune non trovato" };
+  
+  if (!comune) {
+    return {
+      title: "Comune non trovato",
+    };
+  }
 
   return {
-    title: `Ristrutturazioni ${comune.nome} 2026 | Preventivi Gratis e Veloci`,
-    description: `Ristrutturazioni ${comune.nome}: stima indicativa gratuita in 30 secondi. 7 servizi professionali, garanzia decennale. Interveniamo in 48 ore in tutto ${comune.nome} e Agro Aversano - Russo FE Costruzione SRL.`,
-    alternates: { canonical: `https://ristrutturazionepreventivi.it/comune/${slug}/` },
+    title: `Ristrutturazioni ${comune.nome} | Preventivi e Stime`,
+    description: `Stima indicativa immediata e gratuita per ristrutturazioni a ${comune.nome}. Russo FE Costruzione SRL - 7 servizi, 33 comuni serviti.`,
+    alternates: {
+      canonical: `https://ristrutturazionepreventivi.it/comune/${slug}/`,
+    },
     openGraph: {
-      title: `Ristrutturazioni ${comune.nome} 2026 | Preventivi Gratis`,
-      description: `Stima gratuita per ristrutturazioni a ${comune.nome}. +33 comuni serviti nell'Agro Aversano.`,
-      images: [{ url: comune.immagine, alt: `Ristrutturazioni ${comune.nome}` }],
+      title: `Ristrutturazioni ${comune.nome} | Preventivi e Stime`,
+      description: `Stima indicativa immediata e gratuita per ristrutturazioni a ${comune.nome}.`,
+      url: `https://ristrutturazionepreventivi.it/comune/${slug}/`,
+      images: [
+        {
+          url: comune.immagine,
+          width: 1200,
+          height: 630,
+          alt: `Ristrutturazioni ${comune.nome}`,
+        },
+      ],
     },
   };
 }
@@ -56,14 +55,14 @@ export default async function ComunePage({ params }: Props) {
   const comune = getComuneBySlug(slug);
   const dataAggiornamento = getDataAggiornamento();
 
-  if (!comune) notFound();
+  if (!comune) {
+    notFound();
+  }
 
   const vicini = comune.vicini
     .map(v => getComuneBySlug(v))
     .filter(Boolean)
     .slice(0, 6);
-
-  const booster = localBooster[slug] || `A ${comune.nome} offriamo ristrutturazioni rapide e di alta qualità con tempi certi e materiali di prima scelta.`;
 
   return (
     <div className="min-h-screen">
@@ -71,7 +70,7 @@ export default async function ComunePage({ params }: Props) {
       <section className="relative h-[50vh] min-h-[400px]">
         <Image
           src={comune.immagine}
-          alt={`Ristrutturazioni ${comune.nome} - Agro Aversano`}
+          alt={`${comune.nome}`}
           fill
           className="object-cover"
           priority
@@ -105,10 +104,9 @@ export default async function ComunePage({ params }: Props) {
                 <h2 className="text-2xl font-bold text-navy mb-4">
                   Ristrutturazioni a {comune.nome}
                 </h2>
-                <div className="prose prose-lg text-gray-600 whitespace-pre-line">
-                  <p>{comune.descrizione}</p>
-                  <p className="mt-6 font-medium text-navy">{booster}</p>
-                </div>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  {comune.descrizione}
+                </p>
               </div>
 
               {/* Caratteristiche */}
