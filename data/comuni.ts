@@ -99,7 +99,7 @@ export const comuni: Comune[] = [
     zona: "caserta",
     descrizione: "Caserta, famosa per la sua Reggia UNESCO, è un importante centro della provincia con un centro storico ricco di palazzi nobiliari.",
     caratteristiche: "Caserta offre un mix unico di architettura storica e moderna. Il centro storico presenta palazzi d'epoca che richiedono interventi di restauro, mentre le periferie offrono numerose opportunità di ristrutturazione di appartamenti moderni.",
-    immagine: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1200",
+    immagine: "/images/comuni/caserta.jpg",
     vicini: ["marcianise", "santa-maria-capua-vetere", "san-nicola-la-strada"],
   },
   {
