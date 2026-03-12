@@ -180,7 +180,6 @@ export default function ComunePage({ params }: Props) {
         </div>
 
         <div className="relative container mx-auto px-4 py-20 md:py-28">
-          {/* Breadcrumb visuale */}
           <nav aria-label="breadcrumb" className="mb-8">
             <ol className="flex items-center gap-2 text-sm text-white/60">
               <li>
@@ -267,7 +266,7 @@ export default function ComunePage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── TESTO SEO COMUNE ── */}
+      {/* ── TESTO SEO ── */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12">
@@ -278,73 +277,59 @@ export default function ComunePage({ params }: Props) {
 
               <div className="prose prose-lg max-w-none text-gray-600 space-y-4">
                 <p>
-                  Se stai cercando un&apos;impresa edile affidabile per la
-                  ristrutturazione della tua casa a{" "}
-                  <strong>{comune.nome}</strong>, Russo FE Costruzione SRL è
-                  il partner giusto. Operiamo regolarmente a {comune.nome} e
-                  nei comuni limitrofi dell&apos;Agro Aversano, della provincia
-                  di Napoli e di Caserta.
+                  Se stai cercando un&apos;impresa edile affidabile per la ristrutturazione
+                  della tua casa a <strong>{comune.nome}</strong>, Russo FE Costruzione SRL
+                  è il partner giusto. Operiamo regolarmente a {comune.nome} e nei comuni
+                  limitrofi dell&apos;Agro Aversano, della provincia di Napoli e di Caserta.
                 </p>
-
                 <p>
                   {comune.descrizione ||
-                    `Il comune di ${comune.nome} è una delle zone più attive per gli interventi di ristrutturazione edilizia nella nostra area di competenza. La tipologia abitativa prevalente — appartamenti in condominio, villette bifamiliari e case indipendenti — richiede competenze specifiche che il nostro team ha maturato in anni di lavoro sul territorio.`}
+                    `Il comune di ${comune.nome} è una delle zone più attive per gli interventi
+                    di ristrutturazione edilizia nella nostra area di competenza. La tipologia
+                    abitativa prevalente — appartamenti in condominio, villette bifamiliari e
+                    case indipendenti — richiede competenze specifiche che il nostro team ha
+                    maturato in anni di lavoro sul territorio.`}
                 </p>
-
                 <p>
-                  I costi indicativi di ristrutturazione a{" "}
-                  <strong>{comune.nome}</strong> partono da{" "}
-                  <strong>550€/mq</strong> per un appartamento completo in
-                  finitura base, <strong>450€/mq</strong> per un bagno e{" "}
-                  <strong>400€/mq</strong> per una cucina. Tutti i prezzi
-                  includono IVA, manodopera e materiali standard.
+                  I costi indicativi di ristrutturazione a <strong>{comune.nome}</strong> partono
+                  da <strong>550€/mq</strong> per un appartamento completo in finitura base,{" "}
+                  <strong>450€/mq</strong> per un bagno e <strong>400€/mq</strong> per una cucina.
+                  Tutti i prezzi includono IVA, manodopera e materiali standard.
                 </p>
-
                 <p>
                   Il nostro processo è semplice:{" "}
-                  <strong>
-                    ottieni una stima indicativa immediata e gratuita
-                  </strong>{" "}
-                  tramite il calcolatore qui a fianco oppure scrivici su
-                  WhatsApp con il tipo di intervento e le misure approssimative.
-                  Se la stima è in linea con il tuo budget, puoi richiedere un{" "}
-                  <strong>preventivo dettagliato</strong> con sopralluogo e
-                  quotazione precisa dei materiali — senza alcun impegno.
+                  <strong>ottieni una stima indicativa immediata e gratuita</strong> tramite
+                  il calcolatore qui a fianco oppure scrivici su WhatsApp con il tipo di
+                  intervento e le misure approssimative. Se la stima è in linea con il tuo
+                  budget, puoi richiedere un <strong>preventivo dettagliato</strong> con
+                  sopralluogo e quotazione precisa dei materiali — senza alcun impegno.
                 </p>
               </div>
 
-              {/* Vantaggi */}
               <div className="mt-10 grid sm:grid-cols-2 gap-4">
                 {[
                   {
                     titolo: "Stima Immediata e Gratuita",
-                    testo:
-                      "Ottieni una stima indicativa in pochi secondi. Se è in linea col budget, richiedi il preventivo dettagliato.",
+                    testo: "Ottieni una stima indicativa in pochi secondi. Se è in linea col budget, richiedi il preventivo dettagliato.",
                     icon: "💬",
                   },
                   {
                     titolo: "Garanzia Decennale",
-                    testo:
-                      "Tutti i lavori strutturali coperti per 10 anni ai sensi della normativa italiana.",
+                    testo: "Tutti i lavori strutturali coperti per 10 anni ai sensi della normativa italiana.",
                     icon: "🛡️",
                   },
                   {
                     titolo: "Tempi Certi",
-                    testo:
-                      "Rispettiamo sempre i tempi concordati contrattualmente. Nessuna sorpresa.",
+                    testo: "Rispettiamo sempre i tempi concordati contrattualmente. Nessuna sorpresa.",
                     icon: "⏱️",
                   },
                   {
                     titolo: "Materiali Certificati",
-                    testo:
-                      "Solo materiali di prima qualità con certificazione CE e di prima scelta.",
+                    testo: "Solo materiali di prima qualità con certificazione CE e di prima scelta.",
                     icon: "🏆",
                   },
                 ].map((v) => (
-                  <div
-                    key={v.titolo}
-                    className="bg-gray-50 rounded-xl p-5 flex gap-4"
-                  >
+                  <div key={v.titolo} className="bg-gray-50 rounded-xl p-5 flex gap-4">
                     <span className="text-2xl">{v.icon}</span>
                     <div>
                       <h3 className="font-bold text-navy">{v.titolo}</h3>
@@ -355,7 +340,6 @@ export default function ComunePage({ params }: Props) {
               </div>
             </div>
 
-            {/* Calcolatore sticky */}
             <div className="lg:col-span-1">
               <div className="sticky top-24">
                 <CalcolatoreStima />
@@ -373,8 +357,8 @@ export default function ComunePage({ params }: Props) {
               Servizi di Ristrutturazione a {comune.nome}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Offriamo una gamma completa di interventi edilizi. Clicca su un
-              servizio per vedere prezzi dettagliati e caratteristiche.
+              Offriamo una gamma completa di interventi edilizi. Clicca su un servizio
+              per vedere prezzi dettagliati e caratteristiche.
             </p>
           </div>
 
@@ -388,23 +372,23 @@ export default function ComunePage({ params }: Props) {
                 <div className="relative h-44 overflow-hidden">
                   <Image
                     src={s.immagine}
-                    alt={`${s.nome} a ${comune.nome}`}
+                    alt={s.alt}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
                   <div className="absolute bottom-3 left-4 right-4">
-                    <h3 className="text-white font-bold">{s.nome}</h3>
+                    <h3 className="text-white font-bold">{s.titolo}</h3>
                   </div>
                 </div>
                 <div className="p-5">
                   <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                    {s.descrizioneBreve}
+                    {s.descrizione}
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-orange font-semibold text-sm">
-                      Da {s.prezzoBase}€/mq
+                      Da {s.prezzoMq.base}€/mq
                     </span>
                     <span className="text-navy font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                       Scopri →
@@ -496,9 +480,9 @@ export default function ComunePage({ params }: Props) {
             Pronto a ristrutturare a {comune.nome}?
           </h2>
           <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-            Ottieni una stima indicativa immediata e gratuita, senza sopralluogo
-            e senza impegno. Se la stima è in linea con il tuo budget, puoi
-            richiedere un preventivo dettagliato.
+            Ottieni una stima indicativa immediata e gratuita, senza sopralluogo e senza
+            impegno. Se la stima è in linea con il tuo budget, puoi richiedere un
+            preventivo dettagliato.
           </p>
           <a
             href="https://wa.me/393339809319"
