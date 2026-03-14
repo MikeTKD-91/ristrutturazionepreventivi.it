@@ -154,7 +154,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
                   href="#calcolatore"
                   className="inline-flex items-center gap-2 bg-orange hover:bg-orange/90 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
                 >
-                  🧮 Calcola la tua stima gratuita
+                  Calcola la tua stima gratuita
                 </a>
               </div>
 
@@ -304,7 +304,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
             <section>
               <h2 className="text-2xl font-bold text-navy mb-2">Quanto dura il cantiere?</h2>
               <p className="text-gray-600 mb-6">
-                Un bagno standard (4–6 mq) richiede mediamente <strong>2–3 settimane lavorative</strong>{" "}
+                Un bagno standard (4–6 mq) richiede mediamente <strong>1 settimana lavorativa</strong>{" "}
                 per il rifacimento completo. Le fasi si susseguono nell&apos;ordine indicato — alcune in parallelo, altre con attese obbligatorie di essicazione.
               </p>
               <div className="space-y-2">
