@@ -3,7 +3,7 @@ export const dynamic = "force-static";
 import { MetadataRoute } from "next";
 import { comuni } from "@/data/comuni";
 import { servizi } from "@/data/servizi";
-import { posts } from "@/data/blog";
+import { articoli } from "@/data/blog";
 
 const BASE_URL = "https://ristrutturazionepreventivi.it";
 
@@ -52,7 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  const blogPages: MetadataRoute.Sitemap = posts.map((p) => ({
+  const blogPages: MetadataRoute.Sitemap = articoli.map((p) => ({
     url: `${BASE_URL}/blog/${p.slug}/`,
     lastModified: p.data || now,
     changeFrequency: "monthly" as const,
