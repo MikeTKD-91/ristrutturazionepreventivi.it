@@ -345,18 +345,6 @@ export default async function ComunePage({ params }: PageProps) {
             </div>
           </div>
         </section>
-
-        {/* CTA mobile floating */}
-        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-50">
-          <a
-            href={`https://wa.me/393339809319?text=Salve%2C%20vorrei%20un%20preventivo%20a%20${encodeURIComponent(comune.nome)}`}
-            target="_blank" rel="noopener noreferrer"
-            className="block w-full bg-orange text-white text-center font-semibold py-3 rounded-xl"
-          >
-            Stima gratuita su WhatsApp
-          </a>
-        </div>
-
       </main>
     </>
   );
