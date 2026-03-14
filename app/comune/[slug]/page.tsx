@@ -233,9 +233,9 @@ export default async function ComunePage({ params }: PageProps) {
               <p className="text-gray-600 mb-8">Tre passaggi, nessuna sorpresa.</p>
               <div className="grid md:grid-cols-3 gap-6">
                 {[
-                  { n: "01", t: "Stima orientativa gratuita", d: "Usi il calcolatore o ci scrivi su WhatsApp. Ti diamo una forbice di costo indicativa. Se è nel range, vai avanti." },
-                  { n: "02", t: "Sopralluogo tecnico", d: "Il nostro tecnico visita l'immobile, verifica impianti e strutture, rileva le criticità specifiche." },
-                  { n: "03", t: "Preventivo dettagliato", d: "Ricevi un documento scritto con prezzi unitari, materiali, tempistiche e garanzie." },
+                  { n: "01", t: "Stima gratuita", d: "Usi il calcolatore o ci scrivi su WhatsApp. In pochi minuti sai se il tuo budget è compatibile con l'intervento, senza impegno." },
+                  { n: "02", t: "Sopralluogo tecnico", d: "Il nostro tecnico visita l'immobile di persona. Verifica impianti, strutture e criticità specifiche: solo così il preventivo è affidabile." },
+                  { n: "03", t: "Preventivo scritto", d: "Un documento con prezzi unitari, materiali, tempistiche e garanzia decennale. Tutto nero su bianco prima di iniziare." },
                 ].map((s) => (
                   <div key={s.n}>
                     <p className="text-5xl font-black text-gray-100 mb-3 leading-none">{s.n}</p>
