@@ -2,6 +2,7 @@
 
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { comuni, getComuneBySlug } from "@/data/comuni";
 import CalcolatoreStima from "@/components/shared/CalcolatoreStima";
@@ -127,8 +128,10 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
               <span className="text-white/80">Ristrutturazione Bagno</span>
             </nav>
 
-            <div className="grid lg:grid-cols-3 gap-10 items-start">
-              <div className="lg:col-span-2">
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
+
+              {/* Testo */}
+              <div>
                 <p className="text-orange text-sm font-semibold uppercase tracking-widest mb-3">
                   Ristrutturazione Bagno · {comune.nome}
                 </p>
@@ -141,20 +144,36 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
                   del patrimonio edilizio di {comune.nome}, tempistiche reali di cantiere.
                   Nessun prezzo inventato: quello definitivo emerge solo dal sopralluogo.
                 </p>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 mb-8">
                   <span className="bg-white/10 text-white/80 text-sm px-3 py-1 rounded-full">Prezzario Regionale Campania</span>
                   <span className="bg-white/10 text-white/80 text-sm px-3 py-1 rounded-full">Garanzia decennale</span>
                   <span className="bg-white/10 text-white/80 text-sm px-3 py-1 rounded-full">Bonus 50% applicabile</span>
                 </div>
+                {/* Pulsante scroll verso calcolatore */}
+                <a
+                  href="#calcolatore"
+                  className="inline-flex items-center gap-2 bg-orange hover:bg-orange/90 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+                >
+                  🧮 Calcola la tua stima gratuita
+                </a>
               </div>
 
-              <div className="hidden lg:block">
-                <CalcolatoreStima comuneDefault={comune.nome} />
+              {/* Foto servizio */}
+              <div className="hidden lg:block relative h-72 rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/servizi/ristrutturazione-bagno.jpg"
+                  alt={`Ristrutturazione bagno a ${comune.nome}`}
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
+
             </div>
           </div>
         </section>
 
+        {/* ── CORPO PAGINA ── */}
         <div className="max-w-6xl mx-auto px-4 py-12 grid lg:grid-cols-3 gap-10 items-start">
           <div className="lg:col-span-2 space-y-16">
 
@@ -225,8 +244,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
             <section>
               <h2 className="text-2xl font-bold text-navy mb-2">Cosa cambia tra finitura Base, Standard e Premium?</h2>
               <p className="text-gray-600 mb-6">
-                Il livello di finitura è il principale fattore che sposta il costo verso l&apos;alto o
-                verso il basso. Ecco cosa include ciascun livello nella pratica.
+                Il livello di finitura è il principale fattore che sposta il costo verso l&apos;alto o verso il basso. Ecco cosa include ciascun livello nella pratica.
               </p>
               <div className="grid md:grid-cols-3 gap-4">
                 {LIVELLI_FINITURA.map((lv) => (
@@ -242,8 +260,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
             <section>
               <h2 className="text-2xl font-bold text-navy mb-2">Cosa include il rifacimento completo del bagno</h2>
               <p className="text-gray-600 mb-6">
-                Un rifacimento completo non è solo "cambiare le piastrelle". Ecco cosa
-                comprende un intervento eseguito a regola d&apos;arte.
+                Un rifacimento completo non è solo "cambiare le piastrelle". Ecco cosa comprende un intervento eseguito a regola d&apos;arte.
               </p>
               <div className="space-y-3">
                 {COSA_INCLUDE_RIFACIMENTO.map((item) => (
@@ -264,8 +281,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
             <section>
               <h2 className="text-2xl font-bold text-navy mb-2">Criticità tipiche degli immobili a {comune.nome}</h2>
               <p className="text-gray-600 mb-6">
-                {comune.tipoEdilizio}. Prima di ogni sopralluogo, teniamo conto delle
-                caratteristiche specifiche del patrimonio edilizio locale.
+                {comune.tipoEdilizio}. Prima di ogni sopralluogo, teniamo conto delle caratteristiche specifiche del patrimonio edilizio locale.
               </p>
               <div className="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-6">
                 <p className="text-sm font-semibold text-navy mb-2">Bagni tipici a {comune.nome}</p>
@@ -280,8 +296,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
                 ))}
               </div>
               <p className="text-sm text-gray-500 mt-4">
-                Queste criticità emergono spesso solo durante il sopralluogo. Il nostro tecnico
-                le verifica sistematicamente prima di emettere qualsiasi stima definitiva.
+                Queste criticità emergono spesso solo durante il sopralluogo. Il nostro tecnico le verifica sistematicamente prima di emettere qualsiasi stima definitiva.
               </p>
             </section>
 
@@ -290,8 +305,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
               <h2 className="text-2xl font-bold text-navy mb-2">Quanto dura il cantiere?</h2>
               <p className="text-gray-600 mb-6">
                 Un bagno standard (4–6 mq) richiede mediamente <strong>2–3 settimane lavorative</strong>{" "}
-                per il rifacimento completo. Le fasi si susseguono nell&apos;ordine indicato — alcune
-                in parallelo, altre con attese obbligatorie di essicazione.
+                per il rifacimento completo. Le fasi si susseguono nell&apos;ordine indicato — alcune in parallelo, altre con attese obbligatorie di essicazione.
               </p>
               <div className="space-y-2">
                 {TEMPISTICHE.map((t, i) => (
@@ -306,9 +320,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
                 ))}
               </div>
               <p className="text-sm text-gray-500 mt-4">
-                I tempi si allungano in presenza di criticità (bonifica amianto, problemi
-                strutturali, modifiche agli impianti condominiali). Il programma definitivo
-                viene definito al sopralluogo.
+                I tempi si allungano in presenza di criticità (bonifica amianto, problemi strutturali, modifiche agli impianti condominiali). Il programma definitivo viene definito al sopralluogo.
               </p>
             </section>
 
@@ -383,7 +395,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
 
           {/* ── SIDEBAR STICKY ── */}
           <div className="hidden lg:block">
-            <div className="sticky top-6 space-y-6">
+            <div id="calcolatore" className="sticky top-6 space-y-6">
               <CalcolatoreStima comuneDefault={comune.nome} />
               <div className="bg-gray-50 rounded-2xl p-5">
                 <p className="text-sm font-semibold text-navy mb-3">Altri servizi a {comune.nome}</p>
