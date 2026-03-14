@@ -30,18 +30,18 @@ const features = [
 const processoSteps = [
   {
     n: "01",
-    titolo: "Stima orientativa gratuita",
-    testo: "Usi il calcolatore e ottieni una forbice di costo basata sul Prezzario Regionale Campania. Se è nel tuo range, vai avanti.",
+    titolo: "Stima gratuita",
+    testo: "Usi il calcolatore o ci scrivi su WhatsApp. In pochi minuti sai se il tuo budget è compatibile con l'intervento, senza impegno.",
   },
   {
     n: "02",
     titolo: "Sopralluogo tecnico",
-    testo: "Il nostro tecnico visita l'immobile, verifica impianti e strutture, rileva le criticità specifiche.",
+    testo: "Il nostro tecnico visita l'immobile di persona. Verifica impianti, strutture e criticità specifiche: solo così il preventivo è affidabile.",
   },
   {
     n: "03",
-    titolo: "Preventivo dettagliato",
-    testo: "Ricevi un documento scritto con prezzi unitari, materiali specificati, tempistiche e condizioni di garanzia.",
+    titolo: "Preventivo scritto",
+    testo: "Un documento con prezzi unitari, materiali, tempistiche e garanzia decennale. Tutto nero su bianco prima di iniziare.",
   },
 ];
 
@@ -98,7 +98,7 @@ export default function HomePage() {
                 <span className="text-orange">Caserta</span>
               </h1>
               <p className="text-lg text-white/75 mb-8 max-w-xl leading-relaxed">
-                Stima orientativa gratuita basata sul Prezzario Regionale Campania.
+                Stima gratuita basata sul Prezzario Regionale Campania.
                 Nessun prezzo inventato — quello definitivo emerge dal sopralluogo.
                 Russo FE Costruzione SRL.
               </p>
@@ -214,7 +214,7 @@ export default function HomePage() {
             <p className="text-orange text-sm font-semibold uppercase tracking-widest mb-2">Come funziona</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">3 passaggi, nessuna sorpresa</h2>
             <p className="text-white/60 max-w-xl mx-auto">
-              Dalla prima ricerca al cantiere. Il prezzo definitivo non si inventa — emerge dai fatti.
+              Ogni ristrutturazione è diversa. L'unico modo per sapere quanto costa la tua è vederla dal vivo.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
