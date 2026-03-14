@@ -12,8 +12,8 @@ import { getDataAggiornamento } from "@/lib/utils";
 const features = [
   {
     icon: Shield,
-    title: "Garanzia Decennale",
-    description: "Tutti i lavori strutturali sono coperti da garanzia decennale per legge.",
+    title: "Impresa Certificata",
+    description: "Iscritti alla Camera di Commercio. DURC regolare e documentazione in ordine.",
   },
   {
     icon: Clock,
@@ -41,7 +41,7 @@ const processoSteps = [
   {
     n: "03",
     titolo: "Preventivo scritto",
-    testo: "Un documento con prezzi unitari, materiali, tempistiche e garanzia decennale. Tutto nero su bianco prima di iniziare.",
+    testo: "Un documento con prezzi unitari, materiali, tempistiche. Tutto nero su bianco prima di iniziare.",
   },
 ];
 
@@ -120,7 +120,7 @@ export default function HomePage() {
                 </Link>
               </div>
               <div className="flex flex-wrap gap-4 text-sm text-white/60">
-                <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-orange" /> Garanzia decennale</span>
+                <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-orange" /> Impresa certificata</span>
                 <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-orange" /> Materiali certificati CE</span>
                 <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-orange" /> Bonus 50% applicabile</span>
               </div>
