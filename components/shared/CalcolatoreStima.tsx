@@ -197,27 +197,29 @@ export default function CalcolatoreStima({ comuneDefault = "il tuo comune" }: Ca
               </div>
             </div>
 
+            {/* Finitura — segmented control compatto */}
             <div>
               <label className="block text-sm font-medium text-navy mb-3">Livello di finitura</label>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                {(Object.keys(finituraLabels) as Array<"base" | "standard" | "premium">).map((f) => (
+              <div className="flex rounded-xl border border-gray-200 overflow-hidden">
+                {(Object.keys(finituraLabels) as Array<"base" | "standard" | "premium">).map((f, i, arr) => (
                   <button
                     key={f}
                     onClick={() => setFinitura(f)}
-                    className={`p-4 rounded-xl border-2 text-left transition-all ${
-                      finitura === f ? "border-orange bg-orange/5" : "border-gray-200 hover:border-orange/30"
-                    }`}
+                    className={`flex-1 py-3 px-2 text-sm font-semibold transition-all text-center
+                      ${finitura === f
+                        ? "bg-orange text-white"
+                        : "bg-white text-gray-500 hover:bg-orange/5 hover:text-navy"
+                      }
+                      ${i < arr.length - 1 ? "border-r border-gray-200" : ""}
+                    `}
                   >
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${finitura === f ? "border-orange" : "border-gray-300"}`}>
-                        {finitura === f && <div className="w-2 h-2 rounded-full bg-orange" />}
-                      </div>
-                      <span className="font-semibold text-navy capitalize">{finituraLabels[f].label}</span>
-                    </div>
-                    <p className="text-xs text-gray-500">{finituraLabels[f].desc}</p>
+                    {finituraLabels[f].label}
                   </button>
                 ))}
               </div>
+              <p className="text-xs text-gray-500 mt-2 text-center">
+                {finituraLabels[finitura].desc}
+              </p>
             </div>
 
             <button
@@ -241,7 +243,6 @@ export default function CalcolatoreStima({ comuneDefault = "il tuo comune" }: Ca
             transition={{ duration: 0.25 }}
             className="space-y-5"
           >
-            {/* Riepilogo step 1 */}
             <div className="bg-orange/5 border border-orange/20 rounded-xl p-4 text-sm text-navy">
               📋 <strong>{servizioSelezionato?.titolo}</strong> · {mq} mq · Finitura {finituraLabels[finitura].label}
             </div>
@@ -264,8 +265,7 @@ export default function CalcolatoreStima({ comuneDefault = "il tuo comune" }: Ca
 
             <div>
               <label className="block text-sm font-medium text-navy mb-2">
-                Telefono{" "}
-                <span className="text-gray-400 font-normal">(opzionale)</span>
+                Telefono <span className="text-gray-400 font-normal">(opzionale)</span>
               </label>
               <input
                 type="tel"
@@ -326,7 +326,6 @@ export default function CalcolatoreStima({ comuneDefault = "il tuo comune" }: Ca
               </p>
             </div>
 
-            {/* Range prezzo */}
             <div className="bg-gradient-to-br from-navy to-navy/90 rounded-2xl p-5 text-center">
               <p className="text-white/60 text-xs mb-1">Stima indicativa</p>
               <div className="text-3xl md:text-4xl font-bold text-white">
@@ -337,7 +336,6 @@ export default function CalcolatoreStima({ comuneDefault = "il tuo comune" }: Ca
               </p>
             </div>
 
-            {/* Bonus + Tempistica */}
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-green-50 rounded-xl p-4">
                 <div className="flex items-center gap-1.5 mb-1">
@@ -362,7 +360,6 @@ export default function CalcolatoreStima({ comuneDefault = "il tuo comune" }: Ca
               </div>
             </div>
 
-            {/* Prova sociale realistica */}
             <div className="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
               <div className="flex -space-x-2 shrink-0">
                 {["M", "L", "A"].map((l, i) => (
@@ -386,7 +383,6 @@ export default function CalcolatoreStima({ comuneDefault = "il tuo comune" }: Ca
               </div>
             </div>
 
-            {/* CTA WhatsApp */}
             <a
               href={generaLinkWA()}
               target="_blank"
