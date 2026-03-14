@@ -10,7 +10,7 @@ import { comuni, getComuneBySlug } from "@/data/comuni";
 // ─── Tipi ────────────────────────────────────────────────────────────────────
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 // ─── Dati statici per tabella costi ──────────────────────────────────────────
@@ -96,7 +96,8 @@ export async function generateStaticParams() {
 // ─── generateMetadata ─────────────────────────────────────────────────────────
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const comune = getComuneBySlug(params.slug);
+  const { slug } = await params;
+  const comune = getComuneBySlug(slug);
   if (!comune) return {};
 
   const title = `Ristrutturazione Bagno a ${comune.nome} | Costi Reali e Preventivo`;
@@ -226,8 +227,9 @@ function CalcolatoreStimaSidebar({ comune }: { comune: NonNullable<ReturnType<ty
 
 // ─── Pagina principale ────────────────────────────────────────────────────────
 
-export default function RistrutturazioneBagnoPage({ params }: PageProps) {
-  const comune = getComuneBySlug(params.slug);
+export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
+  const { slug } = await params;
+  const comune = getComuneBySlug(slug);
   if (!comune) notFound();
 
   const jsonLd = buildJsonLd(comune);
