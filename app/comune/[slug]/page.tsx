@@ -129,7 +129,7 @@ export default async function ComunePage({ params }: PageProps) {
               {/* Foto */}
               <div className="hidden lg:block relative h-72 rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/ristrutturazione-appartamento-completo.jpg"
+                  src="/images/servizi/ristrutturazione-appartamento-completo.jpg"
                   alt={`Ristrutturazione appartamento a ${comune.nome}`}
                   fill
                   className="object-cover"
