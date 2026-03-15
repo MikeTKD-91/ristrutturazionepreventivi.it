@@ -156,11 +156,11 @@ export default async function ComunePage({ params }: PageProps) {
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   { label: "Ristrutturazione Bagno", prezzo: "da ~450 €/mq", href: `/comune/${slug}/ristrutturazione-bagno/`, attivo: true },
-                  { label: "Ristrutturazione Cucina", prezzo: "da ~400 €/mq", href: `/servizi/ristrutturazione-cucina/`, attivo: false },
-                  { label: "Ristrutturazione Appartamento", prezzo: "da ~550 €/mq", href: `/comune/${slug}/`, attivo: true },
-                  { label: "Cappotto Termico", prezzo: "da ~80 €/mq", href: `/servizi/cappotto-termico/`, attivo: false },
-                  { label: "Impianti", prezzo: "da ~150 €/mq", href: `/servizi/impianti-elettrici-idraulici-termici/`, attivo: false },
-                  { label: "Pavimenti e Rivestimenti", prezzo: "da ~60 €/mq", href: `/servizi/pavimenti-rivestimenti/`, attivo: false },
+                  { label: "Ristrutturazione Cucina", prezzo: "da ~400 €/mq", href: `/comune/${slug}/ristrutturazione-cucina/`, attivo: true },
+                  { label: "Ristrutturazione Appartamento", prezzo: "da ~550 €/mq", href: `/comune/${slug}/ristrutturazione-appartamento-completo/`, attivo: true },
+                  { label: "Cappotto Termico", prezzo: "da ~80 €/mq", href: `/comune/${slug}/cappotto-termico/`, attivo: true },
+                  { label: "Impianti", prezzo: "da ~150 €/mq", href: `/comune/${slug}/impianti-elettrici-idraulici-termici/`, attivo: true },
+                  { label: "Pavimenti e Rivestimenti", prezzo: "da ~60 €/mq", href: `/comune/${slug}/pavimenti-rivestimenti/`, attivo: true },
                 ].map((s) =>
                   s.attivo ? (
                     <Link key={s.label} href={s.href}
@@ -302,13 +302,21 @@ export default async function ComunePage({ params }: PageProps) {
                 <CalcolatoreStima comuneDefault={comune.nome} />
               </div>
               <div className="bg-gray-50 rounded-2xl p-5">
-                <p className="text-sm font-semibold text-navy mb-3">Pagina servizio disponibile</p>
-                <Link href={`/comune/${slug}/ristrutturazione-bagno/`}
-                  className="flex items-center justify-between text-sm text-gray-700 hover:text-orange transition-colors py-2"
-                >
-                  Ristrutturazione Bagno <ArrowRight className="h-4 w-4" />
-                </Link>
-                <p className="text-xs text-gray-400 mt-3 pt-3 border-t border-gray-200">Altre pagine servizio in arrivo</p>
+                <p className="text-sm font-semibold text-navy mb-3">Pagine servizio disponibili</p>
+                {[
+                  { label: "Ristrutturazione Bagno", href: `/comune/${slug}/ristrutturazione-bagno/` },
+                  { label: "Ristrutturazione Cucina", href: `/comune/${slug}/ristrutturazione-cucina/` },
+                  { label: "Ristrutturazione Appartamento", href: `/comune/${slug}/ristrutturazione-appartamento-completo/` },
+                  { label: "Cappotto Termico", href: `/comune/${slug}/cappotto-termico/` },
+                  { label: "Impianti", href: `/comune/${slug}/impianti-elettrici-idraulici-termici/` },
+                  { label: "Pavimenti e Rivestimenti", href: `/comune/${slug}/pavimenti-rivestimenti/` },
+                ].map((s) => (
+                  <Link key={s.label} href={s.href}
+                    className="flex items-center justify-between text-sm text-gray-700 hover:text-orange transition-colors py-2 border-b border-gray-100 last:border-0"
+                  >
+                    {s.label} <ArrowRight className="h-4 w-4" />
+                  </Link>
+                ))}
               </div>
               <div className="bg-orange/5 border border-orange/20 rounded-2xl p-5">
                 <div className="space-y-2">

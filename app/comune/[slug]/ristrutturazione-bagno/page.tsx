@@ -173,7 +173,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
           </div>
         </section>
         {/* Calcolatore mobile */}
-        <div className="lg:hidden px-4 pt-6">
+        <div id="calcolatore" className="lg:hidden px-4 pt-6">
           <CalcolatoreStima comuneDefault={comune.nome} />
         </div>
 
@@ -405,10 +405,12 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
                 <p className="text-sm font-semibold text-navy mb-3">Altri servizi a {comune.nome}</p>
                 <div className="space-y-2">
                   {[
-                    { label: "Ristrutturazione Appartamento", href: `/comune/${comune.slug}/` },
+                    { label: "Ristrutturazione Appartamento", href: `/comune/${comune.slug}/ristrutturazione-appartamento-completo/` },
                     { label: "Ristrutturazione Cucina", href: `/comune/${comune.slug}/ristrutturazione-cucina/` },
+                    { label: "Rifacimento Tetto", href: `/comune/${comune.slug}/rifacimento-tetto/` },
                     { label: "Cappotto Termico", href: `/comune/${comune.slug}/cappotto-termico/` },
-                    { label: "Impianti", href: `/comune/${comune.slug}/impianti/` },
+                    { label: "Impianti", href: `/comune/${comune.slug}/impianti-elettrici-idraulici-termici/` },
+                    { label: "Pavimenti e Rivestimenti", href: `/comune/${comune.slug}/pavimenti-rivestimenti/` },
                   ].map((s) => (
                     <Link key={s.href} href={s.href} className="flex items-center justify-between text-sm text-gray-700 hover:text-navy py-2 border-b border-gray-200 last:border-0 transition-colors">
                       {s.label}
