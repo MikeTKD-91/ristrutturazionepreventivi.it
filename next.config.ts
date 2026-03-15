@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  // ⚠️ NOTA: con output:"export" i redirect qui NON vengono applicati.
+  // I redirect 301 per /napoli/ e /caserta/ vanno gestiti nel file vercel.json
 };
 
 export default nextConfig;
