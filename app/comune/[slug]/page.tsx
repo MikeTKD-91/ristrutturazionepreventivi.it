@@ -11,10 +11,11 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+// Valori orientativi da Prezzario Regionale Campania — ristrutturazione appartamento completo
 const PREZZI_FINITURA = [
-  { livello: "Base", prezzo: "500 – 650 €/mq", desc: "Materiali di primo livello, finitura funzionale" },
-  { livello: "Standard", prezzo: "650 – 850 €/mq", desc: "Materiali di buona qualità, il più richiesto" },
-  { livello: "Premium", prezzo: "850 – 1.100 €/mq", desc: "Materiali di design, lavorazioni a alto valore" },
+  { livello: "Base", prezzo: "550 – 700 €/mq", desc: "Ceramica standard, impianti a norma, tinteggiatura liscia. Funzionale e certificato." },
+  { livello: "Standard", prezzo: "700 – 900 €/mq", desc: "Gres porcellanato, impianti evoluti, serramenti con doppio vetro. Il livello più richiesto." },
+  { livello: "Premium", prezzo: "900 – 1.200 €/mq", desc: "Grandi formati, impianti smart, serramenti alto isolamento, finiture su misura." },
 ];
 
 export async function generateStaticParams() {
@@ -158,6 +159,7 @@ export default async function ComunePage({ params }: PageProps) {
                   { label: "Ristrutturazione Bagno", prezzo: "da ~450 €/mq", href: `/comune/${slug}/ristrutturazione-bagno/`, attivo: true },
                   { label: "Ristrutturazione Cucina", prezzo: "da ~400 €/mq", href: `/comune/${slug}/ristrutturazione-cucina/`, attivo: true },
                   { label: "Ristrutturazione Appartamento", prezzo: "da ~550 €/mq", href: `/comune/${slug}/ristrutturazione-appartamento-completo/`, attivo: true },
+                  { label: "Rifacimento Tetto", prezzo: "da ~80 €/mq", href: `/comune/${slug}/rifacimento-tetto/`, attivo: true },
                   { label: "Cappotto Termico", prezzo: "da ~80 €/mq", href: `/comune/${slug}/cappotto-termico/`, attivo: true },
                   { label: "Impianti", prezzo: "da ~150 €/mq", href: `/comune/${slug}/impianti-elettrici-idraulici-termici/`, attivo: true },
                   { label: "Pavimenti e Rivestimenti", prezzo: "da ~60 €/mq", href: `/comune/${slug}/pavimenti-rivestimenti/`, attivo: true },
@@ -192,7 +194,7 @@ export default async function ComunePage({ params }: PageProps) {
                 Valori basati sul <strong>Prezzario Regionale Campania</strong> — costo al mq per ristrutturazione completa appartamento.
               </p>
               <p className="text-sm text-gray-500 mb-6">
-                Il costo definitivo dipende dallo stato dell&apos;immobile e dai materiali scelti. Emerge solo dal sopralluogo.
+                Il costo definitivo dipende dall&apos;anno di costruzione, dallo stato degli impianti e dai materiali scelti. Nessun numero è vincolante prima del sopralluogo.
               </p>
               <div className="grid md:grid-cols-3 gap-4 mb-5">
                 {PREZZI_FINITURA.map((p) => (
@@ -307,6 +309,7 @@ export default async function ComunePage({ params }: PageProps) {
                   { label: "Ristrutturazione Bagno", href: `/comune/${slug}/ristrutturazione-bagno/` },
                   { label: "Ristrutturazione Cucina", href: `/comune/${slug}/ristrutturazione-cucina/` },
                   { label: "Ristrutturazione Appartamento", href: `/comune/${slug}/ristrutturazione-appartamento-completo/` },
+                  { label: "Rifacimento Tetto", href: `/comune/${slug}/rifacimento-tetto/` },
                   { label: "Cappotto Termico", href: `/comune/${slug}/cappotto-termico/` },
                   { label: "Impianti", href: `/comune/${slug}/impianti-elettrici-idraulici-termici/` },
                   { label: "Pavimenti e Rivestimenti", href: `/comune/${slug}/pavimenti-rivestimenti/` },
