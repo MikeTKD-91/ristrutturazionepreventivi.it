@@ -1,206 +1,308 @@
+// app/agro-aversano/page.tsx
+
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, Check, MapPin, MessageCircle } from "lucide-react";
+import { ArrowRight, MapPin, TriangleAlert, CheckCircle } from "lucide-react";
 import { comuniAgroAversano } from "@/data/comuni";
 import CalcolatoreStima from "@/components/shared/CalcolatoreStima";
-import { getDataAggiornamento } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Ristrutturazione nell'Agro Aversano | Preventivo, costi e impresa edile",
-  description: "Ristrutturazione nell'Agro Aversano: stima gratuita immediata in 30 secondi. Impresa edile locale con 7 servizi professionali, pratiche e permessi edilizi. Russo FE Costruzione SRL.",
+  title: "Ristrutturazione Agro Aversano | Costi Reali e Preventivo",
+  description:
+    "Ristrutturazione nell'Agro Aversano: costi orientativi da Prezzario Regionale Campania, criticità tipiche del territorio, stima gratuita senza impegno. Russo FE Costruzione SRL.",
   alternates: {
     canonical: "https://ristrutturazionepreventivi.it/agro-aversano/",
   },
   openGraph: {
-    title: "Ristrutturazione nell'Agro Aversano | Preventivo, costi e impresa edile",
-    description: "Stima gratuita immediata per ristrutturazioni nell'Agro Aversano.",
+    title: "Ristrutturazione Agro Aversano | Costi Reali e Preventivo",
+    description:
+      "Costi orientativi per ristrutturazioni nell'Agro Aversano. Stima gratuita senza impegno.",
     url: "https://ristrutturazionepreventivi.it/agro-aversano/",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1200",
-        width: 1200,
-        height: 630,
-        alt: "Ristrutturazione nell'Agro Aversano",
-      },
-    ],
   },
 };
 
+const CRITICITA_ZONA = [
+  {
+    titolo: "Canne fumarie in amianto",
+    testo:
+      "Diffuse nei condomini degli anni '60-'70 di Aversa e dei comuni limitrofi. Rimozione obbligatoria prima di qualsiasi intervento su cucine e bagni collegati.",
+  },
+  {
+    titolo: "Umidità di risalita nelle villette anni '80",
+    testo:
+      "Fondazioni senza barriera impermeabilizzante nelle costruzioni private degli anni '80-'90. Frequente nei piani terra di Lusciano, Carinaro, Teverola e Casaluce.",
+  },
+  {
+    titolo: "Abusi edilizi non condonati",
+    testo:
+      "Verande, locali seminterrati e soppalchi non regolarizzati nelle zone di espansione privata degli anni '90. Verifica catastale necessaria prima di pratiche edilizie.",
+  },
+  {
+    titolo: "Vincoli centro storico ad Aversa",
+    testo:
+      "Il nucleo normanno di Aversa è soggetto a vincoli della Soprintendenza. Alcuni interventi esterni richiedono autorizzazione preventiva.",
+  },
+];
+
+const SERVIZI = [
+  { label: "Ristrutturazione Bagno", prezzo: "da ~450 €/mq" },
+  { label: "Ristrutturazione Cucina", prezzo: "da ~400 €/mq" },
+  { label: "Ristrutturazione Appartamento", prezzo: "da ~550 €/mq" },
+  { label: "Rifacimento Tetto", prezzo: "da ~80 €/mq" },
+  { label: "Cappotto Termico", prezzo: "da ~80 €/mq" },
+  { label: "Impianti", prezzo: "da ~150 €/mq" },
+  { label: "Pavimenti e Rivestimenti", prezzo: "da ~60 €/mq" },
+];
+
 export default function AgroAversanoPage() {
-  const dataAggiornamento = getDataAggiornamento();
-
   return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section className="relative h-[50vh] min-h-[400px]">
-        <Image
-          src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1920"
-          alt="Agro Aversano"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent" />
-        <div className="absolute inset-0 flex items-end">
-          <div className="container mx-auto px-4 pb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Ristrutturazione nell'Agro Aversano
-            </h1>
-            
-            {/* PULSANTE "Stima gratuita immediata" SUBITO DOPO IL TITOLO */}
-            <a
-              href="#calcolatore"
-              className="inline-flex items-center gap-2 bg-orange hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-colors text-lg shadow-lg mt-6"
-            >
-              Stima gratuita immediata
-              <ArrowRight className="h-5 w-5" />
-            </a>
+    <main className="min-h-screen bg-white">
 
-            <div className="inline-flex items-center gap-2 bg-orange/20 text-orange backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mt-6">
-              <Check className="h-4 w-4" />
-              Costi aggiornati a {dataAggiornamento}
+      {/* ── HERO ── */}
+      <section className="bg-navy py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <nav className="text-sm text-white/50 mb-6 flex flex-wrap gap-1 items-center">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <span className="text-white/80">Agro Aversano</span>
+          </nav>
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <MapPin className="h-4 w-4 text-orange" />
+                <p className="text-orange text-sm font-semibold uppercase tracking-widest">
+                  Zona operativa · Agro Aversano
+                </p>
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-5">
+                Ristrutturazione nell'Agro Aversano:{" "}
+                <span className="text-orange">Costi Reali e Stima Gratuita</span>
+              </h1>
+              <p className="text-white/70 text-lg leading-relaxed mb-6">
+                Operiamo in 14 comuni dell'Agro Aversano con conoscenza diretta del
+                patrimonio edilizio locale: dagli edifici storici di Aversa alle villette
+                degli anni '80 di Lusciano, Carinaro e Teverola. Prezzi orientativi basati
+                sul Prezzario Regionale Campania, mai inventati.
+              </p>
+              <div className="flex flex-wrap gap-3 mb-8">
+                {["Prezzario Regionale Campania", "Garanzia decennale", "14 comuni serviti"].map((t) => (
+                  <span key={t} className="bg-white/10 text-white/80 text-sm px-3 py-1 rounded-full">{t}</span>
+                ))}
+              </div>
+              <a
+                href="#calcolatore"
+                className="inline-flex items-center gap-2 bg-orange hover:bg-orange/90 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+              >
+                Calcola la tua stima gratuita
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+            <div className="hidden lg:grid grid-cols-2 gap-3">
+              {[
+                { n: "14", label: "Comuni serviti" },
+                { n: "7", label: "Servizi disponibili" },
+                { n: "10 anni", label: "Garanzia lavori" },
+                { n: "Gratuita", label: "Stima iniziale" },
+              ].map((s) => (
+                <div key={s.label} className="bg-white/10 rounded-2xl p-5 text-center">
+                  <p className="text-2xl font-black text-orange mb-1">{s.n}</p>
+                  <p className="text-white/70 text-sm">{s.label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Content */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-12">
-            {/* Main Content */}
-            <div className="lg:col-span-2 space-y-12">
-              {/* Descrizione */}
-              <div>
-                <h2 className="text-2xl font-bold text-navy mb-4">
-                  Ristrutturazioni nell'Agro Aversano
-                </h2>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  L'Agro Aversano è un territorio ricco di storia, tradizione e opportunità edilizie. 
-                  Da Aversa a Lusciano, da Casal di Principe a San Cipriano d'Aversa, offriamo servizi di 
-                  ristrutturazione completa per case, appartamenti e ville.
-                </p>
-                <p className="text-gray-600 leading-relaxed mt-4">
-                  Russo FE Costruzione SRL è l'impresa edile di riferimento nell'Agro Aversano: 
-                  conosciamo perfettamente norme urbanistiche locali, permessi edilizi e caratteristiche 
-                  dei terreni. Dalla ristrutturazione di palazzi storici alla moderna efficientamento energetico.
-                </p>
-              </div>
+      {/* Calcolatore mobile */}
+      <div id="calcolatore" className="lg:hidden px-4 pt-6">
+        <CalcolatoreStima comuneDefault="Aversa" />
+      </div>
 
-              {/* Caratteristiche */}
-              <div className="bg-gray-50 p-8 rounded-2xl">
-                <h2 className="text-2xl font-bold text-navy mb-4">
-                  Caratteristiche del Territorio
-                </h2>
-                <p className="text-gray-600 leading-relaxed">
-                  L'Agro Aversano è caratterizzato da un mix unico di centri storici, zone residenziali 
-                  e aree agricole. Molti edifici richiedono interventi di ristrutturazione per adeguamento 
-                  sismico, efficientamento energetico e restauro conservativo.
-                </p>
-              </div>
+      {/* ── CORPO ── */}
+      <div className="max-w-6xl mx-auto px-4 py-12 grid lg:grid-cols-3 gap-10 items-start">
+        <div className="lg:col-span-2 space-y-16">
 
-              {/* Comuni */}
-              <div>
-                <h2 className="text-2xl font-bold text-navy mb-6">
-                  Comuni Serviti nell'Agro Aversano
-                </h2>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {comuniAgroAversano.map((comune) => (
-                    <Link
-                      key={comune.slug}
-                      href={`/comune/${comune.slug}/`}
-                      className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-orange transition-colors group"
-                    >
-                      <MapPin className="h-5 w-5 text-orange" />
-                      <span className="font-semibold text-navy group-hover:text-orange transition-colors">
-                        {comune.nome}
-                      </span>
-                      <ArrowRight className="h-4 w-4 text-gray-300 group-hover:text-orange transition-colors ml-auto" />
-                    </Link>
-                  ))}
-                </div>
-              </div>
+          {/* PATRIMONIO EDILIZIO */}
+          <section>
+            <h2 className="text-2xl font-bold text-navy mb-2">
+              Il patrimonio edilizio dell'Agro Aversano
+            </h2>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              L'Agro Aversano è un territorio edilizio eterogeneo. Il comune capofila,
+              Aversa, ha un centro storico normanno con vincoli della Soprintendenza e
+              una corona di espansione degli anni '70-'90. I comuni limitrofi — Lusciano,
+              Carinaro, Teverola, Casaluce, Succivo e gli altri — mostrano un pattern
+              prevalente di villette unifamiliari e case a schiera degli anni '80-'00,
+              con nuclei storici più contenuti.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Questa doppia natura — storico e recente — genera criticità specifiche che
+              chi non opera abitualmente nella zona tende a sottovalutare. Le conosciamo
+              perché siamo qui: la nostra sede è a Lusciano.
+            </p>
+          </section>
 
-              {/* Prezzi */}
-              <div className="bg-navy/5 p-8 rounded-2xl">
-                <h2 className="text-2xl font-bold text-navy mb-4">
-                  Prezzi Indicativi 2026 nell'Agro Aversano
-                </h2>
-                <p className="text-gray-600 mb-6">
-                  Ecco i prezzi indicativi per una ristrutturazione completa nell'Agro Aversano. 
-                  I prezzi variano in base al livello di finitura scelto.
-                </p>
-                <div className="grid sm:grid-cols-3 gap-4">
-                  <div className="bg-white p-6 rounded-xl text-center">
-                    <p className="text-sm text-gray-500 mb-2">Finitura Base</p>
-                    <p className="text-2xl font-bold text-navy">550 €/mq</p>
-                  </div>
-                  <div className="bg-white p-6 rounded-xl text-center border-2 border-orange">
-                    <p className="text-sm text-gray-500 mb-2">Finitura Standard</p>
-                    <p className="text-2xl font-bold text-orange">750 €/mq</p>
-                  </div>
-                  <div className="bg-white p-6 rounded-xl text-center">
-                    <p className="text-sm text-gray-500 mb-2">Finitura Premium</p>
-                    <p className="text-2xl font-bold text-navy">950 €/mq</p>
+          {/* CRITICITÀ ZONA */}
+          <section>
+            <h2 className="text-2xl font-bold text-navy mb-2">
+              Criticità tipiche del territorio
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Questi problemi emergono sistematicamente nei cantieri dell'Agro Aversano.
+              Conoscerli prima del sopralluogo permette stime più accurate e meno sorprese.
+            </p>
+            <div className="space-y-4">
+              {CRITICITA_ZONA.map((c) => (
+                <div key={c.titolo} className="flex gap-4 items-start bg-amber-50 border border-amber-100 rounded-xl p-5">
+                  <TriangleAlert className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-navy text-sm mb-1">{c.titolo}</p>
+                    <p className="text-sm text-gray-700 leading-relaxed">{c.testo}</p>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
+          </section>
 
-            {/* Sidebar */}
-            <div className="space-y-8">
-              <div id="calcolatore">
-                <CalcolatoreStima comuneDefault="Agro Aversano" />
-              </div>
+          {/* PREZZI */}
+          <section>
+            <h2 className="text-2xl font-bold text-navy mb-2">
+              Costi orientativi nell'Agro Aversano
+            </h2>
+            <p className="text-gray-600 mb-1">
+              Valori basati sul <strong>Prezzario Regionale Campania</strong>.
+              Il costo definitivo emerge solo dal sopralluogo.
+            </p>
+            <p className="text-sm text-gray-500 mb-6">
+              Ogni servizio ha una pagina dedicata per ogni comune con tabelle costi dettagliate,
+              tempistiche reali e FAQ specifiche.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-3 mb-5">
+              {SERVIZI.map((s) => (
+                <div key={s.label} className="flex items-center justify-between p-4 border border-gray-200 rounded-xl">
+                  <p className="font-medium text-navy text-sm">{s.label}</p>
+                  <p className="text-sm text-orange font-semibold">{s.prezzo}</p>
+                </div>
+              ))}
+            </div>
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
+              <TriangleAlert className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />
+              <p className="text-sm text-amber-900">
+                <strong>Questi sono costi orientativi, non preventivi vincolanti.</strong>{" "}
+                Servono a capire se l&apos;intervento è nel tuo range di budget.
+                Il prezzo reale richiede sopralluogo.
+              </p>
+            </div>
+          </section>
 
-              <div className="bg-navy p-6 rounded-2xl text-white">
-                <h3 className="text-xl font-bold mb-4">
-                  Richiedi una Stima
-                </h3>
-                <p className="text-white/80 mb-6">
-                  Contattaci su WhatsApp per una stima indicativa gratuita 
-                  per la tua ristrutturazione nell'Agro Aversano.
-                </p>
-                <a
-                  href="https://wa.me/393339809319"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-orange hover:bg-orange-600 text-white py-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2"
+          {/* COMUNI */}
+          <section>
+            <h2 className="text-2xl font-bold text-navy mb-2">
+              Comuni serviti nell'Agro Aversano
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Ogni comune ha una pagina dedicata con costi orientativi specifici,
+              criticità locali e FAQ.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {comuniAgroAversano.map((comune) => (
+                <Link
+                  key={comune.slug}
+                  href={`/comune/${comune.slug}/`}
+                  className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-orange/50 hover:bg-orange/5 transition-colors group"
                 >
-                  <MessageCircle className="h-5 w-5" />
-                  Scrivici su WhatsApp
-                </a>
+                  <MapPin className="h-4 w-4 text-orange flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <p className="font-semibold text-navy text-sm group-hover:text-orange transition-colors">
+                      {comune.nome}
+                    </p>
+                    <p className="text-xs text-gray-400 truncate">{comune.tipoEdilizio}</p>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-gray-300 group-hover:text-orange transition-colors flex-shrink-0" />
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* PROCESSO */}
+          <section>
+            <h2 className="text-2xl font-bold text-navy mb-2">Come funziona</h2>
+            <p className="text-gray-600 mb-8">Tre passaggi, nessuna sorpresa.</p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { n: "01", t: "Stima gratuita", d: "Usi il calcolatore o ci scrivi su WhatsApp. In pochi minuti sai se il tuo budget è compatibile con l'intervento, senza impegno." },
+                { n: "02", t: "Sopralluogo tecnico", d: "Il nostro tecnico visita l'immobile. Verifica impianti, strutture e criticità specifiche dell'Agro Aversano: solo così il preventivo è affidabile." },
+                { n: "03", t: "Preventivo scritto", d: "Prezzi unitari, materiali specificati, tempistiche e garanzia decennale. Tutto nero su bianco prima di iniziare." },
+              ].map((s) => (
+                <div key={s.n}>
+                  <p className="text-5xl font-black text-gray-100 mb-3 leading-none">{s.n}</p>
+                  <h3 className="text-base font-bold text-navy mb-2">{s.t}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{s.d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+        </div>
+
+        {/* ── SIDEBAR ── */}
+        <div className="hidden lg:block">
+          <div id="calcolatore" className="sticky top-6 space-y-6">
+            <CalcolatoreStima comuneDefault="Aversa" />
+            <div className="bg-gray-50 rounded-2xl p-5">
+              <p className="text-sm font-semibold text-navy mb-4">Perché scegliere noi</p>
+              <div className="space-y-3">
+                {[
+                  "Sede a Lusciano: conosciamo il territorio",
+                  "Prezzi da Prezzario Regionale Campania",
+                  "Garanzia decennale sui lavori",
+                  "Materiali certificati CE",
+                  "Supporto pratiche Bonus 50%",
+                  "Sopralluogo tecnico senza impegno",
+                ].map((t) => (
+                  <div key={t} className="flex items-start gap-2 text-sm text-gray-700">
+                    <CheckCircle className="h-4 w-4 text-orange flex-shrink-0 mt-0.5" />
+                    {t}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* CTA Bottom */}
-      <section className="py-20 bg-navy">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Pronto a Ristrutturare nell'Agro Aversano?
+      {/* ── CTA FINALE ── */}
+      <section className="bg-navy py-14 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Vuoi sapere quanto costa ristrutturare nell'Agro Aversano?
           </h2>
-          <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-            Richiedi ora una stima indicativa immediata e gratuita per il tuo progetto 
-            di ristrutturazione nell'Agro Aversano.
+          <p className="text-white/70 mb-8 text-lg">
+            Parti dalla stima gratuita. Se la forbice è in linea col tuo budget,
+            organizziamo il sopralluogo e prepariamo il preventivo dettagliato.
           </p>
-          <a
-            href="https://wa.me/393339809319"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-orange hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-colors"
-          >
-            <MessageCircle className="h-5 w-5" />
-            Richiedi Stima Gratuita
-          </a>
-          <p className="text-white/50 text-sm mt-4">
-            Costi aggiornati a {dataAggiornamento} - Ultimo aggiornamento: {dataAggiornamento}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://wa.me/393339809319?text=Salve%2C%20vorrei%20un%20preventivo%20per%20una%20ristrutturazione%20nell%27Agro%20Aversano"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange text-white font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity text-center"
+            >
+              Richiedi stima su WhatsApp
+            </a>
+            <a
+              href="tel:+393339809319"
+              className="bg-white/10 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition-colors text-center"
+            >
+              Chiama +39 333 980 9319
+            </a>
+          </div>
+          <p className="text-white/40 text-xs mt-6">
+            Russo FE Costruzione SRL · Viale della Libertà 3, Lusciano (CE)
           </p>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
