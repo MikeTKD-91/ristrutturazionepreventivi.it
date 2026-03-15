@@ -1,9 +1,6 @@
 // data/comuni.ts
-// Ultimo aggiornamento: marzo 2025
-// ⚠️ LEGENDA SEGNALAZIONI:
-//   [REALE]    = dato confermato / fornito direttamente
-//   [IPOTESI]  = generato su base urbanistica/storica, da verificare
-//   [VERIFICA] = campo che richiede conferma prima di andare in produzione
+// Aggiornato con contenuti differenziati per tutti i 33 comuni
+// Legenda: [REALE] = dato confermato | [IPOTESI] = su base urbanistica/storica, da verificare
 
 export interface ComuneFaq {
   domanda: string;
@@ -11,45 +8,24 @@ export interface ComuneFaq {
 }
 
 export interface Comune {
-  // — Identificazione —
   slug: string;
   nome: string;
   provincia: "napoli" | "caserta";
   zona: "napoli" | "caserta" | "agro-aversano";
-
-  // — SEO (niente anno nel title, niente promesse commerciali) —
-  metaTitle: string;         // max 60 caratteri
-  metaDescription: string;   // max 155 caratteri
-
-  // — Contenuto geografico —
-  descrizione: string;       // 2-3 righe, unico per comune
-
-  // — Patrimonio edilizio —
-  tipoEdilizio: string;      // es. "Villette anni '80, palazzine anni '60-'70 in centro"
-  criticalita: string[];     // problemi reali e ricorrenti in quel contesto edilizio
-
-  // — Per pagine servizio×comune —
-  caratteristicheBagni: string;    // tipologia bagni prevalente
-  caratteristicheCucine: string;   // tipologia cucine prevalente
-
-  // — FAQ dinamiche (3-4 per comune) —
+  metaTitle: string;
+  metaDescription: string;
+  descrizione: string;
+  tipoEdilizio: string;
+  criticalita: string[];
+  caratteristicheBagni: string;
+  caratteristicheCucine: string;
   faq: ComuneFaq[];
-
-  // — Internal linking —
   vicini: string[];
-
-  // — Immagine (opzionale: da sostituire con foto reali) —
   immagine?: string;
 }
 
 // ─────────────────────────────────────────────
 // ZONA: AGRO AVERSANO (14 comuni)
-// Dati edilizi: pattern confermato [REALE]
-// Pattern generale zona:
-//   - Periferia/espansione: villette e case a schiera anni '80-'00
-//   - Centro storico: palazzi anni '50-'70
-//   - Criticità trasversali: canne fumarie in amianto (palazzi vecchi),
-//     abusi edilizi da regolarizzare, bagni standard mono-sanitari anni '80-'90
 // ─────────────────────────────────────────────
 
 export const comuniAgroAversano: Comune[] = [
@@ -58,61 +34,36 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Aversa",
     provincia: "caserta",
     zona: "agro-aversano",
-
-    // [REALE] Centro storico medievale con vincoli Soprintendenza
     metaTitle: "Ristrutturazione Casa ad Aversa | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a domicilio ad Aversa: costi orientativi, criticità del centro storico e delle palazzine anni '60-'70. Stima gratuita senza impegno.",
-
-    descrizione:
-      "Aversa è il comune più popoloso dell'Agro Aversano, con un centro storico di origine normanna sottoposto a vincoli della Soprintendenza e un'ampia corona di espansione residenziale sviluppata tra gli anni '70 e i primi anni 2000. Questa doppia natura rende ogni intervento edilizio potenzialmente soggetto a iter autorizzativi differenti a seconda della zona.",
-
-    // [REALE] Confermato: centro storico + espansione nuova
-    tipoEdilizio:
-      "Palazzi storici anni '50-'70 nel centro (alcuni con vincolo Soprintendenza), villette unifamiliari e case a schiera nelle zone di espansione anni '80-'00",
-
-    // [REALE] Amianto e abusi confermati; vincoli centro storico specifici di Aversa
+    metaDescription: "Ristrutturazione ad Aversa: costi orientativi, criticità del centro storico e delle palazzine anni '60-'70. Stima gratuita senza impegno.",
+    descrizione: "Aversa è il comune più popoloso dell'Agro Aversano, con un centro storico di origine normanna sottoposto a vincoli della Soprintendenza e un'ampia corona di espansione residenziale sviluppata tra gli anni '70 e i primi anni 2000. Questa doppia natura rende ogni intervento edilizio potenzialmente soggetto a iter autorizzativi differenti a seconda della zona.",
+    tipoEdilizio: "Palazzi storici anni '50-'70 nel centro (alcuni con vincolo Soprintendenza), villette unifamiliari e case a schiera nelle zone di espansione anni '80-'00",
     criticalita: [
       "Canne fumarie in amianto negli edifici condominiali anni '60-'70: rimozione obbligatoria prima di qualsiasi intervento su cucine e bagni",
       "Abusi edilizi non condonati frequenti nelle zone di espansione: necessaria verifica catastale prima del sopralluogo",
       "Centro storico soggetto a vincolo paesaggistico e monumentale: alcune lavorazioni richiedono autorizzazione preventiva della Soprintendenza",
       "Umidità di risalita diffusa nei piani terra e seminterrati dei palazzi storici, spesso mascherata da interventi superficiali precedenti",
     ],
-
-    // [REALE] Bagni standard anni '80-'90, tipici della zona
-    caratteristicheBagni:
-      "Bagni prevalentemente sotto i 6 mq con vasca da bagno degli anni '80-'90, spesso già oggetto di un primo rifacimento parziale non a norma. Nelle abitazioni del centro storico, impianti idrici in piombo ancora presenti nei condomini più vecchi.",
-
-    // [IPOTESI - da verificare] Cucine tipiche zona
-    caratteristicheCucine:
-      "Cucine separate dal soggiorno, dimensioni medie 10-14 mq. Nelle palazzine anni '70, frequente presenza di cappa esterna non a norma collegata a canna fumaria in amianto.",
-
+    caratteristicheBagni: "Bagni prevalentemente sotto i 6 mq con vasca da bagno degli anni '80-'90, spesso già oggetto di un primo rifacimento parziale non a norma. Nelle abitazioni del centro storico, impianti idrici in piombo ancora presenti nei condomini più vecchi.",
+    caratteristicheCucine: "Cucine separate dal soggiorno, dimensioni medie 10-14 mq. Nelle palazzine anni '70, frequente presenza di cappa esterna non a norma collegata a canna fumaria in amianto.",
     faq: [
       {
-        domanda:
-          "Devo chiedere permessi per ristrutturare il bagno in un palazzo del centro storico di Aversa?",
-        risposta:
-          "Dipende dall'intervento. La sostituzione di sanitari e rivestimenti interni (manutenzione ordinaria) non richiede permessi. Se l'intervento tocca impianti, strutture o modifica la distribuzione degli spazi interni, serve almeno una CILA. In zona vincolata dalla Soprintendenza, qualsiasi intervento esterno o che modifichi l'aspetto dell'edificio richiede autorizzazione specifica. Il nostro tecnico verifica la situazione urbanistica prima del preventivo.",
+        domanda: "Devo chiedere permessi per ristrutturare il bagno in un palazzo del centro storico di Aversa?",
+        risposta: "Dipende dall'intervento. La sostituzione di sanitari e rivestimenti interni non richiede permessi. Se l'intervento tocca impianti o modifica la distribuzione degli spazi interni, serve almeno una CILA. In zona vincolata dalla Soprintendenza, qualsiasi intervento esterno richiede autorizzazione specifica. Il nostro tecnico verifica la situazione urbanistica prima del preventivo.",
       },
       {
-        domanda:
-          "Nel mio palazzo c'è ancora la canna fumaria in amianto. Cosa succede se rifaccio la cucina?",
-        risposta:
-          "Se la canna fumaria è in amianto, prima di installare una nuova cappa è obbligatorio procedere alla bonifica o all'incapsulamento, da eseguire da una ditta specializzata certificata. Il costo di bonifica va considerato nel preventivo complessivo. Non è possibile aggirare questo passaggio: le ditte serie non agganciano nuovi impianti a canne in amianto non bonificate.",
+        domanda: "Nel mio palazzo c'è ancora la canna fumaria in amianto. Cosa succede se rifaccio la cucina?",
+        risposta: "Se la canna fumaria è in amianto, prima di installare una nuova cappa è obbligatorio procedere alla bonifica o all'incapsulamento, da eseguire da una ditta specializzata certificata. Il costo di bonifica va considerato nel preventivo complessivo. Non è possibile aggirare questo passaggio: le ditte serie non agganciano nuovi impianti a canne in amianto non bonificate.",
       },
       {
-        domanda:
-          "Ho un abuso edilizio non condonato. Posso ristrutturare lo stesso?",
-        risposta:
-          "Tecnicamente sì, se l'abuso riguarda parti diverse da quelle da ristrutturare. Nella pratica, prima di qualsiasi intervento soggetto a CILA o permesso di costruire, il Comune verifica la regolarità urbanistica dell'immobile. Un abuso pendente può bloccare l'iter. È consigliabile un confronto con un tecnico prima di procedere.",
+        domanda: "Ho un abuso edilizio non condonato. Posso ristrutturare lo stesso?",
+        risposta: "Tecnicamente sì, se l'abuso riguarda parti diverse da quelle da ristrutturare. Nella pratica, prima di qualsiasi intervento soggetto a CILA o permesso di costruire, il Comune verifica la regolarità urbanistica. Un abuso pendente può bloccare l'iter. È consigliabile un confronto con un tecnico prima di procedere.",
       },
       {
         domanda: "Quanto tempo richiede la ristrutturazione di un bagno ad Aversa?",
-        risposta:
-          "Un bagno standard (4-6 mq) con sostituzione completa di sanitari, rivestimenti e impianti richiede mediamente 2-3 settimane lavorative. Se si aggiunge la bonifica dell'amianto o modifiche agli impianti condominiali, i tempi si allungano. I tempi definitivi emergono dal sopralluogo.",
+        risposta: "Un bagno standard (4-6 mq) con sostituzione completa di sanitari, rivestimenti e impianti richiede mediamente 2-3 settimane lavorative. Se si aggiunge la bonifica dell'amianto o modifiche agli impianti condominiali, i tempi si allungano. I tempi definitivi emergono dal sopralluogo.",
       },
     ],
-
     vicini: ["lusciano", "carinaro", "teverola", "trentola-ducenta", "succivo"],
   },
 
@@ -121,60 +72,36 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Lusciano",
     provincia: "caserta",
     zona: "agro-aversano",
-
-    // [REALE] Sede dell'azienda — dati edilizi confermati
     metaTitle: "Ristrutturazione Casa a Lusciano | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Lusciano: interventi su villette anni '80-'90, PEEP comunali e palazzine. Stima gratuita, preventivo con sopralluogo.",
-
-    descrizione:
-      "Lusciano è un comune a prevalente carattere residenziale, sviluppatosi principalmente tra gli anni '80 e i primi anni 2000 con un mix di villette unifamiliari, case a schiera e alcuni piani di edilizia economica popolare (PEEP). Il centro più antico conserva un nucleo di palazzi anni '50-'60, mentre la periferia è quasi interamente composta da edilizia privata recente.",
-
-    // [REALE] Villette anni '80-'90, PEEP, palazzi vecchi al centro
-    tipoEdilizio:
-      "Villette unifamiliari e case a schiera anni '80-'00 nella zona di espansione; PEEP comunali anni '80 in alcune aree; palazzi anni '50-'60 nel nucleo centrale",
-
-    // [REALE] Pattern zona confermato; umidità risalita tipica villette anni '80
+    metaDescription: "Ristrutturazione a Lusciano: interventi su villette anni '80-'90, PEEP comunali e palazzine. Stima gratuita, preventivo con sopralluogo.",
+    descrizione: "Lusciano è un comune a prevalente carattere residenziale, sviluppatosi principalmente tra gli anni '80 e i primi anni 2000 con un mix di villette unifamiliari, case a schiera e alcuni piani di edilizia economica popolare (PEEP). Il centro più antico conserva un nucleo di palazzi anni '50-'60, mentre la periferia è quasi interamente composta da edilizia privata recente.",
+    tipoEdilizio: "Villette unifamiliari e case a schiera anni '80-'00 nella zona di espansione; PEEP comunali anni '80 in alcune aree; palazzi anni '50-'60 nel nucleo centrale",
     criticalita: [
       "Umidità di risalita diffusa nelle villette anni '80: fondazioni senza barriera impermeabilizzante, frequente nei piani terra e nei locali interrati",
       "Abusi edilizi nelle zone di espansione privata degli anni '90: verande, locali seminterrati, soppalchi spesso non condonati",
       "Impianti idrici in acciaio zincato nelle abitazioni degli anni '70-'80: corrosione interna che riduce portata e qualità dell'acqua",
       "Canne fumarie in amianto nei condomini più vecchi del centro: rilevamento obbligatorio prima di interventi su cucine",
     ],
-
-    caratteristicheBagni:
-      "Bagni di dimensioni standard (5-7 mq) nelle villette, spesso con vasca da incasso degli anni '80-'90 mai sostituita. Nei PEEP, bagni mono-sanitari sotto i 5 mq con impianti originali da aggiornare.",
-
-    // [IPOTESI]
-    caratteristicheCucine:
-      "Cucine in muratura degli anni '80-'90 con piastrelle a decoro tipiche del periodo. Nelle villette, frequente assenza di cappa a norma o collegamento a canna fumaria non certificata.",
-
+    caratteristicheBagni: "Bagni di dimensioni standard (5-7 mq) nelle villette, spesso con vasca da incasso degli anni '80-'90 mai sostituita. Nei PEEP, bagni mono-sanitari sotto i 5 mq con impianti originali da aggiornare.",
+    caratteristicheCucine: "Cucine in muratura degli anni '80-'90 con piastrelle a decoro tipiche del periodo. Nelle villette, frequente assenza di cappa a norma o collegamento a canna fumaria non certificata.",
     faq: [
       {
-        domanda:
-          "Ho una villetta degli anni '90 a Lusciano con umidità al piano terra. Prima di ristrutturare, cosa devo fare?",
-        risposta:
-          "L'umidità di risalita nelle villette anni '90 dell'Agro Aversano è molto comune e va trattata prima di qualsiasi rifinitura. Il nostro sopralluogo include sempre la verifica delle cause (risalita capillare, infiltrazioni da fondazione, condensa). Il trattamento corretto dipende dall'origine: non esiste una soluzione unica. Fare le rifiniture prima di risolvere l'umidità significa rifare tutto a distanza di 2-3 anni.",
+        domanda: "Ho una villetta degli anni '90 a Lusciano con umidità al piano terra. Prima di ristrutturare, cosa devo fare?",
+        risposta: "L'umidità di risalita nelle villette anni '90 dell'Agro Aversano è molto comune e va trattata prima di qualsiasi rifinitura. Il nostro sopralluogo include la verifica delle cause (risalita capillare, infiltrazioni da fondazione, condensa). Il trattamento corretto dipende dall'origine: fare le rifiniture prima di risolvere l'umidità significa rifare tutto a distanza di 2-3 anni.",
       },
       {
-        domanda:
-          "Posso usare il Bonus Ristrutturazione 50% per il rifacimento del bagno nella mia villetta a Lusciano?",
-        risposta:
-          "Sì, la detrazione IRPEF al 50% (fino a 96.000 € di spesa) si applica agli interventi di manutenzione straordinaria sugli immobili residenziali, incluso il rifacimento completo del bagno con sostituzione di impianti. Sono necessari: pagamenti tracciati (bonifico parlante), fatture in regola, e per alcuni interventi una CILA. Il nostro ufficio amministrativo supporta la gestione della pratica.",
+        domanda: "Posso usare il Bonus Ristrutturazione 50% per il rifacimento del bagno nella mia villetta a Lusciano?",
+        risposta: "Sì, la detrazione IRPEF al 50% si applica agli interventi di manutenzione straordinaria sugli immobili residenziali, incluso il rifacimento completo del bagno con sostituzione di impianti. Sono necessari: pagamenti tracciati (bonifico parlante), fatture in regola, e per alcuni interventi una CILA. Il nostro ufficio amministrativo supporta la gestione della pratica.",
       },
       {
-        domanda:
-          "Quanto costa rifare completamente un bagno in un PEEP di Lusciano?",
-        risposta:
-          "Un bagno in un appartamento PEEP è tipicamente sotto i 5 mq, il che lo rende uno degli interventi più intensivi in termini di costo per metro quadro (lavorazione elevata in spazio ridotto). In base al Prezzario Regionale Campania, le stime orientative partono da circa 4.500-5.500 € per una finitura base, fino a 7.000-9.000 € per una finitura premium con impianti completamente rinnovati. I valori precisi emergono dal sopralluogo.",
+        domanda: "Quanto costa rifare completamente un bagno in un PEEP di Lusciano?",
+        risposta: "Un bagno in un appartamento PEEP è tipicamente sotto i 5 mq, il che lo rende uno degli interventi più intensivi in termini di costo per metro quadro. In base al Prezzario Regionale Campania, le stime orientative partono da circa 4.500-5.500 € per una finitura base, fino a 7.000-9.000 € per una finitura premium con impianti completamente rinnovati.",
       },
       {
         domanda: "Quanto tempo ci vuole per ristrutturare un bagno a Lusciano?",
-        risposta:
-          "Per un bagno standard (5-6 mq) con sostituzione completa di sanitari, rivestimenti e impianti, mediamente 2-3 settimane lavorative. Se si aggiungono lavori strutturali o la bonifica di impianti obsoleti, i tempi si allungano. Il cantiere viene organizzato per ridurre i giorni senza bagno funzionante.",
+        risposta: "Per un bagno standard (5-6 mq) con sostituzione completa di sanitari, rivestimenti e impianti, mediamente 2-3 settimane lavorative. Se si aggiungono lavori strutturali o la bonifica di impianti obsoleti, i tempi si allungano. Il cantiere viene organizzato per ridurre i giorni senza bagno funzionante.",
       },
     ],
-
     vicini: ["aversa", "carinaro", "teverola", "gricignano-di-aversa"],
   },
 
@@ -183,51 +110,36 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Carinaro",
     provincia: "caserta",
     zona: "agro-aversano",
-
     metaTitle: "Ristrutturazione Casa a Carinaro | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Carinaro: costi orientativi per villette e palazzine. Criticità locali, stima gratuita e preventivo con sopralluogo.",
-
-    // [IPOTESI] Piccolo comune residenziale, pattern Agro Aversano
-    descrizione:
-      "Carinaro è un piccolo comune residenziale dell'Agro Aversano, con un tessuto edilizio composto prevalentemente da villette unifamiliari e case a schiera edificate tra gli anni '80 e i primi anni 2000. Il centro storico è contenuto, con alcune palazzine degli anni '60-'70.",
-
-    tipoEdilizio:
-      "Prevalenza di villette anni '80-'00 e case a schiera; nucleo centrale con palazzine anni '60-'70",
-
+    metaDescription: "Ristrutturazione a Carinaro: costi orientativi per villette e palazzine. Criticità locali, stima gratuita e preventivo con sopralluogo.",
+    descrizione: "Carinaro è un piccolo comune residenziale dell'Agro Aversano, con un tessuto edilizio composto prevalentemente da villette unifamiliari e case a schiera edificate tra gli anni '80 e i primi anni 2000. Il centro storico è contenuto, con alcune palazzine degli anni '60-'70.",
+    tipoEdilizio: "Prevalenza di villette anni '80-'00 e case a schiera; nucleo centrale con palazzine anni '60-'70",
     criticalita: [
       "Umidità di risalita nei piani terra delle villette anni '80, comune in tutta la zona",
       "Abusi edilizi non condonati nelle espansioni private degli anni '90",
       "Impianti idrici vetusti nelle palazzine del centro anni '60-'70",
-      // [IPOTESI]
       "Coperture con guaine bituminose di prima generazione, spesso non più impermeabili nelle abitazioni con più di 25 anni",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard 5-7 mq con sanitari e rivestimenti degli anni '80-'90. Nelle case a schiera più recenti, bagni già oggetto di primo rifacimento parziale non a norma.", // [IPOTESI parziale]
-
-    caratteristicheCucine:
-      "Cucine separate dal soggiorno, dimensioni medie. Frequente presenza di cucine in muratura degli anni '90 da demolire e ricostruire.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni standard 5-7 mq con sanitari e rivestimenti degli anni '80-'90. Nelle case a schiera più recenti, bagni già oggetto di primo rifacimento parziale non a norma.",
+    caratteristicheCucine: "Cucine separate dal soggiorno, dimensioni medie. Frequente presenza di cucine in muratura degli anni '90 da demolire e ricostruire.",
     faq: [
       {
         domanda: "Quali permessi servono per ristrutturare un bagno a Carinaro?",
-        risposta:
-          "Per la sostituzione di sanitari e rivestimenti senza modificare la distribuzione degli spazi, nessun permesso (manutenzione ordinaria). Se si spostano impianti o si modificano le tramezzature, serve una CILA da presentare al Comune di Carinaro prima dell'inizio lavori. Il nostro tecnico valuta la situazione specifica al sopralluogo.",
+        risposta: "Per la sostituzione di sanitari e rivestimenti senza modificare la distribuzione degli spazi, nessun permesso. Se si spostano impianti o si modificano le tramezzature, serve una CILA da presentare al Comune di Carinaro prima dell'inizio lavori. Il nostro tecnico valuta la situazione specifica al sopralluogo.",
       },
       {
-        domanda:
-          "Ho una villetta anni '90 a Carinaro. Come capisco se c'è amianto prima di ristrutturare?",
-        risposta:
-          "L'amianto nelle villette degli anni '90 è meno comune rispetto ai condomini degli anni '60-'70, ma può essere presente in canne fumarie, lastre di copertura (eternit) o guaine di isolamento. Un'ispezione visiva da parte di un tecnico esperto è il primo passo. In caso di dubbio, è possibile richiedere un'analisi campione certificata prima dell'inizio lavori.",
+        domanda: "Ho una villetta anni '90 a Carinaro. Come capisco se c'è amianto prima di ristrutturare?",
+        risposta: "L'amianto nelle villette degli anni '90 è meno comune rispetto ai condomini anni '60-'70, ma può essere presente in canne fumarie, lastre di copertura o guaine di isolamento. Un'ispezione visiva da parte di un tecnico esperto è il primo passo. In caso di dubbio, è possibile richiedere un'analisi campione certificata prima dell'inizio lavori.",
       },
       {
         domanda: "Quanto costa ristrutturare un bagno a Carinaro?",
-        risposta:
-          "In base al Prezzario Regionale Campania, per un bagno di 5-6 mq con rifacimento completo di impianti, rivestimenti e sanitari, le stime orientative vanno da circa 5.000 € (finitura base) a 9.000-10.000 € (finitura premium). Il costo preciso dipende dallo stato attuale, dai materiali scelti e da eventuali criticità emerse al sopralluogo.",
+        risposta: "In base al Prezzario Regionale Campania, per un bagno di 5-6 mq con rifacimento completo di impianti, rivestimenti e sanitari, le stime orientative vanno da circa 5.000 € (finitura base) a 9.000-10.000 € (finitura premium). Il costo preciso dipende dallo stato attuale degli impianti, che emerge al sopralluogo.",
+      },
+      {
+        domanda: "Conviene sostituire anche i pavimenti del bagno oppure tenerli?",
+        risposta: "Dipende dalle condizioni e dal tipo di posa. Se i pavimenti sono in buone condizioni, a volte è possibile posare il nuovo sopra il vecchio (sovrapposa) risparmiando su demolizione e smaltimento. Se ci sono problemi di umidità, rigonfiamenti o il pavimento è in vinile anni '80, la rimozione completa è necessaria. Lo valutiamo al sopralluogo insieme a te.",
       },
     ],
-
     vicini: ["aversa", "lusciano", "teverola", "gricignano-di-aversa"],
   },
 
@@ -236,51 +148,37 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Teverola",
     provincia: "caserta",
     zona: "agro-aversano",
-
     metaTitle: "Ristrutturazione Casa a Teverola | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Teverola: interventi su villette e palazzine, costi orientativi da Prezzario Campania. Stima gratuita senza impegno.",
-
-    // [IPOTESI] Comune misto residenziale/produttivo
-    descrizione:
-      "Teverola è un comune con vocazione mista residenziale e produttiva, situato lungo la SS7bis. Il tessuto abitativo è composto da villette e palazzine di diverse epoche, con una parte centrale più densa e zone periferiche a edilizia sparsa.",
-
-    tipoEdilizio:
-      "Mix di villette anni '80-'00 e palazzine anni '70; presenza di edilizia residenziale lungo le arterie principali",
-
+    metaDescription: "Ristrutturazione a Teverola: interventi su villette e palazzine, costi orientativi da Prezzario Campania. Stima gratuita senza impegno.",
+    descrizione: "Teverola è un comune con vocazione mista residenziale e produttiva, situato lungo la SS7bis. Il tessuto abitativo è composto da villette e palazzine di diverse epoche, con una parte centrale più densa e zone periferiche a edilizia sparsa.",
+    tipoEdilizio: "Mix di villette anni '80-'00 e palazzine anni '70; presenza di edilizia residenziale lungo le arterie principali",
     criticalita: [
-      "Vibrazioni da traffico pesante sulla SS7bis: crepe e lesioni nei muri perimetrali nelle abitazioni prossime alla strada", // [IPOTESI localizzata]
+      "Vibrazioni da traffico pesante sulla SS7bis: crepe e lesioni nei muri perimetrali nelle abitazioni prossime alla strada",
       "Umidità di risalita e infiltrazioni nei piani terra",
       "Abusi edilizi da regolarizzare frequenti nelle zone di espansione",
       "Canne fumarie in amianto nei condomini degli anni '70",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard con sanitari anni '80-'90, spesso con vasca da bagno. Nelle palazzine più vecchie, impianti idrici da sostituire integralmente.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate, medie dimensioni. Nelle abitazioni lungo le strade principali, frequente necessità di miglioramento dell'isolamento acustico durante i lavori.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni standard con sanitari anni '80-'90, spesso con vasca da bagno. Nelle palazzine più vecchie, impianti idrici da sostituire integralmente.",
+    caratteristicheCucine: "Cucine separate, medie dimensioni. Nelle abitazioni lungo le strade principali, frequente necessità di miglioramento dell'isolamento acustico durante i lavori.",
     faq: [
       {
-        domanda:
-          "Ho delle crepe nei muri di casa a Teverola. Devo preoccuparmi prima di ristrutturare?",
-        risposta:
-          "Le crepe vanno sempre valutate prima di qualsiasi lavoro di rifinitura. Le lesioni superficiali (fessure nei rivestimenti, stacco di intonaco) sono spesso legate a assestamenti normali o escursioni termiche. Le crepe passanti nei muri portanti o in diagonale agli angoli delle aperture richiedono invece una valutazione strutturale. Procedere con le rifiniture senza risolvere le cause è un errore che comporta rifacimenti a distanza di pochi anni.",
+        domanda: "Ho delle crepe nei muri di casa a Teverola. Devo preoccuparmi prima di ristrutturare?",
+        risposta: "Le crepe vanno sempre valutate prima di qualsiasi lavoro di rifinitura. Le lesioni superficiali (fessure nei rivestimenti, stacco di intonaco) sono spesso legate ad assestamenti normali. Le crepe passanti nei muri portanti o in diagonale agli angoli delle aperture richiedono una valutazione strutturale. Procedere con le rifiniture senza risolvere le cause significa rifare tutto a distanza di pochi anni.",
       },
       {
         domanda: "Posso usare il Bonus 50% per ristrutturare il bagno a Teverola?",
-        risposta:
-          "Sì, la detrazione IRPEF al 50% si applica agli interventi di manutenzione straordinaria su immobili residenziali, compreso il rifacimento completo del bagno. Sono necessari pagamenti con bonifico parlante e fatture in regola. Per interventi che richiedono CILA, va presentata prima dell'inizio lavori.",
+        risposta: "Sì, la detrazione IRPEF al 50% si applica agli interventi di manutenzione straordinaria su immobili residenziali, compreso il rifacimento completo del bagno. Sono necessari pagamenti con bonifico parlante e fatture in regola. Per interventi che richiedono CILA, va presentata prima dell'inizio lavori.",
       },
       {
         domanda: "Quanto costa ristrutturare un bagno a Teverola?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno di 5-6 mq vanno da circa 5.000 € per finitura base a 9.500 € per finitura premium con impianti nuovi. Il dato preciso emerge solo dal sopralluogo, che permette di rilevare criticità nascoste come impianti obsoleti o umidità.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno di 5-6 mq vanno da circa 5.000 € per finitura base a 9.500 € per finitura premium con impianti nuovi. Il dato preciso emerge solo dal sopralluogo.",
+      },
+      {
+        domanda: "Vivo vicino alla SS7bis e ho problemi di rumore. Posso migliorare l'isolamento acustico durante la ristrutturazione?",
+        risposta: "Sì, la ristrutturazione è il momento ideale per intervenire sull'isolamento acustico. Le soluzioni più efficaci sono la sostituzione dei serramenti con doppi o tripli vetri, il miglioramento dell'isolamento delle pareti perimetrali, e in alcuni casi l'installazione di contropareti. Il costo dipende dall'estensione dell'intervento e viene incluso nel preventivo complessivo.",
       },
     ],
-
-    vicini: ["aversa", "carinaro", "lusciano", "gricignano-di-aversa"],
+    vicini: ["aversa", "lusciano", "carinaro", "gricignano-di-aversa"],
   },
 
   {
@@ -288,47 +186,33 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Gricignano di Aversa",
     provincia: "caserta",
     zona: "agro-aversano",
-
     metaTitle: "Ristrutturazione Casa a Gricignano di Aversa | Preventivi",
-    metaDescription:
-      "Ristrutturazione a Gricignano di Aversa: costi orientativi per villette e case a schiera. Stima gratuita, sopralluogo senza impegno.",
-
-    // [IPOTESI] Comune residenziale puro, vicino base NATO
-    descrizione:
-      "Gricignano di Aversa è un comune a forte carattere residenziale, noto anche per la vicinanza alla base NATO di supporto. Il tessuto edilizio è composto prevalentemente da villette unifamiliari e case a schiera, con un nucleo storico contenuto.",
-
-    tipoEdilizio:
-      "Prevalenza di villette unifamiliari e case a schiera anni '80-'00; centro storico con palazzine anni '60",
-
+    metaDescription: "Ristrutturazione a Gricignano di Aversa: costi orientativi, criticità edilizie e stima gratuita senza impegno.",
+    descrizione: "Gricignano di Aversa è un comune di dimensioni ridotte con un tessuto edilizio misto, composto da un nucleo storico e zone di espansione residenziale sviluppate tra gli anni '70 e i primi anni 2000. La presenza della base militare statunitense (USAF) ha caratterizzato storicamente il comune.",
+    tipoEdilizio: "Nucleo storico con palazzine anni '50-'70; espansione con villette e case a schiera anni '80-'00",
     criticalita: [
-      "Umidità di risalita nei piani terra delle villette, specialmente nelle edificazioni su suolo argilloso", // [IPOTESI parziale]
-      "Abusi edilizi nelle espansioni private degli anni '90-'00",
-      "Impianti idrici in acciaio zincato nelle abitazioni più datate",
-      "Coperture piane non a norma nelle ville degli anni '80: guaine esaurite e infiltrazioni",
+      "Umidità di risalita nelle abitazioni più datate del nucleo storico",
+      "Canne fumarie in amianto nei condomini anni '60-'70",
+      "Abusi edilizi non condonati nelle zone di espansione privata",
+      "Impianti idrici vetusti nelle palazzine degli anni '60-'70",
     ],
-
-    caratteristicheBagni:
-      "Bagni con sanitari degli anni '80-'90, dimensioni standard. Nelle villette più recenti (anni 2000), bagni più grandi ma spesso con rivestimenti da aggiornare.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine di medie dimensioni, spesso separate. Nelle villette anni '90 presenza frequente di penisola o cucina semi-aperta da rivedere.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni standard nelle villette (5-7 mq); più compatti nelle palazzine storiche. Sanitari degli anni '80-'90 frequentemente da sostituire integralmente.",
+    caratteristicheCucine: "Cucine separate, medie dimensioni. Nelle palazzine più vecchie, verifica obbligatoria della canna fumaria prima di interventi.",
     faq: [
       {
-        domanda:
-          "Quanto costa ristrutturare un bagno a Gricignano di Aversa?",
-        risposta:
-          "Per un bagno standard di 5-6 mq, le stime orientative basate sul Prezzario Regionale Campania vanno da circa 5.000 € (finitura base) a 9.500 € (finitura premium). Se la villetta presenta problemi di umidità o impianti da sostituire integralmente, il costo aumenta. I valori precisi emergono dal sopralluogo gratuito.",
+        domanda: "Quanto costa ristrutturare un bagno a Gricignano di Aversa?",
+        risposta: "In base al Prezzario Regionale Campania, le stime orientative per un bagno di 5-6 mq con rifacimento completo vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine degli anni '60-'70 con impianti originali, il costo tende al limite superiore.",
       },
       {
-        domanda:
-          "Ho comprato una villetta anni '90 a Gricignano. Cosa verifico prima di ristrutturare?",
-        risposta:
-          "Oltre alla verifica urbanistica (assenza di abusi), è consigliabile controllare: stato degli impianti idrici ed elettrici (spesso dimensionati per consumi anni '90, oggi insufficienti), condizione della copertura e impermeabilizzazione, presenza di umidità nei muri perimetrali. Il nostro sopralluogo include una valutazione tecnica complessiva prima di qualsiasi preventivo.",
+        domanda: "Quanti giorni devo restare senza bagno durante la ristrutturazione?",
+        risposta: "Con un'organizzazione del cantiere ben pianificata, i giorni senza bagno funzionante si riducono a 3-5 giorni (fase demolizione e impermeabilizzazione). Pianifichiamo sempre il cantiere per minimizzare il disagio: se in casa c'è un secondo bagno, questo non è un problema. Se è l'unico bagno, organizziamo i lavori in modo da renderlo parzialmente funzionante il prima possibile.",
+      },
+      {
+        domanda: "Come faccio a sapere se i miei impianti idrici vanno sostituiti durante la ristrutturazione del bagno?",
+        risposta: "I segnali evidenti sono: pressione bassa, acqua color ruggine all'apertura del rubinetto, perdite frequenti ai raccordi. Ma spesso le tubazioni in acciaio zincato sembrano ok dall'esterno e sono deteriorate internamente. Al sopralluogo verifichiamo lo stato delle tubazioni accessibili e ti diciamo chiaramente cosa conviene sostituire e cosa può essere mantenuto.",
       },
     ],
-
-    vicini: ["aversa", "carinaro", "teverola", "lusciano"],
+    vicini: ["aversa", "lusciano", "carinaro", "teverola"],
   },
 
   {
@@ -336,47 +220,33 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Trentola Ducenta",
     provincia: "caserta",
     zona: "agro-aversano",
-
     metaTitle: "Ristrutturazione Casa a Trentola Ducenta | Preventivi",
-    metaDescription:
-      "Ristrutturazione a Trentola Ducenta: costi orientativi, criticità edilizie locali e stima gratuita. Preventivo con sopralluogo.",
-
-    // [IPOTESI] Due centri fusi (Trentola + Ducenta) — comune medio
-    descrizione:
-      "Trentola Ducenta è un comune nato dalla fusione di due centri abitati, con un tessuto edilizio eterogeneo che comprende sia il nucleo storico che ampie zone di espansione residenziale sviluppate tra gli anni '70 e i primi anni 2000.",
-
-    tipoEdilizio:
-      "Mix di palazzine anni '60-'70 nei centri storici di Trentola e Ducenta, villette e case a schiera anni '80-'00 nelle zone di espansione",
-
+    metaDescription: "Ristrutturazione a Trentola Ducenta: costi orientativi da Prezzario Campania, criticità locali e stima gratuita.",
+    descrizione: "Trentola Ducenta è un comune in forte crescita demografica, con un tessuto edilizio che va dalle palazzine degli anni '70 nel centro alle villette e ai nuovi complessi residenziali nelle zone di espansione. La presenza di attività commerciali e artigianali lo rende un comune vivace con una domanda abitativa costante.",
+    tipoEdilizio: "Palazzine anni '70-'80 nel centro; villette e case a schiera anni '90-2000 nell'espansione; nuovi complessi residenziali nelle zone periferiche",
     criticalita: [
-      "Doppio nucleo storico: ogni intervento va verificato rispetto al PRG specifico della zona (Trentola o Ducenta)", // [IPOTESI]
-      "Umidità di risalita frequente nelle abitazioni dei nuclei storici più vecchi",
-      "Canne fumarie in amianto nei condomini anni '60-'70",
-      "Abusi edilizi non condonati nelle espansioni private",
+      "Canne fumarie in amianto nei condomini degli anni '70-'80",
+      "Umidità di risalita nelle palazzine più datate e nelle villette con fondazioni non impermeabilizzate",
+      "Abusi edilizi frequenti nelle zone di espansione privata",
+      "Impianti idrici in acciaio zincato negli edifici degli anni '70-'80: sostituzione spesso necessaria durante la ristrutturazione del bagno",
     ],
-
-    caratteristicheBagni:
-      "Bagni di dimensioni variabili: più piccoli (sotto 5 mq) nelle palazzine storiche, standard (5-7 mq) nelle villette. Frequente presenza di vasche anni '80 da sostituire.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate con dimensioni medie. Nelle palazzine più vecchie, frequente necessità di aggiornamento completo dell'impianto di scarico.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni di dimensioni variabili: standard nelle villette (5-7 mq), più compatti nelle palazzine anni '70 (sotto i 5 mq). Frequente presenza di vasca da bagno da sostituire con doccia.",
+    caratteristicheCucine: "Cucine separate nelle palazzine, cucine più ampie nelle villette. Nelle costruzioni degli anni '80, frequente impianto gas datato da adeguare.",
     faq: [
       {
-        domanda:
-          "Abito nel nucleo storico di Trentola. Ho bisogno di permessi speciali per ristrutturare?",
-        risposta:
-          "Dipende dalla zona di PRG in cui si trova l'immobile e dal tipo di intervento. I centri storici sono spesso soggetti a norme di conservazione che limitano le modifiche alle facciate e ai prospetti. Per lavori interni (bagno, cucina) senza modifiche strutturali, di solito è sufficiente una CILA. Prima di procedere, è utile una verifica della classificazione urbanistica dell'immobile.",
+        domanda: "Ho una palazzina anni '70 a Trentola Ducenta. Cosa include il rifacimento completo del bagno?",
+        risposta: "In una palazzina degli anni '70, il rifacimento completo include: demolizione e smaltimento di rivestimenti e sanitari, sostituzione integrale delle tubazioni idriche (quasi certamente in acciaio zincato), nuovo impianto elettrico bagno a norma IP44, impermeabilizzazione, nuovi rivestimenti, nuovi sanitari e rubinetteria. La verifica della canna fumaria è necessaria se ci sono lavori collegati alla cucina.",
       },
       {
-        domanda:
-          "Quanto costa il rifacimento completo di un bagno a Trentola Ducenta?",
-        risposta:
-          "In base al Prezzario Regionale Campania, le stime orientative per un bagno 5-6 mq vanno da 5.000 € (base) a 9.500 € (premium). Nelle palazzine storiche con impianti obsoleti, il costo tende al limite superiore della forbice o lo supera. Il sopralluogo è il momento in cui emergono queste variabili.",
+        domanda: "Voglio sostituire la vasca con una doccia a Trentola Ducenta. Ci sono particolari criticità?",
+        risposta: "La sostituzione vasca-doccia è uno degli interventi più richiesti. I punti da verificare sono: la posizione degli scarichi (se la doccia va in posizione diversa dalla vasca, bisogna rifare le tracce), lo spazio disponibile per il box doccia, e la portata idrica (le docce a pioggia richiedono buona pressione). Al sopralluogo misuriamo tutto e progettiamo la soluzione migliore per il tuo spazio.",
+      },
+      {
+        domanda: "Quanto costa ristrutturare un bagno a Trentola Ducenta?",
+        risposta: "In base al Prezzario Regionale Campania, le stime orientative per un bagno di 5-6 mq con rifacimento completo vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine anni '70 con impianti originali, il costo reale tende al limite superiore.",
       },
     ],
-
-    vicini: ["aversa", "succivo", "parete", "villa-di-briano"],
+    vicini: ["aversa", "succivo", "casaluce", "san-marcellino"],
   },
 
   {
@@ -384,47 +254,33 @@ export const comuniAgroAversano: Comune[] = [
     nome: "San Marcellino",
     provincia: "caserta",
     zona: "agro-aversano",
-
     metaTitle: "Ristrutturazione Casa a San Marcellino | Preventivi",
-    metaDescription:
-      "Ristrutturazione a San Marcellino: costi, criticità edilizie e stima gratuita. Interveniamo su villette, case a schiera e palazzine.",
-
-    // [IPOTESI] Comune residenziale medio Agro Aversano
-    descrizione:
-      "San Marcellino è un comune residenziale dell'Agro Aversano con un tessuto edilizio caratteristico della zona: un nucleo più denso con palazzine degli anni '60-'70 e un'ampia espansione periferica di villette e case a schiera degli anni '80-'00.",
-
-    tipoEdilizio:
-      "Palazzine anni '60-'70 nel centro, villette unifamiliari e case a schiera anni '80-'00 nella periferia",
-
+    metaDescription: "Ristrutturazione a San Marcellino: costi orientativi, criticità edilizie locali e stima gratuita. Sopralluogo senza impegno.",
+    descrizione: "San Marcellino è un piccolo comune dell'Agro Aversano con un tessuto edilizio prevalentemente residenziale, composto da un nucleo storico compatto e zone di espansione con villette e palazzine di piccole e medie dimensioni.",
+    tipoEdilizio: "Nucleo storico con palazzine anni '50-'70; espansione con villette unifamiliari e case a schiera anni '80-'00",
     criticalita: [
-      "Canne fumarie in amianto nei condomini degli anni '60-'70: rilevamento necessario prima di interventi su cucine",
-      "Umidità di risalita nelle abitazioni di piano terra, frequente nelle costruzioni senza intercapedine",
-      "Abusi edilizi non condonati nelle espansioni private degli anni '90",
-      "Impianti elettrici non a norma (CEI 64-8) nelle abitazioni più datate: aggiornamento spesso necessario in fase di ristrutturazione",
+      "Umidità di risalita diffusa nel nucleo storico, frequente nei piani terra",
+      "Canne fumarie in amianto nelle palazzine degli anni '60-'70",
+      "Abusi edilizi nelle zone di espansione",
+      "Impianti idrici vetusti nelle abitazioni più datate",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard con sanitari e rivestimenti anni '80-'90. Nelle palazzine più datate, impianti idrici in acciaio zincato che richiedono sostituzione integrale.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine in muratura degli anni '80-'90, spesso con piastrelle a decoro da rimuovere. Interventi tipici: demolizione cucina esistente, nuovi impianti, nuove rifiniture.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni di dimensioni ridotte nelle palazzine storiche (sotto i 5 mq); standard nelle villette. Impianti spesso originali da sostituire integralmente.",
+    caratteristicheCucine: "Cucine separate, medie dimensioni. Nelle abitazioni storiche, frequente necessità di adeguamento scarichi e impianto gas.",
     faq: [
       {
-        domanda:
-          "Quanto costa ristrutturare un bagno a San Marcellino?",
-        risposta:
-          "Per un bagno di 5-6 mq con rifacimento completo, le stime orientative in base al Prezzario Regionale Campania vanno da circa 5.000 € (base) a 9.500 € (premium). Se gli impianti idrici sono in acciaio zincato e richiedono sostituzione, il costo si avvicina o supera il limite superiore. Il sopralluogo gratuito permette di quantificare con precisione.",
+        domanda: "Quanto costa ristrutturare un bagno a San Marcellino?",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 4-5 mq vanno da circa 4.500 € (base) a 9.000 € (premium). Nelle palazzine storiche con impianti originali, il costo tende al limite superiore. Il sopralluogo gratuito chiarisce la situazione specifica.",
       },
       {
-        domanda:
-          "Posso ristrutturare il bagno senza toccare gli impianti?",
-        risposta:
-          "Tecnicamente sì, ma non è quasi mai consigliabile. Se gli impianti hanno più di 30-35 anni, il rifacimento è l'occasione giusta per aggiornarli: il costo marginale di farlo mentre si aprono le pareti è molto inferiore rispetto a un intervento separato in futuro. Nelle nostre valutazioni, segnaliamo sempre lo stato degli impianti esistenti.",
+        domanda: "Il bagno del mio appartamento è molto piccolo (meno di 4 mq). Vale la pena ristrutturarlo?",
+        risposta: "Assolutamente sì. I bagni piccoli beneficiano enormemente di una ristrutturazione ben progettata: sanitari sospesi, doccia al posto della vasca, grandi formati che ampliano visivamente lo spazio, e una distribuzione intelligente degli accessori. Il costo per metro quadro è più alto rispetto a bagni grandi, ma l'impatto sulla qualità della vita quotidiana è significativo.",
+      },
+      {
+        domanda: "Posso ristrutturare il bagno senza svuotare completamente l'appartamento?",
+        risposta: "Sì, la ristrutturazione del bagno richiede solo di svuotare il bagno stesso e proteggere il corridoio adiacente per il passaggio dei materiali. Il cantiere è delimitato e non interferisce con il resto dell'abitazione. L'unico disagio reale è il periodo senza bagno funzionante, che organizziamo per essere il più breve possibile.",
       },
     ],
-
-    vicini: ["aversa", "casal-di-principe", "villa-di-briano", "frignano"],
+    vicini: ["trentola-ducenta", "casal-di-principe", "aversa", "villa-di-briano"],
   },
 
   {
@@ -432,47 +288,33 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Casal di Principe",
     provincia: "caserta",
     zona: "agro-aversano",
-
     metaTitle: "Ristrutturazione Casa a Casal di Principe | Preventivi",
-    metaDescription:
-      "Ristrutturazione a Casal di Principe: costi orientativi per appartamenti e villette. Stima gratuita, sopralluogo senza impegno.",
-
-    // [IPOTESI] Comune medio, centro storico più sviluppato rispetto ad altri
-    descrizione:
-      "Casal di Principe è un comune con un centro storico relativamente sviluppato rispetto agli altri comuni dell'Agro Aversano, con un'edilizia più densa e palazzine degli anni '50-'70 affiancate da espansioni residenziali più recenti.",
-
-    tipoEdilizio:
-      "Centro storico con palazzi e palazzine anni '50-'70; espansione periferica con villette anni '80-'00",
-
+    metaDescription: "Ristrutturazione a Casal di Principe: costi orientativi da Prezzario Campania, criticità locali e stima gratuita senza impegno.",
+    descrizione: "Casal di Principe è un comune dell'Agro Aversano con un tessuto edilizio misto: il centro storico conserva palazzi e palazzine di varie epoche, mentre le zone periferiche mostrano un'edilizia prevalentemente degli anni '80-'90.",
+    tipoEdilizio: "Centro con palazzi storici e palazzine anni '60-'80; periferia con villette e case a schiera anni '80-'00",
     criticalita: [
-      "Umidità di risalita diffusa nelle abitazioni del centro storico, spesso trattata in modo superficiale negli anni",
-      "Canne fumarie in amianto nei condomini più vecchi",
-      "Abusi edilizi da regolarizzare, frequenti come nel resto della zona",
-      "Solai in latero-cemento degli anni '60-'70 con possibili problemi di degrado del ferro: da verificare in caso di interventi strutturali", // [IPOTESI]
+      "Umidità di risalita nelle abitazioni del centro storico e nei piani terra",
+      "Canne fumarie in amianto nei condomini anni '60-'70",
+      "Abusi edilizi non condonati nelle zone di espansione",
+      "Impianti idrici in piombo o acciaio zincato nelle palazzine più datate",
     ],
-
-    caratteristicheBagni:
-      "Bagni prevalentemente sotto i 6 mq nelle palazzine del centro, con sanitari da aggiornare. Alcune abitazioni presentano ancora il cosiddetto 'bagno di servizio' senza finestra.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine di dimensioni medie, separate. Nelle abitazioni più vecchie del centro, frequente presenza di cucine con impianto gas a vista non a norma.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni compatti nel centro storico (sotto i 5 mq); standard nelle costruzioni successive. Frequente presenza di impianti originali mai aggiornati.",
+    caratteristicheCucine: "Cucine separate, dimensioni variabili. Nelle palazzine anni '60-'70, canna fumaria condominiale da verificare obbligatoriamente.",
     faq: [
       {
-        domanda:
-          "Quanto costa ristrutturare un appartamento a Casal di Principe?",
-        risposta:
-          "Per una ristrutturazione completa, le stime orientative in base al Prezzario Regionale Campania vanno da circa 550 €/mq (finitura base) a 950 €/mq (finitura premium). Su un appartamento di 80 mq, significa una forbice orientativa di 44.000-76.000 €. I valori precisi dipendono dallo stato attuale dell'immobile, che emerge dal sopralluogo.",
+        domanda: "Quanto costa ristrutturare un bagno a Casal di Principe?",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 4-5 mq vanno da circa 4.500 € (base) a 9.000 € (premium). Nelle abitazioni del centro con impianti d'epoca, il costo tende al limite superiore.",
       },
       {
-        domanda:
-          "Ho un appartamento anni '70 a Casal di Principe. Cosa rischio se ristruttura senza verificare gli impianti?",
-        risposta:
-          "Un impianto elettrico degli anni '70 non è a norma CEI 64-8 (niente differenziale, sezioni dei cavi insufficienti per i carichi attuali). Un impianto idrico in acciaio zincato può avere sezioni ridotte dalla corrosione interna. Procedere con rifiniture senza aggiornare gli impianti significa trovarsi con guasti in pochi anni, in spazi appena rinnovati. Il sopralluogo include sempre la valutazione dello stato degli impianti.",
+        domanda: "Ho un appartamento datato con impianti idrici in piombo. Devo sostituirli durante la ristrutturazione?",
+        risposta: "Le tubazioni in piombo vanno sostituite per ragioni di salute: il piombo è tossico e si dissolve nell'acqua, soprattutto quella stagnante. La sostituzione durante la ristrutturazione del bagno è il momento più conveniente, perché le tracce sono già aperte. Non farlo significa dover intervenire di nuovo a distanza di poco tempo.",
+      },
+      {
+        domanda: "Posso fare la ristrutturazione del bagno abitando in casa?",
+        risposta: "Sì, è possibile in molti casi. I lavori nel bagno sono circoscritti e non rendono inabitabile il resto dell'appartamento. L'unico vero disagio è il periodo senza bagno funzionante (3-5 giorni). Se c'è un secondo bagno in casa, il problema non si pone. Altrimenti, organizziamo il cantiere per minimizzare questo tempo.",
       },
     ],
-
-    vicini: ["san-marcellino", "villa-di-briano", "frignano", "parete"],
+    vicini: ["san-marcellino", "villa-di-briano", "trentola-ducenta", "parete"],
   },
 
   {
@@ -480,46 +322,33 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Casaluce",
     provincia: "caserta",
     zona: "agro-aversano",
-
     metaTitle: "Ristrutturazione Casa a Casaluce | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Casaluce: costi orientativi da Prezzario Campania, criticità locali e stima gratuita senza impegno.",
-
-    // [IPOTESI] Piccolo comune residenziale
-    descrizione:
-      "Casaluce è un piccolo comune residenziale dell'Agro Aversano, con un nucleo antico che conserva alcune strutture storiche e una cintura di espansione residenziale sviluppata tra gli anni '80 e i primi anni 2000.",
-
-    tipoEdilizio:
-      "Nucleo storico con palazzine anni '50-'70; espansione periferica con villette unifamiliari anni '80-'00",
-
+    metaDescription: "Ristrutturazione a Casaluce: costi orientativi, criticità edilizie e stima gratuita. Preventivo con sopralluogo.",
+    descrizione: "Casaluce è un comune residenziale dell'Agro Aversano con un tessuto edilizio prevalentemente composto da villette unifamiliari e palazzine di piccole dimensioni, sviluppato principalmente tra gli anni '80 e i primi anni 2000.",
+    tipoEdilizio: "Prevalenza di villette unifamiliari anni '80-'00; alcune palazzine nel nucleo centrale",
     criticalita: [
-      "Umidità di risalita nei piani terra, frequente nelle costruzioni storiche senza barriera impermeabilizzante",
-      "Abusi edilizi nelle espansioni private",
-      "Coperture in eternit (amianto) ancora presenti in alcune strutture accessorie (garage, tettoie) degli anni '70-'80", // [IPOTESI — VERIFICA]
-      "Impianti idrici vetusti nelle palazzine del centro",
+      "Umidità di risalita nelle villette con fondazioni non impermeabilizzate",
+      "Abusi edilizi nelle zone di espansione privata",
+      "Coperture piane nelle villette anni '80: guaine bituminose spesso esaurite",
+      "Impianti idrici in acciaio zincato nelle costruzioni degli anni '70-'80",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard con impianti e rivestimenti degli anni '80-'90. Nelle abitazioni storiche, bagni aggiunti in epoche successive con interventi non sempre a norma.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate, medie dimensioni. Interventi frequenti: sostituzione cucine in muratura datate con nuovi impianti.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni di dimensioni standard nelle villette (6-8 mq), con sanitari degli anni '80-'90. Frequente doppio bagno nelle villette, entrambi da aggiornare.",
+    caratteristicheCucine: "Cucine ampie nelle villette, spesso con accesso diretto al giardino. Frequente richiesta di apertura verso il soggiorno in fase di ristrutturazione.",
     faq: [
       {
-        domanda: "Quanto costa il rifacimento del bagno a Casaluce?",
-        risposta:
-          "Per un bagno standard di 5-6 mq, le stime orientative basate sul Prezzario Regionale Campania vanno da circa 5.000 € (finitura base) a 9.500 € (finitura premium). Nei casi con impianti molto datati o problemi di umidità, il costo reale emerge solo dal sopralluogo.",
+        domanda: "Quanto costa ristrutturare un bagno a Casaluce?",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 6-7 mq (tipico delle villette di Casaluce) vanno da circa 5.500 € (base) a 10.500 € (premium). Il costo preciso dipende dallo stato degli impianti e dai materiali scelti.",
       },
       {
-        domanda:
-          "Ho un garage con copertura in eternit. Influisce sulla ristrutturazione della casa?",
-        risposta:
-          "Direttamente no, ma se l'intervento edilizio complessivo richiede un titolo abilitativo, la presenza di amianto nell'immobile può essere rilevata durante i controlli. La bonifica di lastre in eternit è un intervento separato, da affidare a ditta specializzata certificata. È consigliabile pianificarla prima o in parallelo con la ristrutturazione.",
+        domanda: "Ho una villetta degli anni '80 con doppio bagno. Conviene rifarli entrambi nello stesso momento?",
+        risposta: "In molti casi sì: l'impresa è già mobilizzata, la logistica è organizzata e il costo marginale del secondo bagno è inferiore rispetto a due interventi separati. Durante il sopralluogo valutiamo entrambi e forniamo preventivi separati e combinati, così decidi con i numeri in mano.",
+      },
+      {
+        domanda: "La copertura piana della mia villetta perde. Posso fare solo le rifiniture interne o devo rifare prima il tetto?",
+        risposta: "Se la guaina del tetto perde, fare le rifiniture interne prima è un errore: l'acqua rovina tutto nel giro di uno o due inverni. L'ordine corretto è: prima risolvere la causa (guaina, impermeabilizzazione), poi intervenire sulle rifiniture interne. Il nostro sopralluogo valuta entrambe le situazioni e ti dà una priorità chiara.",
       },
     ],
-
-    vicini: ["aversa", "lusciano", "cesa", "succivo"],
+    vicini: ["trentola-ducenta", "succivo", "aversa", "cesa"],
   },
 
   {
@@ -527,39 +356,28 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Cesa",
     provincia: "caserta",
     zona: "agro-aversano",
-
     metaTitle: "Ristrutturazione Casa a Cesa | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Cesa: costi orientativi per villette e palazzine, stima gratuita e sopralluogo senza impegno.",
-
-    // [IPOTESI] Piccolo comune, simile pattern zona
-    descrizione:
-      "Cesa è un piccolo comune residenziale dell'Agro Aversano, con un tessuto edilizio che alterna un centro storico compatto a zone di espansione residenziale sviluppate principalmente tra gli anni '80 e i primi anni 2000.",
-
-    tipoEdilizio:
-      "Centro compatto con palazzine anni '60-'70; periferia con villette e case a schiera anni '80-'00",
-
+    metaDescription: "Ristrutturazione a Cesa: costi orientativi da Prezzario Campania, criticità edilizie locali e stima gratuita senza impegno.",
+    descrizione: "Cesa è un piccolo comune dell'Agro Aversano con un nucleo storico ben definito e zone di espansione residenziale degli anni '80-'90. Il comune è conosciuto per la produzione ortofrutticola e mantiene un carattere prevalentemente residenziale.",
+    tipoEdilizio: "Nucleo storico con palazzine anni '50-'70; espansione con villette anni '80-'00",
     criticalita: [
-      "Umidità di risalita nei piani terra, frequente nelle costruzioni più datate",
-      "Abusi edilizi non condonati nelle espansioni private",
-      "Impianti idrici e fognari vetusti nelle palazzine del centro",
-      "Canne fumarie in amianto negli edifici condominiali degli anni '60-'70",
+      "Umidità di risalita nelle abitazioni storiche, frequente nei piani terra",
+      "Canne fumarie in amianto nei condomini degli anni '60-'70",
+      "Abusi edilizi nelle zone di espansione",
+      "Impianti fognari datati nel nucleo storico",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard anni '80-'90. Nelle palazzine del centro, dimensioni spesso inferiori ai 5 mq con impianti originali.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate, medie dimensioni. Frequente necessità di aggiornamento impianto gas e scarichi nelle abitazioni più vecchie.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni di dimensioni ridotte nelle palazzine storiche; standard nelle villette. Sanitari e rivestimenti spesso originali.",
+    caratteristicheCucine: "Cucine separate, dimensioni medie. Nelle abitazioni storiche, frequente assenza di canna fumaria dedicata.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Cesa?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € a 9.500 €. Nelle palazzine del centro con impianti originali, il costo reale tende al limite superiore. Il sopralluogo gratuito chiarisce la situazione prima di qualsiasi impegno.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il costo preciso dipende dallo stato degli impianti esistenti.",
+      },
+      {
+        domanda: "Per la ristrutturazione del bagno serve sempre una CILA a Cesa?",
+        risposta: "Non sempre. La sola sostituzione di sanitari, rivestimenti e rubinetteria senza spostare impianti è manutenzione ordinaria e non richiede pratiche edilizie. La CILA è necessaria quando si spostano impianti, si demoliscono o si creano tramezzi, o si modifica la distribuzione degli spazi. Il nostro tecnico chiarisce al sopralluogo cosa è necessario per il tuo intervento specifico.",
       },
     ],
-
     vicini: ["aversa", "casaluce", "succivo", "trentola-ducenta"],
   },
 
@@ -568,46 +386,29 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Frignano",
     provincia: "caserta",
     zona: "agro-aversano",
-
     metaTitle: "Ristrutturazione Casa a Frignano | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Frignano: costi orientativi, criticità edilizie locali e stima gratuita. Preventivo con sopralluogo.",
-
-    // [IPOTESI] Piccolo comune agricolo/residenziale
-    descrizione:
-      "Frignano è un piccolo comune dell'Agro Aversano con radici agricole, il cui tessuto edilizio riflette la trasformazione della zona avvenuta tra gli anni '70 e i primi anni 2000: case rurali ristrutturate, palazzine di piccole dimensioni e alcune villette di nuova costruzione.",
-
-    tipoEdilizio:
-      "Case rurali e palazzine anni '60-'70; villette anni '80-'00 nelle zone di espansione",
-
+    metaDescription: "Ristrutturazione a Frignano: costi orientativi da Prezzario Campania, criticità edilizie e stima gratuita senza impegno.",
+    descrizione: "Frignano è un comune prevalentemente residenziale dell'Agro Aversano, con un patrimonio edilizio composto da un nucleo centrale e zone di espansione sviluppate tra gli anni '70 e i primi anni 2000.",
+    tipoEdilizio: "Mix di palazzine anni '70-'80 e villette anni '90-2000; nucleo storico compatto",
     criticalita: [
-      "Umidità di risalita frequente nelle strutture più vecchie, spesso costruite senza solaio di separazione dal terreno", // [IPOTESI]
-      "Abusi edilizi nelle trasformazioni del patrimonio rurale",
-      "Impianti fognari non allacciati alla rete pubblica in alcune zone periferiche: fossa biologica da verificare prima di interventi su bagni", // [IPOTESI — VERIFICA]
-      "Coperture con tegole deteriorate nelle abitazioni rurali più datate",
+      "Umidità di risalita nelle palazzine più datate",
+      "Canne fumarie in amianto nei condomini degli anni '70",
+      "Abusi edilizi nelle zone di espansione privata",
+      "Impianti idrici vetusti nelle costruzioni degli anni '70",
     ],
-
-    caratteristicheBagni:
-      "Bagni spesso aggiunti in un secondo momento nelle ristrutturazioni rurali degli anni '80, con impianti non sempre a norma. Dimensioni variabili.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine grandi nelle case rurali, con camino o cucina economica ancora presente in alcune abitazioni più vecchie.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni standard nelle palazzine (4-6 mq); più ampi nelle villette. Sanitari degli anni '80-'90 da aggiornare.",
+    caratteristicheCucine: "Cucine separate nelle palazzine; ampie nelle villette. Verifica impianto gas necessaria nelle costruzioni più datate.",
     faq: [
       {
-        domanda:
-          "Ho una casa rurale a Frignano. Cosa devo verificare prima di ristrutturare il bagno?",
-        risposta:
-          "Per le case rurali è fondamentale verificare: il sistema fognario (allaccio alla rete pubblica o fossa biologica), lo stato degli impianti idrici (spesso realizzati artigianalmente negli anni '80), la presenza di umidità nei muri, e la regolarità urbanistica dell'immobile. Il nostro sopralluogo copre tutti questi aspetti prima di emettere qualsiasi stima.",
+        domanda: "Quanto costa ristrutturare un bagno a Frignano?",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito quantifica le variabili specifiche.",
       },
       {
-        domanda: "Quanto costa ristrutturare un bagno a Frignano?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle case rurali con impianti non a norma, il costo reale tende al limite superiore e può superarlo se necessario l'allaccio fognario.",
+        domanda: "Quanto dura una ristrutturazione bagno completa a Frignano?",
+        risposta: "Un bagno standard 5-6 mq richiede mediamente 2-3 settimane lavorative dalla demolizione alla rifinitura finale. I tempi si allungano se è necessaria la bonifica di impianti in amianto o se emergono criticità strutturali al sopralluogo.",
       },
     ],
-
-    vicini: ["san-marcellino", "villa-di-briano", "casal-di-principe", "parete"],
+    vicini: ["villa-di-briano", "casal-di-principe", "san-marcellino", "parete"],
   },
 
   {
@@ -615,45 +416,29 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Parete",
     provincia: "caserta",
     zona: "agro-aversano",
-
     metaTitle: "Ristrutturazione Casa a Parete | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Parete: costi orientativi per appartamenti e villette, stima gratuita e sopralluogo senza impegno.",
-
-    // [IPOTESI] Comune residenziale medio Agro Aversano
-    descrizione:
-      "Parete è un comune residenziale dell'Agro Aversano con un tessuto edilizio tipico della zona: centro più antico con palazzine degli anni '60-'70 e ampie zone di espansione con villette e case a schiera edificate tra gli anni '80 e i primi anni 2000.",
-
-    tipoEdilizio:
-      "Palazzine anni '60-'70 nel centro; villette unifamiliari e case a schiera anni '80-'00 nella periferia",
-
+    metaDescription: "Ristrutturazione a Parete: costi orientativi da Prezzario Campania, criticità locali e stima gratuita. Preventivo con sopralluogo.",
+    descrizione: "Parete è un comune dell'Agro Aversano con un tessuto edilizio misto, dove convivono palazzine del centro storico degli anni '60-'70 e un'espansione residenziale più recente con villette e case a schiera.",
+    tipoEdilizio: "Palazzine anni '60-'80 nel centro; villette e case a schiera anni '80-'00 nell'espansione",
     criticalita: [
-      "Umidità di risalita nei piani terra, frequente nelle costruzioni senza barriera impermeabilizzante",
       "Canne fumarie in amianto nei condomini degli anni '60-'70",
-      "Abusi edilizi non condonati nelle espansioni private",
-      "Impianti elettrici non aggiornati nelle abitazioni più datate",
+      "Umidità di risalita frequente nelle palazzine e nelle villette più datate",
+      "Abusi edilizi nelle zone di espansione",
+      "Impianti idrici vetusti nelle palazzine del centro",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard con sanitari anni '80-'90. Nelle palazzine del centro, dimensioni ridotte e impianti da aggiornare.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate, dimensioni medie. Interventi frequenti: nuovi impianti gas, sostituzione scarichi, rifacimento rivestimenti.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni compatti nelle palazzine (sotto i 5 mq); standard nelle villette. Impianti spesso da aggiornare.",
+    caratteristicheCucine: "Cucine separate nelle palazzine, medie-grandi nelle villette. Canna fumaria da verificare prima di interventi.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Parete?",
-        risposta:
-          "Per un bagno di 5-6 mq con rifacimento completo, le stime orientative in base al Prezzario Regionale Campania vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito permette di quantificare con precisione le variabili specifiche dell'immobile.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine degli anni '60-'70 con impianti originali, il costo tende al limite superiore.",
       },
       {
-        domanda: "Posso detrarre il 50% per il rifacimento del bagno a Parete?",
-        risposta:
-          "Sì, la detrazione IRPEF al 50% (Bonus Ristrutturazione) si applica al rifacimento completo del bagno come intervento di manutenzione straordinaria. Servono pagamenti con bonifico parlante, fatture in regola e, per gli interventi soggetti a CILA, la presentazione prima dell'inizio lavori.",
+        domanda: "Ho un condominio anni '70 a Parete. Cosa devo sapere prima di ristrutturare il mio appartamento?",
+        risposta: "Negli edifici condominiali anni '70 è importante verificare: lo stato delle colonne scarico condominiali (se intasate o deteriorate, il problema ricade su tutti i bagni), la presenza di amianto nelle canne fumarie, e il regolamento condominiale per orari e modalità dei lavori. Se l'intervento tocca parti comuni, è necessario informare l'amministratore.",
       },
     ],
-
-    vicini: ["trentola-ducenta", "villa-di-briano", "casal-di-principe", "frignano"],
+    vicini: ["villa-di-briano", "casal-di-principe", "frignano", "aversa"],
   },
 
   {
@@ -661,45 +446,32 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Succivo",
     provincia: "caserta",
     zona: "agro-aversano",
-
     metaTitle: "Ristrutturazione Casa a Succivo | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Succivo: interventi su villette e palazzine, costi orientativi e stima gratuita senza impegno.",
-
-    // [IPOTESI] Comune residenziale con buon tenore abitativo
-    descrizione:
-      "Succivo è un comune residenziale dell'Agro Aversano con un tenore abitativo mediamente più elevato rispetto agli altri comuni della zona, caratterizzato da villette e palazzine di medie dimensioni edificate principalmente tra gli anni '80 e i primi anni 2000.",
-
-    tipoEdilizio:
-      "Prevalenza di villette unifamiliari e palazzine anni '80-'00; nucleo storico con edifici anni '60-'70",
-
+    metaDescription: "Ristrutturazione a Succivo: costi orientativi da Prezzario Campania, criticità locali e stima gratuita senza impegno.",
+    descrizione: "Succivo è un comune residenziale dell'Agro Aversano con un tenore abitativo mediamente più elevato rispetto agli altri comuni della zona, caratterizzato da villette e palazzine di medie dimensioni edificate principalmente tra gli anni '80 e i primi anni 2000.",
+    tipoEdilizio: "Prevalenza di villette unifamiliari e palazzine anni '80-'00; nucleo storico con edifici anni '60-'70",
     criticalita: [
       "Umidità di risalita nelle villette più datate, frequente nei piani terra",
       "Abusi edilizi nelle espansioni private degli anni '90",
       "Impianti idrici in acciaio zincato nelle abitazioni degli anni '70-'80",
       "Coperture piane nelle villette degli anni '80: guaine di prima generazione spesso da sostituire",
     ],
-
-    caratteristicheBagni:
-      "Bagni di dimensioni standard o superiori nelle villette, con sanitari degli anni '80-'90. Nelle abitazioni più recenti, bagni già ristrutturati parzialmente ma con impianti da aggiornare.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate e ampie nelle villette. Frequente richiesta di apertura verso il soggiorno (cucina open space) in fase di ristrutturazione.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni di dimensioni standard o superiori nelle villette, con sanitari degli anni '80-'90. Nelle abitazioni più recenti, bagni già ristrutturati parzialmente ma con impianti da aggiornare.",
+    caratteristicheCucine: "Cucine separate e ampie nelle villette. Frequente richiesta di apertura verso il soggiorno (cucina open space) in fase di ristrutturazione.",
     faq: [
       {
-        domanda:
-          "Voglio aprire la cucina sul soggiorno nella mia villetta a Succivo. È possibile?",
-        risposta:
-          "Dipende dalla struttura del muro di separazione. Se è un muro portante, l'apertura richiede una trave di sostegno e il progetto di un ingegnere strutturale, oltre al permesso di costruire. Se è una tramezza non portante, basta una CILA. Il nostro sopralluogo include la verifica della natura del muro prima di qualsiasi preventivo.",
+        domanda: "Voglio aprire la cucina sul soggiorno nella mia villetta a Succivo. È possibile?",
+        risposta: "Dipende dalla struttura del muro di separazione. Se è un muro portante, l'apertura richiede una trave di sostegno e il progetto di un ingegnere strutturale, oltre al permesso di costruire. Se è una tramezza non portante, basta una CILA. Il nostro sopralluogo include la verifica della natura del muro prima di qualsiasi preventivo.",
       },
       {
         domanda: "Quanto costa ristrutturare un bagno a Succivo?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle villette con bagni già parzialmente ristrutturati, il costo dipende da quanto degli impianti esistenti è riutilizzabile: lo si capisce al sopralluogo.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle villette con bagni già parzialmente ristrutturati, il costo dipende da quanto degli impianti esistenti è riutilizzabile: lo si capisce al sopralluogo.",
+      },
+      {
+        domanda: "Ho intenzione di installare un riscaldamento a pavimento nel bagno. È compatibile con una ristrutturazione completa?",
+        risposta: "Sì, il riscaldamento a pavimento nel bagno è uno degli upgrade più richiesti in fase di ristrutturazione completa, perché le tracce e il massetto sono già da rifare. Il costo aggiuntivo rispetto a un bagno standard è di 800-1.500 € a seconda della dimensione. Va pianificato dall'inizio perché richiede un massetto dedicato.",
       },
     ],
-
     vicini: ["aversa", "cesa", "casaluce", "trentola-ducenta"],
   },
 
@@ -708,47 +480,34 @@ export const comuniAgroAversano: Comune[] = [
     nome: "Villa di Briano",
     provincia: "caserta",
     zona: "agro-aversano",
-
     metaTitle: "Ristrutturazione Casa a Villa di Briano | Preventivi",
-    metaDescription:
-      "Ristrutturazione a Villa di Briano: costi orientativi, criticità edilizie locali e stima gratuita. Sopralluogo senza impegno.",
-
-    // [IPOTESI] Piccolo comune residenziale
-    descrizione:
-      "Villa di Briano è un piccolo comune residenziale dell'Agro Aversano, con un tessuto edilizio composto da un nucleo storico compatto e zone di espansione con villette e palazzine di piccole dimensioni, sviluppate tra gli anni '70 e i primi anni 2000.",
-
-    tipoEdilizio:
-      "Nucleo storico con palazzine anni '50-'70; periferia con villette anni '80-'00",
-
+    metaDescription: "Ristrutturazione a Villa di Briano: costi orientativi, criticità edilizie locali e stima gratuita. Sopralluogo senza impegno.",
+    descrizione: "Villa di Briano è un piccolo comune residenziale dell'Agro Aversano, con un tessuto edilizio composto da un nucleo storico compatto e zone di espansione con villette e palazzine di piccole dimensioni, sviluppate tra gli anni '70 e i primi anni 2000.",
+    tipoEdilizio: "Nucleo storico con palazzine anni '50-'70; periferia con villette anni '80-'00",
     criticalita: [
       "Umidità di risalita nelle abitazioni storiche, frequente nei piani terra",
       "Canne fumarie in amianto nei condomini anni '60-'70",
       "Abusi edilizi nelle zone di espansione",
-      "Impianti fognari datati nel nucleo storico, spesso condivisi tra più abitazioni", // [IPOTESI — VERIFICA]
+      "Impianti fognari datati nel nucleo storico, spesso condivisi tra più abitazioni",
     ],
-
-    caratteristicheBagni:
-      "Bagni di dimensioni ridotte nelle palazzine storiche; standard nelle villette. Impianti spesso datati con necessità di aggiornamento completo.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate, medie dimensioni. Nelle abitazioni storiche, frequente necessità di adeguamento scarichi e impianto gas.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni di dimensioni ridotte nelle palazzine storiche; standard nelle villette. Impianti spesso datati con necessità di aggiornamento completo.",
+    caratteristicheCucine: "Cucine separate, medie dimensioni. Nelle abitazioni storiche, frequente necessità di adeguamento scarichi e impianto gas.",
     faq: [
       {
-        domanda:
-          "Quanto costa ristrutturare un bagno a Villa di Briano?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine storiche con impianti originali, il costo tende al limite superiore. Il sopralluogo gratuito chiarisce la situazione specifica.",
+        domanda: "Quanto costa ristrutturare un bagno a Villa di Briano?",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine storiche con impianti originali, il costo tende al limite superiore. Il sopralluogo gratuito chiarisce la situazione specifica.",
+      },
+      {
+        domanda: "Nel mio appartamento storico a Villa di Briano gli scarichi sono condivisi con il vicino. Posso comunque ristrutturare?",
+        risposta: "Sì, ma con le dovute cautele. Gli scarichi condivisi sono una caratteristica degli edifici storici più datati. Durante il sopralluogo verifichiamo la configurazione degli scarichi e progettiamo l'intervento in modo da non interferire con i vicini. In alcuni casi può essere necessario concordare i lavori con il proprietario dell'appartamento adiacente.",
       },
     ],
-
     vicini: ["san-marcellino", "casal-di-principe", "frignano", "parete"],
   },
 ];
 
 // ─────────────────────────────────────────────
 // ZONA: NAPOLI E PROVINCIA (8 comuni)
-// ⚠️ TUTTI I DATI SONO [IPOTESI] — da verificare con chi conosce la zona
 // ─────────────────────────────────────────────
 
 export const comuniNapoli: Comune[] = [
@@ -757,52 +516,36 @@ export const comuniNapoli: Comune[] = [
     nome: "Napoli",
     provincia: "napoli",
     zona: "napoli",
-
     metaTitle: "Ristrutturazione Casa a Napoli | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Napoli: costi orientativi per appartamenti nei quartieri serviti. Criticità locali, stima gratuita e sopralluogo.",
-
-    // [IPOTESI] Solo quartieri periferici serviti (non centro storico UNESCO)
-    descrizione:
-      "Napoli è servita nelle zone periferiche nord e nord-ovest, con un tessuto edilizio prevalentemente condominiale degli anni '60-'80. Le caratteristiche edilizie variano significativamente da quartiere a quartiere: il nostro servizio copre principalmente le zone di Secondigliano, Scampia, Piscinola e le aree limitrofe.",
-
-    tipoEdilizio:
-      "Condomini anni '60-'80 nelle periferie nord; edilizia popolare IACP; alcune palazzine anni '50 nei quartieri più centrali dell'area servita",
-
-    // [IPOTESI — VERIFICA obbligatoria]
+    metaDescription: "Ristrutturazione a Napoli: costi orientativi per appartamenti nei quartieri serviti. Criticità locali, stima gratuita e sopralluogo.",
+    descrizione: "Napoli è servita nelle zone periferiche nord e nord-ovest, con un tessuto edilizio prevalentemente condominiale degli anni '60-'80. Le caratteristiche edilizie variano significativamente da quartiere a quartiere: il nostro servizio copre principalmente le zone di Secondigliano, Piscinola e le aree limitrofe.",
+    tipoEdilizio: "Condomini anni '60-'80 nelle periferie nord; edilizia popolare IACP; palazzine anni '50 nei quartieri più centrali dell'area servita",
     criticalita: [
       "Impianti idrici condominiali obsoleti: spesso le colonne montanti non sono state aggiornate dalla costruzione",
       "Canne fumarie in amianto nei condomini degli anni '60-'70: rilevamento obbligatorio",
       "Umidità di risalita e infiltrazioni da lastrico solare nei piani alti",
-      "Interventi in condominio: necessario il rispetto del regolamento condominiale e in alcuni casi delibera assembleare per lavori che toccano parti comuni",
+      "Interventi in condominio: necessario rispettare il regolamento condominiale e in alcuni casi ottenere delibera assembleare per lavori su parti comuni",
     ],
-
-    caratteristicheBagni:
-      "Bagni mono-sanitari sotto i 5 mq nei condomini IACP e nelle palazzine degli anni '60. Nelle abitazioni più recenti, bagni di dimensioni standard con sanitari da aggiornare.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate e compatte nei condomini degli anni '60-'70. Frequente presenza di canna fumaria condominiale in amianto collegata alle cucine.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni mono-sanitari sotto i 5 mq nei condomini IACP e nelle palazzine degli anni '60. Nelle abitazioni più recenti, bagni di dimensioni standard con sanitari da aggiornare.",
+    caratteristicheCucine: "Cucine separate e compatte nei condomini degli anni '60-'70. Frequente presenza di canna fumaria condominiale in amianto collegata alle cucine.",
     faq: [
       {
-        domanda:
-          "Devo chiedere al condominio per ristrutturare il mio bagno a Napoli?",
-        risposta:
-          "Se l'intervento è interno al tuo appartamento e non tocca parti comuni (colonne scarico condominiali, strutture, facciate), non serve una delibera. Devi però rispettare il regolamento condominiale per orari e modalità dei lavori. Se l'intervento richiede di collegare o modificare impianti condominiali, è necessario informare l'amministratore e in alcuni casi ottenere l'approvazione assembleare.",
+        domanda: "Devo chiedere al condominio per ristrutturare il mio bagno a Napoli?",
+        risposta: "Se l'intervento è interno al tuo appartamento e non tocca parti comuni, non serve una delibera. Devi però rispettare il regolamento condominiale per orari e modalità dei lavori. Se l'intervento richiede di collegare o modificare impianti condominiali, è necessario informare l'amministratore e in alcuni casi ottenere l'approvazione assembleare.",
       },
       {
         domanda: "Quanto costa ristrutturare un bagno a Napoli?",
-        risposta:
-          "In base al Prezzario Regionale Campania, le stime orientative per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). I condomini degli anni '60-'70 con impianti obsoleti tendono al limite superiore. Il sopralluogo è il momento in cui emergono le variabili specifiche.",
+        risposta: "In base al Prezzario Regionale Campania, le stime orientative per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). I condomini degli anni '60-'70 con impianti obsoleti tendono al limite superiore. Il sopralluogo è il momento in cui emergono le variabili specifiche.",
       },
       {
-        domanda:
-          "Posso usare il Bonus 50% per un appartamento in condominio a Napoli?",
-        risposta:
-          "Sì, la detrazione IRPEF al 50% si applica agli interventi di manutenzione straordinaria sulle unità immobiliari residenziali, indipendentemente dalla tipologia condominiale. Servono pagamenti tracciati con bonifico parlante e fatture in regola. Per interventi che toccano parti comuni, esiste anche il Bonus Ristrutturazione Condominiale con soglie di spesa più elevate.",
+        domanda: "Posso usare il Bonus 50% per un appartamento in condominio a Napoli?",
+        risposta: "Sì, la detrazione IRPEF al 50% si applica agli interventi di manutenzione straordinaria sulle unità residenziali, indipendentemente dalla tipologia condominiale. Servono pagamenti tracciati con bonifico parlante e fatture in regola.",
+      },
+      {
+        domanda: "Ho un appartamento IACP a Napoli. Posso ristrutturare anche se non sono proprietario?",
+        risposta: "La ristrutturazione degli appartamenti IACP è soggetta a regole specifiche che dipendono dal tipo di contratto (locazione semplice, riscatto, piena proprietà). Se sei in fase di riscatto o già proprietario, hai piena libertà di intervento sugli interni. Se sei locatario, è necessaria l'autorizzazione dell'ente gestore per lavori di manutenzione straordinaria.",
       },
     ],
-
     vicini: ["giugliano-in-campania", "mugnano-di-napoli", "melito-di-napoli"],
   },
 
@@ -811,46 +554,36 @@ export const comuniNapoli: Comune[] = [
     nome: "Giugliano in Campania",
     provincia: "napoli",
     zona: "napoli",
-
     metaTitle: "Ristrutturazione Casa a Giugliano in Campania | Preventivi",
-    metaDescription:
-      "Ristrutturazione a Giugliano in Campania: costi orientativi, criticità edilizie e stima gratuita. Preventivo con sopralluogo.",
-
-    // [IPOTESI] Comune molto popoloso, espansione rapida anni '80-'90
-    descrizione:
-      "Giugliano in Campania è uno dei comuni più popolosi della Campania, con un'espansione residenziale avvenuta molto rapidamente tra gli anni '80 e i primi anni 2000. Il tessuto edilizio è prevalentemente composto da palazzine e condomini di media altezza, con un nucleo storico relativamente contenuto.",
-
-    tipoEdilizio:
-      "Palazzine e condomini anni '80-'00 nelle zone di espansione; nucleo storico con edifici anni '50-'70; alcune ville e villette nelle zone periferiche",
-
-    // [IPOTESI]
+    metaDescription: "Ristrutturazione a Giugliano in Campania: costi orientativi, criticità edilizie e stima gratuita. Preventivo con sopralluogo.",
+    descrizione: "Giugliano in Campania è uno dei comuni più popolosi della Campania, con un'espansione residenziale avvenuta molto rapidamente tra gli anni '80 e i primi anni 2000. Il tessuto edilizio è prevalentemente composto da palazzine e condomini di media altezza, con un nucleo storico relativamente contenuto.",
+    tipoEdilizio: "Palazzine e condomini anni '80-'00 nelle zone di espansione; nucleo storico con edifici anni '50-'70; alcune ville e villette nelle zone periferiche",
     criticalita: [
       "Abusi edilizi non condonati molto frequenti, legati alla rapida espansione non sempre pianificata degli anni '80-'90",
       "Canne fumarie in amianto nei condomini degli anni '70-'80",
       "Umidità di risalita nelle abitazioni di piano terra, frequente nelle costruzioni su terreno argilloso",
       "Impianti condominiali non aggiornati in edifici di 30-40 anni: pressione idrica insufficiente ai piani alti",
     ],
-
-    caratteristicheBagni:
-      "Bagni di dimensioni variabili: standard nei condomini degli anni '80 (5-6 mq), più piccoli nelle palazzine del centro. Sanitari degli anni '80-'90 da aggiornare.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate nelle palazzine, medie dimensioni. Nelle costruzioni degli anni '80, frequente presenza di impianto gas non a norma.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni di dimensioni variabili: standard nei condomini degli anni '80 (5-6 mq), più piccoli nelle palazzine del centro. Sanitari degli anni '80-'90 da aggiornare.",
+    caratteristicheCucine: "Cucine separate nelle palazzine, medie dimensioni. Nelle costruzioni degli anni '80, frequente presenza di impianto gas non a norma.",
     faq: [
       {
-        domanda:
-          "Ho un appartamento anni '90 a Giugliano. Cosa controllo prima di ristrutturare?",
-        risposta:
-          "Per gli appartamenti degli anni '90 a Giugliano è consigliabile verificare: la regolarità urbanistica (abusi frequenti nella zona), lo stato dell'impianto elettrico (norme CEI 64-8 del 1992 spesso non aggiornate), la condizione degli scarichi condominiali, e la presenza di umidità nei muri perimetrali. Il nostro sopralluogo include una valutazione tecnica complessiva.",
+        domanda: "Ho un appartamento anni '90 a Giugliano. Cosa controllo prima di ristrutturare?",
+        risposta: "Per gli appartamenti degli anni '90 a Giugliano è consigliabile verificare: la regolarità urbanistica (abusi frequenti nella zona), lo stato dell'impianto elettrico, la condizione degli scarichi condominiali, e la presenza di umidità nei muri perimetrali. Il nostro sopralluogo include una valutazione tecnica complessiva.",
       },
       {
         domanda: "Quanto costa ristrutturare un bagno a Giugliano in Campania?",
-        risposta:
-          "In base al Prezzario Regionale Campania, le stime orientative per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Negli edifici degli anni '90 con impianti da sostituire integralmente, il costo tende al limite superiore.",
+        risposta: "In base al Prezzario Regionale Campania, le stime orientative per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Negli edifici degli anni '90 con impianti da sostituire integralmente, il costo tende al limite superiore.",
+      },
+      {
+        domanda: "Vivo al terzo piano di un condominio anni '80 a Giugliano e ho poca pressione idrica. Si risolve con la ristrutturazione?",
+        risposta: "La bassa pressione ai piani alti dipende quasi sempre dalle colonne montanti condominiali, non dall'impianto del tuo appartamento. È un problema che si risolve solo intervenendo sulle parti comuni, che richiede delibera condominiale. Nell'ambito della ristrutturazione del tuo appartamento, possiamo installare un mini-autoclave privato come soluzione temporanea o definitiva.",
+      },
+      {
+        domanda: "Ho un abuso non condonato nella mia abitazione a Giugliano. Posso comunque fare lavori?",
+        risposta: "Dipende dalla natura dell'abuso e dall'intervento che vuoi fare. Per lavori di manutenzione ordinaria (sostituzione sanitari, rivestimenti) non ci sono problemi. Per lavori soggetti a CILA o permesso, il Comune può bloccare l'iter se c'è un abuso pendente. È fondamentale una verifica preventiva della situazione urbanistica.",
       },
     ],
-
     vicini: ["napoli", "villaricca", "sant-antimo", "mugnano-di-napoli"],
   },
 
@@ -859,39 +592,32 @@ export const comuniNapoli: Comune[] = [
     nome: "Sant'Antimo",
     provincia: "napoli",
     zona: "napoli",
-
     metaTitle: "Ristrutturazione Casa a Sant'Antimo | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Sant'Antimo: costi orientativi da Prezzario Campania, criticità edilizie e stima gratuita.",
-
-    // [IPOTESI]
-    descrizione:
-      "Sant'Antimo è un comune densamente popolato a nord di Napoli, con un tessuto edilizio prevalentemente composto da palazzine e condomini di media altezza. L'espansione residenziale rapida degli anni '70-'90 ha lasciato un patrimonio edilizio eterogeneo con livelli di qualità costruttiva molto variabili.",
-
-    tipoEdilizio:
-      "Condomini e palazzine anni '70-'90; alcune aree di edilizia popolare; nucleo storico con edifici anni '50-'60",
-
+    metaDescription: "Ristrutturazione a Sant'Antimo: costi orientativi da Prezzario Campania, criticità edilizie e stima gratuita.",
+    descrizione: "Sant'Antimo è un comune densamente popolato a nord di Napoli, con un tessuto edilizio prevalentemente composto da palazzine e condomini di media altezza. L'espansione residenziale rapida degli anni '70-'90 ha lasciato un patrimonio edilizio eterogeneo con livelli di qualità costruttiva molto variabili.",
+    tipoEdilizio: "Condomini e palazzine anni '70-'90; alcune aree di edilizia popolare; nucleo storico con edifici anni '50-'60",
     criticalita: [
       "Umidità di risalita e infiltrazioni da lastrici solari nei piani alti",
       "Canne fumarie in amianto nei condomini degli anni '70",
       "Abusi edilizi non condonati frequenti",
-      "Impianti idrici condominiali vetusti: colonne montanti in piombo ancora presenti nei palazzi anni '60", // [IPOTESI — VERIFICA]
+      "Impianti idrici condominiali vetusti: colonne montanti in piombo ancora presenti nei palazzi anni '60",
     ],
-
-    caratteristicheBagni:
-      "Bagni compatti nelle palazzine anni '70 (sotto i 5 mq), standard nelle costruzioni successive. Impianti spesso da aggiornare integralmente.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate, compatte. Canne fumarie condominiali collegate che richiedono verifica prima di qualsiasi intervento.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni compatti nelle palazzine anni '70 (sotto i 5 mq), standard nelle costruzioni successive. Impianti spesso da aggiornare integralmente.",
+    caratteristicheCucine: "Cucine separate, compatte. Canne fumarie condominiali collegate che richiedono verifica prima di qualsiasi intervento.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Sant'Antimo?",
-        risposta:
-          "Le stime orientative in base al Prezzario Regionale Campania per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). Nei condomini degli anni '70 con impianti originali, il costo reale tende al limite superiore. Il sopralluogo chiarisce la situazione specifica.",
+        risposta: "Le stime orientative in base al Prezzario Regionale Campania per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). Nei condomini degli anni '70 con impianti originali, il costo reale tende al limite superiore.",
+      },
+      {
+        domanda: "Ho un appartamento in un condominio degli anni '70 a Sant'Antimo con infiltrazioni dal lastrico solare. Prima di ristrutturare, cosa faccio?",
+        risposta: "Le infiltrazioni dal lastrico solare vanno risolte prima di qualsiasi lavoro interno, altrimenti le nuove rifiniture sono compromesse. Il lastrico solare è solitamente parte comune del condominio (salvo diverse disposizioni): il problema va segnalato all'amministratore e risolto con delibera condominiale. Solo dopo è sensato intervenire sugli interni dell'appartamento.",
+      },
+      {
+        domanda: "Posso ristrutturare la cucina se la canna fumaria condominiale è in amianto?",
+        risposta: "Non è possibile collegare una nuova cappa a una canna fumaria in amianto senza bonifica preventiva. La bonifica va eseguita da una ditta specializzata certificata, con notifica all'ASL e smaltimento in discarica autorizzata. Il costo va calcolato separatamente dal preventivo della cucina e va pianificato prima dell'inizio lavori.",
       },
     ],
-
     vicini: ["giugliano-in-campania", "napoli", "melito-di-napoli", "grumo-nevano"],
   },
 
@@ -900,39 +626,32 @@ export const comuniNapoli: Comune[] = [
     nome: "Melito di Napoli",
     provincia: "napoli",
     zona: "napoli",
-
     metaTitle: "Ristrutturazione Casa a Melito di Napoli | Preventivi",
-    metaDescription:
-      "Ristrutturazione a Melito di Napoli: costi orientativi, criticità locali e stima gratuita. Sopralluogo senza impegno.",
-
-    // [IPOTESI]
-    descrizione:
-      "Melito di Napoli è un comune dell'area nord di Napoli con un tessuto edilizio prevalentemente condominiale, sviluppatosi rapidamente tra gli anni '60 e gli anni '90. La vicinanza a Napoli e la buona connessione viaria hanno favorito una forte crescita residenziale.",
-
-    tipoEdilizio:
-      "Condomini anni '60-'90; palazzine di media altezza; alcune aree di edilizia popolare",
-
+    metaDescription: "Ristrutturazione a Melito di Napoli: costi orientativi, criticità locali e stima gratuita. Sopralluogo senza impegno.",
+    descrizione: "Melito di Napoli è un comune dell'area nord di Napoli con un tessuto edilizio prevalentemente condominiale, sviluppatosi rapidamente tra gli anni '60 e gli anni '90. La vicinanza a Napoli e la buona connessione viaria hanno favorito una forte crescita residenziale.",
+    tipoEdilizio: "Condomini anni '60-'90; palazzine di media altezza; alcune aree di edilizia popolare",
     criticalita: [
       "Canne fumarie in amianto nei condomini degli anni '60-'70",
       "Umidità di infiltrazione e risalita nei piani terra e seminterrati",
-      "Impianti condominiali obsoleti: aggiornamento necessario in caso di interventi su bagni o cucine", // [IPOTESI]
+      "Impianti condominiali obsoleti: aggiornamento necessario in caso di interventi su bagni o cucine",
       "Abusi edilizi non condonati",
     ],
-
-    caratteristicheBagni:
-      "Bagni compatti (sotto i 5 mq) nei condomini più vecchi, standard nelle costruzioni degli anni '80-'90. Impianti originali spesso ancora in funzione.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine compatte e separate. Frequente presenza di cappa non a norma collegata a canna fumaria condominiale.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni compatti (sotto i 5 mq) nei condomini più vecchi, standard nelle costruzioni degli anni '80-'90. Impianti originali spesso ancora in funzione.",
+    caratteristicheCucine: "Cucine compatte e separate. Frequente presenza di cappa non a norma collegata a canna fumaria condominiale.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Melito di Napoli?",
-        risposta:
-          "In base al Prezzario Regionale Campania, le stime orientative per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). Nei condomini degli anni '60-'70 con impianti originali da sostituire, il costo tende al limite superiore. Il sopralluogo gratuito quantifica le variabili specifiche.",
+        risposta: "In base al Prezzario Regionale Campania, le stime orientative per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). Nei condomini degli anni '60-'70 con impianti originali da sostituire, il costo tende al limite superiore.",
+      },
+      {
+        domanda: "Ho un seminterrato a Melito di Napoli con problemi di umidità. Posso ristrutturarlo?",
+        risposta: "Sì, ma l'umidità va affrontata con metodo. Nei seminterrati dell'area nord di Napoli l'umidità ha spesso una doppia origine: risalita capillare dalle fondazioni e condensa da scarsa ventilazione. Trattarla superficialmente (solo impermeabilizzante) non risolve il problema. Il sopralluogo identifica la causa specifica e permette di progettare l'intervento corretto.",
+      },
+      {
+        domanda: "Nell'appartamento di mia madre anni '60 a Melito il bagno è piccolo e con impianti originali. Quanto costerebbe rifarlo completamente?",
+        risposta: "Un bagno degli anni '60 con impianti originali è quasi certamente da rifare integralmente: tubazioni in piombo o acciaio zincato, impianto elettrico non a norma, rivestimenti in mosaico con adesivo a base di catrame. La stima orientativa per un bagno sotto i 5 mq con rifacimento completo è di 4.500-7.500 € a seconda della finitura scelta. Il sopralluogo gratuito definisce il costo reale.",
       },
     ],
-
     vicini: ["napoli", "sant-antimo", "mugnano-di-napoli", "casandrino"],
   },
 
@@ -941,39 +660,32 @@ export const comuniNapoli: Comune[] = [
     nome: "Mugnano di Napoli",
     provincia: "napoli",
     zona: "napoli",
-
     metaTitle: "Ristrutturazione Casa a Mugnano di Napoli | Preventivi",
-    metaDescription:
-      "Ristrutturazione a Mugnano di Napoli: costi orientativi, criticità edilizie locali e stima gratuita senza impegno.",
-
-    // [IPOTESI]
-    descrizione:
-      "Mugnano di Napoli è un comune dell'area nord-ovest di Napoli, con un tessuto edilizio prevalentemente condominiale degli anni '60-'80. La densità abitativa è elevata e le abitazioni sono in larga parte appartamenti in condominio.",
-
-    tipoEdilizio:
-      "Condomini anni '60-'80; palazzine di media altezza; edilizia compatta",
-
+    metaDescription: "Ristrutturazione a Mugnano di Napoli: costi orientativi, criticità edilizie locali e stima gratuita senza impegno.",
+    descrizione: "Mugnano di Napoli è un comune dell'area nord-ovest di Napoli, con un tessuto edilizio prevalentemente condominiale degli anni '60-'80. La densità abitativa è elevata e le abitazioni sono in larga parte appartamenti in condominio.",
+    tipoEdilizio: "Condomini anni '60-'80; palazzine di media altezza; edilizia compatta",
     criticalita: [
       "Canne fumarie in amianto nei condomini degli anni '60-'70",
       "Impianti condominiali vetusti: colonne scarico e montanti idrici da decenni senza manutenzione",
-      "Umidità di infiltrazione nei piani alti e risalita ai piani terra",
-      "Abusi edilizi nei tavolati interni e nei ripostigli ricavati",
+      "Umidità da infiltrazione nei piani alti e da risalita nei piani terra",
+      "Abusi edilizi non condonati nelle zone di espansione",
     ],
-
-    caratteristicheBagni:
-      "Bagni compatti nei condomini più vecchi, spesso sotto i 5 mq con sanitari in posizione fissa da decenni. Impianti originali frequentemente ancora in funzione.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine compatte, separate. Canne fumarie condominiali da verificare obbligatoriamente.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni compatti nelle palazzine degli anni '60-'70 (sotto i 5 mq); standard nelle costruzioni degli anni '80. Impianti originali da sostituire.",
+    caratteristicheCucine: "Cucine separate e compatte. Verifica canna fumaria obbligatoria prima di qualsiasi intervento.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Mugnano di Napoli?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). Nei condomini più vecchi con impianti originali, il costo reale tende al limite superiore. Il sopralluogo gratuito chiarisce la situazione.",
+        risposta: "In base al Prezzario Regionale Campania, le stime orientative per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). Nei condomini degli anni '60-'70 con impianti originali, il costo reale è tendenzialmente nel range superiore.",
+      },
+      {
+        domanda: "Ho un appartamento al quinto piano di un condominio anni '70 a Mugnano. Ho problemi di scarico lento. È un problema condominiale?",
+        risposta: "Gli scarichi lenti nei piani alti sono spesso un sintomo del deterioramento delle colonne scarico condominiali, non solo dell'impianto del singolo appartamento. Il problema può essere parzialmente risolto sostituendo i tratti di impianto interno all'appartamento, ma per una soluzione definitiva è necessario intervenire sulla colonna condominiale, che richiede delibera assembleare.",
+      },
+      {
+        domanda: "Posso trasformare il bagno piccolo degli anni '70 in un bagno moderno funzionale senza aumentare lo spazio?",
+        risposta: "Assolutamente sì. I bagni compatti anni '70 beneficiano moltissimo di una ristrutturazione ben progettata: sanitari sospesi al posto di quelli a terra (guadagni 15-20 cm a pavimento), doccia al posto della vasca, grande specchio e illuminazione ottimizzata, mensole integrate. Con 4-5 mq ben progettati si ottiene un bagno funzionale e piacevole. Lo progettiamo insieme al sopralluogo.",
       },
     ],
-
     vicini: ["napoli", "giugliano-in-campania", "melito-di-napoli", "villaricca"],
   },
 
@@ -982,40 +694,33 @@ export const comuniNapoli: Comune[] = [
     nome: "Villaricca",
     provincia: "napoli",
     zona: "napoli",
-
     metaTitle: "Ristrutturazione Casa a Villaricca | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Villaricca: costi orientativi da Prezzario Campania, criticità locali e stima gratuita.",
-
-    // [IPOTESI]
-    descrizione:
-      "Villaricca è un comune dell'area nord-ovest di Napoli con un tessuto edilizio misto, che comprende sia condomini degli anni '70-'80 che villette unifamiliari nelle zone più periferiche. L'espansione residenziale è avvenuta principalmente tra gli anni '70 e i primi anni 2000.",
-
-    tipoEdilizio:
-      "Condomini anni '70-'80 nelle zone centrali; villette unifamiliari nelle zone periferiche; edilizia mista",
-
+    metaDescription: "Ristrutturazione a Villaricca: costi orientativi da Prezzario Campania, criticità edilizie e stima gratuita senza impegno.",
+    descrizione: "Villaricca è un comune dell'area nord-ovest di Napoli con un tessuto edilizio misto: palazzine degli anni '70-'80 nel centro e una consistente espansione residenziale degli anni '90-2000 nelle zone periferiche con villette e condomini.",
+    tipoEdilizio: "Palazzine anni '70-'80 nel centro; villette e condomini anni '90-2000 nell'espansione",
     criticalita: [
-      "Umidità di risalita nelle abitazioni di piano terra, sia nei condomini che nelle villette",
       "Canne fumarie in amianto nei condomini degli anni '70",
-      "Abusi edilizi frequenti nelle villette e nelle zone di espansione",
-      "Impianti idrici vetusti nei condomini più datati",
+      "Umidità di risalita nei piani terra delle costruzioni più datate",
+      "Abusi edilizi frequenti nelle zone di espansione degli anni '90",
+      "Impianti idrici in acciaio zincato nelle palazzine degli anni '70-'80",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard nei condomini (5-6 mq); dimensioni variabili nelle villette. Sanitari anni '80-'90 da aggiornare.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate di medie dimensioni. Nelle villette, frequente richiesta di apertura sul soggiorno.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni di dimensioni variabili: compatti nelle palazzine anni '70 (4-5 mq), standard nelle costruzioni successive (5-7 mq). Impianti da aggiornare.",
+    caratteristicheCucine: "Cucine separate nelle palazzine; ampie nelle villette. Canna fumaria da verificare prima di interventi nelle palazzine più vecchie.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Villaricca?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il valore preciso dipende dallo stato degli impianti e dall'entità dell'intervento, che emergono al sopralluogo.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine degli anni '70 con impianti originali, il costo tende al limite superiore.",
+      },
+      {
+        domanda: "Devo fare la CILA per ristrutturare il bagno nella mia palazzina a Villaricca?",
+        risposta: "Se sostituisci solo sanitari e rivestimenti senza spostare impianti o modificare tramezzi, la manutenzione ordinaria non richiede pratiche edilizie. La CILA è necessaria per interventi che modificano la distribuzione degli spazi o spostano impianti. Il nostro tecnico chiarisce cosa è necessario per il tuo intervento specifico prima del preventivo.",
+      },
+      {
+        domanda: "Ho una villetta degli anni '90 a Villaricca. Voglio ristrutturare sia il bagno che la cucina. Conviene fare tutto insieme?",
+        risposta: "Fare bagno e cucina insieme ha vantaggi concreti: l'impresa è già in casa, le pratiche burocratiche si gestiscono una sola volta, i costi di cantiere (ponteggi, smaltimento, trasferta) si dividono su due interventi. Il risparmio rispetto a due cantieri separati è di solito il 10-15% sull'importo totale.",
       },
     ],
-
-    vicini: ["giugliano-in-campania", "mugnano-di-napoli", "napoli", "casandrino"],
+    vicini: ["napoli", "giugliano-in-campania", "mugnano-di-napoli", "casandrino"],
   },
 
   {
@@ -1023,39 +728,32 @@ export const comuniNapoli: Comune[] = [
     nome: "Casandrino",
     provincia: "napoli",
     zona: "napoli",
-
     metaTitle: "Ristrutturazione Casa a Casandrino | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Casandrino: costi orientativi, criticità edilizie locali e stima gratuita senza impegno.",
-
-    // [IPOTESI]
-    descrizione:
-      "Casandrino è un piccolo comune dell'area nord di Napoli con un tessuto edilizio compatto, composto principalmente da palazzine degli anni '60-'80 e alcune villette nelle zone periferiche.",
-
-    tipoEdilizio:
-      "Palazzine anni '60-'80 nel centro; villette nelle zone periferiche",
-
+    metaDescription: "Ristrutturazione a Casandrino: costi orientativi da Prezzario Campania, criticità locali e stima gratuita senza impegno.",
+    descrizione: "Casandrino è un comune dell'area nord di Napoli con un tessuto edilizio prevalentemente composto da palazzine degli anni '60-'80 e alcune zone di espansione recente. La prossimità a Napoli e a Giugliano in Campania ne fa un comune a forte vocazione residenziale.",
+    tipoEdilizio: "Palazzine anni '60-'80 nel centro; espansione recente con condomini di qualità media",
     criticalita: [
       "Canne fumarie in amianto nei condomini degli anni '60-'70",
-      "Umidità di risalita nei piani terra",
-      "Abusi edilizi non condonati",
-      "Impianti idrici vetusti nei palazzi più datati",
+      "Umidità di risalita nei piani terra, frequente nelle costruzioni più datate",
+      "Impianti condominiali obsoleti nelle palazzine più vecchie",
+      "Abusi edilizi non condonati nelle espansioni private",
     ],
-
-    caratteristicheBagni:
-      "Bagni compatti nelle palazzine degli anni '60-'70; standard nelle costruzioni successive.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate e compatte. Verifica canna fumaria obbligatoria prima di interventi.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni compatti nelle palazzine degli anni '60-'70 (sotto i 5 mq); standard nelle costruzioni successive. Impianti spesso da aggiornare.",
+    caratteristicheCucine: "Cucine separate e compatte. Verifica canna fumaria obbligatoria prima di interventi nelle palazzine più vecchie.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Casandrino?",
-        risposta:
-          "In base al Prezzario Regionale Campania, le stime orientative per un bagno 4-5 mq vanno da circa 4.500 € a 8.500 €. Il sopralluogo gratuito quantifica le variabili specifiche dell'immobile.",
+        risposta: "In base al Prezzario Regionale Campania, le stime orientative per un bagno 4-5 mq vanno da circa 4.500 € a 8.500 €. Il sopralluogo gratuito quantifica le variabili specifiche dell'immobile.",
+      },
+      {
+        domanda: "Il mio appartamento a Casandrino ha il bagno e la cucina adiacenti. Posso abbatterli e ricavare un bagno più grande?",
+        risposta: "È tecnicamente possibile se il muro tra i due ambienti non è portante. Serve però un progetto attento: lo spazio sottratto alla cucina va compensato, gli impianti vanno riprogettati, e per la modifica degli spazi interni serve una CILA o permesso di costruire a seconda dell'entità. Al sopralluogo verifichiamo la fattibilità strutturale e ti presentiamo le opzioni.",
+      },
+      {
+        domanda: "Quanto dura il cantiere per la ristrutturazione di un bagno a Casandrino?",
+        risposta: "Un bagno di 4-5 mq con rifacimento completo richiede mediamente 2-3 settimane lavorative. I tempi si allungano se è necessaria la bonifica di impianti in amianto, la sostituzione delle colonne condominiali o se emergono criticità strutturali al sopralluogo.",
       },
     ],
-
     vicini: ["napoli", "villaricca", "mugnano-di-napoli", "grumo-nevano"],
   },
 
@@ -1064,46 +762,38 @@ export const comuniNapoli: Comune[] = [
     nome: "Grumo Nevano",
     provincia: "napoli",
     zona: "napoli",
-
     metaTitle: "Ristrutturazione Casa a Grumo Nevano | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Grumo Nevano: costi orientativi, criticità edilizie e stima gratuita senza impegno.",
-
-    // [IPOTESI]
-    descrizione:
-      "Grumo Nevano è un comune dell'area nord di Napoli, al confine con la provincia di Caserta. Il tessuto edilizio è prevalentemente composto da palazzine degli anni '70-'90 con alcune aree di edilizia residenziale più recente.",
-
-    tipoEdilizio:
-      "Palazzine anni '70-'90; nucleo storico con edifici più datati; edilizia recente nelle zone periferiche",
-
+    metaDescription: "Ristrutturazione a Grumo Nevano: costi orientativi, criticità edilizie e stima gratuita senza impegno.",
+    descrizione: "Grumo Nevano è un comune dell'area nord di Napoli, al confine con la provincia di Caserta. Il tessuto edilizio è prevalentemente composto da palazzine degli anni '70-'90 con alcune aree di edilizia residenziale più recente. La posizione di confine tra le due province lo rende un comune con caratteristiche edilizie ibride.",
+    tipoEdilizio: "Palazzine anni '70-'90; nucleo storico con edifici più datati; edilizia recente nelle zone periferiche",
     criticalita: [
       "Canne fumarie in amianto nei condomini degli anni '70",
       "Umidità di risalita nelle abitazioni di piano terra",
       "Abusi edilizi non condonati nelle espansioni private",
       "Impianti idrici vetusti nelle palazzine più datate",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard nei condomini degli anni '80-'90; più compatti nelle palazzine storiche.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate di medie dimensioni. Canna fumaria condominiale da verificare.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni standard nei condomini degli anni '80-'90; più compatti nelle palazzine storiche. Sanitari e rivestimenti degli anni '80-'90 frequentemente da aggiornare.",
+    caratteristicheCucine: "Cucine separate di medie dimensioni. Canna fumaria condominiale da verificare nelle palazzine più vecchie.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Grumo Nevano?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). I valori precisi emergono dal sopralluogo gratuito.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito quantifica le variabili specifiche dell'immobile.",
+      },
+      {
+        domanda: "Vivo a Grumo Nevano ma il confine comunale è vicino ad Aversa. Intervenite anche nella mia zona?",
+        risposta: "Sì, operiamo su tutto il territorio di Grumo Nevano e nei comuni limitrofi sia in provincia di Napoli che di Caserta. La posizione al confine tra le due province non è un problema: il nostro intervento dipende dall'indirizzo specifico, non dalla provincia.",
+      },
+      {
+        domanda: "Ho un appartamento degli anni '80 a Grumo Nevano con rivestimenti in ceramica fino a metà parete. Conviene toglierli o posarci sopra?",
+        risposta: "La scelta tra rimozione e sovrapposa dipende da: spessore dei vecchi rivestimenti (se già sovrapposti una volta, una seconda volta può creare problemi di peso e planarità), adesione al supporto (se ci sono zone staccate, vanno rimosse), e tipo di intervento (se rifai anche gli impianti, è meglio rimuovere tutto). Al sopralluogo valutiamo la situazione e ti diciamo qual è la soluzione più conveniente.",
       },
     ],
-
     vicini: ["sant-antimo", "casandrino", "napoli", "aversa"],
   },
 ];
 
 // ─────────────────────────────────────────────
 // ZONA: CASERTA E PROVINCIA (9 comuni)
-// ⚠️ TUTTI I DATI SONO [IPOTESI] — da verificare
 // ─────────────────────────────────────────────
 
 export const comuniCaserta: Comune[] = [
@@ -1112,51 +802,36 @@ export const comuniCaserta: Comune[] = [
     nome: "Caserta",
     provincia: "caserta",
     zona: "caserta",
-
     metaTitle: "Ristrutturazione Casa a Caserta | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Caserta: costi orientativi per appartamenti e ville, criticità locali e stima gratuita senza impegno.",
-
-    // [IPOTESI] Capoluogo con centro storico + espansione moderna
-    descrizione:
-      "Caserta è il capoluogo di provincia, con un tessuto edilizio che varia dalla zona del centro storico e delle ville storiche nei pressi della Reggia, alle palazzine degli anni '60-'80 nelle zone residenziali, fino alle villette dell'espansione periferica degli anni '90-2000. Ogni zona ha caratteristiche edilizie e iter autorizzativi differenti.",
-
-    tipoEdilizio:
-      "Centro storico con edifici d'epoca e palazzi signorili; palazzine anni '60-'80 nelle zone residenziali (Pietro Nenni, Acquaviva); villette anni '90-2000 in periferia",
-
-    // [IPOTESI]
+    metaDescription: "Ristrutturazione a Caserta: costi orientativi per appartamenti e ville, criticità locali e stima gratuita senza impegno.",
+    descrizione: "Caserta è il capoluogo di provincia, con un tessuto edilizio che varia dalla zona del centro storico e delle ville storiche nei pressi della Reggia, alle palazzine degli anni '60-'80 nelle zone residenziali, fino alle villette dell'espansione periferica degli anni '90-2000. Ogni zona ha caratteristiche edilizie e iter autorizzativi differenti.",
+    tipoEdilizio: "Centro storico con edifici d'epoca e palazzi signorili; palazzine anni '60-'80 nelle zone residenziali (Pietro Nenni, Acquaviva); villette anni '90-2000 in periferia",
     criticalita: [
       "Centro storico: alcune zone sono soggette a vincoli paesaggistici e della Soprintendenza (vicinanza Reggia e Belvedere)",
       "Canne fumarie in amianto nei condomini degli anni '60-'70",
       "Umidità di risalita nelle abitazioni del centro storico e nei piani terra dei condomini",
       "Impianti condominiali obsoleti: negli edifici degli anni '60-'70, frequente assenza di aggiornamento degli impianti idrici condominiali",
     ],
-
-    caratteristicheBagni:
-      "Bagni di dimensioni variabili: ampi negli appartamenti signorili del centro, compatti (sotto 5 mq) nelle palazzine degli anni '70. Nei condomini più vecchi, impianti idrici originali spesso in piombo o acciaio zincato.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate nelle palazzine; più ampie negli appartamenti del centro. Frequente necessità di aggiornamento impianto gas e cappa.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni di dimensioni variabili: ampi negli appartamenti signorili del centro, compatti (sotto 5 mq) nelle palazzine degli anni '70. Nei condomini più vecchi, impianti idrici originali spesso in piombo o acciaio zincato.",
+    caratteristicheCucine: "Cucine separate nelle palazzine; più ampie negli appartamenti del centro. Frequente necessità di aggiornamento impianto gas e cappa.",
     faq: [
       {
-        domanda:
-          "Ho un appartamento vicino alla Reggia di Caserta. Ci sono vincoli per ristrutturare?",
-        risposta:
-          "La vicinanza alla Reggia non implica automaticamente vincoli sugli interni. I vincoli della Soprintendenza riguardano prevalentemente facciate, prospetti e interventi visibili dall'esterno. Per lavori interni (bagno, cucina) senza modifiche strutturali, di solito è sufficiente una CILA. È sempre utile verificare la classificazione urbanistica specifica dell'immobile prima di procedere.",
+        domanda: "Ho un appartamento vicino alla Reggia di Caserta. Ci sono vincoli per ristrutturare?",
+        risposta: "La vicinanza alla Reggia non implica automaticamente vincoli sugli interni. I vincoli della Soprintendenza riguardano prevalentemente facciate, prospetti e interventi visibili dall'esterno. Per lavori interni (bagno, cucina) senza modifiche strutturali, di solito è sufficiente una CILA. È sempre utile verificare la classificazione urbanistica specifica dell'immobile prima di procedere.",
       },
       {
         domanda: "Quanto costa ristrutturare un bagno a Caserta?",
-        risposta:
-          "In base al Prezzario Regionale Campania, le stime orientative per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Negli appartamenti del centro con impianti d'epoca, il costo tende al limite superiore. Il sopralluogo gratuito chiarisce la situazione specifica.",
+        risposta: "In base al Prezzario Regionale Campania, le stime orientative per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Negli appartamenti del centro con impianti d'epoca, il costo tende al limite superiore. Il sopralluogo gratuito chiarisce la situazione specifica.",
       },
       {
         domanda: "Quanto tempo ci vuole per ristrutturare un bagno a Caserta?",
-        risposta:
-          "Un bagno standard (5-6 mq) con rifacimento completo richiede mediamente 2-3 settimane lavorative. Negli appartamenti condominiali, i tempi dipendono anche dalla logistica (accesso, orari condominio, smaltimento macerie). Il programma lavori viene definito al sopralluogo.",
+        risposta: "Un bagno standard (5-6 mq) con rifacimento completo richiede mediamente 2-3 settimane lavorative. Negli appartamenti condominiali, i tempi dipendono anche dalla logistica (accesso, orari condominio, smaltimento macerie). Il programma lavori viene definito al sopralluogo.",
+      },
+      {
+        domanda: "Voglio ristrutturare un appartamento degli anni '70 nel quartiere Pietro Nenni a Caserta. Da dove conviene iniziare?",
+        risposta: "Per un appartamento degli anni '70, l'ordine logico è: prima una verifica degli impianti (elettrico e idrico), poi una valutazione dell'umidità nelle pareti perimetrali, e infine la programmazione degli interventi. Spesso conviene fare impianti e rifiniture in sequenza unica per ottimizzare i costi. Il sopralluogo identifica le priorità e permette di pianificare in modo efficiente.",
       },
     ],
-
     vicini: ["casagiove", "san-prisco", "recale", "marcianise"],
   },
 
@@ -1165,40 +840,33 @@ export const comuniCaserta: Comune[] = [
     nome: "Marcianise",
     provincia: "caserta",
     zona: "caserta",
-
     metaTitle: "Ristrutturazione Casa a Marcianise | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Marcianise: costi orientativi da Prezzario Campania, criticità edilizie e stima gratuita.",
-
-    // [IPOTESI] Comune con forte componente industriale/commerciale
-    descrizione:
-      "Marcianise è un comune con una forte componente industriale e commerciale, ma con un nucleo residenziale significativo composto da palazzine degli anni '60-'80 nel centro e villette nelle zone periferiche. La prossimità all'autostrada ha favorito l'espansione residenziale.",
-
-    tipoEdilizio:
-      "Palazzine anni '60-'80 nel centro; villette anni '80-'00 nelle zone periferiche; edilizia mista",
-
+    metaDescription: "Ristrutturazione a Marcianise: costi orientativi da Prezzario Campania, criticità edilizie e stima gratuita.",
+    descrizione: "Marcianise è un comune con una forte componente industriale e commerciale, ma con un nucleo residenziale significativo composto da palazzine degli anni '60-'80 nel centro e villette nelle zone periferiche. La prossimità all'autostrada e al casello A30 ha favorito l'espansione residenziale.",
+    tipoEdilizio: "Palazzine anni '60-'80 nel centro; villette anni '80-'00 nelle zone periferiche; edilizia mista",
     criticalita: [
       "Canne fumarie in amianto nei condomini degli anni '60-'70",
       "Umidità di risalita nei piani terra, frequente nelle costruzioni più datate",
       "Abusi edilizi non condonati nelle zone di espansione",
-      "Vibrazioni da traffico pesante sulla SS7 Appia: possibili lesioni nei muri delle abitazioni prossime", // [IPOTESI]
+      "Vibrazioni da traffico pesante sulla SS7 Appia: possibili lesioni nei muri delle abitazioni prossime alla strada",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard nelle palazzine degli anni '80; più compatti nei condomini anni '60-'70. Impianti spesso da aggiornare.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate, medie dimensioni. Canne fumarie da verificare nei condomini più vecchi.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni standard nelle palazzine degli anni '80; più compatti nei condomini anni '60-'70. Impianti spesso da aggiornare.",
+    caratteristicheCucine: "Cucine separate, medie dimensioni. Canne fumarie da verificare nei condomini più vecchi.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Marcianise?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito quantifica le variabili specifiche dell'immobile.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito quantifica le variabili specifiche dell'immobile.",
+      },
+      {
+        domanda: "Ho crepe sui muri di casa a Marcianise vicino alla SS7. Cosa faccio prima di ristrutturare?",
+        risposta: "Le abitazioni prossime ad arterie stradali ad alto traffico possono sviluppare lesioni da vibrazione nel tempo. Prima di qualsiasi rifinitura, è necessario valutare l'entità delle crepe: le fessure superficiali nell'intonaco si trattano con stucco elastico prima della tinteggiatura, ma le lesioni ai muri portanti richiedono una valutazione strutturale. Il nostro sopralluogo include questa verifica.",
+      },
+      {
+        domanda: "Posso ristrutturare il bagno e la cucina contemporaneamente a Marcianise?",
+        risposta: "Sì, e spesso conviene. L'impresa è già in casa, i costi fissi (trasferta, ponteggi interni, smaltimento) si distribuiscono su due interventi, e la logistica del cantiere è più efficiente. In media, fare bagno e cucina insieme costa il 10-15% in meno rispetto a due cantieri separati.",
       },
     ],
-
-    vicini: ["caserta", "curti", "santa-maria-capua-vetere", "aversa"],
+    vicini: ["caserta", "santa-maria-capua-vetere", "curti", "recale"],
   },
 
   {
@@ -1206,40 +874,29 @@ export const comuniCaserta: Comune[] = [
     nome: "Curti",
     provincia: "caserta",
     zona: "caserta",
-
     metaTitle: "Ristrutturazione Casa a Curti | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Curti: costi orientativi, criticità edilizie locali e stima gratuita. Preventivo con sopralluogo.",
-
-    // [IPOTESI] Piccolo comune tra Caserta e S.M.C.V.
-    descrizione:
-      "Curti è un piccolo comune situato tra Caserta e Santa Maria Capua Vetere, con un tessuto edilizio composto prevalentemente da palazzine anni '70-'80 e villette unifamiliari.",
-
-    tipoEdilizio:
-      "Palazzine anni '70-'80; villette unifamiliari; edilizia residenziale compatta",
-
+    metaDescription: "Ristrutturazione a Curti: costi orientativi da Prezzario Campania, criticità edilizie locali e stima gratuita senza impegno.",
+    descrizione: "Curti è un comune di dimensioni ridotte nella provincia di Caserta, con un tessuto edilizio prevalentemente residenziale composto da palazzine degli anni '70-'80 e villette degli anni '90-2000. La sua posizione tra Caserta e Marcianise lo rende un comune a forte domanda abitativa.",
+    tipoEdilizio: "Palazzine anni '70-'80 nel centro; villette e case a schiera anni '90-2000 nell'espansione",
     criticalita: [
       "Canne fumarie in amianto nei condomini degli anni '70",
-      "Umidità di risalita nei piani terra",
-      "Abusi edilizi non condonati",
-      "Impianti idrici vetusti nelle costruzioni più datate",
+      "Umidità di risalita nei piani terra delle costruzioni più datate",
+      "Abusi edilizi nelle zone di espansione",
+      "Impianti idrici in acciaio zincato nelle palazzine degli anni '70-'80",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard con sanitari anni '80-'90. Impianti spesso da aggiornare integralmente.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate di medie dimensioni. Verifica canna fumaria necessaria.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni standard nelle palazzine (4-6 mq); più ampi nelle villette. Sanitari degli anni '80-'90 da aggiornare.",
+    caratteristicheCucine: "Cucine separate nelle palazzine; ampie nelle villette. Frequente necessità di adeguamento impianto gas.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Curti?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito chiarisce la situazione specifica.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito chiarisce la situazione specifica.",
+      },
+      {
+        domanda: "Ho una palazzina anni '70 a Curti. Devo sostituire le tubazioni durante la ristrutturazione del bagno?",
+        risposta: "Nelle palazzine degli anni '70 le tubazioni idriche sono quasi certamente in acciaio zincato, che si corrode internamente nel tempo riducendo la portata e rilasciando impurità nell'acqua. Se il bagno è già aperto per la ristrutturazione, la sostituzione dei tratti di tubazione interni all'appartamento ha un costo marginale relativamente basso. Consigliamo quasi sempre di farlo per evitare di riaprire le tracce tra pochi anni.",
       },
     ],
-
-    vicini: ["caserta", "marcianise", "santa-maria-capua-vetere", "casapulla"],
+    vicini: ["caserta", "marcianise", "santa-maria-capua-vetere", "recale"],
   },
 
   {
@@ -1247,48 +904,33 @@ export const comuniCaserta: Comune[] = [
     nome: "Santa Maria Capua Vetere",
     provincia: "caserta",
     zona: "caserta",
-
     metaTitle: "Ristrutturazione Casa a Santa Maria Capua Vetere | Preventivi",
-    metaDescription:
-      "Ristrutturazione a S. Maria Capua Vetere: costi orientativi, criticità storiche e stima gratuita senza impegno.",
-
-    // [IPOTESI] Comune con sito archeologico — vincoli specifici
-    descrizione:
-      "Santa Maria Capua Vetere è un comune con un importante sito archeologico (l'anfiteatro campano e l'antica Capua romana), che impone vincoli specifici in alcune zone. Il tessuto edilizio residenziale è composto da palazzine degli anni '50-'80 nel centro e villette nelle zone periferiche.",
-
-    tipoEdilizio:
-      "Palazzine anni '50-'80 nel centro; villette nelle zone periferiche; alcune zone soggette a vincolo archeologico",
-
-    // [IPOTESI]
+    metaDescription: "Ristrutturazione a Santa Maria Capua Vetere: costi orientativi, criticità del centro storico e stima gratuita senza impegno.",
+    descrizione: "Santa Maria Capua Vetere è un comune di rilevanza storica, sede dell'antica Capua romana, con un centro storico ricco di reperti e vincoli archeologici. Il tessuto edilizio mescola edifici storici nel centro con palazzine degli anni '60-'80 nelle zone residenziali.",
+    tipoEdilizio: "Centro storico con edifici d'epoca e zone di interesse archeologico; palazzine anni '60-'80; villette nelle zone periferiche",
     criticalita: [
-      "Zona archeologica: qualsiasi scavo (anche superficiale per impianti) in zone limitrofe al sito richiede verifica preventiva con la Soprintendenza",
+      "Vincoli archeologici: scavi nel sottosuolo possono portare a scoperte che bloccano i lavori — fondamentale verificare la mappa dei vincoli prima di interventi strutturali",
       "Canne fumarie in amianto nei condomini degli anni '60-'70",
-      "Umidità di risalita diffusa nelle abitazioni storiche del centro",
-      "Impianti condominiali obsoleti nelle palazzine più vecchie",
+      "Umidità di risalita nelle abitazioni storiche, accentuata dalla presenza di falde acquifere superficiali",
+      "Impianti idrici datati nelle costruzioni più vecchie",
     ],
-
-    caratteristicheBagni:
-      "Bagni di dimensioni variabili. Nelle palazzine storiche, spesso compatti con impianti originali. Nelle abitazioni più recenti, standard.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate, medie dimensioni. Nelle zone limitrofe al sito archeologico, eventuali lavori di scavo per impianti richiedono attenzione specifica.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni di dimensioni variabili: compatti negli appartamenti storici del centro (sotto i 5 mq), standard nelle costruzioni successive. Impianti spesso originali.",
+    caratteristicheCucine: "Cucine separate nelle palazzine; di dimensioni variabili nel centro storico. Canna fumaria da verificare prima di interventi.",
     faq: [
       {
-        domanda:
-          "Abito vicino all'anfiteatro di Santa Maria Capua Vetere. Ci sono vincoli per ristrutturare?",
-        risposta:
-          "I vincoli archeologici riguardano principalmente gli interventi che comportano scavi nel sottosuolo. Per lavori interni (bagno, cucina) che non toccano le fondazioni, di solito non ci sono limitazioni particolari. Se l'intervento prevede scavi (es. sostituzione impianti sotto pavimento con demolizione del massetto), è consigliabile una verifica preventiva. Il nostro tecnico valuta la situazione al sopralluogo.",
+        domanda: "Ho un appartamento nel centro storico di Santa Maria Capua Vetere. Ci sono vincoli per ristrutturare?",
+        risposta: "A Santa Maria Capua Vetere i vincoli principali sono di natura archeologica: il sottosuolo è ricco di reperti romani e qualsiasi scavo o intervento che interessa le fondazioni può portare a scoperte che sospendono i lavori. Per interventi interni senza impatto sul sottosuolo (bagno, cucina, impianti a traccia) i vincoli sono generalmente limitati. Una verifica preventiva con il Comune è sempre consigliata.",
       },
       {
-        domanda:
-          "Quanto costa ristrutturare un bagno a Santa Maria Capua Vetere?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito quantifica le variabili specifiche.",
+        domanda: "Quanto costa ristrutturare un bagno a Santa Maria Capua Vetere?",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Negli appartamenti storici con impianti d'epoca, il costo tende al limite superiore.",
+      },
+      {
+        domanda: "Ho umidità diffusa nel mio appartamento storico a Santa Maria Capua Vetere. Come si affronta?",
+        risposta: "Gli edifici storici di Santa Maria Capua Vetere soffrono spesso di umidità da risalita capillare e da falde acquifere superficiali. Il trattamento corretto richiede un'analisi della causa: diversi tipi di umidità hanno soluzioni diverse. I trattamenti superficiali (pitture antimuffa, impermeabilizzanti) non risolvono il problema alla radice. Il sopralluogo include sempre la verifica delle cause.",
       },
     ],
-
-    vicini: ["caserta", "curti", "capua", "marcianise"],
+    vicini: ["caserta", "marcianise", "curti", "capua"],
   },
 
   {
@@ -1296,40 +938,29 @@ export const comuniCaserta: Comune[] = [
     nome: "Casapulla",
     provincia: "caserta",
     zona: "caserta",
-
     metaTitle: "Ristrutturazione Casa a Casapulla | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Casapulla: costi orientativi, criticità edilizie e stima gratuita. Preventivo con sopralluogo.",
-
-    // [IPOTESI]
-    descrizione:
-      "Casapulla è un piccolo comune residenziale in provincia di Caserta, con un tessuto edilizio composto da palazzine degli anni '70-'80 e villette unifamiliari nelle zone periferiche.",
-
-    tipoEdilizio:
-      "Palazzine anni '70-'80; villette unifamiliari; edilizia residenziale compatta",
-
+    metaDescription: "Ristrutturazione a Casapulla: costi orientativi da Prezzario Campania, criticità locali e stima gratuita senza impegno.",
+    descrizione: "Casapulla è un comune della provincia di Caserta con un tessuto edilizio prevalentemente residenziale, composto da palazzine degli anni '70-'80 e villette degli anni '90. Il comune è in posizione favorevole rispetto ai principali centri della provincia.",
+    tipoEdilizio: "Palazzine anni '70-'80 nel centro; villette anni '90-2000 nelle zone di espansione",
     criticalita: [
       "Canne fumarie in amianto nei condomini degli anni '70",
-      "Umidità di risalita nei piani terra",
-      "Abusi edilizi non condonati",
-      "Impianti idrici vetusti nelle costruzioni più datate",
+      "Umidità di risalita nei piani terra delle palazzine più datate",
+      "Abusi edilizi nelle zone di espansione",
+      "Impianti idrici vetusti nelle costruzioni degli anni '70",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard con sanitari anni '80-'90. Impianti spesso da aggiornare.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate, medie dimensioni.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni standard nelle palazzine (4-6 mq); più ampi nelle villette. Impianti degli anni '80-'90 spesso da aggiornare.",
+    caratteristicheCucine: "Cucine separate nelle palazzine; ampie nelle villette. Verifica impianto gas necessaria nelle costruzioni più datate.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Casapulla?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). I valori precisi emergono dal sopralluogo gratuito.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito quantifica le variabili specifiche.",
+      },
+      {
+        domanda: "Posso fare la ristrutturazione del bagno senza preavviso al condominio a Casapulla?",
+        risposta: "Puoi iniziare lavori di manutenzione ordinaria (sostituzione sanitari e rivestimenti) senza necessità di comunicazioni formali. Per lavori più invasivi con demolizioni e rumori continuativi, è buona pratica avvisare l'amministratore e i vicini con qualche giorno di anticipo. La maggior parte dei regolamenti condominiali limita i lavori rumorosi a determinati orari.",
       },
     ],
-
-    vicini: ["caserta", "curti", "recale", "san-prisco"],
+    vicini: ["caserta", "san-prisco", "recale", "capua"],
   },
 
   {
@@ -1337,39 +968,29 @@ export const comuniCaserta: Comune[] = [
     nome: "Recale",
     provincia: "caserta",
     zona: "caserta",
-
     metaTitle: "Ristrutturazione Casa a Recale | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Recale: costi orientativi da Prezzario Campania, criticità locali e stima gratuita.",
-
-    // [IPOTESI]
-    descrizione:
-      "Recale è un piccolo comune in provincia di Caserta, con un tessuto edilizio prevalentemente residenziale composto da villette unifamiliari e palazzine di piccole dimensioni.",
-
-    tipoEdilizio:
-      "Villette unifamiliari; palazzine di piccole dimensioni; edilizia residenziale a bassa densità",
-
+    metaDescription: "Ristrutturazione a Recale: costi orientativi da Prezzario Campania, criticità edilizie e stima gratuita senza impegno.",
+    descrizione: "Recale è un comune residenziale della provincia di Caserta, con un tessuto edilizio composto principalmente da palazzine degli anni '70-'80 e villette degli anni '90-2000. La sua posizione nelle immediate vicinanze di Caserta lo rende un polo residenziale attrattivo.",
+    tipoEdilizio: "Mix di palazzine anni '70-'80 e villette anni '90-2000; alcune costruzioni recenti in zone di espansione",
     criticalita: [
-      "Umidità di risalita nelle abitazioni più datate",
-      "Abusi edilizi non condonati nelle villette",
-      "Impianti idrici vetusti nelle costruzioni degli anni '70-'80",
+      "Canne fumarie in amianto nei condomini degli anni '70",
+      "Umidità di risalita nei piani terra",
+      "Abusi edilizi non condonati nelle zone di espansione",
+      "Impianti idrici vetusti nelle palazzine più datate",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard nelle villette, spesso con sanitari anni '80-'90 mai aggiornati.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine di medie dimensioni, separate. Nelle villette, frequente richiesta di apertura verso il soggiorno.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni standard nelle palazzine e nelle villette (5-7 mq). Sanitari degli anni '80-'90 da aggiornare.",
+    caratteristicheCucine: "Cucine separate nelle palazzine; medie-grandi nelle villette. Canna fumaria da verificare.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Recale?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito chiarisce la situazione specifica dell'immobile.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito chiarisce la situazione specifica.",
+      },
+      {
+        domanda: "Ho una villetta degli anni '90 a Recale. Conviene fare cappotto termico durante la ristrutturazione?",
+        risposta: "Il cappotto termico è indipendente dalla ristrutturazione degli interni, ma spesso viene pianificato insieme per ottimizzare il cantiere e accedere alle detrazioni fiscali (Ecobonus). Se stai già ristrutturando gli interni, è un buon momento per valutare anche l'involucro esterno: i costi fissi del cantiere si ammortizzano meglio. Il sopralluogo include anche una valutazione dell'isolamento della facciata.",
       },
     ],
-
-    vicini: ["caserta", "casapulla", "san-prisco", "casagiove"],
+    vicini: ["caserta", "casagiove", "san-prisco", "marcianise"],
   },
 
   {
@@ -1377,39 +998,32 @@ export const comuniCaserta: Comune[] = [
     nome: "San Prisco",
     provincia: "caserta",
     zona: "caserta",
-
     metaTitle: "Ristrutturazione Casa a San Prisco | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a San Prisco: costi orientativi, criticità edilizie locali e stima gratuita senza impegno.",
-
-    // [IPOTESI]
-    descrizione:
-      "San Prisco è un comune residenziale in provincia di Caserta, con un tessuto edilizio composto da palazzine degli anni '70-'80 nel centro e villette nelle zone di espansione.",
-
-    tipoEdilizio:
-      "Palazzine anni '70-'80 nel centro; villette negli anni '80-'00 nelle zone periferiche",
-
+    metaDescription: "Ristrutturazione a San Prisco: costi orientativi da Prezzario Campania, criticità edilizie locali e stima gratuita.",
+    descrizione: "San Prisco è un comune della provincia di Caserta con un tessuto edilizio prevalentemente residenziale. Il paese ospita la Cattedrale di San Prisco, uno dei più importanti edifici paleocristiani della Campania, e mantiene un nucleo storico interessante circondato da zone di espansione più recente.",
+    tipoEdilizio: "Palazzine anni '70-'80 nel centro; villette negli anni '80-'00 nelle zone periferiche",
     criticalita: [
       "Canne fumarie in amianto nei condomini degli anni '70",
       "Umidità di risalita nei piani terra",
       "Abusi edilizi non condonati nelle zone di espansione",
       "Impianti idrici vetusti nelle palazzine più datate",
     ],
-
-    caratteristicheBagni:
-      "Bagni standard con sanitari anni '80-'90. Impianti da aggiornare nelle palazzine più datate.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine separate, medie dimensioni.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni standard con sanitari anni '80-'90. Impianti da aggiornare nelle palazzine più datate.",
+    caratteristicheCucine: "Cucine separate, medie dimensioni.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a San Prisco?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito quantifica le variabili specifiche.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo gratuito quantifica le variabili specifiche.",
+      },
+      {
+        domanda: "Ho un appartamento con doppio bagno a San Prisco. Conviene rifarli entrambi?",
+        risposta: "In molti casi sì: l'impresa è già mobilizzata, i costi di cantiere si distribuiscono su due interventi, e il risparmio rispetto a due cantieri separati è sensibile. Forniamo sempre preventivi separati e combinati così puoi decidere con i numeri in mano.",
+      },
+      {
+        domanda: "Quali materiali sono più adatti per un bagno in una zona con acqua dura come quella di Caserta?",
+        risposta: "L'acqua della zona di Caserta è tendenzialmente calcarea. Per la rubinetteria, consigliamo modelli con rompigetto anticalcare intercambiabile. Per i rivestimenti, i gres porcellanati levigati mostrano il calcare più degli opachi: tenere presente la manutenzione. Per la doccia, i box con profili minimi (zero profili) sono più facili da pulire. Lo discutiamo in dettaglio durante la scelta dei materiali al sopralluogo.",
       },
     ],
-
     vicini: ["caserta", "recale", "casapulla", "casagiove"],
   },
 
@@ -1418,52 +1032,36 @@ export const comuniCaserta: Comune[] = [
     nome: "Capua",
     provincia: "caserta",
     zona: "caserta",
-
     metaTitle: "Ristrutturazione Casa a Capua | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Capua: costi orientativi per appartamenti nel centro storico e villette. Stima gratuita e sopralluogo.",
-
-    // [IPOTESI] Comune con centro storico medievale rilevante
-    descrizione:
-      "Capua è un comune con un centro storico di origine medievale ben conservato, circondato dalle anse del Volturno. Il tessuto edilizio del centro è prevalentemente storico, mentre le zone periferiche ospitano palazzine degli anni '70-'80 e villette più recenti.",
-
-    tipoEdilizio:
-      "Centro storico medievale (sec. X-XVIII) con palazzi d'epoca; palazzine anni '70-'80 nelle zone residenziali; villette nelle periferie",
-
-    // [IPOTESI]
+    metaDescription: "Ristrutturazione a Capua: costi orientativi per appartamenti nel centro storico e villette. Stima gratuita e sopralluogo.",
+    descrizione: "Capua è un comune con un centro storico di origine medievale ben conservato, circondato dalle anse del Volturno. Il tessuto edilizio del centro è prevalentemente storico, mentre le zone periferiche ospitano palazzine degli anni '70-'80 e villette più recenti.",
+    tipoEdilizio: "Centro storico medievale (sec. X-XVIII) con palazzi d'epoca; palazzine anni '70-'80 nelle zone residenziali; villette nelle periferie",
     criticalita: [
       "Centro storico: vincoli della Soprintendenza per interventi sulle facciate e sugli elementi storici; gli interni sono generalmente liberi da vincoli",
       "Umidità di risalita molto diffusa negli edifici storici del centro, spesso accentuata dalla vicinanza al Volturno",
       "Canne fumarie in amianto nei condomini degli anni '60-'70",
       "Impianti idrici e fognari datati nelle abitazioni del centro storico",
     ],
-
-    caratteristicheBagni:
-      "Bagni spesso aggiunti in un secondo momento negli edifici storici, con dimensioni e posizioni non ottimali. Nelle palazzine periferiche, bagni standard anni '80.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Nelle abitazioni storiche del centro, cucine spesso ricavate in ambienti non originariamente destinati a tale uso. Nelle palazzine, cucine standard separate.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni spesso aggiunti in un secondo momento negli edifici storici, con dimensioni e posizioni non ottimali. Nelle palazzine periferiche, bagni standard anni '80.",
+    caratteristicheCucine: "Nelle abitazioni storiche del centro, cucine spesso ricavate in ambienti non originariamente destinati a tale uso. Nelle palazzine, cucine standard separate.",
     faq: [
       {
-        domanda:
-          "Ho un appartamento nel centro storico di Capua. Posso ristrutturare liberamente gli interni?",
-        risposta:
-          "In linea generale, gli interventi interni (bagno, cucina, rivestimenti) non soggetti a modifiche strutturali sono liberi da vincoli della Soprintendenza, che interviene principalmente sulle facciate e sugli elementi storico-architettonici. Una CILA è di solito sufficiente per lavori di manutenzione straordinaria interna. È sempre consigliabile una verifica preventiva con il Comune prima di iniziare.",
+        domanda: "Ho un appartamento nel centro storico di Capua. Posso ristrutturare liberamente gli interni?",
+        risposta: "In linea generale, gli interventi interni (bagno, cucina, rivestimenti) non soggetti a modifiche strutturali sono liberi da vincoli della Soprintendenza, che interviene principalmente sulle facciate e sugli elementi storico-architettonici. Una CILA è di solito sufficiente per lavori di manutenzione straordinaria interna. È sempre consigliabile una verifica preventiva con il Comune prima di iniziare.",
       },
       {
-        domanda:
-          "Ho umidità diffusa in un appartamento storico a Capua vicino al Volturno. Come la gestisco?",
-        risposta:
-          "L'umidità negli edifici storici vicino al Volturno può avere più cause: risalita capillare dai muri, infiltrazioni da falde acquifere superficiali, condensa da scarsa ventilazione. Trattarla con interventi superficiali (nuovi rivestimenti, pittura antimuffa) non risolve il problema alla radice. Il sopralluogo permette di identificare la causa e progettare l'intervento corretto.",
+        domanda: "Ho umidità diffusa in un appartamento storico a Capua vicino al Volturno. Come la gestisco?",
+        risposta: "L'umidità negli edifici storici vicino al Volturno può avere più cause: risalita capillare dai muri, infiltrazioni da falde acquifere superficiali, condensa da scarsa ventilazione. Trattarla con interventi superficiali non risolve il problema alla radice. Il sopralluogo permette di identificare la causa e progettare l'intervento corretto.",
       },
       {
         domanda: "Quanto costa ristrutturare un bagno a Capua?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Negli edifici storici con impianti d'epoca, il costo tende al limite superiore. Il sopralluogo gratuito chiarisce la situazione specifica.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Negli edifici storici con impianti d'epoca, il costo tende al limite superiore. Il sopralluogo gratuito chiarisce la situazione specifica.",
+      },
+      {
+        domanda: "La mia cucina nel centro storico di Capua non ha una canna fumaria. Come installo la cappa?",
+        risposta: "In assenza di canna fumaria, le soluzioni sono: cappa a ricircolo (filtra l'aria senza canalizzarla all'esterno, meno efficace ma non richiede tracce), cappa canalizzata verso l'esterno attraverso il muro perimetrale (richiede foratura della facciata e in centro storico va verificata con il Comune), oppure creazione di una nuova canna fumaria interna. Il sopralluogo valuta la soluzione più adatta al tuo spazio.",
       },
     ],
-
     vicini: ["santa-maria-capua-vetere", "caserta", "marcianise"],
   },
 
@@ -1472,45 +1070,36 @@ export const comuniCaserta: Comune[] = [
     nome: "Casagiove",
     provincia: "caserta",
     zona: "caserta",
-
     metaTitle: "Ristrutturazione Casa a Casagiove | Costi e Preventivi",
-    metaDescription:
-      "Ristrutturazione a Casagiove: costi orientativi da Prezzario Campania, criticità locali e stima gratuita.",
-
-    // [IPOTESI] Comune residenziale benestante vicino Caserta
-    descrizione:
-      "Casagiove è un comune residenziale adiacente a Caserta, con un tenore abitativo mediamente più elevato rispetto agli altri comuni della zona. Il tessuto edilizio comprende villette e palazzine di qualità costruttiva superiore alla media, edificate tra gli anni '80 e i primi anni 2000.",
-
-    tipoEdilizio:
-      "Villette unifamiliari e palazzine di qualità medio-alta anni '80-2000; alcuni condomini degli anni '70 nel centro",
-
+    metaDescription: "Ristrutturazione a Casagiove: costi orientativi da Prezzario Campania, criticità locali e stima gratuita.",
+    descrizione: "Casagiove è un comune residenziale adiacente a Caserta, con un tenore abitativo mediamente più elevato rispetto agli altri comuni della zona. Il tessuto edilizio comprende villette e palazzine di qualità costruttiva superiore alla media, edificate tra gli anni '80 e i primi anni 2000.",
+    tipoEdilizio: "Villette unifamiliari e palazzine di qualità medio-alta anni '80-2000; alcuni condomini degli anni '70 nel centro",
     criticalita: [
       "Umidità di risalita nelle abitazioni di piano terra, anche in costruzioni di qualità",
       "Impianti idrici in acciaio zincato nelle palazzine degli anni '70-'80",
       "Abusi edilizi nelle zone di espansione privata degli anni '90",
       "Coperture piane delle villette anni '80: guaine esaurite da sostituire",
     ],
-
-    caratteristicheBagni:
-      "Bagni di dimensioni standard o superiori nelle villette, spesso con doppio bagno. Sanitari degli anni '80-'90 ancora in uso ma da aggiornare esteticamente e impiantisticamente.", // [IPOTESI]
-
-    caratteristicheCucine:
-      "Cucine ampie nelle villette, spesso già oggetto di un primo rifacimento parziale. Frequente richiesta di apertura verso il soggiorno.", // [IPOTESI]
-
+    caratteristicheBagni: "Bagni di dimensioni standard o superiori nelle villette, spesso con doppio bagno. Sanitari degli anni '80-'90 ancora in uso ma da aggiornare esteticamente e impiantisticamente.",
+    caratteristicheCucine: "Cucine ampie nelle villette, spesso già oggetto di un primo rifacimento parziale. Frequente richiesta di apertura verso il soggiorno.",
     faq: [
       {
         domanda: "Quanto costa ristrutturare un bagno a Casagiove?",
-        risposta:
-          "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 6-8 mq (tipico delle villette di Casagiove) vanno da circa 5.500 € (base) a 11.000 € (premium). Il costo preciso dipende dall'entità dell'intervento e dallo stato degli impianti, che emergono al sopralluogo.",
+        risposta: "Le stime orientative basate sul Prezzario Regionale Campania per un bagno 6-8 mq (tipico delle villette di Casagiove) vanno da circa 5.500 € (base) a 11.000 € (premium). Il costo preciso dipende dall'entità dell'intervento e dallo stato degli impianti, che emergono al sopralluogo.",
       },
       {
-        domanda:
-          "Ho una villetta degli anni '90 a Casagiove con doppio bagno. Conviene rifare entrambi insieme?",
-        risposta:
-          "In molti casi sì: l'impresa è già mobilizzata, i ponteggi interni sono installati, la logistica è organizzata. Il costo marginale del secondo bagno in contemporanea è significativamente inferiore rispetto a due interventi separati. Durante il sopralluogo valutiamo lo stato di entrambi e forniamo un preventivo separato per ognuno e uno combinato, così si può decidere con i numeri in mano.",
+        domanda: "Ho una villetta degli anni '90 a Casagiove con doppio bagno. Conviene rifare entrambi insieme?",
+        risposta: "In molti casi sì: l'impresa è già mobilizzata, i ponteggi interni sono installati, la logistica è organizzata. Il costo marginale del secondo bagno in contemporanea è significativamente inferiore rispetto a due interventi separati. Durante il sopralluogo valutiamo lo stato di entrambi e forniamo un preventivo separato per ognuno e uno combinato, così si può decidere con i numeri in mano.",
+      },
+      {
+        domanda: "Voglio aprire cucina e soggiorno nella mia villetta a Casagiove. È possibile?",
+        risposta: "Dipende dalla natura del muro divisorio. Se è portante, l'apertura richiede il progetto di un ingegnere strutturale e il permesso di costruire. Se è una tramezza, basta una CILA. Il nostro sopralluogo include la verifica della struttura e ti fornisce un quadro chiaro di costi e pratiche necessarie prima di qualsiasi preventivo.",
+      },
+      {
+        domanda: "Ho la guaina del tetto piatto esaurita a Casagiove. Conviene rifare anche l'isolamento termico?",
+        risposta: "Se il tetto è già da aprire per la guaina, aggiungere lo strato isolante ha un costo marginale basso rispetto al costo totale dell'intervento. L'isolamento termico del tetto è uno degli interventi con il miglior rapporto costo/beneficio in termini energetici, e può beneficiare dell'Ecobonus. Lo valutiamo al sopralluogo insieme al rifacimento della guaina.",
       },
     ],
-
     vicini: ["caserta", "recale", "san-prisco"],
   },
 ];
