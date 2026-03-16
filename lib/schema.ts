@@ -19,9 +19,6 @@ const PROVIDER = {
   },
 };
 
-// ─────────────────────────────────────────────────────────────────
-// buildBreadcrumb
-// ─────────────────────────────────────────────────────────────────
 export function buildBreadcrumb(
   comuneNome: string,
   comuneSlug: string,
@@ -40,9 +37,6 @@ export function buildBreadcrumb(
   };
 }
 
-// ─────────────────────────────────────────────────────────────────
-// buildLocalBusiness
-// ─────────────────────────────────────────────────────────────────
 export function buildLocalBusiness(comuneNome: string, descrizione: string) {
   return {
     "@context": "https://schema.org",
@@ -52,10 +46,6 @@ export function buildLocalBusiness(comuneNome: string, descrizione: string) {
   };
 }
 
-// ─────────────────────────────────────────────────────────────────
-// buildServiceSchema
-// Aggiunge il tipo di servizio specifico con città — mancante in tutti i 7 file
-// ─────────────────────────────────────────────────────────────────
 export function buildServiceSchema({
   serviceType,
   serviceName,
@@ -98,11 +88,6 @@ export function buildServiceSchema({
   };
 }
 
-// ─────────────────────────────────────────────────────────────────
-// buildHowToSchema
-// "Come funziona" → 3 step fissi uguali per tutti i servizi
-// Unica variabile: il servizio e il comune nel nome
-// ─────────────────────────────────────────────────────────────────
 export function buildHowToSchema(servizioLabel: string, comuneNome: string) {
   return {
     "@context": "https://schema.org",
@@ -116,7 +101,7 @@ export function buildHowToSchema(servizioLabel: string, comuneNome: string) {
         position: 1,
         name: "Stima gratuita orientativa",
         text: "Usa il calcolatore online o scrivi su WhatsApp. Ricevi subito una forbice di costo indicativa basata sul Prezzario Regionale Campania. Nessun impegno, nessun dato obbligatorio.",
-        url: `${BASE_URL}/comune/${komuneNome.toLowerCase()}/`,
+        url: `${BASE_URL}/comune/${comuneNome.toLowerCase()}/`,
       },
       {
         "@type": "HowToStep",
@@ -134,10 +119,6 @@ export function buildHowToSchema(servizioLabel: string, comuneNome: string) {
   };
 }
 
-// ─────────────────────────────────────────────────────────────────
-// buildFaqSchema
-// Accetta le FAQ specifiche del servizio (se presenti) oppure quelle generali del comune
-// ─────────────────────────────────────────────────────────────────
 export function buildFaqSchema(faq: Array<{ domanda: string; risposta: string }>) {
   if (!faq || faq.length === 0) return null;
   return {
