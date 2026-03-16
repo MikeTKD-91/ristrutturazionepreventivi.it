@@ -6,6 +6,13 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { comuni, getComuneBySlug } from "@/data/comuni";
 import CalcolatoreStima from "@/components/shared/CalcolatoreStima";
+import {
+  buildBreadcrumb,
+  buildLocalBusiness,
+  buildServiceSchema,
+  buildHowToSchema,
+  buildFaqSchema,
+} from "@/lib/schema";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -68,27 +75,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 function buildJsonLd(comune: ReturnType<typeof getComuneBySlug>) {
   if (!comune) return null;
-  const pageUrl = `https://ristrutturazionepreventivi.it/comune/${comune.slug}/impianti-elettrici-idraulici-termici/`;
-  const breadcrumb = {
-    "@context": "https://schema.org", "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://ristrutturazionepreventivi.it/" },
-      { "@type": "ListItem", position: 2, name: "Zone Servite", item: "https://ristrutturazionepreventivi.it/zone-servite/" },
-      { "@type": "ListItem", position: 3, name: comune.nome, item: `https://ristrutturazionepreventivi.it/comune/${comune.slug}/` },
-      { "@type": "ListItem", position: 4, name: "Impianti Elettrici, Idraulici e Termici", item: pageUrl },
-    ],
-  };
-  const localBusiness = {
-    "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness",
-    name: "Russo FE Costruzione SRL", url: "https://ristrutturazionepreventivi.it", telephone: "+393339809319",
-    address: { "@type": "PostalAddress", streetAddress: "Viale della Libertà 3", addressLocality: "Lusciano", addressRegion: "CE", postalCode: "81030", addressCountry: "IT" },
-    areaServed: { "@type": "City", name: comune.nome },
-    description: `Rifacimento impianti elettrici, idraulici e termici a ${comune.nome}. Preventivi con sopralluogo, certificazioni incluse.`,
-  };
-  const faqSchema = comune.faq.length > 0
-    ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: comune.faq.map((f) => ({ "@type": "Question", name: f.domanda, acceptedAnswer: { "@type": "Answer", text: f.risposta } })) }
-    : null;
-  return { breadcrumb, localBusiness, faqSchema };
+  const servizioSlug = "impianti-elettrici-idraulici-termici";
+
+  const breadcrumb = buildBreadcrumb(
+    comune.nome,
+    comune.slug,
+    "Impianti Elettrici, Idraulici e Termici",
+    servizioSlug
+  );
+
+  const localBusiness = buildLocalBusiness(
+    comune.nome,
+    `impianti elettrici idraulici e termici a ${comune.nome}. Preventivi con sopralluogo, stime orientative gratuite basate su Prezzario Regionale Campania.`
+  );
+
+  const serviceSchema = buildServiceSchema({
+    serviceType: "Impianti Elettrici Idraulici e Termici",
+    serviceName: `Impianti Elettrici, Idraulici e Termici a ${comune.nome}`,
+    descrizione: `Impianti Elettrici Idraulici e Termici a ${comune.nome}. ${comune.tipoEdilizio}.`,
+    comuneNome: comune.nome,
+    comuneSlug: comune.slug,
+    servizioSlug,
+    prezzoMin: "4500",
+    prezzoMax: "45000",
+  });
+
+  const howToSchema = buildHowToSchema("Impianti Elettrici, Idraulici e Termici", comune.nome);
+
+  const faqSchema = buildFaqSchema(comune.faq);
+
+  return { breadcrumb, localBusiness, serviceSchema, howToSchema, faqSchema };
 }
 
 export default async function ImpiantiPage({ params }: PageProps) {
@@ -103,7 +119,11 @@ export default async function ImpiantiPage({ params }: PageProps) {
         <>
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.breadcrumb) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.localBusiness) }} />
-          {jsonLd.faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.faqSchema) }} />}
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.serviceSchema) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.howToSchema) }} />
+          {jsonLd.faqSchema && (
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.faqSchema) }} />
+          )}
         </>
       )}
       <main className="min-h-screen bg-white">
@@ -365,7 +385,7 @@ export default async function ImpiantiPage({ params }: PageProps) {
                 Chiama +39 333 980 9319
               </a>
             </div>
-            <p className="text-white/40 text-xs mt-6">Russo FE Costruzione SRL · Lusciano (CE) · P.IVA e C.F. da inserire</p>
+            <p className="text-white/40 text-xs mt-6">Russo FE Costruzione SRL · Lusciano (CE) · P.IVA 04836230617</p>
           </div>
         </section>
       </main>
