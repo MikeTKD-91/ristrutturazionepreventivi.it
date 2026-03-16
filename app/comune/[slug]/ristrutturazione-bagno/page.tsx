@@ -382,29 +382,34 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
             </section>
 
             {/* ── FAQ ── */}
-            {comune.faq.length > 0 && (
-              <section>
-                <h2 className="text-2xl font-bold text-navy mb-2">
-                  Domande frequenti sulla ristrutturazione bagno a {comune.nome}
-                </h2>
-                <p className="text-gray-600 mb-6">
-                  Le domande che ci vengono poste più spesso da chi ci contatta da {comune.nome}.
-                </p>
-                <div className="space-y-4">
-                  {comune.faq.map((faq, i) => (
-                    <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden">
-                      <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none hover:bg-gray-50 transition-colors">
-                        <span className="font-medium text-navy text-sm leading-snug">{faq.domanda}</span>
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-orange/10 text-orange flex items-center justify-center text-sm group-open:rotate-45 transition-transform">+</span>
-                      </summary>
-                      <div className="px-5 pb-5 pt-1">
-                        <p className="text-sm text-gray-700 leading-relaxed">{faq.risposta}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
-              </section>
-            )}
+            {(() => {
+              const faqRender = comune.faqBagno && comune.faqBagno.length > 0
+                ? comune.faqBagno
+                : comune.faq;
+              return faqRender.length > 0 && (
+                <section>
+                  <h2 className="text-2xl font-bold text-navy mb-2">
+                    Domande frequenti sulla ristrutturazione bagno a {comune.nome}
+                  </h2>
+                  <p className="text-gray-600 mb-6">
+                    Le domande che ci vengono poste più spesso da chi ci contatta da {comune.nome}.
+                  </p>
+                  <div className="space-y-4">
+                    {faqRender.map((faq, i) => (
+                      <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden">
+                        <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none hover:bg-gray-50 transition-colors">
+                          <span className="font-medium text-navy text-sm leading-snug">{faq.domanda}</span>
+                          <span className="flex-shrink-0 w-6 h-6 rounded-full bg-orange/10 text-orange flex items-center justify-center text-sm group-open:rotate-45 transition-transform">+</span>
+                        </summary>
+                        <div className="px-5 pb-5 pt-1">
+                          <p className="text-sm text-gray-700 leading-relaxed">{faq.risposta}</p>
+                        </div>
+                      </details>
+                    ))}
+                  </div>
+                </section>
+              );
+            })()}
 
             {/* ── COMUNI VICINI ── */}
             {comune.vicini.length > 0 && (
