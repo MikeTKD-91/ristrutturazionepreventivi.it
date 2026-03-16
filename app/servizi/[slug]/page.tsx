@@ -142,7 +142,7 @@ export default async function ServizioPage({ params }: Props) {
               {/* Prezzi */}
               <div>
                 <h2 className="text-2xl font-bold text-navy mb-6">
-                  Prezzi Indicativi 2026
+                  Prezzi Indicativi (Prezzario Regionale Campania)
                 </h2>
                 <div className="grid sm:grid-cols-3 gap-4">
                   <div className="bg-white border-2 border-gray-200 p-6 rounded-xl text-center">
