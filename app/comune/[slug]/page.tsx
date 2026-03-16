@@ -31,7 +31,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: comune.metaTitle,
     description: comune.metaDescription,
     alternates: { canonical: url },
-    openGraph: { title: comune.metaTitle, description: comune.metaDescription, url, type: "article" },
+    openGraph: {
+      title: comune.metaTitle,
+      description: comune.metaDescription,
+      url,
+      type: "article",
+      siteName: "ristrutturazionepreventivi.it",
+      locale: "it_IT",
+      images: [
+        {
+          url: "https://ristrutturazionepreventivi.it/images/servizi/ristrutturazione-appartamento-completo.jpg",
+          width: 1200,
+          height: 630,
+          alt: comune.metaTitle,
+        },
+      ],
+    },
   };
 }
 
