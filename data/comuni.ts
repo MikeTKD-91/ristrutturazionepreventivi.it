@@ -20,6 +20,10 @@ export interface Comune {
   caratteristicheBagni: string;
   caratteristicheCucine: string;
   faq: ComuneFaq[];
+  // FAQ specifiche per pagina servizio — se assenti, le pagine usano faq[] come fallback
+  faqBagno?: ComuneFaq[];
+  faqCucina?: ComuneFaq[];
+  faqAppartamento?: ComuneFaq[];
   vicini: string[];
   immagine?: string;
 }
@@ -64,6 +68,42 @@ export const comuniAgroAversano: Comune[] = [
         risposta: "Un bagno standard (4-6 mq) con sostituzione completa di sanitari, rivestimenti e impianti richiede mediamente 2-3 settimane lavorative. Se si aggiunge la bonifica dell'amianto o modifiche agli impianti condominiali, i tempi si allungano. I tempi definitivi emergono dal sopralluogo.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno ad Aversa?",
+        risposta: "In base al Prezzario Regionale Campania, un bagno standard (4-6 mq) con rifacimento completo di impianti, rivestimenti e sanitari ha un costo orientativo tra 5.000 € (finitura base) e 13.000 € (finitura premium). Nelle palazzine del centro storico anni '60-'70 con tubazioni originali, il costo tende al limite superiore perché quasi sempre vanno sostituite le tubazioni in piombo. Il dato definitivo emerge solo dal sopralluogo.",
+      },
+      {
+        domanda: "Devo chiedere permessi per ristrutturare il bagno ad Aversa?",
+        risposta: "Per la sola sostituzione di sanitari e rivestimenti senza toccare impianti o tramezzi, non serve alcun permesso. Se sposti impianti o demolisci tramezzi serve una CILA da presentare al Comune di Aversa prima dell'inizio lavori. In zona vincolata dalla Soprintendenza (centro storico normanno), qualsiasi intervento sulla facciata richiede autorizzazione specifica, ma i lavori interni sono generalmente liberi.",
+      },
+      {
+        domanda: "Quanto tempo dura la ristrutturazione di un bagno ad Aversa?",
+        risposta: "Per un bagno di 4-6 mq con rifacimento completo, la sequenza standard è: demolizione (2-3 gg) → impermeabilizzazione e attesa (2 gg) → posa rivestimenti (3-5 gg) → impianti (2 gg) → montaggio sanitari e rifiniture (2 gg). Totale: 2-3 settimane. Si allunga se è necessaria bonifica amianto sulle canne fumarie condominiali.",
+      },
+      {
+        domanda: "Posso usare il Bonus 50% per il bagno ad Aversa?",
+        risposta: "Sì. La detrazione IRPEF al 50% si applica al rifacimento completo del bagno con sostituzione degli impianti, classificato come manutenzione straordinaria. Servono pagamenti con bonifico parlante e fatture in regola. Il nostro ufficio gestisce la documentazione necessaria.",
+      },
+      {
+        domanda: "Nel palazzo del centro storico di Aversa c'è amianto nelle canne fumarie. Cosa implica per il bagno?",
+        risposta: "La canna fumaria in amianto riguarda direttamente la cucina (cappa), non il bagno. Per il bagno l'amianto può essere presente in altri elementi: guaine di isolamento delle tubazioni, lastre di copertura in alcuni casi. Al sopralluogo verifichiamo la situazione specifica. La bonifica va eseguita da ditta certificata con notifica all'ASL prima dell'inizio lavori.",
+      },
+    ],
+    faqCucina: [
+      {
+        domanda: "Quanto costa ristrutturare la cucina ad Aversa?",
+        risposta: "In base al Prezzario Regionale Campania, per una cucina di 10-14 mq (tipica delle palazzine aversane) il costo orientativo va da 6.500 € (finitura base) a 19.000 € (finitura premium con mobili su misura). Il fattore che incide di più è la canna fumaria: se è in amianto, la bonifica obbligatoria prima dell'installazione della nuova cappa aggiunge 800-2.500 € al preventivo.",
+      },
+      {
+        domanda: "La canna fumaria del palazzo è in amianto. Posso fare la cucina lo stesso?",
+        risposta: "Non è possibile collegare una nuova cappa a una canna fumaria in amianto senza bonifica preventiva. La bonifica va affidata a una ditta specializzata certificata (non noi — è un'attività separata), con notifica all'ASL e smaltimento in discarica autorizzata. Solo dopo la bonifica installare la nuova cappa è legale e sicuro. Il costo di bonifica va calcolato separatamente dal preventivo cucina.",
+      },
+      {
+        domanda: "Posso aprire la cucina sul soggiorno nel mio appartamento ad Aversa?",
+        risposta: "Dipende dal muro. Se è una tramezza non portante, serve solo una CILA e l'intervento è rapido. Se è un muro portante, servono il progetto di un ingegnere strutturale, una trave di sostegno e il permesso di costruire. Il nostro sopralluogo include la verifica della natura del muro prima di qualsiasi preventivo.",
+      },
+    ],
     vicini: ["lusciano", "carinaro", "teverola", "trentola-ducenta", "succivo"],
   },
 
@@ -100,6 +140,24 @@ export const comuniAgroAversano: Comune[] = [
       {
         domanda: "Quanto tempo ci vuole per ristrutturare un bagno a Lusciano?",
         risposta: "Per un bagno standard (5-6 mq) con sostituzione completa di sanitari, rivestimenti e impianti, mediamente 2-3 settimane lavorative. Se si aggiungono lavori strutturali o la bonifica di impianti obsoleti, i tempi si allungano. Il cantiere viene organizzato per ridurre i giorni senza bagno funzionante.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Lusciano?",
+        risposta: "In base al Prezzario Regionale Campania, per un bagno standard (5-7 mq) nelle villette di Lusciano il costo orientativo va da 5.000 € (finitura base) a 13.000 € (finitura premium). Per i bagni nei PEEP comunali, più piccoli (sotto i 5 mq), la forbice è 4.500-9.000 €. Le tubazioni in acciaio zincato, frequenti nelle costruzioni anni '70-'80, vanno quasi sempre sostituite e incidono sul costo finale.",
+      },
+      {
+        domanda: "Ho una villetta anni '80 a Lusciano con umidità al bagno. Prima di rifare le piastrelle cosa devo fare?",
+        risposta: "L'umidità va affrontata prima di qualsiasi rifinitura, altrimenti le nuove piastrelle si staccano o si formano muffe nel giro di uno-due anni. Al sopralluogo il nostro tecnico identifica l'origine: risalita capillare dai muri, infiltrazioni da fondazione o condensa da ventilazione insufficiente. La soluzione dipende dalla causa — ogni caso è diverso.",
+      },
+      {
+        domanda: "Quanto tempo ci vuole per rifare il bagno nella mia villetta a Lusciano?",
+        risposta: "Un bagno di 5-7 mq con rifacimento completo richiede mediamente 2-3 settimane lavorative dalla demolizione alla rifinitura finale. Siamo basati a Lusciano, il che significa trasferte rapide e cantiere efficiente. Se la villetta ha un secondo bagno, il disagio è minimo: lavoriamo sul bagno da rifare mentre l'altro rimane funzionante.",
+      },
+      {
+        domanda: "Conviene fare il bagno e la cucina insieme nella villetta a Lusciano?",
+        risposta: "Spesso sì. I costi fissi (trasferta, smaltimento, ponteggi interni) si distribuiscono su due interventi invece di uno. Il risparmio rispetto a due cantieri separati è mediamente del 10-15%. Al sopralluogo presentiamo preventivi separati e combinati: la scelta finale è tua, con i numeri in mano.",
       },
     ],
     vicini: ["aversa", "carinaro", "teverola", "gricignano-di-aversa"],
@@ -140,6 +198,20 @@ export const comuniAgroAversano: Comune[] = [
         risposta: "Dipende dalle condizioni e dal tipo di posa. Se i pavimenti sono in buone condizioni, a volte è possibile posare il nuovo sopra il vecchio (sovrapposa) risparmiando su demolizione e smaltimento. Se ci sono problemi di umidità, rigonfiamenti o il pavimento è in vinile anni '80, la rimozione completa è necessaria. Lo valutiamo al sopralluogo insieme a te.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Carinaro?",
+        risposta: "In base al Prezzario Regionale Campania, per un bagno standard (5-7 mq) nelle villette di Carinaro la forbice orientativa è 5.000-13.000 €. Le case a schiera degli anni '90 con bagni già parzialmente rifatti una volta richiedono spesso la rimozione dei vecchi rivestimenti sovrapposti prima della nuova posa, il che allunga i tempi e incide sul costo.",
+      },
+      {
+        domanda: "Ho una villetta anni '90 a Carinaro con un bagno già ristrutturato male. Conviene rifare tutto da zero?",
+        risposta: "Una ristrutturazione parziale mal eseguita è uno dei casi in cui conviene quasi sempre rifare dall'inizio: sotto i rivestimenti sovrapposti mancano quasi sempre l'impermeabilizzazione a norma e l'adeguamento degli impianti. Rifare solo la superficie è un risparmio apparente che costringe a riaprire tutto tra pochi anni. Al sopralluogo valutiamo cosa è recuperabile.",
+      },
+      {
+        domanda: "Serve la CILA per rifare il bagno a Carinaro?",
+        risposta: "Solo se sposti impianti o demolisci/ricostruisci tramezzi. La sostituzione di sanitari, rivestimenti e rubinetteria nella stessa posizione è manutenzione ordinaria: nessuna pratica. Il nostro tecnico chiarisce al sopralluogo cosa richiede il tuo intervento specifico.",
+      },
+    ],
     vicini: ["aversa", "lusciano", "teverola", "gricignano-di-aversa"],
   },
 
@@ -178,6 +250,20 @@ export const comuniAgroAversano: Comune[] = [
         risposta: "Sì, la ristrutturazione è il momento ideale per intervenire sull'isolamento acustico. Le soluzioni più efficaci sono la sostituzione dei serramenti con doppi o tripli vetri, il miglioramento dell'isolamento delle pareti perimetrali, e in alcuni casi l'installazione di contropareti. Il costo dipende dall'estensione dell'intervento e viene incluso nel preventivo complessivo.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Teverola?",
+        risposta: "In base al Prezzario Regionale Campania, per un bagno standard (5-6 mq) la forbice orientativa è 5.000-9.500 €. Nelle palazzine anni '70 lungo le arterie principali, le tubazioni in acciaio zincato sono quasi sempre da sostituire integralmente, il che porta il costo verso il limite superiore.",
+      },
+      {
+        domanda: "Ho crepe nei muri del bagno causate dal traffico sulla SS7bis. Prima di rifare le piastrelle cosa faccio?",
+        risposta: "Le crepe da vibrazione nel bagno vanno trattate prima della nuova posa. Se sono solo superficiali (nell'intonaco o nella fuga), si trattano con stucco elastico. Se attraversano il muro, serve una valutazione strutturale prima di procedere con qualsiasi rifinitura. Rivestire sopra una lesione attiva la fa ricomparire in pochi mesi.",
+      },
+      {
+        domanda: "Quanto tempo dura la ristrutturazione di un bagno a Teverola?",
+        risposta: "Per un bagno di 5-6 mq con rifacimento completo, mediamente 2-3 settimane lavorative. Nelle palazzine anni '70 con impianti originali da sostituire integralmente, si aggiungono 2-3 giorni per le tracce degli impianti. I tempi definitivi emergono dal sopralluogo.",
+      },
+    ],
     vicini: ["aversa", "lusciano", "carinaro", "gricignano-di-aversa"],
   },
 
@@ -210,6 +296,20 @@ export const comuniAgroAversano: Comune[] = [
       {
         domanda: "Come faccio a sapere se i miei impianti idrici vanno sostituiti durante la ristrutturazione del bagno?",
         risposta: "I segnali evidenti sono: pressione bassa, acqua color ruggine all'apertura del rubinetto, perdite frequenti ai raccordi. Ma spesso le tubazioni in acciaio zincato sembrano ok dall'esterno e sono deteriorate internamente. Al sopralluogo verifichiamo lo stato delle tubazioni accessibili e ti diciamo chiaramente cosa conviene sostituire e cosa può essere mantenuto.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Gricignano di Aversa?",
+        risposta: "In base al Prezzario Regionale Campania, per un bagno standard (5-7 mq) nelle villette la forbice orientativa è 5.000-13.000 €. Nelle palazzine storiche del nucleo più antico con impianti originali, il costo tende al limite superiore per via della sostituzione integrale degli impianti idrici.",
+      },
+      {
+        domanda: "La base USAF vicina ha influenzato il tipo di costruzioni a Gricignano? Cambia qualcosa per la ristrutturazione?",
+        risposta: "Le costruzioni residenziali attorno alla base sono prevalentemente villette e palazzine standard degli anni '70-'00, non diverse dalle abitazioni dei comuni limitrofi. Non ci sono particolari vincoli edilizi per i residenti. L'unica specificità è la presenza di alcune abitazioni costruite in periodi di forte domanda locativa che possono presentare qualità costruttiva variabile.",
+      },
+      {
+        domanda: "Quanto tempo devo stare senza bagno durante i lavori a Gricignano?",
+        risposta: "Con una pianificazione ottimale del cantiere, i giorni senza bagno funzionante sono 3-5 (fase di demolizione e impermeabilizzazione). Se la villetta ha un secondo bagno, il disagio è nullo. Organizziamo sempre il cantiere per ridurre al minimo l'impatto sulla vita quotidiana.",
       },
     ],
     vicini: ["aversa", "lusciano", "carinaro", "teverola"],
@@ -246,6 +346,20 @@ export const comuniAgroAversano: Comune[] = [
         risposta: "In base al Prezzario Regionale Campania, le stime orientative per un bagno di 5-6 mq con rifacimento completo vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine anni '70 con impianti originali, il costo reale tende al limite superiore.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Trentola Ducenta?",
+        risposta: "In base al Prezzario Regionale Campania, per le palazzine anni '70-'80 del centro (bagni sotto i 5 mq) la forbice è 4.500-9.000 €. Per le villette anni '90-2000 nelle zone di espansione (5-7 mq) la forbice è 5.000-13.000 €. La sostituzione delle tubazioni in acciaio zincato, frequente nelle palazzine più datate, incide sensibilmente sul costo finale.",
+      },
+      {
+        domanda: "Voglio sostituire la vasca con la doccia a Trentola Ducenta. Come funziona?",
+        risposta: "La sostituzione vasca-doccia è uno degli interventi più richiesti. I punti chiave da verificare al sopralluogo sono: posizione degli scarichi (se la doccia non è dove era la vasca, bisogna rifare le tracce a pavimento), spazio disponibile per il box, e pressione idrica (le docce a pioggia richiedono almeno 2 bar). Tutto si misura e si progetta durante il sopralluogo.",
+      },
+      {
+        domanda: "Posso usare il Bonus 50% per il bagno a Trentola Ducenta?",
+        risposta: "Sì, il rifacimento completo del bagno con sostituzione di impianti rientra nella manutenzione straordinaria detraibile al 50% IRPEF. Servono pagamento con bonifico parlante e fatture in regola. Per interventi che richiedono CILA, la pratica va presentata prima dell'inizio lavori.",
+      },
+    ],
     vicini: ["aversa", "succivo", "casaluce", "san-marcellino"],
   },
 
@@ -278,6 +392,20 @@ export const comuniAgroAversano: Comune[] = [
       {
         domanda: "Posso ristrutturare il bagno senza svuotare completamente l'appartamento?",
         risposta: "Sì, la ristrutturazione del bagno richiede solo di svuotare il bagno stesso e proteggere il corridoio adiacente per il passaggio dei materiali. Il cantiere è delimitato e non interferisce con il resto dell'abitazione. L'unico disagio reale è il periodo senza bagno funzionante, che organizziamo per essere il più breve possibile.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a San Marcellino?",
+        risposta: "In base al Prezzario Regionale Campania, per i bagni compatti delle palazzine storiche (sotto i 5 mq) la forbice è 4.500-9.000 €. Per i bagni standard nelle villette (5-7 mq) la forbice è 5.000-13.000 €. Il costo al metro quadro è più alto nei bagni piccoli perché le operazioni di demolizione, impermeabilizzazione e posa hanno un costo fisso indipendente dalla dimensione.",
+      },
+      {
+        domanda: "Il mio bagno a San Marcellino è meno di 4 mq. Ha senso ristrutturarlo o è uno spazio perso?",
+        risposta: "Ha senso, e spesso il risultato è sorprendente. Sanitari sospesi liberano spazio a pavimento, la doccia al posto della vasca recupera facilmente 60-70 cm, grandi formati sui muri dilatano visivamente lo spazio. Con 3-4 mq ben progettati si ottiene un bagno funzionale e piacevole. Lo progettiamo insieme al sopralluogo.",
+      },
+      {
+        domanda: "Gli impianti fognari del nucleo storico di San Marcellino sono spesso condivisi. Come gestisco il bagno in questi casi?",
+        risposta: "I vecchi scarichi condivisi vanno verificati prima di qualsiasi intervento. Al sopralluogo identifichiamo la configurazione degli scarichi e progettiamo l'intervento senza interferire con le proprietà adiacenti. In alcuni casi è opportuno concordare i lavori con il vicino per evitare problemi durante le fasi di demolizione e collegamento.",
       },
     ],
     vicini: ["trentola-ducenta", "casal-di-principe", "aversa", "villa-di-briano"],
@@ -314,6 +442,20 @@ export const comuniAgroAversano: Comune[] = [
         risposta: "Sì, è possibile in molti casi. I lavori nel bagno sono circoscritti e non rendono inabitabile il resto dell'appartamento. L'unico vero disagio è il periodo senza bagno funzionante (3-5 giorni). Se c'è un secondo bagno in casa, il problema non si pone. Altrimenti, organizziamo il cantiere per minimizzare questo tempo.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Casal di Principe?",
+        risposta: "In base al Prezzario Regionale Campania, per i bagni compatti del centro storico (sotto i 5 mq) la forbice è 4.500-9.000 €. Per i bagni standard nelle villette anni '80-'00 (5-6 mq) la forbice è 5.000-9.500 €. Nelle abitazioni con tubazioni in piombo originali, la sostituzione integrale degli impianti è obbligatoria e porta il costo verso il limite superiore.",
+      },
+      {
+        domanda: "Ho tubazioni in piombo nel mio appartamento a Casal di Principe. È obbligatorio sostituirle?",
+        risposta: "Le tubazioni in piombo vanno sostituite per ragioni di salute pubblica: il piombo contamina l'acqua potabile, soprattutto quella stagnante nelle tubazioni. La ristrutturazione del bagno è il momento ideale perché le tracce sono già aperte. Non sostituirle oggi significa riaprire tutto tra pochi anni.",
+      },
+      {
+        domanda: "Posso rifare il bagno abitando nell'appartamento a Casal di Principe?",
+        risposta: "Sì. I lavori sono confinati al bagno e i disagi agli altri ambienti sono minimi. I giorni critici sono 3-5 (demolizione e impermeabilizzazione) in cui il bagno non è utilizzabile. Se c'è un secondo bagno, il problema non esiste. Organizziamo il cantiere per ridurre al minimo questo periodo.",
+      },
+    ],
     vicini: ["san-marcellino", "villa-di-briano", "trentola-ducenta", "parete"],
   },
 
@@ -348,6 +490,20 @@ export const comuniAgroAversano: Comune[] = [
         risposta: "Se la guaina del tetto perde, fare le rifiniture interne prima è un errore: l'acqua rovina tutto nel giro di uno o due inverni. L'ordine corretto è: prima risolvere la causa (guaina, impermeabilizzazione), poi intervenire sulle rifiniture interne. Il nostro sopralluogo valuta entrambe le situazioni e ti dà una priorità chiara.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Casaluce?",
+        risposta: "Le villette di Casaluce hanno tipicamente bagni di 6-8 mq, più grandi della media dell'Agro Aversano. In base al Prezzario Regionale Campania, la forbice orientativa è 5.500-15.000 € per bagni di questa dimensione. Il doppio bagno, frequente nelle villette, permette di fare entrambi insieme con un risparmio del 10-15% rispetto a due cantieri separati.",
+      },
+      {
+        domanda: "Ho una villetta anni '80 a Casaluce con doppio bagno. Conviene rifarli entrambi insieme?",
+        risposta: "In quasi tutti i casi sì. L'impresa è già in cantiere, la logistica è organizzata, i costi fissi si dividono su due interventi. Il risparmio sul totale è mediamente 10-15%. Forniamo sempre preventivi separati e combinati: la scelta finale è tua con i numeri davanti.",
+      },
+      {
+        domanda: "La guaina del tetto della mia villetta a Casaluce perde. Devo risolvere prima di rifare il bagno?",
+        risposta: "Sì, categoricamente. Se l'acqua entra dal tetto arriva prima o poi alle pareti del bagno e compromette qualsiasi rifinitura nuova. L'ordine corretto è impermeabilizzazione esterna → asciugatura delle murature → ristrutturazione degli interni. Il sopralluogo valuta entrambi gli interventi e ti dà le priorità.",
+      },
+    ],
     vicini: ["trentola-ducenta", "succivo", "aversa", "cesa"],
   },
 
@@ -376,6 +532,20 @@ export const comuniAgroAversano: Comune[] = [
       {
         domanda: "Per la ristrutturazione del bagno serve sempre una CILA a Cesa?",
         risposta: "Non sempre. La sola sostituzione di sanitari, rivestimenti e rubinetteria senza spostare impianti è manutenzione ordinaria e non richiede pratiche edilizie. La CILA è necessaria quando si spostano impianti, si demoliscono o si creano tramezzi, o si modifica la distribuzione degli spazi. Il nostro tecnico chiarisce al sopralluogo cosa è necessario per il tuo intervento specifico.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Cesa?",
+        risposta: "In base al Prezzario Regionale Campania, per i bagni ridotti nelle palazzine storiche la forbice è 4.000-8.500 €. Per i bagni standard nelle villette anni '80-'90 (5-6 mq) la forbice è 5.000-9.500 €. Gli impianti fognari datati del nucleo storico possono richiedere lavori aggiuntivi sugli scarichi.",
+      },
+      {
+        domanda: "Il mio bagno a Cesa ha i sanitari degli anni '70 originali. Conviene tenere qualcosa o rifare tutto?",
+        risposta: "Quasi sempre conviene rifare tutto durante un rifacimento completo. I sanitari anni '70 hanno consumi idrici nettamente superiori ai modelli attuali (cassetta del WC da 12-15 litri contro i 6 di oggi). Gli impianti idrici di quell'epoca sono in acciaio zincato o piombo. Tenere i vecchi componenti per risparmiare ora significa riaprire il cantiere tra poco.",
+      },
+      {
+        domanda: "Gli impianti fognari del centro storico di Cesa sono datati. Cosa verificate al sopralluogo?",
+        risposta: "Al sopralluogo verifichiamo: il diametro e il materiale degli scarichi esistenti (i vecchi in ghisa o grès hanno spesso ostruzioni), la pendenza degli scarichi verso la colonna principale, e la capacità di portata. Se gli scarichi mostrano segni di ostruzione cronica o deterioramento, li sostituiamo durante la ristrutturazione del bagno.",
       },
     ],
     vicini: ["aversa", "casaluce", "succivo", "trentola-ducenta"],
@@ -408,6 +578,20 @@ export const comuniAgroAversano: Comune[] = [
         risposta: "Un bagno standard 5-6 mq richiede mediamente 2-3 settimane lavorative dalla demolizione alla rifinitura finale. I tempi si allungano se è necessaria la bonifica di impianti in amianto o se emergono criticità strutturali al sopralluogo.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Frignano?",
+        risposta: "In base al Prezzario Regionale Campania, per le palazzine anni '70-'80 (bagni 4-6 mq) la forbice è 4.500-9.500 €. Per le villette anni '90-2000 (bagni 5-8 mq) la forbice è 5.000-13.000 €. Le tubazioni in acciaio zincato nei condomini degli anni '70 richiedono quasi sempre la sostituzione e incidono sul costo.",
+      },
+      {
+        domanda: "Ho umidità di risalita nei muri del bagno a Frignano. Devo trattarla prima di rifare le piastrelle?",
+        risposta: "Sì, sempre. Posare nuove piastrelle sopra muri con umidità attiva significa dover rifare tutto in 1-2 anni perché le piastrelle si staccano e si formano muffe. Al sopralluogo identifichiamo l'origine dell'umidità e inseriamo il trattamento nel piano lavori prima delle finiture.",
+      },
+      {
+        domanda: "Conviene fare il riscaldamento a pavimento nel bagno durante la ristrutturazione a Frignano?",
+        risposta: "Sì, il momento giusto per installare il riscaldamento a pavimento è quando il bagno è già aperto per il rifacimento completo: il massetto va comunque rifatto. Il costo aggiuntivo è 800-1.500 € a seconda della dimensione. Va pianificato prima dell'inizio lavori perché richiede un massetto dedicato con altezza specifica.",
+      },
+    ],
     vicini: ["villa-di-briano", "casal-di-principe", "san-marcellino", "parete"],
   },
 
@@ -436,6 +620,20 @@ export const comuniAgroAversano: Comune[] = [
       {
         domanda: "Ho un condominio anni '70 a Parete. Cosa devo sapere prima di ristrutturare il mio appartamento?",
         risposta: "Negli edifici condominiali anni '70 è importante verificare: lo stato delle colonne scarico condominiali (se intasate o deteriorate, il problema ricade su tutti i bagni), la presenza di amianto nelle canne fumarie, e il regolamento condominiale per orari e modalità dei lavori. Se l'intervento tocca parti comuni, è necessario informare l'amministratore.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Parete?",
+        risposta: "In base al Prezzario Regionale Campania, per i bagni compatti delle palazzine degli anni '60-'70 (sotto i 5 mq) la forbice è 4.500-9.000 €. Per i bagni standard nelle villette (5-7 mq) la forbice è 5.000-13.000 €. Nelle palazzine più datate con impianti originali, quasi sempre è necessaria la sostituzione integrale delle tubazioni.",
+      },
+      {
+        domanda: "Ho una palazzina anni '70 a Parete. Le colonne scarico condominiali sono rotte. Posso rifare il bagno lo stesso?",
+        risposta: "Puoi rifare il bagno, ma la colonna scarico condominiale rotta è un problema che prima o poi compromette anche il tuo intervento. Se la colonna è deteriorata, ogni scarico del bagno crea rischi di perdite ai piani inferiori. Consigliamo di segnalare il problema all'amministratore prima dei lavori e, se possibile, coordinare la sostituzione della colonna con la ristrutturazione del bagno.",
+      },
+      {
+        domanda: "Serve la CILA per rifare il bagno in un condominio a Parete?",
+        risposta: "Solo se sposti impianti o modifichi i tramezzi. La sostituzione di sanitari e rivestimenti nella stessa posizione è manutenzione ordinaria e non richiede pratiche. Se sposti il WC o demolisci/ricostruisci una tramezza, serve la CILA da presentare al Comune di Parete prima dell'inizio lavori.",
       },
     ],
     vicini: ["villa-di-briano", "casal-di-principe", "frignano", "aversa"],
@@ -472,6 +670,20 @@ export const comuniAgroAversano: Comune[] = [
         risposta: "Sì, il riscaldamento a pavimento nel bagno è uno degli upgrade più richiesti in fase di ristrutturazione completa, perché le tracce e il massetto sono già da rifare. Il costo aggiuntivo rispetto a un bagno standard è di 800-1.500 € a seconda della dimensione. Va pianificato dall'inizio perché richiede un massetto dedicato.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Succivo?",
+        risposta: "Succivo ha un tenore abitativo mediamente più alto rispetto agli altri comuni dell'Agro Aversano: le villette hanno bagni di dimensioni standard o superiori (5-8 mq) e spesso già una ristrutturazione parziale alle spalle. In base al Prezzario Regionale Campania la forbice orientativa è 5.000-15.000 €. Il costo dipende molto da quanta parte degli impianti esistenti è riutilizzabile: lo verifichiamo al sopralluogo.",
+      },
+      {
+        domanda: "Ho già ristrutturato il bagno parzialmente qualche anno fa a Succivo. Conviene rifare tutto o solo parte?",
+        risposta: "Dipende da cosa è stato fatto e quando. Se l'impianto idrico è stato sostituito con materiali moderni (multistrato o polipropilene) e l'impermeabilizzazione è a norma, si può intervenire solo sulle finiture. Se invece è stato fatto solo un cambio piastrelle senza toccare impianti e impermeabilizzazione, quasi sempre conviene rifare dall'inizio per non riaprire tutto tra pochi anni.",
+      },
+      {
+        domanda: "Il riscaldamento a pavimento nel bagno vale l'investimento a Succivo?",
+        risposta: "Per le villette di Succivo che tendono a standard abitativi più elevati, il riscaldamento a pavimento nel bagno è spesso già previsto dai proprietari. Il costo aggiuntivo durante la ristrutturazione è 800-1.500 €: lo stesso intervento fatto dopo su un bagno già finito costerebbe 3-4 volte tanto perché richiede di rimuovere pavimento e massetto. Pianificato dall'inizio è uno degli upgrade con il miglior rapporto costo/beneficio.",
+      },
+    ],
     vicini: ["aversa", "cesa", "casaluce", "trentola-ducenta"],
   },
 
@@ -500,6 +712,20 @@ export const comuniAgroAversano: Comune[] = [
       {
         domanda: "Nel mio appartamento storico a Villa di Briano gli scarichi sono condivisi con il vicino. Posso comunque ristrutturare?",
         risposta: "Sì, ma con le dovute cautele. Gli scarichi condivisi sono una caratteristica degli edifici storici più datati. Durante il sopralluogo verifichiamo la configurazione degli scarichi e progettiamo l'intervento in modo da non interferire con i vicini. In alcuni casi può essere necessario concordare i lavori con il proprietario dell'appartamento adiacente.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Villa di Briano?",
+        risposta: "In base al Prezzario Regionale Campania, per i bagni nelle palazzine storiche (sotto i 5 mq) la forbice è 4.500-9.000 €. Per i bagni standard nelle villette (5-7 mq) la forbice è 5.000-13.000 €. Gli impianti fognari datati e spesso condivisi del nucleo storico possono richiedere verifiche e lavori aggiuntivi sugli scarichi.",
+      },
+      {
+        domanda: "Gli scarichi del mio appartamento storico a Villa di Briano sono condivisi con il vicino. Cosa succede quando rifaccio il bagno?",
+        risposta: "Al sopralluogo mappiamo la configurazione degli scarichi esistenti. Se lo scarico è effettivamente condiviso, progettiamo l'intervento in modo da non toccare le parti che appartengono anche al vicino. In alcuni casi conviene separare gli scarichi durante la ristrutturazione, rendendoli indipendenti: è un lavoro aggiuntivo ma risolve definitivamente il problema per entrambi.",
+      },
+      {
+        domanda: "Quanto tempo dura la ristrutturazione del bagno a Villa di Briano?",
+        risposta: "Un bagno standard (5-7 mq) con rifacimento completo richiede 2-3 settimane lavorative. Nelle palazzine storiche con impianti originali e fognature datate, si aggiungono 2-4 giorni per la verifica e la sostituzione degli scarichi. I tempi definitivi emergono dal sopralluogo.",
       },
     ],
     vicini: ["san-marcellino", "casal-di-principe", "frignano", "parete"],
@@ -546,6 +772,24 @@ export const comuniNapoli: Comune[] = [
         risposta: "La ristrutturazione degli appartamenti IACP è soggetta a regole specifiche che dipendono dal tipo di contratto (locazione semplice, riscatto, piena proprietà). Se sei in fase di riscatto o già proprietario, hai piena libertà di intervento sugli interni. Se sei locatario, è necessaria l'autorizzazione dell'ente gestore per lavori di manutenzione straordinaria.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Napoli (zone nord servite)?",
+        risposta: "In base al Prezzario Regionale Campania, per un bagno sotto i 5 mq nei condomini IACP o nelle palazzine degli anni '60-'70 il costo orientativo è 4.500-8.500 €. Nei condomini degli anni '80 con bagni di 5-6 mq la forbice è 5.000-9.500 €. Il fattore che spinge il costo in alto è quasi sempre lo stato degli impianti: tubazioni in piombo o acciaio zincato da sostituire integralmente.",
+      },
+      {
+        domanda: "Devo avvisare il condominio per rifare il bagno del mio appartamento a Napoli?",
+        risposta: "Per lavori interni all'appartamento (sanitari, rivestimenti, impianti privati), non serve delibera condominiale. Devi rispettare gli orari di lavoro previsti dal regolamento condominiale (solitamente 8-13 e 15-19 nei giorni feriali). Se l'intervento tocca colonne scarico condominiali, è obbligatorio informare l'amministratore prima di aprire le tracce.",
+      },
+      {
+        domanda: "Quanto tempo duro senza bagno durante la ristrutturazione in un condominio napoletano?",
+        risposta: "Con un'organizzazione ottimale del cantiere, i giorni completamente senza bagno funzionante sono 3-5 (fase di demolizione e impermeabilizzazione). Organizziamo il cantiere per rendere il bagno parzialmente funzionante il prima possibile. Se hai un secondo bagno in casa, il problema non si pone.",
+      },
+      {
+        domanda: "Ho tubazioni in piombo nell'appartamento anni '60 a Napoli. Devo sostituirle durante la ristrutturazione del bagno?",
+        risposta: "Sì, le tubazioni in piombo vanno sostituite per ragioni di salute pubblica: il piombo si dissolve nell'acqua, in particolare quella stagnante. La sostituzione è conveniente farla durante la ristrutturazione del bagno perché le tracce sono già aperte. Il costo aggiuntivo è marginale rispetto al costo totale, ma non farlo significa riaprire tutto tra pochi anni.",
+      },
+    ],
     vicini: ["giugliano-in-campania", "mugnano-di-napoli", "melito-di-napoli"],
   },
 
@@ -584,6 +828,20 @@ export const comuniNapoli: Comune[] = [
         risposta: "Dipende dalla natura dell'abuso e dall'intervento che vuoi fare. Per lavori di manutenzione ordinaria (sostituzione sanitari, rivestimenti) non ci sono problemi. Per lavori soggetti a CILA o permesso, il Comune può bloccare l'iter se c'è un abuso pendente. È fondamentale una verifica preventiva della situazione urbanistica.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Giugliano in Campania?",
+        risposta: "In base al Prezzario Regionale Campania, per un bagno standard di 5-6 mq nei condomini degli anni '80-'90 di Giugliano il costo orientativo è 5.000-9.500 €. Negli edifici più vecchi con impianti originali da sostituire integralmente, si tende al limite superiore. Il dato definitivo emerge dal sopralluogo.",
+      },
+      {
+        domanda: "Ho un appartamento anni '90 a Giugliano con abuso non condonato. Posso rifare il bagno?",
+        risposta: "Per il rifacimento del bagno con sostituzione di sanitari e rivestimenti (manutenzione ordinaria) non c'è nessun problema, anche in presenza di abusi pendenti. Il problema si pone se l'intervento richiede una CILA (es. spostamento impianti o modifica tramezzi): in quel caso il Comune di Giugliano verifica la regolarità urbanistica dell'immobile prima di ricevere la pratica. Una verifica preventiva al catasto è sempre consigliata.",
+      },
+      {
+        domanda: "Nei condomini anni '90 di Giugliano le tubazioni vanno quasi sempre sostituite?",
+        risposta: "Non sempre integralmente. Nelle costruzioni degli anni '90 le tubazioni sono spesso in polipropilene o pvc, materiali più duraturi dell'acciaio zincato degli anni '70. Il problema più frequente nei condomini giuglianese degli anni '80-'90 è la bassa pressione ai piani alti, che dipende dalle colonne condominiali. Al sopralluogo verifichiamo lo stato delle tubazioni accessibili e ti diciamo con precisione cosa va sostituito.",
+      },
+    ],
     vicini: ["napoli", "villaricca", "sant-antimo", "mugnano-di-napoli"],
   },
 
@@ -616,6 +874,20 @@ export const comuniNapoli: Comune[] = [
       {
         domanda: "Posso ristrutturare la cucina se la canna fumaria condominiale è in amianto?",
         risposta: "Non è possibile collegare una nuova cappa a una canna fumaria in amianto senza bonifica preventiva. La bonifica va eseguita da una ditta specializzata certificata, con notifica all'ASL e smaltimento in discarica autorizzata. Il costo va calcolato separatamente dal preventivo della cucina e va pianificato prima dell'inizio lavori.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Sant'Antimo?",
+        risposta: "In base al Prezzario Regionale Campania, per i bagni compatti nelle palazzine anni '70 (sotto i 5 mq) la forbice è 4.500-9.000 €. Per i bagni standard nelle costruzioni anni '80-'90 (5-6 mq) la forbice è 5.000-9.500 €. Le colonne montanti in piombo ancora presenti nei palazzi anni '60 richiedono la sostituzione integrale durante qualsiasi intervento sull'impianto idrico.",
+      },
+      {
+        domanda: "Ho infiltrazioni dal lastrico solare nel mio condominio a Sant'Antimo. Devo aspettare che siano risolte prima di rifare il bagno?",
+        risposta: "Sì, se le infiltrazioni arrivano alle pareti del tuo appartamento. Rivestire pareti bagnate significa dover rifare tutto in 1-2 inverni. Il lastrico solare è parte comune: il problema va segnalato all'amministratore e risolto con delibera condominiale prima di qualsiasi intervento interno. Se le infiltrazioni non raggiungono il bagno, puoi procedere.",
+      },
+      {
+        domanda: "Posso fare il bagno abitando in casa in un condominio a Sant'Antimo?",
+        risposta: "Sì. I lavori nel bagno sono circoscritti e rispettiamo sempre gli orari condominiali (tipicamente 8-13 e 15-19). I giorni critici senza bagno funzionante sono 3-5. Avvisiamo sempre l'amministratore prima dell'inizio lavori per la parte logistica (accesso, smaltimento macerie, orari).",
       },
     ],
     vicini: ["giugliano-in-campania", "napoli", "melito-di-napoli", "grumo-nevano"],
@@ -652,6 +924,20 @@ export const comuniNapoli: Comune[] = [
         risposta: "Un bagno degli anni '60 con impianti originali è quasi certamente da rifare integralmente: tubazioni in piombo o acciaio zincato, impianto elettrico non a norma, rivestimenti in mosaico con adesivo a base di catrame. La stima orientativa per un bagno sotto i 5 mq con rifacimento completo è di 4.500-7.500 € a seconda della finitura scelta. Il sopralluogo gratuito definisce il costo reale.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Melito di Napoli?",
+        risposta: "In base al Prezzario Regionale Campania, per i bagni compatti dei condomini anni '60-'70 (sotto i 5 mq) la forbice è 4.500-8.500 €. Per i bagni standard nelle costruzioni anni '80-'90 (5-6 mq) la forbice è 5.000-9.500 €. Un bagno degli anni '60 con impianti originali è quasi sempre da rifare integralmente: tubazioni in piombo, impianto elettrico non a norma, adesivi storici non compatibili con nuovi rivestimenti.",
+      },
+      {
+        domanda: "Ho umidità al piano terra del mio condominio a Melito. Devo risolverla prima di rifare il bagno?",
+        risposta: "Dipende dalla posizione del bagno. Se il bagno è al piano terra e l'umidità riguarda le pareti perimetrali, è necessario trattare prima l'umidità, altrimenti le nuove piastrelle si staccano entro 1-2 anni. Se il bagno è a un piano superiore e l'umidità riguarda solo altri ambienti, puoi procedere. Al sopralluogo verifichiamo la situazione specifica.",
+      },
+      {
+        domanda: "Nel mio appartamento anni '60 a Melito ci sono ancora le tubazioni in piombo. Cosa faccio durante la ristrutturazione del bagno?",
+        risposta: "Le tubazioni in piombo vanno sostituite obbligatoriamente: il piombo contamina l'acqua potabile ed è classificato come sostanza tossica. La sostituzione durante la ristrutturazione del bagno ha un costo marginale rispetto all'intervento totale, perché le tracce sono già aperte. Includiamo sempre la sostituzione delle tubazioni interne all'appartamento nel preventivo.",
+      },
+    ],
     vicini: ["napoli", "sant-antimo", "mugnano-di-napoli", "casandrino"],
   },
 
@@ -684,6 +970,20 @@ export const comuniNapoli: Comune[] = [
       {
         domanda: "Posso trasformare il bagno piccolo degli anni '70 in un bagno moderno funzionale senza aumentare lo spazio?",
         risposta: "Assolutamente sì. I bagni compatti anni '70 beneficiano moltissimo di una ristrutturazione ben progettata: sanitari sospesi al posto di quelli a terra (guadagni 15-20 cm a pavimento), doccia al posto della vasca, grande specchio e illuminazione ottimizzata, mensole integrate. Con 4-5 mq ben progettati si ottiene un bagno funzionale e piacevole. Lo progettiamo insieme al sopralluogo.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Mugnano di Napoli?",
+        risposta: "In base al Prezzario Regionale Campania, per i bagni compatti delle palazzine anni '60-'70 (sotto i 5 mq) la forbice è 4.500-8.500 €. Per i bagni standard delle costruzioni anni '80 (5-6 mq) la forbice è 5.000-9.500 €. Le colonne scarico e i montanti idrici condominiali vetusti sono la criticità principale: se deteriorati, aggiungono costi al preventivo dell'appartamento.",
+      },
+      {
+        domanda: "Ho scarichi lenti al quinto piano del mio condominio a Mugnano. Il problema è mio o condominiale?",
+        risposta: "Quasi sempre condominiale. Le colonne scarico nei condomini anni '70 di Mugnano sono spesso in ghisa o pvc di prima generazione, deteriorate internamente. Il problema si manifesta prima ai piani alti. Puoi risolvere i tratti interni al tuo appartamento durante la ristrutturazione del bagno, ma la soluzione definitiva richiede che il condominio intervenga sulla colonna comune.",
+      },
+      {
+        domanda: "Posso ricavare un bagno funzionale da soli 4 mq a Mugnano di Napoli?",
+        risposta: "Sì. Con sanitari sospesi, doccia a filo pavimento al posto della vasca, grande specchio che amplifica la percezione dello spazio, e illuminazione a LED integrata nel controsoffitto si trasforma completamente anche un bagno di 3,5-4 mq. Progettiamo lo spazio al sopralluogo con misure reali, non a occhio.",
       },
     ],
     vicini: ["napoli", "giugliano-in-campania", "melito-di-napoli", "villaricca"],
@@ -720,6 +1020,20 @@ export const comuniNapoli: Comune[] = [
         risposta: "Fare bagno e cucina insieme ha vantaggi concreti: l'impresa è già in casa, le pratiche burocratiche si gestiscono una sola volta, i costi di cantiere (ponteggi, smaltimento, trasferta) si dividono su due interventi. Il risparmio rispetto a due cantieri separati è di solito il 10-15% sull'importo totale.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Villaricca?",
+        risposta: "In base al Prezzario Regionale Campania, per i bagni compatti nelle palazzine anni '70 (4-5 mq) la forbice è 4.500-9.000 €. Per i bagni standard nelle costruzioni anni '90-2000 (5-7 mq) la forbice è 5.000-13.000 €. Le tubazioni in acciaio zincato nelle palazzine degli anni '70-'80 richiedono quasi sempre la sostituzione integrale.",
+      },
+      {
+        domanda: "Ho una villetta anni '90 a Villaricca e voglio rifare bagno e cucina. Conviene farlo insieme?",
+        risposta: "Quasi sempre sì. L'impresa è già in cantiere, i costi fissi si dividono su due interventi, e hai un solo periodo di disagio invece di due. Il risparmio sul totale è 10-15%. Forniamo sempre preventivi separati e combinati: la scelta è tua con i numeri davanti.",
+      },
+      {
+        domanda: "Serve la CILA per rifare il bagno nella mia palazzina a Villaricca?",
+        risposta: "Solo se sposti impianti o modifichi tramezzi. La sostituzione di sanitari e rivestimenti nella stessa posizione è manutenzione ordinaria: nessuna pratica. Se invece sposti il WC, demolisci una tramezza o sposti le tracce degli impianti, serve la CILA al Comune di Villaricca prima dell'inizio lavori.",
+      },
+    ],
     vicini: ["napoli", "giugliano-in-campania", "mugnano-di-napoli", "casandrino"],
   },
 
@@ -754,6 +1068,20 @@ export const comuniNapoli: Comune[] = [
         risposta: "Un bagno di 4-5 mq con rifacimento completo richiede mediamente 2-3 settimane lavorative. I tempi si allungano se è necessaria la bonifica di impianti in amianto, la sostituzione delle colonne condominiali o se emergono criticità strutturali al sopralluogo.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Casandrino?",
+        risposta: "In base al Prezzario Regionale Campania, per i bagni compatti delle palazzine anni '60-'70 (sotto i 5 mq) la forbice è 4.500-8.500 €. Per i bagni standard nelle costruzioni successive (5-6 mq) la forbice è 5.000-9.500 €. Nelle palazzine più vecchie con canne fumarie in amianto, la bonifica preventiva obbligatoria va inserita nel piano costi prima di qualsiasi intervento sulla cucina adiacente.",
+      },
+      {
+        domanda: "Il mio appartamento a Casandrino ha bagno e cucina adiacenti. Posso allargare il bagno ricavando spazio dalla cucina?",
+        risposta: "È fattibile se il muro divisorio è una tramezza non portante. Serve una CILA per la modifica degli spazi interni. L'intervento va progettato con attenzione: lo spazio tolto alla cucina va compensato nella distribuzione dei mobili, e tutti gli impianti vanno riprogettati. Al sopralluogo verifichiamo la struttura del muro e progettiamo l'intervento se fattibile.",
+      },
+      {
+        domanda: "Quanto tempo dura la ristrutturazione del bagno a Casandrino?",
+        risposta: "Per un bagno di 4-5 mq nelle palazzine di Casandrino, mediamente 2-3 settimane lavorative. I tempi si allungano se è necessaria la sostituzione di colonne condominiali (richiede coordinamento col condominio) o la bonifica di materiali in amianto.",
+      },
+    ],
     vicini: ["napoli", "villaricca", "mugnano-di-napoli", "grumo-nevano"],
   },
 
@@ -786,6 +1114,20 @@ export const comuniNapoli: Comune[] = [
       {
         domanda: "Ho un appartamento degli anni '80 a Grumo Nevano con rivestimenti in ceramica fino a metà parete. Conviene toglierli o posarci sopra?",
         risposta: "La scelta tra rimozione e sovrapposa dipende da: spessore dei vecchi rivestimenti (se già sovrapposti una volta, una seconda volta può creare problemi di peso e planarità), adesione al supporto (se ci sono zone staccate, vanno rimosse), e tipo di intervento (se rifai anche gli impianti, è meglio rimuovere tutto). Al sopralluogo valutiamo la situazione e ti diciamo qual è la soluzione più conveniente.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Grumo Nevano?",
+        risposta: "In base al Prezzario Regionale Campania, per le palazzine anni '70-'90 (bagni 5-6 mq) la forbice è 5.000-9.500 €. Grumo Nevano è al confine tra le province di Napoli e Caserta: le caratteristiche edilizie sono ibride tra i condomini napoli-nord degli anni '70-'80 e le palazzine casertane. Le tubazioni in acciaio zincato sono frequenti nelle costruzioni degli anni '70-'80 e richiedono spesso sostituzione.",
+      },
+      {
+        domanda: "Grumo Nevano è al confine con la provincia di Caserta. Operate comunque qui?",
+        risposta: "Sì, operiamo su tutto il territorio di Grumo Nevano. Siamo basati a Lusciano, a pochi minuti di distanza: la logistica è ottimale e le trasferte sono rapide. La provincia di appartenenza non fa differenza per i nostri interventi.",
+      },
+      {
+        domanda: "Ho rivestimenti in ceramica a metà parete nel bagno anni '80. Li rimuovo o ci poso sopra?",
+        risposta: "Se stai facendo un rifacimento completo con sostituzione degli impianti, quasi sempre conviene rimuovere tutto: le tracce degli impianti vanno comunque aperte, e lavorare su una superficie pulita garantisce impermeabilizzazione a norma e aderenza ottimale dei nuovi rivestimenti. La sovrapposa è conveniente solo per interventi cosmetici senza toccare gli impianti.",
       },
     ],
     vicini: ["sant-antimo", "casandrino", "napoli", "aversa"],
@@ -832,6 +1174,24 @@ export const comuniCaserta: Comune[] = [
         risposta: "Per un appartamento degli anni '70, l'ordine logico è: prima una verifica degli impianti (elettrico e idrico), poi una valutazione dell'umidità nelle pareti perimetrali, e infine la programmazione degli interventi. Spesso conviene fare impianti e rifiniture in sequenza unica per ottimizzare i costi. Il sopralluogo identifica le priorità e permette di pianificare in modo efficiente.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Caserta?",
+        risposta: "In base al Prezzario Regionale Campania, per un bagno standard di 5-6 mq nelle palazzine del quartiere Pietro Nenni o Acquaviva il costo orientativo è 5.000-9.500 €. Negli appartamenti del centro storico con impianti d'epoca (piombo o acciaio zincato) il costo tende al limite superiore. Un bagno nei complessi anni '90 in periferia con impianti in buono stato si attesta più vicino al range base.",
+      },
+      {
+        domanda: "Ci sono vincoli per ristrutturare il bagno vicino alla Reggia di Caserta?",
+        risposta: "I vincoli della Soprintendenza riguardano le facciate e gli elementi storico-architettonici visibili dall'esterno. I lavori interni come il rifacimento del bagno non richiedono autorizzazione della Soprintendenza. Per interventi che modificano gli spazi interni (spostamento tramezzi, modifica impianti) è sufficiente una CILA al Comune di Caserta.",
+      },
+      {
+        domanda: "Ho impianti in piombo nell'appartamento storico di Caserta. Cosa succede durante la ristrutturazione del bagno?",
+        risposta: "Le tubazioni in piombo vanno sostituite per legge in caso di interventi sull'impianto idrico. La ristrutturazione del bagno è il momento ideale perché le tracce sono già aperte. La sostituzione dei tratti interni all'appartamento ha un costo marginale rispetto al totale, ma è un intervento che non va rimandato: il piombo contamina l'acqua potabile.",
+      },
+      {
+        domanda: "L'acqua a Caserta è dura. Cosa scelgo per il bagno?",
+        risposta: "L'acqua della zona di Caserta è calcarea. Per la rubinetteria, privilegia modelli con rompigetto intercambiabile anti-calcare. Per i rivestimenti, i gres porcellanati opachi mostrano meno il calcare rispetto ai lucidi. Per il box doccia, profili minimi o assenza di profili facilitano la pulizia. Ne parliamo durante la scelta dei materiali al sopralluogo.",
+      },
+    ],
     vicini: ["casagiove", "san-prisco", "recale", "marcianise"],
   },
 
@@ -866,6 +1226,20 @@ export const comuniCaserta: Comune[] = [
         risposta: "Sì, e spesso conviene. L'impresa è già in casa, i costi fissi (trasferta, ponteggi interni, smaltimento) si distribuiscono su due interventi, e la logistica del cantiere è più efficiente. In media, fare bagno e cucina insieme costa il 10-15% in meno rispetto a due cantieri separati.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Marcianise?",
+        risposta: "In base al Prezzario Regionale Campania, per i bagni compatti delle palazzine anni '60-'70 (sotto i 5 mq) la forbice è 4.500-8.500 €. Per i bagni standard nelle palazzine anni '80 e nelle villette periferiche (5-7 mq) la forbice è 5.000-13.000 €. Le abitazioni vicino alla SS7 Appia con lesioni da vibrazione richiedono un sopralluogo tecnico prima di qualsiasi rifinitura.",
+      },
+      {
+        domanda: "Ho crepe nel bagno causate dal traffico sulla SS7 a Marcianise. Le tratto prima o dopo aver rifatto le piastrelle?",
+        risposta: "Sempre prima. Le lesioni da vibrazione attiva si ripresentano sotto qualsiasi rivestimento nuovo se non trattate alla radice. Le fessure superficiali nell'intonaco si risolvono con stucco elastico prima della nuova posa. Se la lesione attraversa il muro, serve una valutazione strutturale. Lo verifichiamo al sopralluogo.",
+      },
+      {
+        domanda: "Conviene fare bagno e cucina insieme a Marcianise?",
+        risposta: "Sì, quasi sempre. I costi fissi si dividono su due interventi, si fa un solo cantiere e un solo periodo di disagio. Il risparmio rispetto a due cantieri separati è mediamente 10-15%. Preventivi separati e combinati vengono forniti al sopralluogo.",
+      },
+    ],
     vicini: ["caserta", "santa-maria-capua-vetere", "curti", "recale"],
   },
 
@@ -894,6 +1268,20 @@ export const comuniCaserta: Comune[] = [
       {
         domanda: "Ho una palazzina anni '70 a Curti. Devo sostituire le tubazioni durante la ristrutturazione del bagno?",
         risposta: "Nelle palazzine degli anni '70 le tubazioni idriche sono quasi certamente in acciaio zincato, che si corrode internamente nel tempo riducendo la portata e rilasciando impurità nell'acqua. Se il bagno è già aperto per la ristrutturazione, la sostituzione dei tratti di tubazione interni all'appartamento ha un costo marginale relativamente basso. Consigliamo quasi sempre di farlo per evitare di riaprire le tracce tra pochi anni.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Curti?",
+        risposta: "In base al Prezzario Regionale Campania, per le palazzine anni '70-'80 (bagni 4-6 mq) la forbice è 4.500-9.500 €. Per le villette anni '90-2000 con bagni più ampi la forbice è 5.000-13.000 €. Le tubazioni in acciaio zincato negli edifici degli anni '70-'80 di Curti richiedono quasi sempre la sostituzione durante la ristrutturazione del bagno.",
+      },
+      {
+        domanda: "Ho una palazzina anni '70 a Curti. Le tubazioni in acciaio zincato vanno sostituite per forza?",
+        risposta: "Non per obbligo di legge, ma quasi sempre per convenienza pratica. Le tubazioni in acciaio zincato si corrodono internamente con il tempo: riduzione della portata, acqua con impurità, perdite ai raccordi. Se il bagno è già aperto per la ristrutturazione, sostituire i tratti interni all'appartamento ha un costo marginale. Non farlo significa riaprire tutto tra 3-5 anni.",
+      },
+      {
+        domanda: "Serve la CILA per rifare il bagno a Curti?",
+        risposta: "Solo se sposti impianti o modifichi tramezzi. La sostituzione di sanitari, rivestimenti e rubinetteria nella stessa posizione è manutenzione ordinaria. Per qualsiasi modifica alla distribuzione interna, serve la CILA al Comune di Curti prima dell'inizio lavori.",
       },
     ],
     vicini: ["caserta", "marcianise", "santa-maria-capua-vetere", "recale"],
@@ -930,6 +1318,20 @@ export const comuniCaserta: Comune[] = [
         risposta: "Gli edifici storici di Santa Maria Capua Vetere soffrono spesso di umidità da risalita capillare e da falde acquifere superficiali. Il trattamento corretto richiede un'analisi della causa: diversi tipi di umidità hanno soluzioni diverse. I trattamenti superficiali (pitture antimuffa, impermeabilizzanti) non risolvono il problema alla radice. Il sopralluogo include sempre la verifica delle cause.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Santa Maria Capua Vetere?",
+        risposta: "In base al Prezzario Regionale Campania, per gli appartamenti storici del centro (bagni sotto i 5 mq con impianti d'epoca) la forbice è 4.500-9.500 €. Per i bagni standard nelle palazzine anni '60-'80 (5-6 mq) la forbice è 5.000-9.500 €. L'umidità da falde acquifere superficiali, frequente nel centro storico, richiede trattamenti specifici che vanno inclusi nel preventivo.",
+      },
+      {
+        domanda: "Ho un appartamento nel centro storico di Santa Maria Capua Vetere con umidità nelle pareti del bagno. Come lo gestisco?",
+        risposta: "L'umidità negli edifici storici di Santa Maria Capua Vetere è spesso alimentata da falde acquifere superficiali: il trattamento con soli impermeabilizzanti non basta. Al sopralluogo identifichiamo la causa (risalita capillare, falda, condensa) e progettiamo il trattamento corretto prima della nuova posa dei rivestimenti.",
+      },
+      {
+        domanda: "Ci sono vincoli per rifare il bagno a Santa Maria Capua Vetere?",
+        risposta: "I vincoli archeologici riguardano il sottosuolo: qualsiasi scavo che potrebbe incontrare reperti romani richiede autorizzazione. Per la ristrutturazione del bagno (lavori a traccia nelle pareti, non fondazioni) i vincoli sono generalmente limitati. Una CILA è sufficiente per interventi di manutenzione straordinaria. Verifica preventiva con il Comune sempre consigliata.",
+      },
+    ],
     vicini: ["caserta", "marcianise", "curti", "capua"],
   },
 
@@ -960,6 +1362,20 @@ export const comuniCaserta: Comune[] = [
         risposta: "Puoi iniziare lavori di manutenzione ordinaria (sostituzione sanitari e rivestimenti) senza necessità di comunicazioni formali. Per lavori più invasivi con demolizioni e rumori continuativi, è buona pratica avvisare l'amministratore e i vicini con qualche giorno di anticipo. La maggior parte dei regolamenti condominiali limita i lavori rumorosi a determinati orari.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Casapulla?",
+        risposta: "In base al Prezzario Regionale Campania, per le palazzine anni '70-'80 (bagni 4-6 mq) la forbice è 4.500-9.500 €. Per le villette anni '90-2000 (bagni più ampi) la forbice è 5.000-13.000 €. Le canne fumarie in amianto nei condomini degli anni '70 vanno verificate prima di qualsiasi intervento sulla cucina adiacente al bagno.",
+      },
+      {
+        domanda: "Devo avvisare il condominio prima di rifare il bagno a Casapulla?",
+        risposta: "Per manutenzione ordinaria (sostituzione sanitari e rivestimenti) non ci sono obblighi formali. Per lavori con demolizioni e rumore continuativo è buona pratica avvisare l'amministratore e i vicini con qualche giorno di anticipo. I regolamenti condominiali solitamente limitano i lavori rumorosi alle fasce 8-13 e 15-19 nei giorni feriali.",
+      },
+      {
+        domanda: "Quanto tempo dura la ristrutturazione del bagno a Casapulla?",
+        risposta: "Un bagno di 5-6 mq con rifacimento completo richiede mediamente 2-3 settimane lavorative. La sostituzione delle tubazioni in acciaio zincato, frequente nelle palazzine anni '70-'80, aggiunge 1-2 giorni per le tracce degli impianti.",
+      },
+    ],
     vicini: ["caserta", "san-prisco", "recale", "capua"],
   },
 
@@ -988,6 +1404,20 @@ export const comuniCaserta: Comune[] = [
       {
         domanda: "Ho una villetta degli anni '90 a Recale. Conviene fare cappotto termico durante la ristrutturazione?",
         risposta: "Il cappotto termico è indipendente dalla ristrutturazione degli interni, ma spesso viene pianificato insieme per ottimizzare il cantiere e accedere alle detrazioni fiscali (Ecobonus). Se stai già ristrutturando gli interni, è un buon momento per valutare anche l'involucro esterno: i costi fissi del cantiere si ammortizzano meglio. Il sopralluogo include anche una valutazione dell'isolamento della facciata.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Recale?",
+        risposta: "In base al Prezzario Regionale Campania, per le palazzine anni '70-'80 (bagni 5-6 mq) la forbice è 5.000-9.500 €. Per le villette anni '90-2000 con bagni più ampi (6-8 mq) la forbice è 5.500-13.000 €. Recale è a due passi da Caserta: le caratteristiche edilizie sono simili ai quartieri residenziali casertani.",
+      },
+      {
+        domanda: "Ho una villetta anni '90 a Recale e voglio rifare il bagno. Da dove si inizia?",
+        risposta: "Il sopralluogo è il punto di partenza obbligatorio: verifichiamo lo stato degli impianti idrici, la presenza di umidità nelle pareti, la condizione degli scarichi e la tipologia del rivestimento esistente. Solo dopo il sopralluogo possiamo dire con precisione cosa va fatto e a che costo.",
+      },
+      {
+        domanda: "Posso abbinare cappotto termico e ristrutturazione bagno a Recale?",
+        risposta: "Sì, anzi è la combinazione ottimale: il cantiere è già aperto, i costi fissi si dividono, e puoi accedere sia al Bonus Ristrutturazioni 50% per il bagno che all'Ecobonus per il cappotto. Gli interventi sono fisicamente separati ma si pianificano insieme al sopralluogo.",
       },
     ],
     vicini: ["caserta", "casagiove", "san-prisco", "marcianise"],
@@ -1022,6 +1452,20 @@ export const comuniCaserta: Comune[] = [
       {
         domanda: "Quali materiali sono più adatti per un bagno in una zona con acqua dura come quella di Caserta?",
         risposta: "L'acqua della zona di Caserta è tendenzialmente calcarea. Per la rubinetteria, consigliamo modelli con rompigetto anticalcare intercambiabile. Per i rivestimenti, i gres porcellanati levigati mostrano il calcare più degli opachi: tenere presente la manutenzione. Per la doccia, i box con profili minimi (zero profili) sono più facili da pulire. Lo discutiamo in dettaglio durante la scelta dei materiali al sopralluogo.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a San Prisco?",
+        risposta: "In base al Prezzario Regionale Campania, per le palazzine anni '70-'80 (bagni 5-6 mq) la forbice è 5.000-9.500 €. Per le villette con bagni più ampi la forbice è 5.500-13.000 €. L'acqua della zona di Caserta è calcarea: al sopralluogo consigliamo i materiali più adatti per ridurre la manutenzione.",
+      },
+      {
+        domanda: "Ho doppio bagno nella mia abitazione a San Prisco. Conviene rifarli insieme?",
+        risposta: "Quasi sempre sì. Un solo cantiere, una sola logistica, costi fissi divisi su due interventi. Il risparmio sul totale è mediamente 10-15%. Al sopralluogo forniamo preventivi separati e combinati.",
+      },
+      {
+        domanda: "L'acqua a San Prisco è dura. Come scelgo materiali e rubinetteria per il bagno?",
+        risposta: "L'acqua della zona casertana è calcarea. Per la rubinetteria scegliamo modelli con rompigetto intercambiabile anti-calcare. Per i rivestimenti, i gres opachi mostrano meno il calcare rispetto ai lucidi. Per il box doccia, i profili minimi o assenti facilitano notevolmente la pulizia. Ne parliamo durante la scelta dei materiali al sopralluogo.",
       },
     ],
     vicini: ["caserta", "recale", "casapulla", "casagiove"],
@@ -1062,6 +1506,20 @@ export const comuniCaserta: Comune[] = [
         risposta: "In assenza di canna fumaria, le soluzioni sono: cappa a ricircolo (filtra l'aria senza canalizzarla all'esterno, meno efficace ma non richiede tracce), cappa canalizzata verso l'esterno attraverso il muro perimetrale (richiede foratura della facciata e in centro storico va verificata con il Comune), oppure creazione di una nuova canna fumaria interna. Il sopralluogo valuta la soluzione più adatta al tuo spazio.",
       },
     ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Capua?",
+        risposta: "In base al Prezzario Regionale Campania, per gli appartamenti storici del centro (bagni spesso aggiunti in seconda battuta, dimensioni non ottimali) la forbice è 5.000-11.000 €. Per i bagni standard nelle palazzine periferiche anni '70-'80 (5-6 mq) la forbice è 5.000-9.500 €. L'umidità da risalita nelle abitazioni storiche vicino al Volturno è la criticità più frequente e va trattata prima di qualsiasi rifinitura.",
+      },
+      {
+        domanda: "Ho un appartamento storico a Capua con umidità nelle pareti del bagno. Devo trattarla prima di rifare le piastrelle?",
+        risposta: "Sì, categoricamente. L'umidità da risalita negli edifici storici di Capua, accentuata dalla vicinanza al Volturno, distrugge qualsiasi rifinitura nuova in 1-2 anni se non trattata alla radice. Al sopralluogo identifichiamo il tipo di umidità e inseriamo il trattamento corretto nel piano lavori prima della nuova posa.",
+      },
+      {
+        domanda: "Il mio bagno nel centro storico di Capua ha dimensioni strane perché ricavato in un secondo momento. Come lo gestisco?",
+        risposta: "È una situazione comune negli edifici storici capuani. Al sopralluogo misuriamo lo spazio reale e progettiamo la distribuzione ottimale dei sanitari: spesso sanitari sospesi, doccia angolare o a filo pavimento, e mensole integrate consentono di ricavare un bagno funzionale anche in spazi irregolari.",
+      },
+    ],
     vicini: ["santa-maria-capua-vetere", "caserta", "marcianise"],
   },
 
@@ -1098,6 +1556,20 @@ export const comuniCaserta: Comune[] = [
       {
         domanda: "Ho la guaina del tetto piatto esaurita a Casagiove. Conviene rifare anche l'isolamento termico?",
         risposta: "Se il tetto è già da aprire per la guaina, aggiungere lo strato isolante ha un costo marginale basso rispetto al costo totale dell'intervento. L'isolamento termico del tetto è uno degli interventi con il miglior rapporto costo/beneficio in termini energetici, e può beneficiare dell'Ecobonus. Lo valutiamo al sopralluogo insieme al rifacimento della guaina.",
+      },
+    ],
+    faqBagno: [
+      {
+        domanda: "Quanto costa rifare il bagno a Casagiove?",
+        risposta: "Casagiove ha un tenore abitativo mediamente più elevato rispetto ai comuni vicini: le villette hanno bagni di dimensioni standard o superiori (6-9 mq) e spesso doppio bagno. In base al Prezzario Regionale Campania la forbice orientativa è 5.500-17.000 €. Il rifacimento di entrambi i bagni insieme (frequente qui) consente un risparmio del 10-15% sul totale.",
+      },
+      {
+        domanda: "Ho una villetta anni '90 a Casagiove con doppio bagno entrambi da rifare. Come organizziamo il cantiere?",
+        risposta: "Organizziamo il cantiere in modo da non lasciare mai entrambi i bagni contemporaneamente non funzionanti. Tipicamente: finiamo il primo bagno al punto da renderlo usabile, poi apriamo il secondo. Il periodo senza almeno un bagno funzionante si riduce a 3-5 giorni totali. Al sopralluogo presentiamo preventivi separati e combinati.",
+      },
+      {
+        domanda: "Ho già ristrutturato parzialmente il bagno nella mia villetta a Casagiove. Conviene completare o rifare?",
+        risposta: "Dipende da cosa è stato fatto. Se l'impianto idrico è stato sostituito con materiali moderni e l'impermeabilizzazione è a norma, si può completare sulle finiture. Se invece è stato solo un cambio estetico senza toccare impianti e impermeabilizzazione, rifare completamente è quasi sempre la scelta corretta per non riaprire tutto tra pochi anni. Al sopralluogo valutiamo cosa è recuperabile.",
       },
     ],
     vicini: ["caserta", "recale", "san-prisco"],
