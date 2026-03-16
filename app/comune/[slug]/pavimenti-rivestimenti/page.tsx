@@ -69,7 +69,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, url, siteName: "ristrutturazionepreventivi.it", locale: "it_IT", type: "article" },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: "ristrutturazionepreventivi.it",
+      locale: "it_IT",
+      type: "article",
+      images: [
+        {
+          url: `https://ristrutturazionepreventivi.it/images/servizi/pavimenti-rivestimenti.jpg`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
   };
 }
 
