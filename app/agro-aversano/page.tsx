@@ -18,6 +18,16 @@ export const metadata: Metadata = {
     description:
       "Costi orientativi per ristrutturazioni nell'Agro Aversano. Stima gratuita senza impegno.",
     url: "https://ristrutturazionepreventivi.it/agro-aversano/",
+    siteName: "ristrutturazionepreventivi.it",
+    locale: "it_IT",
+    images: [
+      {
+        url: "https://ristrutturazionepreventivi.it/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ristrutturazione Agro Aversano - Russo FE Costruzione SRL",
+      },
+    ],
   },
 };
 
