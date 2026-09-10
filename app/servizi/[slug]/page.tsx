@@ -199,7 +199,7 @@ export default async function ServizioPage({ params }: Props) {
                   Richiedi un preventivo immediato per la ristrutturazione di casa o appartamento e ottieni un primo costo reale del tuo intervento. Il preventivo finale viene confermato dopo sopralluogo e verifica tecnica dell’immobile.
                 </p>
                 <a
-                  href="#modulo-di-preventivo"
+                  href="#preventivatore"
                   className="inline-flex items-center gap-2 bg-orange text-white font-semibold px-6 py-3 rounded-xl hover:opacity-90 transition-opacity"
                 >
                   Richiedi un preventivo
@@ -219,7 +219,7 @@ export default async function ServizioPage({ params }: Props) {
           </div>
         </section>
 
-        <div className="lg:hidden px-4 pt-6" id="modulo-di-preventivo">
+        <div className="lg:hidden px-4 pt-6" id="preventivatore">
           <CalcolatoreAppartamento comuneDefault="Napoli" />
         </div>
 
@@ -435,7 +435,7 @@ export default async function ServizioPage({ params }: Props) {
           </div>
 
           <div className="space-y-8">
-            <div id="modulo-di-preventivo" className="hidden lg:block">
+            <div id="preventivatore" className="hidden lg:block">
               <CalcolatoreAppartamento comuneDefault="Napoli" />
             </div>
 
@@ -533,7 +533,7 @@ export default async function ServizioPage({ params }: Props) {
                 {servizio.sottotitolo}
               </p>
               <a
-                href="#modulo-di-preventivo"
+                href="#preventivatore"
                 className="inline-flex items-center gap-2 bg-orange text-white font-semibold px-6 py-3 rounded-xl hover:opacity-90 transition-opacity"
               >
                 Richiedi un preventivo
