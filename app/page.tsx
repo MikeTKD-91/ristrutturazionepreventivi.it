@@ -169,7 +169,7 @@ const servicePriceLabels: Record<string, string> = {
               </div>
             </div>
 
-            <div id="preventivatore">
+            <div id="preventivatore" className="scroll-mt-24 lg:scroll-mt-28">
               <div className={`transition-all duration-700 rounded-2xl ${
                 highlightPreventivatore
                   ? "ring-4 ring-orange ring-offset-4 ring-offset-navy shadow-2xl shadow-orange/30"
