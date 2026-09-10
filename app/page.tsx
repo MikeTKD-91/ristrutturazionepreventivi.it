@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, MapPin, Shield, Clock, Award, ChevronDown } from "lucide-react";
@@ -48,7 +48,7 @@ const processoSteps = [
 const faqHome = [
   {
     q: "La prima stima online è vincolante?",
-    a: "No. La stima online serve a capire l’ordine di grandezza dell’intervento e capire se la spesa è in linea con il budget. Il preventivo finale si definisce solo dopo verifica tecnica e sopralluogo.",
+    a: "No. La stima online serve a capire l'ordine di grandezza dell'intervento e capire se la spesa è in linea con il budget. Il preventivo finale si definisce solo dopo verifica tecnica e sopralluogo.",
   },
   {
     q: "Come funziona il sopralluogo?",
@@ -66,6 +66,32 @@ const faqHome = [
 
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [highlightPreventivatore, setHighlightPreventivatore] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 1024); // lg breakpoint
+    };
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
+
+  useEffect(() => {
+    if (highlightPreventivatore) {
+      const timer = setTimeout(() => setHighlightPreventivatore(false), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [highlightPreventivatore]);
+
+  const handleCliccaPreventivo = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    setHighlightPreventivatore(true);
+    if (isDesktop) {
+      e.preventDefault(); // niente scroll in desktop
+    }
+    // in mobile lasciamo che il link faccia il suo lavoro (scroll a #preventivatore)
+  };
 
 const servicePriceLabels: Record<string, string> = {
   "ristrutturazione-appartamento-completo": "Da 550 €/mq",
@@ -108,12 +134,13 @@ const servicePriceLabels: Record<string, string> = {
                 si conferma dopo verifica tecnica e sopralluogo.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
-                <Link
-                  href="/servizi/"
+                <a
+                  href="#preventivatore"
+                  onClick={handleCliccaPreventivo}
                   className="inline-flex w-full items-center justify-center text-center bg-orange hover:bg-orange-600 text-white px-7 py-4 rounded-xl font-semibold shadow-lg shadow-orange/20 transition-colors"
                 >
-                  Vedi i Servizi
-                </Link>
+                  Preventivo Online
+                </a>
               </div>
               <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-3 lg:gap-4">
                 <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
@@ -136,14 +163,20 @@ const servicePriceLabels: Record<string, string> = {
                   <p className="text-2xl font-bold text-orange leading-none">Online</p>
                   <p className="mt-2 text-sm font-semibold text-white">Preventivo immediato</p>
                   <p className="mt-1 text-xs leading-relaxed text-white/65">
-                    Verifica se l’intervento è compatibile col budget.
+                    Verifica se l'intervento è compatibile col budget.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="">
-              <CalcolatoreAppartamento />
+            <div id="preventivatore">
+              <div className={`transition-all duration-700 rounded-2xl ${
+                highlightPreventivatore
+                  ? "ring-4 ring-orange ring-offset-4 ring-offset-navy shadow-2xl shadow-orange/30"
+                  : ""
+              }`}>
+                <CalcolatoreAppartamento />
+              </div>
             </div>
           </div>
         </div>
