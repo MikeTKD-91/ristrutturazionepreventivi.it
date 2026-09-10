@@ -101,7 +101,7 @@ export default function CalcolatoreAppartamento({
             Scopri quanto costa la tua ristrutturazione
           </h3>
           <p className="text-sm text-gray-600">
-            Calcolo basato su ristrutturazione chiavi in mano standard da 550 €/mq
+            Preventivo ristrutturazione chiavi in mano - finiture Standard
           </p>
         </div>
       </div>
