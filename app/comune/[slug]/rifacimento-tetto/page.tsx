@@ -125,7 +125,7 @@ export default async function RifacimentoTettoComunePage({ params }: PageProps) 
                 <p className="text-white/70 text-lg leading-relaxed mb-6">
                   {getServiceIntro(comune, "rifacimento-tetto")}
                 </p>
-                <a href="#modulo preventivo" className="inline-flex items-center gap-2 bg-orange text-white font-semibold px-6 py-3 rounded-xl hover:opacity-90 transition-opacity">
+                <a href="#preventivatore" className="inline-flex items-center gap-2 bg-orange text-white font-semibold px-6 py-3 rounded-xl hover:opacity-90 transition-opacity">
                   Richiedi un preventivo
                 </a>
               </div>

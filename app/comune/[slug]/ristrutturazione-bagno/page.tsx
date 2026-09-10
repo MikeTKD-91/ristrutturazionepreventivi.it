@@ -176,7 +176,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
                 <p className="text-white/70 text-lg leading-relaxed mb-6">
                   Richiedi un preventivo immediato per la ristrutturazione del bagno a {comune.nome} e ottieni un primo costo reale del tuo intervento. Il preventivo finale viene confermato dopo sopralluogo e verifica tecnica dell’immobile.
                 </p>
-                <a href="#modulo preventivo" className="inline-flex items-center gap-2 bg-orange text-white font-semibold px-6 py-3 rounded-xl hover:opacity-90 transition-opacity">
+                <a href="#preventivatore" className="inline-flex items-center gap-2 bg-orange text-white font-semibold px-6 py-3 rounded-xl hover:opacity-90 transition-opacity">
                   Richiedi un preventivo
                 </a>
               </div>
@@ -194,7 +194,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
           </div>
         </section>
 
-        <div id="modulo preventivo" className="lg:hidden px-4 pt-6">
+        <div id="preventivatore" className="lg:hidden px-4 pt-6 scroll-mt-24 lg:scroll-mt-28">
           <CalcolatoreBagno comuneDefault={comune.nome} />
         </div>
 
@@ -328,7 +328,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
           </div>
 
           <div className="space-y-8">
-            <div id="modulo preventivo" className="hidden lg:block">
+            <div id="preventivatore" className="hidden lg:block">
               <CalcolatoreBagno comuneDefault={comune.nome} />
             </div>
 
