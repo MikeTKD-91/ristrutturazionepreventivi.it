@@ -86,12 +86,8 @@ export default function CalcolatoreAppartamento({
   };
 
   useEffect(() => {
-    if (step === 1) return;
-    const el = document.getElementById("preventivatore");
-    if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [step]);
-
 
   return (
     <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100">
