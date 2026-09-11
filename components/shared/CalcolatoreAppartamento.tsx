@@ -94,7 +94,7 @@ export default function CalcolatoreAppartamento({
 
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100">
+    <div id="preventivatore" className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100">
       <div className="flex items-start gap-3 mb-6">
         <div>
           <h3 className="text-xl font-bold text-navy">

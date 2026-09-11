@@ -94,7 +94,7 @@
   }
 }
 /* Highlight del preventivatore quando è target dell'ancora */
-#preventivatore:target > div {
-  @apply rounded-2xl border-4 border-orange shadow-2xl shadow-orange/30;
+#preventivatore:target div.rounded-2xl {
+  @apply border-4 border-orange shadow-2xl shadow-orange/30;
   transition: all 0.7s ease;
 }

@@ -48,7 +48,7 @@ export default function ScopriIlCostoDellaTuaRistrutturazione({
   }, [nome, cognome, telefono, email, citta, descrizione]);
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+    <div id="preventivatore" className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
       <div className="flex items-center gap-3 mb-6">        <div>
           <h3 className="text-xl font-bold text-navy">Richiedi un preventivo online immediato</h3>
           <p className="text-sm text-gray-600">
