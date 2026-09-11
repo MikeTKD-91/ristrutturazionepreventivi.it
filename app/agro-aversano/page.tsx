@@ -125,7 +125,7 @@ export default function AgroAversanoPage() {
       </section>
 
       {/* Modulo di preventivo mobile */}
-      <div id="preventivatore" className="lg:hidden px-4 pt-6">
+      <div className="lg:hidden px-4 pt-6">
         <ScopriIlCostoDellaTuaRistrutturazione comuneDefault="Aversa" />
       </div>
 

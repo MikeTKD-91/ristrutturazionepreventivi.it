@@ -187,7 +187,7 @@ export default async function RistrutturazioneCucinaPage({ params }: PageProps) 
           </div>
         </section>
 
-        <div id="preventivatore" className="lg:hidden px-4 pt-6 scroll-mt-24 lg:scroll-mt-28">
+        <div className="lg:hidden px-4 pt-6 scroll-mt-24 lg:scroll-mt-28">
           <ScopriIlCostoDellaTuaRistrutturazione comuneDefault={comune.nome} />
         </div>
 

@@ -66,32 +66,6 @@ const faqHome = [
 
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [highlightPreventivatore, setHighlightPreventivatore] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const checkDesktop = () => {
-      setIsDesktop(window.innerWidth >= 1024); // lg breakpoint
-    };
-    checkDesktop();
-    window.addEventListener("resize", checkDesktop);
-    return () => window.removeEventListener("resize", checkDesktop);
-  }, []);
-
-  useEffect(() => {
-    if (highlightPreventivatore) {
-      const timer = setTimeout(() => setHighlightPreventivatore(false), 2000);
-      return () => clearTimeout(timer);
-    }
-  }, [highlightPreventivatore]);
-
-  const handleCliccaPreventivo = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    setHighlightPreventivatore(true);
-    if (isDesktop) {
-      e.preventDefault(); // niente scroll in desktop
-    }
-    // in mobile lasciamo che il link faccia il suo lavoro (scroll a #preventivatore)
-  };
 
 const servicePriceLabels: Record<string, string> = {
   "ristrutturazione-appartamento-completo": "Da 550 €/mq",
@@ -136,7 +110,6 @@ const servicePriceLabels: Record<string, string> = {
               <div className="flex flex-wrap gap-4 mb-8">
                 <a
                   href="#preventivatore"
-                  onClick={handleCliccaPreventivo}
                   className="inline-flex w-full items-center justify-center text-center bg-orange hover:bg-orange-600 text-white px-7 py-4 rounded-xl font-semibold shadow-lg shadow-orange/20 transition-colors"
                 >
                   Preventivo Online
@@ -170,13 +143,7 @@ const servicePriceLabels: Record<string, string> = {
             </div>
 
             <div id="preventivatore" className="scroll-mt-24 lg:scroll-mt-28">
-              <div className={`transition-all duration-700 rounded-2xl ${
-                highlightPreventivatore
-                  ? "ring-4 ring-orange ring-offset-4 ring-offset-navy shadow-2xl shadow-orange/30"
-                  : ""
-              }`}>
-                <CalcolatoreAppartamento />
-              </div>
+              <CalcolatoreAppartamento />
             </div>
           </div>
         </div>

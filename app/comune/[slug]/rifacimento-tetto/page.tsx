@@ -246,7 +246,7 @@ export default async function RifacimentoTettoComunePage({ params }: PageProps) 
                 </div>
               </div>
 
-              <div className="space-y-8">
+              <div id="preventivatore" className="space-y-8">
                 <ScopriIlCostoDellaTuaRistrutturazione comuneDefault={comune.nome} />
 
                 <div className="bg-navy p-6 rounded-2xl text-white">

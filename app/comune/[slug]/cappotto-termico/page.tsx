@@ -177,7 +177,7 @@ export default async function CappottoTermicoPage({ params }: PageProps) {
           </div>
         </section>
 
-        <div id="preventivatore" className="lg:hidden px-4 pt-6 scroll-mt-24 lg:scroll-mt-28"><ScopriIlCostoDellaTuaRistrutturazione comuneDefault={comune.nome} /></div>
+        <div className="lg:hidden px-4 pt-6 scroll-mt-24 lg:scroll-mt-28"><ScopriIlCostoDellaTuaRistrutturazione comuneDefault={comune.nome} /></div>
 
         <div className="container mx-auto px-4 py-20 grid lg:grid-cols-3 gap-10 items-start">
           <div className="lg:col-span-2 space-y-16">
