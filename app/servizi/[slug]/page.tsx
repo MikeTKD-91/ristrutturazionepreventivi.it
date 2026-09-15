@@ -35,17 +35,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const url = `https://ristrutturazionepreventivi.it/servizi/${slug}/`;
 
-  const seoDescription = servizio.descrizioneCard ?? servizio.descrizione;
+  const title = `${servizio.titoloBreve} a Napoli, Caserta e Agro Aversano`;
+  const description = `${servizio.descrizioneCard ?? servizio.descrizione} Preventivo e sopralluogo tecnico.`;
 
   return {
-    title: `${servizio.titolo} | preventivo e costo reale a Napoli, Caserta e Agro Aversano`,
-    description: seoDescription,
+    title,
+    description,
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title: `${servizio.titolo} | preventivo e costo reale`,
-      description: seoDescription,
+      title,
+      description,
       url,
       type: "website",
       siteName: "RistrutturazionePreventivi.it",
@@ -61,8 +62,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${servizio.titolo} | preventivo e costo reale`,
-      description: seoDescription,
+      title,
+      description,
       images: [servizio.immagine],
     },
   };

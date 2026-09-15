@@ -8,7 +8,7 @@ import { getDataAggiornamento } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Servizi di Ristrutturazione | Napoli Caserta",
-  description: "Scopri i nostri 7 servizi di ristrutturazione a Napoli e Caserta: appartamento, cucina, bagno, tetto, pavimenti, impianti e cappotto termico. Preventivo online e sopralluogo tecnico.",
+  description: "Ristrutturazione completa, bagno, cucina, tetto, impianti e cappotto termico a Napoli e Caserta. Preventivo online e sopralluogo tecnico.",
   alternates: {
     canonical: "https://ristrutturazionepreventivi.it/servizi/",
   },

@@ -16,11 +16,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://ristrutturazionepreventivi.it"),
   title: {
-    default: "Ristrutturazione Casa Napoli, Caserta | Preventivo Online",
+    default: "Ristrutturazioni Napoli, Caserta e Agro Aversano | Preventivo",
     template: "%s | RistrutturazionePreventivi.it",
   },
   description:
-    "Ristrutturazioni residenziali a Napoli, Caserta e Agro Aversano. Richiedi un preventivo online, con verifica tecnica e sopralluogo per definire costi e lavorazioni.",
+    "Ristrutturazioni complete a Napoli, Caserta e Agro Aversano. Preventivo online, sopralluogo tecnico e lavori per casa, bagno, cucina e appartamento.",
   keywords: [
     "ristrutturazione", "preventivi", "Napoli", "Caserta", "Agro Aversano",
     "appartamento", "cucina", "bagno", "tetto", "cappotto termico", "Lusciano", "Aversa",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     locale: "it_IT",
     url: "https://ristrutturazionepreventivi.it",
     siteName: "RistrutturazionePreventivi.it",
-    title: "Ristrutturazione Casa Napoli, Caserta | Preventivo Online",
+    title: "Ristrutturazioni Napoli, Caserta e Agro Aversano | Preventivo",
     description:
       "Richiedi un preventivo online per ristrutturazioni a Napoli, Caserta e Agro Aversano. 7 servizi, sopralluogo tecnico e proposta chiara da verificare sul posto. Russo FE Costruzione SRL.",
     images: [

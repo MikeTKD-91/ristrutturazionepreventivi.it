@@ -6,7 +6,7 @@ import { getDataAggiornamento } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Bonus Ristrutturazione 2026 | Guida Detrazioni Casa",
   description:
-    "Guida chiara ai bonus casa 2026: detrazioni per ristrutturazione, efficienza energetica e interventi antisismici. Regole, aliquote e casi da verificare prima dei lavori.",
+    "Bonus ristrutturazione 2026: detrazioni casa, efficienza energetica e interventi antisismici. Regole, aliquote e requisiti da verificare.",
   alternates: {
     canonical: "https://ristrutturazionepreventivi.it/bonus-ristrutturazione/",
   },
