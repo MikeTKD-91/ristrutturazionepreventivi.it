@@ -435,7 +435,7 @@ export default async function ServizioPage({ params }: Props) {
           </div>
 
           <div className="space-y-8">
-            <div id="preventivatore" className="hidden lg:block scroll-mt-28">
+            <div className="hidden lg:block scroll-mt-28">
               <CalcolatoreAppartamento comuneDefault="Napoli" />
             </div>
 
@@ -709,7 +709,7 @@ export default async function ServizioPage({ params }: Props) {
             </div>
 
             {/* Sidebar */}
-            <div className="space-y-8">
+            <div id="preventivatore" className="space-y-8">
               {/* Modulo di preventivo */}
               {slug === "ristrutturazione-appartamento-completo" ? <CalcolatoreAppartamento comuneDefault="Napoli" /> : slug === "ristrutturazione-bagno" ? <CalcolatoreBagno comuneDefault="Napoli" /> : <ScopriIlCostoDellaTuaRistrutturazione comuneDefault="Napoli" />}
 
