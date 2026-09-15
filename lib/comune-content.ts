@@ -32,7 +32,7 @@ const contenutiBase: Record<string, Partial<ComuneContent>> = {
     tagHero: ["Preventivo immediato", "Sopralluogo tecnico", "Costo trasparente", "Chiavi in mano"],
     testoIntro: "Devi ristrutturare casa a Napoli? Ristrutturiamo il tuo appartamento completo a partire da 550 €/mq. Compila i campi, scopri immediatamente il costo della tua ristrutturazione e ricevi il tuo preventivo.",
     testoCosti: "Il costo reale dipende soprattutto da metratura, stato degli impianti, accessibilità del cantiere e livello delle finiture. Il preventivo online è una prima stima utile, mentre il prezzo definitivo si conferma dopo sopralluogo tecnico.",
-    immagineHero: "/images/comuni/napoli-hero.jpg",
+    immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: ["Accesso e logistica in centro possono allungare i tempi", "Smaltimento macerie e permessi condominiali da verificare", "Impianti vecchi e distribuzioni interne da controllare prima del preventivo"],
   },
   "giugliano-in-campania": {
@@ -118,7 +118,7 @@ const contenutiBase: Record<string, Partial<ComuneContent>> = {
     tagHero: ["Prezzario Regione Campania", "Centro storico e periferia", "Bonus 50% applicabile", "Vicinanza Reggia"],
     testoIntro: "Caserta offre un mix di edilizia storica nel centro (con vincoli paesaggistici) e palazzine residenziali nei quartieri periferici. La vicinanza alla Reggia e al Belvedere influenza i vincoli su alcune zone.",
     testoCosti: "I costi a Caserta sono in linea con la media provinciale, con un leggero aumento per gli appartamenti del centro storico dove la logistica e i vincoli richiedono attenzioni specifiche.",
-    immagineHero: "/images/comuni/caserta-hero.jpg",
+    immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: ["Vicinanza Reggia: verificare vincoli paesaggistici", "Quartieri Pietro Nenni e Acquaviva: palazzine anni '60-'70", "Acqua calcarea: materiali anti-calcare consigliati"],
   },
   marcianise: {
@@ -228,7 +228,7 @@ const contenutiBase: Record<string, Partial<ComuneContent>> = {
     tagHero: ["Prezzario Regione Campania", "Agro Aversano", "Bonus 50% applicabile", "Palazzine e villette"],
     testoIntro: "Aversa, cuore dell'Agro Aversano, ha un tessuto edilizio caratterizzato da palazzine degli anni '70-'80 nel centro e da una forte espansione residenziale nelle zone periferiche con villette e condomini.",
     testoCosti: "I costi a Aversa sono leggermente inferiori alla media campana, con buona disponibilità di maestranze locali e logistica semplificata rispetto ai grandi centri.",
-    immagineHero: "/images/comuni/aversa-hero.jpg",
+    immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: ["Espansione residenziale: verificare abusi edilizi", "Palazzine anni '70: amianto frequente nelle canne fumarie", "Zone periferiche: accesso semplificato, tempi ridotti"],
   },
   lusciano: {
