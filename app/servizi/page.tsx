@@ -72,7 +72,7 @@ const pricingLabels: Record<string, { top: string; value: string }> = {
               Costi aggiornati a {dataAggiornamento}
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              I Nostri Servizi
+              Servizi di ristrutturazione per la casa
             </h1>
             <p className="text-xl text-white/80">
               Offriamo una gamma completa di servizi di ristrutturazione per la tua casa 

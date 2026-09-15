@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200",
         width: 1200,
         height: 630,
-        alt: "Zone Servite",
+        alt: "Zone servite per le ristrutturazioni",
       },
     ],
   },
@@ -40,7 +40,7 @@ export default function ZoneServitePage() {
               Costi aggiornati a {dataAggiornamento}
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Zone Servite
+              Zone servite per le ristrutturazioni
             </h1>
             <p className="text-xl text-white/80">
               Operiamo in tutta la <span className="text-orange font-bold">Provincia di Napoli e Caserta</span>, con specializzazione nell'<span className="text-orange font-bold">Agro Aversano</span>.
