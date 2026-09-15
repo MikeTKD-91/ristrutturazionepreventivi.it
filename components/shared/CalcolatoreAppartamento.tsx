@@ -17,6 +17,8 @@ const PREZZO_STANDARD_MQ = 550;
 const MIN_MQ = 70;
 const MAX_MQ = 300;
 const DEFAULT_MQ = 80;
+const DEFAULT_BAGNI = 1;
+const PREZZO_BAGNO_EXTRA = 5000;
 
 const inclusioniStandard = [
   "Smontaggio porte interne e infissi interni, demolizione tramezzature, pavimentazione e massetto",
@@ -45,29 +47,37 @@ export default function CalcolatoreAppartamento({
 }: CalcolatoreAppartamentoProps) {
   const [step, setStep] = useState<Step>(1);
   const [mqInput, setMqInput] = useState<string>(String(DEFAULT_MQ));
+  const [bagniInput, setBagniInput] = useState<string>(String(DEFAULT_BAGNI));
   const [comune, setComune] = useState(comuneDefault);
   const [nome, setNome] = useState("");
-  const [telefono, setTelefono] = useState("");
   const [disponibileAppuntamento, setDisponibileAppuntamento] = useState(false);
 
   const mq = Number(mqInput);
+  const bagni = Number(bagniInput);
+  const mqValido = Number.isInteger(mq) && mq >= MIN_MQ && mq <= MAX_MQ;
+  const bagniValidi = Number.isInteger(bagni) && bagni >= 1 && bagni <= 10;
 
   const stima = useMemo(() => {
-    const totale = mq * PREZZO_STANDARD_MQ;
+    if (!mqValido || !bagniValidi) {
+      return { min: 0, max: 0 };
+    }
+
+    const totale =
+      mq * PREZZO_STANDARD_MQ +
+      (bagni - 1) * PREZZO_BAGNO_EXTRA;
     return {
       min: Math.round(totale * 0.95),
       max: Math.round(totale * 1.05),
     };
-  }, [mq]);
+  }, [mq, mqValido, bagni, bagniValidi]);
 
   const comuneFinale = comune.trim() || comuneDefault || "da definire";
 
-  const mqValido = mq >= MIN_MQ && mq <= MAX_MQ && !Number.isNaN(mq);
-  const canGoStep2 = mqValido && comune.trim().length >= 2;
+  const canGoStep2 =
+    mqValido && bagniValidi && comune.trim().length >= 2;
 
   const canSend =
     nome.trim().length >= 2 &&
-    telefono.trim().length >= 6 &&
     disponibileAppuntamento;
 
   const generaLinkWhatsApp = () => {
@@ -77,7 +87,6 @@ export default function CalcolatoreAppartamento({
       `📐 Superficie: ${mq} mq\n` +
       `📍 Comune: ${comuneFinale}\n` +
       `💶 Preventivo online standard: ${formatPrezzo(stima.min)} – ${formatPrezzo(stima.max)}\n` +
-      `📞 Telefono: ${telefono}\n` +
       `🤝 Disponibile ad appuntamento in studio/sopralluogo: Sì\n\n` +
       `Se la configurazione è compatibile con il vostro metodo di lavoro, resto disponibile per un appuntamento tecnico.`
     );
@@ -162,6 +171,30 @@ export default function CalcolatoreAppartamento({
               )}
               <p className="text-xs text-gray-500 mt-2">
                 Il calcolatore è pensato per appartamenti da ristrutturare in modo completo.
+              </p>
+            </div>
+
+            <div>
+              <label htmlFor="numero-bagni" className="block text-sm font-medium text-navy mb-2">
+                Numero di bagni
+              </label>
+              <input
+                id="numero-bagni"
+                type="number"
+                min={1}
+                max={10}
+                step={1}
+                value={bagniInput}
+                onChange={(e) => setBagniInput(e.target.value)}
+                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition-all"
+              />
+              {!bagniValidi && bagniInput.length > 0 && (
+                <p className="text-xs text-rose-600 mt-2">
+                  Inserisci un numero di bagni tra 1 e 10.
+                </p>
+              )}
+              <p className="text-xs text-gray-500 mt-2">
+                Indica il numero di bagni da ristrutturare.
               </p>
             </div>
 
@@ -317,22 +350,6 @@ export default function CalcolatoreAppartamento({
               )}
             </div>
 
-            <div>
-              <label className="block text-sm font-medium text-navy mb-2">
-                Telefono *
-              </label>
-              <input
-                type="tel"
-                value={telefono}
-                onChange={(e) => setTelefono(e.target.value)}
-                placeholder="Es. 333 980 9319"
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition-all"
-              />
-              {telefono.trim().length < 6 && (
-                <p className="text-xs text-rose-600 mt-2">Inserisci un numero valido per essere ricontattato.</p>
-              )}
-            </div>
-
             <label className="flex items-start gap-3 p-4 rounded-xl border border-gray-200 hover:border-orange/40 transition-colors cursor-pointer">
               <input
                 type="checkbox"
@@ -342,11 +359,11 @@ export default function CalcolatoreAppartamento({
               />
               <div>
                 <p className="text-sm font-semibold text-navy">
-                  Se il preventivo è compatibile, sono disponibile a un appuntamento
+                  Acconsento a essere ricontattato per approfondire la richiesta di ristrutturazione
                 </p>
                 <p className="text-xs text-gray-600 mt-1 leading-relaxed">
-                  In studio o con sopralluogo tecnico, per verificare immobile,
-                  priorità, dettagli esecutivi ed eventuali extra.
+                  Accetto di essere contattato tramite WhatsApp per verificare le esigenze
+                  dell’immobile e valutare insieme i prossimi passi.
                 </p>
               </div>
             </label>
