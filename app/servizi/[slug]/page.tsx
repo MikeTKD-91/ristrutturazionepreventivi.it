@@ -436,7 +436,7 @@ export default async function ServizioPage({ params }: Props) {
           </div>
 
           <div className="space-y-8">
-            <div className="hidden lg:block scroll-mt-28">
+            <div id="preventivatore" className="hidden lg:block scroll-mt-28">
               <CalcolatoreAppartamento comuneDefault="Napoli" />
             </div>
 
