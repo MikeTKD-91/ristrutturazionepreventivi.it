@@ -51,24 +51,49 @@ export const comuniAgroAversano: Comune[] = [
     ],
     caratteristicheBagni: "Bagni prevalentemente sotto i 6 mq con vasca da bagno degli anni '80-'90, spesso già oggetto di un primo rifacimento parziale non a norma. Nelle abitazioni del centro storico, impianti idrici in piombo ancora presenti nei condomini più vecchi.",
     caratteristicheCucine: "Cucine separate dal soggiorno, dimensioni medie 10-14 mq. Nelle palazzine anni '70, frequente presenza di cappa esterna non a norma collegata a canna fumaria in amianto.",
-    faq: [
+      faq: [
       {
-        domanda: "Devo chiedere permessi per ristrutturare il bagno in un palazzo del centro storico di Aversa?",
-        risposta: "Dipende dall'intervento. La sostituzione di sanitari e rivestimenti interni non richiede permessi. Se l'intervento tocca impianti o modifica la distribuzione degli spazi interni, serve almeno una CILA. In zona vincolata dalla Soprintendenza, qualsiasi intervento esterno richiede autorizzazione specifica. Il nostro tecnico verifica la situazione urbanistica prima del preventivo.",
+        domanda: "Quanto costa ristrutturare un appartamento a Aversa nel 2026?",
+        risposta: "Per una ristrutturazione completa di appartamento ad Aversa, il costo si attesta intorno a 550 €/mq per lavori standard con impianti e finiture di livello medio. Il prezzo totale dipende da metratura, stato degli impianti, distribuzione interna e livello delle finiture. Per un appartamento di 80 mq, ad esempio, il costo indicativo parte da circa 44.000 €, da confermare dopo sopralluogo tecnico.",
       },
       {
-        domanda: "Nel mio palazzo c'è ancora la canna fumaria in amianto. Cosa succede se rifaccio la cucina?",
-        risposta: "Se la canna fumaria è in amianto, prima di installare una nuova cappa è obbligatorio procedere alla bonifica o all'incapsulamento, da eseguire da una ditta specializzata certificata. Il costo di bonifica va considerato nel preventivo complessivo. Non è possibile aggirare questo passaggio: le ditte serie non agganciano nuovi impianti a canne in amianto non bonificate.",
+        domanda: "Da cosa dipende il costo di ristrutturazione casa ad Aversa?",
+        risposta: "Il costo di ristrutturazione di una casa ad Aversa varia in base a metratura, stato degli impianti elettrico, idraulico e termico, necessità di demolizioni, distribuzione degli ambienti, accessibilità dell'immobile e livello delle finiture scelte. Anche la presenza di criticità come umidità, impianti obsoleti o interventi su bagno e cucina può incidere sul prezzo finale.",
       },
       {
-        domanda: "Ho un abuso edilizio non condonato. Posso ristrutturare lo stesso?",
-        risposta: "Tecnicamente sì, se l'abuso riguarda parti diverse da quelle da ristrutturare. Nella pratica, prima di qualsiasi intervento soggetto a CILA o permesso di costruire, il Comune verifica la regolarità urbanistica. Un abuso pendente può bloccare l'iter. È consigliabile un confronto con un tecnico prima di procedere.",
+        domanda: "Come posso ottenere un preventivo per ristrutturare casa ad Aversa?",
+        risposta: "Tramite Ristrutturazionepreventivi.it puoi richiedere subito un preventivo gratuito per ristrutturare casa ad Aversa. Inserisci i dati del tuo intervento (metratura, tipo di immobile, lavori da svolgere) e ottieni una prima stima indicativa online. Il preventivo definitivo viene poi confermato dopo sopralluogo tecnico, con tutte le lavorazioni necessarie esplicitate in modo trasparente.",
       },
       {
-        domanda: "Quanto tempo richiede la ristrutturazione di un bagno ad Aversa?",
-        risposta: "Un bagno standard (4-6 mq) con sostituzione completa di sanitari, rivestimenti e impianti richiede mediamente 2-3 settimane lavorative. Se si aggiunge la bonifica dell'amianto o modifiche agli impianti condominiali, i tempi si allungano. I tempi definitivi emergono dal sopralluogo.",
+        domanda: "Quanto tempo serve per ristrutturare un appartamento ad Aversa?",
+        risposta: "Per un appartamento standard ad Aversa, la durata media di una ristrutturazione completa è di circa 6–10 settimane lavorative. I tempi dipendono da metratura, complessità degli impianti, opere murarie necessarie e livello delle finiture. Una ristrutturazione parziale (ad esempio solo bagno o cucina) richiede generalmente meno tempo, mentre interventi più complessi possono allungare il cantiere.",
+      },
+      {
+        domanda: "Che lavori include una ristrutturazione completa di appartamento ad Aversa?",
+        risposta: "Una ristrutturazione completa di appartamento ad Aversa include demolizioni e smaltimento macerie, rifacimento degli impianti elettrico, idraulico e termico, opere murarie per la nuova distribuzione interna, massetti e sottofondi, posa di pavimenti e rivestimenti, rasature, tinteggiature e finiture. Sono compresi anche fornitura e installazione di infissi, porte interne, sanitari e termosifoni standard, secondo il capitolato concordato.",
+      },
+      {
+        domanda: "Quali permessi servono per ristrutturare casa ad Aversa?",
+        risposta: "Per ristrutturare casa ad Aversa, gli interventi di manutenzione straordinaria richiedono almeno una CILA presentata da un tecnico abilitato. Se la ristrutturazione comporta modifiche strutturali, cambi di destinazione d'uso o interventi su facciate in zone vincolate, può essere necessario un permesso di costruire o autorizzazioni della Soprintendenza. Prima di iniziare i lavori, verifichiamo sempre la situazione urbanistica dell'immobile.",
+      },
+      {
+        domanda: "Posso usufruire del bonus ristrutturazione 50% per lavori ad Aversa?",
+        risposta: "Sì, per le ristrutturazioni edilizie su abitazioni principali nel 2026 è prevista una detrazione IRPEF del 50% fino a un tetto massimo di spesa di 96.000 € per unità immobiliare. Il bonus si applica a lavori di manutenzione straordinaria, restauro, risanamento conservativo e ristrutturazione edilizia, inclusi impianti e finiture. Per usufruire della detrazione è necessario rispettare le regole su pagamenti tracciabili, documentazione e comunicazione all'ENEA quando prevista.",
+      },
+      {
+        domanda: "Conviene fare una ristrutturazione completa o solo parziale?",
+        risposta: "La scelta tra ristrutturazione completa e parziale dipende dallo stato dell'immobile e dal budget. Se gli impianti sono obsoleti, la distribuzione interna non è funzionale e le finiture sono datate, una ristrutturazione completa è spesso più conveniente nel medio termine, perché evita interventi a strati. Se invece solo alcune aree (ad esempio bagno o cucina) necessitano di lavori, può avere senso una ristrutturazione parziale, pianificando eventuali altri interventi in un secondo momento.",
+      },
+      {
+        domanda: "Come scelgo l'impresa di ristrutturazioni giusta ad Aversa?",
+        risposta: "Per scegliere l'impresa di ristrutturazioni giusta ad Aversa, valuta esperienza su lavori simili al tuo, trasparenza dei preventivi, referenze e recensioni di clienti, e capacità di gestire il cantiere con un unico referente. È importante che l'impresa fornisca un preventivo dettagliato, con lavorazioni, tempi e condizioni di pagamento chiare. Russo FE Costruzione SRL, tramite Ristrutturazionepreventivi.it, offre preventivi trasparenti e segue il cantiere dalla prima valutazione alla consegna dei lavori.",
+      },
+      {
+        domanda: "Cosa devo controllare prima di iniziare la ristrutturazione del mio appartamento ad Aversa?",
+        risposta: "Prima di iniziare la ristrutturazione, è utile verificare lo stato degli impianti, la presenza di eventuali abusi edilizi, la regolarità urbanistica e catastale dell'immobile, e le condizioni di canne fumarie, infissi e strutture. Se l'appartamento è in condominio, è importante coordinarsi per accesso, orari di cantiere e smaltimento macerie. Un sopralluogo tecnico accurato aiuta a individuare queste criticità prima del preventivo definitivo.",
       },
     ],
+
     faqBagno: [
       {
         domanda: "Quanto costa rifare il bagno ad Aversa?",
@@ -113,11 +138,11 @@ export const comuniAgroAversano: Comune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni ad Aversa",
-        text: "Affidarsi a un'impresa di ristrutturazioni ad Aversa significa avere un solo referente che segue il lavoro dall'impostazione iniziale fino alla realizzazione finale. Coordinare sopralluogo, demolizioni, impianti, opere murarie e finiture con una regia unica aiuta a ridurre stress, tempi morti e costi poco chiari. Operando tra Agro Aversano, Napoli e Caserta, lavoriamo con un approccio pratico e con una rete di professionisti del territorio per rendere il cantiere più lineare, concreto e gestibile.",
+        text: "Russo FE Costruzione SRL è l'impresa di ristrutturazioni ad Aversa che realizza i lavori richiesti tramite il portale Ristrutturazionepreventivi.it. Se devi ristrutturare casa o appartamento ad Aversa, la nostra impresa di ristrutturazioni edili segue ogni fase: dal sopralluogo iniziale alle demolizioni, dagli impianti elettrico, idraulico e termico alle opere murarie, fino a pavimenti, rivestimenti, rasature, tinteggiature e finiture. Avere un unico referente per la ristrutturazione completa del tuo immobile significa meno stress, meno tempi morti e un quadro economico più chiaro, con tutte le lavorazioni coordinate da una sola regia. Operiamo in tutto l'Agro Aversano, tra Napoli e Caserta, con un approccio pratico e una rete di professionisti del territorio per rendere il cantiere più lineare e gestibile. Se vuoi conoscere meglio il nostro metodo come impresa di ristrutturazioni ad Aversa, puoi scoprire chi siamo e come organizziamo i lavori per offrire preventivi trasparenti e ristrutturazioni chiavi in mano.",
       },
       {
         title: "Preventivo Ristrutturazione ad Aversa",
-        text: "Richiedere un preventivo per ristrutturare casa ad Aversa serve a trasformare un'idea di massima in un quadro economico più concreto. Metratura, stato degli impianti, accessibilità del fabbricato, presenza di canne fumarie da verificare, eventuali interventi su bagno e cucina e livello delle finiture possono cambiare molto il risultato finale. Un preventivo utile non si limita al prezzo, ma mette in evidenza le lavorazioni che incidono davvero sul cantiere. Su RistrutturazionePreventivi.it il preventivo è immediato e gratuito, con conferma finale dopo sopralluogo tecnico.",
+        text: "Se stai valutando una ristrutturazione completa ad Aversa, richiedere un preventivo è il primo passo per trasformare la tua idea in un progetto concreto con costi chiari. Il preventivo di ristrutturazione per casa o appartamento ad Aversa tiene conto di metratura, stato degli impianti elettrico, idraulico e termico, accessibilità dell'immobile, distribuzione interna, eventuali lavori su bagno e cucina e livello delle finiture scelte. Un preventivo serio per ristrutturare non si limita a indicare un prezzo, ma descrive nel dettaglio le lavorazioni che incidono sul costo finale del cantiere, così sai esattamente cosa stai pagando. Tramite RistrutturazionePreventivi.it puoi richiedere subito un preventivo gratuito e immediato per la tua ristrutturazione ad Aversa: ottieni una prima stima indicativa online e la conferma del prezzo definitivo dopo sopralluogo tecnico, con tutte le lavorazioni necessarie esplicitate in modo trasparente.",
       },
     ],
   },

@@ -226,10 +226,10 @@ const contenutiBase: Record<string, Partial<ComuneContent>> = {
     durataCantiere: "6–10 settimane",
     durataRange: "6–10",
     tagHero: ["Prezzario Regione Campania", "Agro Aversano", "Bonus 50% applicabile", "Palazzine e villette"],
-    testoIntro: "Aversa, cuore dell'Agro Aversano, ha un tessuto edilizio caratterizzato da palazzine degli anni '70-'80 nel centro e da una forte espansione residenziale nelle zone periferiche con villette e condomini.",
-    testoCosti: "I costi a Aversa sono leggermente inferiori alla media campana, con buona disponibilità di maestranze locali e logistica semplificata rispetto ai grandi centri.",
+    testoIntro: "Devi ristrutturare casa a Aversa? La nostra impresa di ristrutturazioni segue ogni fase della ristrutturazione completa del tuo appartamento: demolizioni, impianti, opere murarie, pavimenti, rivestimenti, tinteggiature e finiture. Partiamo da 550 €/mq per darti subito un riferimento chiaro sul costo ristrutturazione a Aversa, poi definiamo un preventivo dettagliato dopo aver visto l'immobile.",
+    testoCosti: "Il costo di ristrutturazione di un appartamento a Aversa varia in base a metratura, stato degli impianti, distribuzione interna e livello delle finiture. Il preventivo online ti dà una prima stima indicativa del prezzo, mentre il preventivo definitivo per la tua ristrutturazione viene confermato dopo sopralluogo tecnico, con tutte le lavorazioni necessarie esplicitate.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Espansione residenziale: verificare abusi edilizi", "Palazzine anni '70: amianto frequente nelle canne fumarie", "Zone periferiche: accesso semplificato, tempi ridotti"],
+    noteCantiere: [],
   },
   lusciano: {
     prezzoMq: 550,

@@ -253,7 +253,7 @@ export default async function ComunePage({ params }: PageProps) {
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Se stai cercando il costo ristrutturazione a {comune.nome}, partire da {content.prezzoMq} €/mq è il modo più semplice per avere un primo riferimento concreto. Qui sotto trovi alcuni esempi indicativi in base alla metratura, utili per capire subito la fascia di spesa di una ristrutturazione completa.
+                Se stai valutando una ristrutturazione completa a {comune.nome}, il valore di {content.prezzoMq} €/mq ti dà un primo riferimento realistico per capire se il progetto è in linea con il tuo budget. Tuttavia, oltre al costo al mq, ciò che serve davvero è un preventivo chiaro, basato sulle caratteristiche del tuo appartamento e sulle lavorazioni necessarie. Qui sotto trovi alcuni esempi indicativi in base alla metratura, utili per inquadrare subito la fascia di spesa di una ristrutturazione chiavi in mano a {comune.nome}.
               </p>
               <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white">
                 <table className="w-full text-sm">
@@ -333,7 +333,7 @@ export default async function ComunePage({ params }: PageProps) {
             <section>
               <h2 className="text-2xl font-bold text-navy mb-3">Quanto dura il cantiere a {comune.nome}?</h2>
               <p className="text-gray-600 mb-5">
-                Capire quanto tempo serve per ristrutturare casa a {comune.nome} è importante quanto conoscere il costo dei lavori. Per questo abbiamo riassunto le principali fasi del cantiere, così puoi avere un riferimento più chiaro sui tempi medi di una ristrutturazione completa a {comune.nome}.
+                Se stai ristrutturando casa a {comune.nome}, sapere quanto dura il cantiere è fondamentale per organizzare al meglio i lavori, pianificare il trasloco e gestire gli impegni familiari. In questa sezione trovi la durata media di ogni fase della ristrutturazione completa di un appartamento a {comune.nome}: dalle demolizioni e dallo smaltimento delle macerie, alla nuova distribuzione interna con le opere murarie, passando per la realizzazione degli impianti elettrico, idraulico e termico, fino alla posa di pavimenti e rivestimenti, alle rasature, alla tinteggiatura e alle finiture finali. Conoscere i tempi di ristrutturazione di un appartamento a {comune.nome} ti aiuta a capire quanto tempo impiega in media un cantiere edile per una casa, a coordinare le diverse maestranze e a prevedere quando la tua nuova casa sarà pronta per essere abitata.
               </p>
               {content.noteCantiere.length > 0 && (
                 <div className="mb-5 space-y-2">
