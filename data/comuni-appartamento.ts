@@ -170,7 +170,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Lusciano, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Lusciano, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Palazzine anni '70-'80: amianto e umidità", "Espansione recente: verificare regolarità edilizia", "Posizione centrale: logistica agevole"],
+    noteCantiere: [],
   },
   {
     slug: "carinaro",
@@ -212,7 +212,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Carinaro, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Carinaro, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Palazzine anni '70: amianto e impianti obsoleti", "Umidità di risalita nei piani terra", "Prossimità SS7: possibili vibrazioni da traffico"],
+    noteCantiere: [],
   },
   {
     slug: "teverola",
@@ -265,7 +265,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Teverola, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Teverola, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Palazzine anni '70-'80: amianto e impianti obsoleti", "Espansione residenziale: verificare regolarità edilizia", "Prossimità SS7: possibili vibrazioni da traffico"],
+    noteCantiere: [],
   },
   {
     slug: "gricignano-di-aversa",
@@ -488,7 +488,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Casaluce, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Casaluce, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Palazzine anni '70: amianto nelle canne fumarie", "Umidità di risalita nei piani terra", "Espansione recente: verificare regolarità edilizia"],
+    noteCantiere: [],
   },
   {
     slug: "cesa",
@@ -522,7 +522,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Cesa, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Cesa, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Palazzine anni '70-'80: amianto e impianti obsoleti", "Villette: verificare stato coperture e isolamento", "Prossimità Aversa: logistica agevole"],
+    noteCantiere: [],
   },
   {
     slug: "frignano",
@@ -556,7 +556,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Frignano, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Frignano, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Palazzine anni '70: amianto e umidità", "Espansione residenziale: verificare regolarità edilizia", "Logistica semplificata rispetto ai grandi centri"],
+    noteCantiere: [],
   },
   {
     slug: "parete",
@@ -590,7 +590,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Parete, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Parete, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Palazzine anni '70: amianto e umidità", "Villette: verificare stato coperture", "Logistica semplificata"],
+    noteCantiere: [],
   },
   {
     slug: "succivo",
@@ -771,7 +771,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Napoli, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Napoli, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Accesso e logistica in centro possono allungare i tempi", "Smaltimento macerie e permessi condominiali da verificare", "Impianti vecchi e distribuzioni interne da controllare prima del preventivo"],
+    noteCantiere: [],
   },
   {
     slug: "giugliano-in-campania",
@@ -1044,7 +1044,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Villaricca, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Villaricca, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Palazzine anni '70: amianto e umidità", "Villette: verificare stato coperture", "Prossimità Napoli: buona disponibilità maestranze"],
+    noteCantiere: [],
   },
   {
     slug: "casandrino",
@@ -1093,7 +1093,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Casandrino, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Casandrino, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Canne fumarie in amianto nei condomini anni '60-'70", "Umidità di risalita nei piani terra", "Impianti condominiali obsoleti nelle palazzine più vecchie"],
+    noteCantiere: [],
   },
   {
     slug: "grumo-nevano",
@@ -1220,7 +1220,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Caserta, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Caserta, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Impianti esistenti: verificarne stato e adeguamenti necessari", "Bagno e cucina: definire prima spostamenti, scarichi e finiture", "Accesso al cantiere: organizzare consegne, demolizioni e smaltimento"],
+    noteCantiere: [],
   },
   {
     slug: "marcianise",
@@ -1269,7 +1269,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Marcianise, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Marcianise, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Vibrazioni da traffico sulla SS7: verificare lesioni muri", "Palazzine anni '60-'70: amianto e umidità", "Espansione residenziale: verificare regolarità edilizia"],
+    noteCantiere: [],
   },
   {
     slug: "curti",
@@ -1314,7 +1314,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Curti, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Curti, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Palazzine anni '70: tubazioni in acciaio zincato", "Umidità di risalita nei piani terra", "Villette anni '90: verificare stato coperture"],
+    noteCantiere: [],
   },
   {
     slug: "santa-maria-capua-vetere",
@@ -1397,7 +1397,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Casapulla, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Casapulla, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Palazzine anni '70: amianto nelle canne fumarie", "Umidità di risalita nei piani terra", "Villette anni '90: verificare regolarità edilizia"],
+    noteCantiere: [],
   },
   {
     slug: "recale",
@@ -1431,7 +1431,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Recale, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Recale, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Palazzine anni '70: amianto e impianti obsoleti", "Umidità di risalita nei piani terra", "Villette anni '90: verificare stato coperture e isolamento"],
+    noteCantiere: [],
   },
   {
     slug: "san-prisco",
@@ -1522,7 +1522,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Capua, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Capua, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Centro storico: umidità da risalita accentuata dal Volturno", "Vincoli Soprintendenza per facciate ed elementi storici", "Palazzine anni '70: amianto e impianti datati"],
+    noteCantiere: [],
   },
   {
     slug: "casagiove",
@@ -1578,6 +1578,6 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoIntro: "Se devi ristrutturare casa a Casagiove, il costo è 550 €/mq per lavori chiavi in mano. Include demolizioni, impianti nuovi, pavimenti, rivestimenti, infissi, porte, sanitari e tinteggiatura. Preventivo definitivo dopo sopralluogo.",
     testoCosti: "A Casagiove, ristrutturare costa 550 €/mq. Per 50 mq: circa 27,500 €, per 80 mq: circa 44,000 €, per 100 mq: circa 55,000 €. Prezzi reali con impresa diretta, un solo referente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Villette anni '80: verificare guaine e coperture piane", "Palazzine anni '70: tubazioni in acciaio zincato", "Aperture cucina-soggiorno: verificare natura muro divisorio"],
+    noteCantiere: [],
   },
 ];
