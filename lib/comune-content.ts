@@ -116,10 +116,10 @@ const contenutiBase: Record<string, Partial<ComuneContent>> = {
     durataCantiere: "7–11 settimane",
     durataRange: "7–11",
     tagHero: ["Prezzario Regione Campania", "Centro storico e periferia", "Bonus 50% applicabile", "Vicinanza Reggia"],
-    testoIntro: "Caserta offre un mix di edilizia storica nel centro (con vincoli paesaggistici) e palazzine residenziali nei quartieri periferici. La vicinanza alla Reggia e al Belvedere influenza i vincoli su alcune zone.",
-    testoCosti: "I costi a Caserta sono in linea con la media provinciale, con un leggero aumento per gli appartamenti del centro storico dove la logistica e i vincoli richiedono attenzioni specifiche.",
+    testoIntro: "Per ristrutturare casa o appartamento a Caserta conviene partire da un preventivo dettagliato, costruito sulle condizioni reali dell'immobile e sugli interventi desiderati. Una ristrutturazione completa può includere demolizioni, smaltimento macerie, modifica degli ambienti, rifacimento degli impianti, massetti, pavimenti, rivestimenti, tinteggiature e montaggi finali. Il sopralluogo tecnico permette di stabilire quali lavorazioni servono davvero e di organizzare il cantiere con un unico referente.",
+    testoCosti: "Il costo della ristrutturazione a Caserta parte da 550 €/mq per un intervento completo standard, ma il prezzo finale dipende da metratura, stato degli impianti, opere murarie, livello delle finiture, accessibilità e lavorazioni richieste per bagno e cucina. Il preventivo online offre una prima indicazione; l'importo definitivo viene confermato dopo il sopralluogo, con lavorazioni, materiali, tempi e condizioni riportati in modo chiaro.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
-    noteCantiere: ["Vicinanza Reggia: verificare vincoli paesaggistici", "Quartieri Pietro Nenni e Acquaviva: palazzine anni '60-'70", "Acqua calcarea: materiali anti-calcare consigliati"],
+    noteCantiere: ["Impianti esistenti: verificarne stato e adeguamenti necessari", "Bagno e cucina: definire prima spostamenti, scarichi e finiture", "Accesso al cantiere: organizzare consegne, demolizioni e smaltimento"],
   },
   marcianise: {
     prezzoMq: 550,

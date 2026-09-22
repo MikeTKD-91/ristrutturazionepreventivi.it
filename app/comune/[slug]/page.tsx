@@ -333,7 +333,7 @@ export default async function ComunePage({ params }: PageProps) {
             <section>
               <h2 className="text-2xl font-bold text-navy mb-3">Quanto dura il cantiere a {comune.nome}?</h2>
               <p className="text-gray-600 mb-5">
-                Se stai ristrutturando casa a {comune.nome}, sapere quanto dura il cantiere è fondamentale per organizzare al meglio i lavori, pianificare il trasloco e gestire gli impegni familiari. In questa sezione trovi la durata media di ogni fase della ristrutturazione completa di un appartamento a {comune.nome}: dalle demolizioni e dallo smaltimento delle macerie, alla nuova distribuzione interna con le opere murarie, passando per la realizzazione degli impianti elettrico, idraulico e termico, fino alla posa di pavimenti e rivestimenti, alle rasature, alla tinteggiatura e alle finiture finali. Conoscere i tempi di ristrutturazione di un appartamento a {comune.nome} ti aiuta a capire quanto tempo impiega in media un cantiere edile per una casa, a coordinare le diverse maestranze e a prevedere quando la tua nuova casa sarà pronta per essere abitata.
+                Se devi ristrutturare casa o appartamento a {comune.nome}, conoscere in anticipo la durata del cantiere ti aiuta a organizzare trasloco, disponibilità dell'immobile e budget. Una ristrutturazione completa non ha un tempo uguale per tutti: il numero dei metri quadrati, lo stato degli impianti, le demolizioni, la modifica degli ambienti, la scelta dei materiali e l'accessibilità del cantiere possono cambiare il calendario dei lavori. Per questo una stima seria dei tempi deve essere collegata al preventivo e alle lavorazioni realmente necessarie.\n\nIn genere il cantiere segue una sequenza precisa: demolizione e smaltimento, opere murarie, realizzazione degli impianti elettrico, idraulico e termico, massetti e preparazione dei sottofondi, posa di pavimenti e rivestimenti, rasature, tinteggiatura e montaggio degli elementi finali. Alcune attività possono procedere in parallelo, mentre altre richiedono tempi tecnici di attesa prima di continuare. Capire quanto dura la ristrutturazione di un appartamento significa quindi valutare l'intero processo e non soltanto i singoli giorni di lavoro.\n\nLa tabella seguente fornisce una durata indicativa delle principali fasi di una ristrutturazione casa. Il programma definitivo viene definito dopo il sopralluogo tecnico, quando è possibile verificare lo stato dell'immobile, coordinare le maestranze e indicare nel preventivo sia le opere comprese sia le tempistiche previste per la consegna.
               </p>
               {content.noteCantiere.length > 0 && (
                 <div className="mb-5 space-y-2">
@@ -393,9 +393,9 @@ export default async function ComunePage({ params }: PageProps) {
                     <div key={i}>
                       <h2 className="text-2xl font-bold text-navy mb-2">{section.title}</h2>
                       <p className="text-gray-600 leading-relaxed whitespace-pre-line">{renderSeoText(section.text, comune.nome)}</p>
-                  {section.title.startsWith("Impresa di Ristrutturazioni") && (
+                  {comune.slug === "caserta" && section.title.startsWith("Impresa di Ristrutturazioni") && (
                     <p className="mt-4 text-sm text-gray-600">
-                      Vuoi conoscere meglio il nostro metodo? <Link href="/chi-siamo/" className="text-navy underline underline-offset-2 hover:text-orange transition-colors">Scopri chi siamo</Link>.
+                      Vuoi conoscere meglio Russo FE Costruzione SRL e il nostro metodo di lavoro? <Link href="/chi-siamo/" className="text-navy underline underline-offset-2 hover:text-orange transition-colors">Scopri chi siamo</Link>.
                     </p>
                   )}
                       {section.title.startsWith("Costo Ristrutturazione") ? (
