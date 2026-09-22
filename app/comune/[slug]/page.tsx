@@ -393,7 +393,7 @@ export default async function ComunePage({ params }: PageProps) {
                     <div key={i}>
                       <h2 className="text-2xl font-bold text-navy mb-2">{section.title}</h2>
                       <p className="text-gray-600 leading-relaxed whitespace-pre-line">{renderSeoText(section.text, comune.nome)}</p>
-                  {comune.slug === "caserta" && section.title.startsWith("Impresa di Ristrutturazioni") && (
+                  {(comune.slug === "caserta" || comune.slug === "giugliano-in-campania") && section.title.startsWith("Impresa di Ristrutturazioni") && (
                     <p className="mt-4 text-sm text-gray-600">
                       Vuoi conoscere meglio Russo FE Costruzione SRL e il nostro metodo di lavoro? <Link href="/chi-siamo/" className="text-navy underline underline-offset-2 hover:text-orange transition-colors">Scopri chi siamo</Link>.
                     </p>

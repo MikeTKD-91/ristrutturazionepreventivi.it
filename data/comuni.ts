@@ -996,20 +996,44 @@ export const comuniNapoli: Comune[] = [
     caratteristicheCucine: "Cucine separate nelle palazzine, medie dimensioni. Nelle costruzioni degli anni '80, frequente presenza di impianto gas non a norma.",
     faq: [
       {
-        domanda: "Ho un appartamento anni '90 a Giugliano. Cosa controllo prima di ristrutturare?",
-        risposta: "Per gli appartamenti degli anni '90 a Giugliano è consigliabile verificare: la regolarità urbanistica (abusi frequenti nella zona), lo stato dell'impianto elettrico, la condizione degli scarichi condominiali, e la presenza di umidità nei muri perimetrali. Il nostro sopralluogo include una valutazione tecnica complessiva.",
+        domanda: "Quanto costa ristrutturare un appartamento di 60 mq a Giugliano?",
+        risposta: "Per una ristrutturazione completa di un appartamento di 60 mq a Giugliano, il costo indicativo può partire da circa 45.000-55.000 € e arrivare a 75.000-90.000 € con impianti da rifare, diversa distribuzione interna e finiture di livello superiore. Il prezzo definitivo dipende dal sopralluogo e dal capitolato.",
       },
       {
-        domanda: "Quanto costa ristrutturare la cucina a Giugliano in Campania?",
-        risposta: "In base al Prezzario Regionale Campania, i costi orientativi per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Negli edifici degli anni '90 con impianti da sostituire integralmente, il costo tende al limite superiore.",
+        domanda: "Quanto costa ristrutturare un appartamento di 80 mq a Giugliano?",
+        risposta: "Per un appartamento di 80 mq a Giugliano, una ristrutturazione completa può indicativamente costare da 60.000-70.000 € fino a 100.000-120.000 €, in base allo stato degli impianti, ai lavori murari, alla qualità delle finiture e alla necessità di modificare la distribuzione degli ambienti.",
       },
       {
-        domanda: "Vivo al terzo piano di un condominio anni '80 a Giugliano e ho poca pressione idrica. Si risolve con la ristrutturazione?",
-        risposta: "La bassa pressione ai piani alti dipende quasi sempre dalle colonne montanti condominiali, non dall'impianto del tuo appartamento. È un problema che si risolve solo intervenendo sulle parti comuni, che richiede delibera condominiale. Nell'ambito della ristrutturazione del tuo appartamento, possiamo installare un mini-autoclave privato come soluzione temporanea o definitiva.",
+        domanda: "Quanto costa ristrutturare un appartamento di 100 mq a Giugliano?",
+        risposta: "Per ristrutturare completamente un appartamento di 100 mq a Giugliano, la spesa indicativa può variare da circa 75.000-85.000 € per interventi standard fino a 125.000-150.000 € per una ristrutturazione più completa con impianti, opere murarie e finiture di fascia medio-alta.",
       },
       {
-        domanda: "Ho un abuso non condonato nella mia abitazione a Giugliano. Posso comunque fare lavori?",
-        risposta: "Dipende dalla natura dell'abuso e dall'intervento che vuoi fare. Per lavori di manutenzione ordinaria (sostituzione sanitari, rivestimenti) non ci sono problemi. Per lavori soggetti a CILA o permesso, il Comune può bloccare l'iter se c'è un abuso pendente. È fondamentale una verifica preventiva della situazione urbanistica.",
+        domanda: "Quanto costa ristrutturare casa al metro quadro a Giugliano?",
+        risposta: "A Giugliano una ristrutturazione completa può orientativamente variare da circa 750 a 1.500 € al mq. La fascia bassa riguarda interventi standard con distribuzione invariata; la fascia alta comprende il rifacimento degli impianti, modifiche interne, opere tecniche e finiture più costose.",
+      },
+      {
+        domanda: "Cosa comprende una ristrutturazione completa di un appartamento a Giugliano?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni, opere murarie, rifacimento degli impianti elettrico e idrico, climatizzazione, pavimenti, rivestimenti, porte, tinteggiatura e posa di sanitari e componenti. Il contenuto preciso deve essere definito in un capitolato dettagliato.",
+      },
+      {
+        domanda: "Quanto incide il rifacimento degli impianti sul costo della ristrutturazione?",
+        risposta: "Il rifacimento degli impianti può incidere in modo significativo sul preventivo, soprattutto negli appartamenti degli anni '80 e '90 con impianti non aggiornati. Il costo dipende dal numero di punti, dalla superficie, dall'accessibilità delle tracce e dalla necessità di adeguare gli impianti alle norme vigenti.",
+      },
+      {
+        domanda: "Quanto costa ristrutturare cucina e bagno in un appartamento a Giugliano?",
+        risposta: "Il costo per ristrutturare cucina e bagno dipende da dimensioni, impianti, rivestimenti, sanitari, mobili e distribuzione interna. Per una stima attendibile è necessario distinguere le sole finiture dal rifacimento completo degli impianti e delle opere murarie.",
+      },
+      {
+        domanda: "Quanto tempo serve per ristrutturare completamente un appartamento a Giugliano?",
+        risposta: "Una ristrutturazione completa richiede generalmente diverse settimane o alcuni mesi, considerando demolizioni, impianti, opere murarie, posa delle finiture e montaggio degli elementi finali. I tempi effettivi dipendono dalla metratura, dalla complessità dei lavori e dalla disponibilità dei materiali.",
+      },
+      {
+        domanda: "Il prezzo della ristrutturazione comprende anche tecnici e pratiche edilizie?",
+        risposta: "Non sempre. Un preventivo completo deve specificare se comprende progettazione, direzione lavori, coordinamento della sicurezza, pratica edilizia, eventuali aggiornamenti catastali, materiali, smaltimenti e oneri. Prima di accettare un'offerta è importante verificare ogni voce del capitolato.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per ristrutturare un appartamento a Giugliano?",
+        risposta: "Per ottenere un preventivo attendibile servono almeno metratura, stato dell'immobile, planimetria, fotografie e indicazione dei lavori desiderati. Il sopralluogo consente di verificare impianti, murature, distribuzione interna e criticità, così da formulare una proposta dettagliata e confrontabile.",
       },
     ],
     faqBagno: [
@@ -1030,15 +1054,15 @@ export const comuniNapoli: Comune[] = [
     seoSections: [
       {
         title: "Costo Ristrutturazione Giugliano in Campania",
-        text: "Parlare di costo ristrutturazione a Giugliano in Campania senza guardare il tipo di fabbricato porta quasi sempre a una stima sbagliata. Il prezzo parte da 550 €/mq per interventi completi nelle condizioni più semplici, ma cambia sensibilmente tra palazzine nate durante l'espansione edilizia degli anni '80-'90, condomini con impianti mai aggiornati e abitazioni che presentano verifiche urbanistiche ancora da chiarire. Anche la pressione idrica, lo stato delle parti comuni e la distribuzione interna incidono più di quanto sembri sul preventivo reale. Su RistrutturazionePreventivi.it puoi richiedere una stima immediata e gratuita, calibrata sulle caratteristiche concrete della tua casa.",
+        text: "Il costo della ristrutturazione a Giugliano in Campania parte da 550 €/mq per un intervento completo standard. Il prezzo finale dipende da metratura, stato dell'immobile, impianti, distribuzione interna e livello delle finiture.\\n\\nPer un appartamento di 80 mq, il costo indicativo parte da circa 44.000 €. Il preventivo online offre una prima stima, mentre l'importo definitivo viene confermato dopo il sopralluogo tecnico.",
       },
       {
         title: "Impresa di Ristrutturazioni a Giugliano in Campania",
-        text: "In una città estesa e costruita per strati successivi come Giugliano, un'impresa di ristrutturazioni non serve solo a eseguire i lavori, ma soprattutto a mettere ordine tecnico prima dell'apertura del cantiere. Verificare conformità edilizia, stato degli impianti, condizioni delle colonne condominiali e fattibilità delle modifiche interne è spesso il passaggio che fa la differenza tra un intervento fluido e uno pieno di stop. Per questo è utile avere un unico referente capace di coordinare opere murarie, impiantistica, demolizioni e finiture senza perdere il controllo del quadro complessivo.",
+        text: "Russo FE Costruzione SRL è l'impresa edile e di ristrutturazioni che realizza i lavori richiesti tramite Ristrutturazionepreventivi.it. Se devi ristrutturare casa o appartamento a Giugliano in Campania, seguiamo ogni fase: sopralluogo, demolizioni, impianti elettrico, idraulico e termico, opere murarie, pavimenti, rivestimenti, tinteggiature e finiture.\\n\\nUn unico referente coordina il cantiere e ti aiuta a mantenere più chiari lavorazioni, tempi e costi. Operiamo nell'area tra Napoli e Caserta con un approccio pratico e organizzato.",
       },
       {
         title: "Preventivo Ristrutturazione a Giugliano in Campania",
-        text: "Un preventivo di ristrutturazione a Giugliano in Campania è davvero utile solo quando traduce i problemi possibili dell'immobile in voci di costo comprensibili. Non contano solo i metri quadri: pesano anche l'età dell'edificio, l'eventuale rifacimento di bagno e cucina, la necessità di adeguare impianti datati, la facilità di accesso al cantiere e l'eventuale presenza di irregolarità da verificare prima delle pratiche. Avere queste informazioni in anticipo ti aiuta a decidere meglio cosa fare subito e cosa rimandare. Su RistrutturazionePreventivi.it il preventivo è immediato e gratuito, con conferma conclusiva dopo sopralluogo tecnico.",
+        text: "Se stai valutando una ristrutturazione completa a Giugliano in Campania, il preventivo è il primo passo per conoscere il costo reale dei lavori. Consideriamo metratura, stato degli impianti, accessibilità dell'immobile, distribuzione interna, bagno, cucina e livello delle finiture.\\n\\nTramite Ristrutturazionepreventivi.it puoi ottenere una prima stima online e gratuita; il prezzo definitivo viene confermato dopo il sopralluogo tecnico, con tutte le lavorazioni indicate in modo chiaro.",
       },
     ],
   },
