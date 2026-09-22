@@ -7,9 +7,8 @@ import { Check, X } from "lucide-react";
 import CalcolatoreAppartamento from "@/components/shared/CalcolatoreAppartamento";
 import GalleriaLavori from "@/components/shared/GalleriaLavori";
 import { RecensioniClienti } from "@/components/shared/RecensioniClienti";
-import { comuni, getComuneBySlug } from "@/data/comuni";
+import { comuniAppartamento } from "@/data/comuni-appartamento";
 import { getAllArticoli } from "@/lib/blog";
-import { getComuneContent } from "@/lib/comune-content";
 import { buildHowToSchema } from "@/lib/schema";
 import { getLavoriPerServizio } from "@/lib/lavori";
 
@@ -28,12 +27,12 @@ function renderSeoText(text: string, comuneNome: string) {
 }
 
 export async function generateStaticParams() {
-  return comuni.map((c) => ({ slug: c.slug }));
+  return comuniAppartamento.map((c) => ({ slug: c.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const comune = getComuneBySlug(slug);
+  const comune = comuniAppartamento.find((c) => c.slug === slug);
   if (!comune) return {};
   const url = `https://ristrutturazionepreventivi.it/comune/${slug}/`;
   return {
@@ -67,10 +66,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ComunePage({ params }: PageProps) {
   const { slug } = await params;
-  const comune = getComuneBySlug(slug);
+  const comune = comuniAppartamento.find((c) => c.slug === slug);
   if (!comune) notFound();
 
-  const content = getComuneContent(slug);
+  const content = comune;
   const lavori = getLavoriPerServizio("ristrutturazione-appartamento-completo");
   const articoliConsigliati = getAllArticoli().slice(0, 3);
   const seoSectionsCasa = comune.seoSections?.filter((section) => section.pageType !== "bagno" && !section.title.startsWith("Costo Ristrutturazione")) ?? [];
@@ -476,7 +475,7 @@ export default async function ComunePage({ params }: PageProps) {
                 <h2 className="text-xl font-bold text-navy mb-4">Interveniamo anche nei comuni vicini</h2>
                 <div className="flex flex-wrap gap-3">
                   {comune.vicini.map((vs) => {
-                    const v = getComuneBySlug(vs);
+                    const v = comuniAppartamento.find((c) => c.slug === vs);
                     if (!v) return null;
                     return (
                       <Link key={vs} href={`/comune/${vs}/`}
