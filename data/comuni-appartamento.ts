@@ -146,22 +146,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Abusi edilizi nelle zone di espansione privata degli anni '90: verande, locali seminterrati, soppalchi spesso non condonati",
       "Impianti idrici in acciaio zincato nelle abitazioni degli anni '70-'80: corrosione interna che riduce portata e qualità dell'acqua",
       "Canne fumarie in amianto nei condomini più vecchi del centro: rilevamento obbligatorio prima di interventi su cucine",],
-    faq: [{
-        domanda: "Ho una villetta degli anni '90 a Lusciano con umidità al piano terra. Prima di ristrutturare, cosa devo fare?",
-        risposta: "L'umidità di risalita nelle villette anni '90 dell'Agro Aversano è molto comune e va trattata prima di qualsiasi rifinitura. Il nostro sopralluogo include la verifica delle cause (risalita capillare, infiltrazioni da fondazione, condensa). Il trattamento corretto dipende dall'origine: fare le rifiniture prima di risolvere l'umidità significa rifare tutto a distanza di 2-3 anni.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Lusciano?",
+        risposta: "Per una ristrutturazione completa a Lusciano il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Posso usare il Bonus Ristrutturazione 50% per il rifacimento del bagno nella mia villetta a Lusciano?",
-        risposta: "Sì, la detrazione IRPEF al 50% si applica agli interventi di manutenzione straordinaria sugli immobili residenziali, incluso il rifacimento completo del bagno con sostituzione di impianti. Sono necessari: pagamenti tracciati (bonifico parlante), fatture in regola, e per alcuni interventi una CILA. Il nostro ufficio amministrativo supporta la gestione della pratica.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Lusciano?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Quanto costa rifare completamente un bagno in un PEEP di Lusciano?",
-        risposta: "Un bagno in un appartamento PEEP è tipicamente sotto i 5 mq, il che lo rende uno degli interventi più intensivi in termini di costo per metro quadro. In base al Prezzario Regionale Campania, i costi orientativi partono da circa 4.500-5.500 € per una finitura base, fino a 7.000-9.000 € per una finitura premium con impianti completamente rinnovati.",
+        domanda: "Quanto dura una ristrutturazione completa a Lusciano?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
       },
       {
-        domanda: "Quanto tempo ci vuole per ristrutturare un bagno a Lusciano?",
-        risposta: "Per un bagno standard (5-6 mq) con sostituzione completa di sanitari, rivestimenti e impianti, mediamente 2-3 settimane lavorative. Se si aggiungono lavori strutturali o la bonifica di impianti obsoleti, i tempi si allungano. Il cantiere viene organizzato per ridurre i giorni senza bagno funzionante.",
-      },],
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Lusciano?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Lusciano?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["aversa", "carinaro", "teverola", "gricignano-di-aversa"],
     seoSections: [{
         title: "Costo Ristrutturazione Lusciano",
@@ -206,22 +212,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Abusi edilizi non condonati nelle espansioni private degli anni '90",
       "Impianti idrici vetusti nelle palazzine del centro anni '60-'70",
       "Coperture con guaine bituminose di prima generazione, spesso non più impermeabili nelle abitazioni con più di 25 anni",],
-    faq: [{
-        domanda: "Quali permessi servono per ristrutturare un bagno a Carinaro?",
-        risposta: "Per la sostituzione di sanitari e rivestimenti senza modificare la distribuzione degli spazi, nessun permesso. Se si spostano impianti o si modificano le tramezzature, serve una CILA da presentare al Comune di Carinaro prima dell'inizio lavori. Il nostro tecnico valuta la situazione specifica al sopralluogo.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Carinaro?",
+        risposta: "Per una ristrutturazione completa a Carinaro il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Ho una villetta anni '90 a Carinaro. Come capisco se c'è amianto prima di ristrutturare?",
-        risposta: "L'amianto nelle villette degli anni '90 è meno comune rispetto ai condomini anni '60-'70, ma può essere presente in canne fumarie, lastre di copertura o guaine di isolamento. Un'ispezione visiva da parte di un tecnico esperto è il primo passo. In caso di dubbio, è possibile richiedere un'analisi campione certificata prima dell'inizio lavori.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Carinaro?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Quanto costa ristrutturare la cucina a Carinaro?",
-        risposta: "In base al Prezzario Regionale Campania, per una cucina di 10-14 mq (tipica delle villette e case a schiera di Carinaro) il costo indicativo va da 6.500 € (finitura base) a 19.000 € (finitura premium con mobili su misura). Il fattore che incide di più è la canna fumaria: se è in amianto, la bonifica obbligatoria prima dell'installazione della nuova cappa aggiunge 800-2.500 € al preventivo.",
+        domanda: "Quanto dura una ristrutturazione completa a Carinaro?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
       },
       {
-        domanda: "Conviene sostituire anche i pavimenti del bagno oppure tenerli?",
-        risposta: "Dipende dalle condizioni e dal tipo di posa. Se i pavimenti sono in buone condizioni, a volte è possibile posare il nuovo sopra il vecchio (sovrapposa) risparmiando su demolizione e smaltimento. Se ci sono problemi di umidità, rigonfiamenti o il pavimento è in vinile anni '80, la rimozione completa è necessaria. Lo valutiamo al sopralluogo insieme a te.",
-      },],
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Carinaro?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Carinaro?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["aversa", "lusciano", "teverola", "gricignano-di-aversa"],
     seoSections: [],
     prezzoMq: 550,
@@ -255,22 +267,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di risalita e infiltrazioni nei piani terra",
       "Abusi edilizi da regolarizzare frequenti nelle zone di espansione",
       "Canne fumarie in amianto nei condomini degli anni '70",],
-    faq: [{
-        domanda: "Ho delle crepe nei muri di casa a Teverola. Devo preoccuparmi prima di ristrutturare?",
-        risposta: "Le crepe vanno sempre valutate prima di qualsiasi lavoro di rifinitura. Le lesioni superficiali (fessure nei rivestimenti, stacco di intonaco) sono spesso legate ad assestamenti normali. Le crepe passanti nei muri portanti o in diagonale agli angoli delle aperture richiedono una valutazione strutturale. Procedere con le rifiniture senza risolvere le cause significa rifare tutto a distanza di pochi anni.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Teverola?",
+        risposta: "Per una ristrutturazione completa a Teverola il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Posso usare il Bonus 50% per ristrutturare il bagno a Teverola?",
-        risposta: "Sì, la detrazione IRPEF al 50% si applica agli interventi di manutenzione straordinaria su immobili residenziali, compreso il rifacimento completo del bagno. Sono necessari pagamenti con bonifico parlante e fatture in regola. Per interventi che richiedono CILA, va presentata prima dell'inizio lavori.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Teverola?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Quanto costa ristrutturare la cucina a Teverola?",
-        risposta: "In base al Prezzario Regionale Campania, per una cucina di 10-14 mq nelle palazzine di Teverola il costo indicativo va da 6.500 € (finitura base) a 19.000 € (finitura premium con mobili su misura). Il dato preciso dipende dallo stato degli impianti esistenti, dalla canna fumaria e da eventuali opere murarie, che si valutano al sopralluogo.",
+        domanda: "Quanto dura una ristrutturazione completa a Teverola?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
       },
       {
-        domanda: "Vivo vicino alla SS7bis e ho problemi di rumore. Posso migliorare l'isolamento acustico durante la ristrutturazione?",
-        risposta: "Sì, la ristrutturazione è il momento ideale per intervenire sull'isolamento acustico. Le soluzioni più efficaci sono la sostituzione dei serramenti con doppi o tripli vetri, il miglioramento dell'isolamento delle pareti perimetrali, e in alcuni casi l'installazione di contropareti. Il costo dipende dall'estensione dell'intervento e viene incluso nel preventivo complessivo.",
-      },],
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Teverola?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Teverola?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["aversa", "lusciano", "carinaro", "gricignano-di-aversa"],
     seoSections: [{
         title: "Costo Ristrutturazione Teverola",
@@ -315,18 +333,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Canne fumarie in amianto nei condomini anni '60-'70",
       "Abusi edilizi non condonati nelle zone di espansione privata",
       "Impianti idrici vetusti nelle palazzine degli anni '60-'70",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Gricignano di Aversa?",
-        risposta: "In base al Prezzario Regionale Campania, i costi orientativi per un bagno di 5-6 mq con rifacimento completo vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine degli anni '60-'70 con impianti originali, il costo tende al limite superiore.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Gricignano di Aversa?",
+        risposta: "Per una ristrutturazione completa a Gricignano di Aversa il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Quanti giorni devo restare senza bagno durante la ristrutturazione?",
-        risposta: "Con un'organizzazione del cantiere ben pianificata, i giorni senza bagno funzionante si riducono a 3-5 giorni (fase demolizione e impermeabilizzazione). Pianifichiamo sempre il cantiere per minimizzare il disagio: se in casa c'è un secondo bagno, questo non è un problema. Se è l'unico bagno, organizziamo i lavori in modo da renderlo parzialmente funzionante il prima possibile.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Gricignano di Aversa?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Come faccio a sapere se i miei impianti idrici vanno sostituiti durante la ristrutturazione del bagno?",
-        risposta: "I segnali evidenti sono: pressione bassa, acqua color ruggine all'apertura del rubinetto, perdite frequenti ai raccordi. Ma spesso le tubazioni in acciaio zincato sembrano ok dall'esterno e sono deteriorate internamente. Al sopralluogo verifichiamo lo stato delle tubazioni accessibili e ti diciamo chiaramente cosa conviene sostituire e cosa può essere mantenuto.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Gricignano di Aversa?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Gricignano di Aversa?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Gricignano di Aversa?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["aversa", "lusciano", "carinaro", "teverola"],
     seoSections: [{
         title: "Costo Ristrutturazione Gricignano di Aversa",
@@ -371,18 +399,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di risalita nelle palazzine più datate e nelle villette con fondazioni non impermeabilizzate",
       "Abusi edilizi frequenti nelle zone di espansione privata",
       "Impianti idrici in acciaio zincato negli edifici degli anni '70-'80: sostituzione spesso necessaria durante la ristrutturazione del bagno",],
-    faq: [{
-        domanda: "Ho una palazzina anni '70 a Trentola Ducenta. Cosa include il rifacimento completo del bagno?",
-        risposta: "In una palazzina degli anni '70, il rifacimento completo include: demolizione e smaltimento di rivestimenti e sanitari, sostituzione integrale delle tubazioni idriche (quasi certamente in acciaio zincato), nuovo impianto elettrico bagno a norma IP44, impermeabilizzazione, nuovi rivestimenti, nuovi sanitari e rubinetteria. La verifica della canna fumaria è necessaria se ci sono lavori collegati alla cucina.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Trentola Ducenta?",
+        risposta: "Per una ristrutturazione completa a Trentola Ducenta il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Voglio sostituire la vasca con una doccia a Trentola Ducenta. Ci sono particolari criticità?",
-        risposta: "La sostituzione vasca-doccia è uno degli interventi più richiesti. I punti da verificare sono: la posizione degli scarichi (se la doccia va in posizione diversa dalla vasca, bisogna rifare le tracce), lo spazio disponibile per il box doccia, e la portata idrica (le docce a pioggia richiedono buona pressione). Al sopralluogo misuriamo tutto e progettiamo la soluzione migliore per il tuo spazio.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Trentola Ducenta?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Quanto costa ristrutturare la cucina a Trentola Ducenta?",
-        risposta: "In base al Prezzario Regionale Campania, i costi orientativi per un bagno di 5-6 mq con rifacimento completo vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine anni '70 con impianti originali, il costo reale tende al limite superiore.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Trentola Ducenta?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Trentola Ducenta?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Trentola Ducenta?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["aversa", "succivo", "casaluce", "san-marcellino"],
     seoSections: [{
         title: "Costo Ristrutturazione Trentola Ducenta",
@@ -427,18 +465,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Canne fumarie in amianto nelle palazzine degli anni '60-'70",
       "Abusi edilizi nelle zone di espansione",
       "Impianti idrici vetusti nelle abitazioni più datate",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a San Marcellino?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 4-5 mq vanno da circa 4.500 € (base) a 9.000 € (premium). Nelle palazzine storiche con impianti originali, il costo tende al limite superiore. Il sopralluogo tecnico chiarisce la situazione specifica.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a San Marcellino?",
+        risposta: "Per una ristrutturazione completa a San Marcellino il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Il bagno del mio appartamento è molto piccolo (meno di 4 mq). Vale la pena ristrutturarlo?",
-        risposta: "Assolutamente sì. I bagni piccoli beneficiano enormemente di una ristrutturazione ben progettata: sanitari sospesi, doccia al posto della vasca, grandi formati che ampliano visivamente lo spazio, e una distribuzione intelligente degli accessori. Il costo per metro quadro è più alto rispetto a bagni grandi, ma l'impatto sulla qualità della vita quotidiana è significativo.",
+        domanda: "Che cosa comprende una ristrutturazione completa a San Marcellino?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Posso ristrutturare il bagno senza svuotare completamente l'appartamento?",
-        risposta: "Sì, la ristrutturazione del bagno richiede solo di svuotare il bagno stesso e proteggere il corridoio adiacente per il passaggio dei materiali. Il cantiere è delimitato e non interferisce con il resto dell'abitazione. L'unico disagio reale è il periodo senza bagno funzionante, che organizziamo per essere il più breve possibile.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a San Marcellino?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a San Marcellino?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a San Marcellino?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["trentola-ducenta", "casal-di-principe", "aversa", "villa-di-briano"],
     seoSections: [{
         title: "Costo Ristrutturazione San Marcellino",
@@ -483,18 +531,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Canne fumarie in amianto nei condomini anni '60-'70",
       "Abusi edilizi non condonati nelle zone di espansione",
       "Impianti idrici in piombo o acciaio zincato nelle palazzine più datate",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Casal di Principe?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 4-5 mq vanno da circa 4.500 € (base) a 9.000 € (premium). Nelle abitazioni del centro con impianti d'epoca, il costo tende al limite superiore.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Casal di Principe?",
+        risposta: "Per una ristrutturazione completa a Casal di Principe il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Ho un appartamento datato con impianti idrici in piombo. Devo sostituirli durante la ristrutturazione?",
-        risposta: "Le tubazioni in piombo vanno sostituite per ragioni di salute: il piombo è tossico e si dissolve nell'acqua, soprattutto quella stagnante. La sostituzione durante la ristrutturazione del bagno è il momento più conveniente, perché le tracce sono già aperte. Non farlo significa dover intervenire di nuovo a distanza di poco tempo.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Casal di Principe?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Posso fare la ristrutturazione del bagno abitando in casa?",
-        risposta: "Sì, è possibile in molti casi. I lavori nel bagno sono circoscritti e non rendono inabitabile il resto dell'appartamento. L'unico vero disagio è il periodo senza bagno funzionante (3-5 giorni). Se c'è un secondo bagno in casa, il problema non si pone. Altrimenti, organizziamo il cantiere per minimizzare questo tempo.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Casal di Principe?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Casal di Principe?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Casal di Principe?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["san-marcellino", "villa-di-briano", "trentola-ducenta", "parete"],
     seoSections: [],
     prezzoMq: 550,
@@ -528,18 +586,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Abusi edilizi nelle zone di espansione privata",
       "Coperture piane nelle villette anni '80: guaine bituminose spesso esaurite",
       "Impianti idrici in acciaio zincato nelle costruzioni degli anni '70-'80",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Casaluce?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 6-7 mq (tipico delle villette di Casaluce) vanno da circa 5.500 € (base) a 10.500 € (premium). Il costo preciso dipende dallo stato degli impianti e dai materiali scelti.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Casaluce?",
+        risposta: "Per una ristrutturazione completa a Casaluce il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Ho una villetta degli anni '80 con doppio bagno. Conviene rifarli entrambi nello stesso momento?",
-        risposta: "In molti casi sì: l'impresa è già mobilizzata, la logistica è organizzata e il costo marginale del secondo bagno è inferiore rispetto a due interventi separati. Durante il sopralluogo valutiamo entrambi e forniamo preventivi separati e combinati, così decidi con i numeri in mano.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Casaluce?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "La copertura piana della mia villetta perde. Posso fare solo le rifiniture interne o devo rifare prima il tetto?",
-        risposta: "Se la guaina del tetto perde, fare le rifiniture interne prima è un errore: l'acqua rovina tutto nel giro di uno o due inverni. L'ordine corretto è: prima risolvere la causa (guaina, impermeabilizzazione), poi intervenire sulle rifiniture interne. Il nostro sopralluogo valuta entrambe le situazioni e ti dà una priorità chiara.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Casaluce?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Casaluce?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Casaluce?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["trentola-ducenta", "succivo", "aversa", "cesa"],
     seoSections: [],
     prezzoMq: 550,
@@ -573,14 +641,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Canne fumarie in amianto nei condomini degli anni '60-'70",
       "Abusi edilizi nelle zone di espansione",
       "Impianti fognari datati nel nucleo storico",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Cesa?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il costo preciso dipende dallo stato degli impianti esistenti.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Cesa?",
+        risposta: "Per una ristrutturazione completa a Cesa il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Per la ristrutturazione del bagno serve sempre una CILA a Cesa?",
-        risposta: "Non sempre. La sola sostituzione di sanitari, rivestimenti e rubinetteria senza spostare impianti è manutenzione ordinaria e non richiede pratiche edilizie. La CILA è necessaria quando si spostano impianti, si demoliscono o si creano tramezzi, o si modifica la distribuzione degli spazi. Il nostro tecnico chiarisce al sopralluogo cosa è necessario per il tuo intervento specifico.",
-      },],
+        domanda: "Che cosa comprende una ristrutturazione completa a Cesa?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
+      },
+      {
+        domanda: "Quanto dura una ristrutturazione completa a Cesa?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Cesa?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Cesa?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["aversa", "casaluce", "succivo", "trentola-ducenta"],
     seoSections: [],
     prezzoMq: 550,
@@ -614,14 +696,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Canne fumarie in amianto nei condomini degli anni '70",
       "Abusi edilizi nelle zone di espansione privata",
       "Impianti idrici vetusti nelle costruzioni degli anni '70",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Frignano?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico quantifica le variabili specifiche.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Frignano?",
+        risposta: "Per una ristrutturazione completa a Frignano il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Quanto dura una ristrutturazione bagno completa a Frignano?",
-        risposta: "Un bagno standard 5-6 mq richiede mediamente 2-3 settimane lavorative dalla demolizione alla rifinitura finale. I tempi si allungano se è necessaria la bonifica di impianti in amianto o se emergono criticità strutturali al sopralluogo.",
-      },],
+        domanda: "Che cosa comprende una ristrutturazione completa a Frignano?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
+      },
+      {
+        domanda: "Quanto dura una ristrutturazione completa a Frignano?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Frignano?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Frignano?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["villa-di-briano", "casal-di-principe", "san-marcellino", "parete"],
     seoSections: [],
     prezzoMq: 550,
@@ -655,14 +751,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di risalita frequente nelle palazzine e nelle villette più datate",
       "Abusi edilizi nelle zone di espansione",
       "Impianti idrici vetusti nelle palazzine del centro",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Parete?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine degli anni '60-'70 con impianti originali, il costo tende al limite superiore.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Parete?",
+        risposta: "Per una ristrutturazione completa a Parete il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Ho un condominio anni '70 a Parete. Cosa devo sapere prima di ristrutturare il mio appartamento?",
-        risposta: "Negli edifici condominiali anni '70 è importante verificare: lo stato delle colonne scarico condominiali (se intasate o deteriorate, il problema ricade su tutti i bagni), la presenza di amianto nelle canne fumarie, e il regolamento condominiale per orari e modalità dei lavori. Se l'intervento tocca parti comuni, è necessario informare l'amministratore.",
-      },],
+        domanda: "Che cosa comprende una ristrutturazione completa a Parete?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
+      },
+      {
+        domanda: "Quanto dura una ristrutturazione completa a Parete?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Parete?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Parete?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["villa-di-briano", "casal-di-principe", "frignano", "aversa"],
     seoSections: [],
     prezzoMq: 550,
@@ -696,18 +806,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Abusi edilizi nelle espansioni private degli anni '90",
       "Impianti idrici in acciaio zincato nelle abitazioni degli anni '70-'80",
       "Coperture piane nelle villette degli anni '80: guaine di prima generazione spesso da sostituire",],
-    faq: [{
-        domanda: "Voglio aprire la cucina sul soggiorno nella mia villetta a Succivo. È possibile?",
-        risposta: "Dipende dalla struttura del muro di separazione. Se è un muro portante, l'apertura richiede una trave di sostegno e il progetto di un ingegnere strutturale, oltre al permesso di costruire. Se è una tramezza non portante, basta una CILA. Il nostro sopralluogo include la verifica della natura del muro prima di qualsiasi preventivo.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Succivo?",
+        risposta: "Per una ristrutturazione completa a Succivo il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Quanto costa ristrutturare la cucina a Succivo?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle villette con bagni già parzialmente ristrutturati, il costo dipende da quanto degli impianti esistenti è riutilizzabile: lo si capisce al sopralluogo.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Succivo?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Ho intenzione di installare un riscaldamento a pavimento nel bagno. È compatibile con una ristrutturazione completa?",
-        risposta: "Sì, il riscaldamento a pavimento nel bagno è uno degli upgrade più richiesti in fase di ristrutturazione completa, perché le tracce e il massetto sono già da rifare. Il costo aggiuntivo rispetto a un bagno standard è di 800-1.500 € a seconda della dimensione. Va pianificato dall'inizio perché richiede un massetto dedicato.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Succivo?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Succivo?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Succivo?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["aversa", "cesa", "casaluce", "trentola-ducenta"],
     seoSections: [],
     prezzoMq: 550,
@@ -741,14 +861,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Canne fumarie in amianto nei condomini anni '60-'70",
       "Abusi edilizi nelle zone di espansione",
       "Impianti fognari datati nel nucleo storico, spesso condivisi tra più abitazioni",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Villa di Briano?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine storiche con impianti originali, il costo tende al limite superiore. Il sopralluogo tecnico chiarisce la situazione specifica.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Villa di Briano?",
+        risposta: "Per una ristrutturazione completa a Villa di Briano il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Nel mio appartamento storico a Villa di Briano gli scarichi sono condivisi con il vicino. Posso comunque ristrutturare?",
-        risposta: "Sì, ma con le dovute cautele. Gli scarichi condivisi sono una caratteristica degli edifici storici più datati. Durante il sopralluogo verifichiamo la configurazione degli scarichi e progettiamo l'intervento in modo da non interferire con i vicini. In alcuni casi può essere necessario concordare i lavori con il proprietario dell'appartamento adiacente.",
-      },],
+        domanda: "Che cosa comprende una ristrutturazione completa a Villa di Briano?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
+      },
+      {
+        domanda: "Quanto dura una ristrutturazione completa a Villa di Briano?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Villa di Briano?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Villa di Briano?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["san-marcellino", "casal-di-principe", "frignano", "parete"],
     seoSections: [{
         title: "Ristrutturare casa a Villa di Briano: contesto edilizio e criticità",
@@ -982,18 +1116,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Canne fumarie in amianto nei condomini degli anni '70",
       "Abusi edilizi non condonati frequenti",
       "Impianti idrici condominiali vetusti: colonne montanti in piombo ancora presenti nei palazzi anni '60",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Sant'Antimo?",
-        risposta: "I costi orientativi in base al Prezzario Regionale Campania per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). Nei condomini degli anni '70 con impianti originali, il costo reale tende al limite superiore.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Sant'Antimo?",
+        risposta: "Per una ristrutturazione completa a Sant'Antimo il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Ho un appartamento in un condominio degli anni '70 a Sant'Antimo con infiltrazioni dal lastrico solare. Prima di ristrutturare, cosa faccio?",
-        risposta: "Le infiltrazioni dal lastrico solare vanno risolte prima di qualsiasi lavoro interno, altrimenti le nuove rifiniture sono compromesse. Il lastrico solare è solitamente parte comune del condominio (salvo diverse disposizioni): il problema va segnalato all'amministratore e risolto con delibera condominiale. Solo dopo è sensato intervenire sugli interni dell'appartamento.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Sant'Antimo?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Posso ristrutturare la cucina se la canna fumaria condominiale è in amianto?",
-        risposta: "Non è possibile collegare una nuova cappa a una canna fumaria in amianto senza bonifica preventiva. La bonifica va eseguita da una ditta specializzata certificata, con notifica all'ASL e smaltimento in discarica autorizzata. Il costo va calcolato separatamente dal preventivo della cucina e va pianificato prima dell'inizio lavori.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Sant'Antimo?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Sant'Antimo?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Sant'Antimo?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["giugliano-in-campania", "napoli", "melito-di-napoli", "grumo-nevano"],
     seoSections: [{
         title: "Costo Ristrutturazione Sant'Antimo",
@@ -1038,18 +1182,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di infiltrazione e risalita nei piani terra e seminterrati",
       "Impianti condominiali obsoleti: aggiornamento necessario in caso di interventi su bagni o cucine",
       "Abusi edilizi non condonati",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Melito di Napoli?",
-        risposta: "In base al Prezzario Regionale Campania, i costi orientativi per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). Nei condomini degli anni '60-'70 con impianti originali da sostituire, il costo tende al limite superiore.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Melito di Napoli?",
+        risposta: "Per una ristrutturazione completa a Melito di Napoli il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Ho un seminterrato a Melito di Napoli con problemi di umidità. Posso ristrutturarlo?",
-        risposta: "Sì, ma l'umidità va affrontata con metodo. Nei seminterrati dell'area nord di Napoli l'umidità ha spesso una doppia origine: risalita capillare dalle fondazioni e condensa da scarsa ventilazione. Trattarla superficialmente (solo impermeabilizzante) non risolve il problema. Il sopralluogo identifica la causa specifica e permette di progettare l'intervento corretto.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Melito di Napoli?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Nell'appartamento di mia madre anni '60 a Melito il bagno è piccolo e con impianti originali. Quanto costerebbe rifarlo completamente?",
-        risposta: "Un bagno degli anni '60 con impianti originali è quasi certamente da rifare integralmente: tubazioni in piombo o acciaio zincato, impianto elettrico non a norma, rivestimenti in mosaico con adesivo a base di catrame. La stima orientativa per un bagno sotto i 5 mq con rifacimento completo è di 4.500-7.500 € a seconda della finitura scelta. Il sopralluogo tecnico definisce il costo reale.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Melito di Napoli?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Melito di Napoli?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Melito di Napoli?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["napoli", "sant-antimo", "mugnano-di-napoli", "casandrino"],
     seoSections: [{
         title: "Costo Ristrutturazione Melito di Napoli",
@@ -1094,18 +1248,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Impianti condominiali vetusti: colonne scarico e montanti idrici da decenni senza manutenzione",
       "Umidità da infiltrazione nei piani alti e da risalita nei piani terra",
       "Abusi edilizi non condonati nelle zone di espansione",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Mugnano di Napoli?",
-        risposta: "In base al Prezzario Regionale Campania, i costi orientativi per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). Nei condomini degli anni '60-'70 con impianti originali, il costo reale è tendenzialmente nel range superiore.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Mugnano di Napoli?",
+        risposta: "Per una ristrutturazione completa a Mugnano di Napoli il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Ho un appartamento al quinto piano di un condominio anni '70 a Mugnano. Ho problemi di scarico lento. È un problema condominiale?",
-        risposta: "Gli scarichi lenti nei piani alti sono spesso un sintomo del deterioramento delle colonne scarico condominiali, non solo dell'impianto del singolo appartamento. Il problema può essere parzialmente risolto sostituendo i tratti di impianto interno all'appartamento, ma per una soluzione definitiva è necessario intervenire sulla colonna condominiale, che richiede delibera assembleare.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Mugnano di Napoli?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Posso trasformare il bagno piccolo degli anni '70 in un bagno moderno funzionale senza aumentare lo spazio?",
-        risposta: "Assolutamente sì. I bagni compatti anni '70 beneficiano moltissimo di una ristrutturazione ben progettata: sanitari sospesi al posto di quelli a terra (guadagni 15-20 cm a pavimento), doccia al posto della vasca, grande specchio e illuminazione ottimizzata, mensole integrate. Con 4-5 mq ben progettati si ottiene un bagno funzionale e piacevole. Lo progettiamo insieme al sopralluogo.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Mugnano di Napoli?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Mugnano di Napoli?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Mugnano di Napoli?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["napoli", "giugliano-in-campania", "melito-di-napoli", "villaricca"],
     seoSections: [{
         title: "Costo Ristrutturazione Mugnano di Napoli",
@@ -1150,18 +1314,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di risalita nei piani terra delle costruzioni più datate",
       "Abusi edilizi frequenti nelle zone di espansione degli anni '90",
       "Impianti idrici in acciaio zincato nelle palazzine degli anni '70-'80",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Villaricca?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine degli anni '70 con impianti originali, il costo tende al limite superiore.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Villaricca?",
+        risposta: "Per una ristrutturazione completa a Villaricca il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Devo fare la CILA per ristrutturare il bagno nella mia palazzina a Villaricca?",
-        risposta: "Se sostituisci solo sanitari e rivestimenti senza spostare impianti o modificare tramezzi, la manutenzione ordinaria non richiede pratiche edilizie. La CILA è necessaria per interventi che modificano la distribuzione degli spazi o spostano impianti. Il nostro tecnico chiarisce cosa è necessario per il tuo intervento specifico prima del preventivo.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Villaricca?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Ho una villetta degli anni '90 a Villaricca. Voglio ristrutturare sia il bagno che la cucina. Conviene fare tutto insieme?",
-        risposta: "Fare bagno e cucina insieme ha vantaggi concreti: l'impresa è già in casa, le pratiche burocratiche si gestiscono una sola volta, i costi di cantiere (ponteggi, smaltimento, trasferta) si dividono su due interventi. Il risparmio rispetto a due cantieri separati è di solito il 10-15% sull'importo totale.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Villaricca?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Villaricca?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Villaricca?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["napoli", "giugliano-in-campania", "mugnano-di-napoli", "casandrino"],
     seoSections: [{
         title: "Costo Ristrutturazione Villaricca",
@@ -1206,18 +1380,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di risalita nei piani terra, frequente nelle costruzioni più datate",
       "Impianti condominiali obsoleti nelle palazzine più vecchie",
       "Abusi edilizi non condonati nelle espansioni private",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Casandrino?",
-        risposta: "In base al Prezzario Regionale Campania, i costi orientativi per un bagno 4-5 mq vanno da circa 4.500 € a 8.500 €. Il sopralluogo tecnico quantifica le variabili specifiche dell'immobile.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Casandrino?",
+        risposta: "Per una ristrutturazione completa a Casandrino il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Il mio appartamento a Casandrino ha il bagno e la cucina adiacenti. Posso abbatterli e ricavare un bagno più grande?",
-        risposta: "È tecnicamente possibile se il muro tra i due ambienti non è portante. Serve però un progetto attento: lo spazio sottratto alla cucina va compensato, gli impianti vanno riprogettati, e per la modifica degli spazi interni serve una CILA o permesso di costruire a seconda dell'entità. Al sopralluogo verifichiamo la fattibilità strutturale e ti presentiamo le opzioni.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Casandrino?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Quanto dura il cantiere per la ristrutturazione di un bagno a Casandrino?",
-        risposta: "Un bagno di 4-5 mq con rifacimento completo richiede mediamente 2-3 settimane lavorative. I tempi si allungano se è necessaria la bonifica di impianti in amianto, la sostituzione delle colonne condominiali o se emergono criticità strutturali al sopralluogo.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Casandrino?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Casandrino?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Casandrino?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["napoli", "villaricca", "mugnano-di-napoli", "grumo-nevano"],
     seoSections: [{
         title: "Costo Ristrutturazione Casandrino",
@@ -1262,18 +1446,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di risalita nelle abitazioni di piano terra",
       "Abusi edilizi non condonati nelle espansioni private",
       "Impianti idrici vetusti nelle palazzine più datate",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Grumo Nevano?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico quantifica le variabili specifiche dell'immobile.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Grumo Nevano?",
+        risposta: "Per una ristrutturazione completa a Grumo Nevano il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Vivo a Grumo Nevano ma il confine comunale è vicino ad Aversa. Intervenite anche nella mia zona?",
-        risposta: "Sì, operiamo su tutto il territorio di Grumo Nevano e nei comuni limitrofi sia in provincia di Napoli che di Caserta. La posizione al confine tra le due province non è un problema: il nostro intervento dipende dall'indirizzo specifico, non dalla provincia.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Grumo Nevano?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Ho un appartamento degli anni '80 a Grumo Nevano con rivestimenti in ceramica fino a metà parete. Conviene toglierli o posarci sopra?",
-        risposta: "La scelta tra rimozione e sovrapposa dipende da: spessore dei vecchi rivestimenti (se già sovrapposti una volta, una seconda volta può creare problemi di peso e planarità), adesione al supporto (se ci sono zone staccate, vanno rimosse), e tipo di intervento (se rifai anche gli impianti, è meglio rimuovere tutto). Al sopralluogo valutiamo la situazione e ti diciamo qual è la soluzione più conveniente.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Grumo Nevano?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Grumo Nevano?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Grumo Nevano?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["sant-antimo", "casandrino", "napoli", "aversa"],
     seoSections: [{
         title: "Costo Ristrutturazione Grumo Nevano",
@@ -1403,18 +1597,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di risalita nei piani terra, frequente nelle costruzioni più datate",
       "Abusi edilizi non condonati nelle zone di espansione",
       "Vibrazioni da traffico pesante sulla SS7 Appia: possibili lesioni nei muri delle abitazioni prossime alla strada",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Marcianise?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico quantifica le variabili specifiche dell'immobile.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Marcianise?",
+        risposta: "Per una ristrutturazione completa a Marcianise il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Ho crepe sui muri di casa a Marcianise vicino alla SS7. Cosa faccio prima di ristrutturare?",
-        risposta: "Le abitazioni prossime ad arterie stradali ad alto traffico possono sviluppare lesioni da vibrazione nel tempo. Prima di qualsiasi rifinitura, è necessario valutare l'entità delle crepe: le fessure superficiali nell'intonaco si trattano con stucco elastico prima della tinteggiatura, ma le lesioni ai muri portanti richiedono una valutazione strutturale. Il nostro sopralluogo include questa verifica.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Marcianise?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Posso ristrutturare il bagno e la cucina contemporaneamente a Marcianise?",
-        risposta: "Sì, e spesso conviene. L'impresa è già in casa, i costi fissi (trasferta, ponteggi interni, smaltimento) si distribuiscono su due interventi, e la logistica del cantiere è più efficiente. In media, fare bagno e cucina insieme costa il 10-15% in meno rispetto a due cantieri separati.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Marcianise?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Marcianise?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Marcianise?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["caserta", "santa-maria-capua-vetere", "curti", "recale"],
     seoSections: [{
         title: "Costo Ristrutturazione Marcianise",
@@ -1459,14 +1663,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di risalita nei piani terra delle costruzioni più datate",
       "Abusi edilizi nelle zone di espansione",
       "Impianti idrici in acciaio zincato nelle palazzine degli anni '70-'80",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Curti?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico chiarisce la situazione specifica.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Curti?",
+        risposta: "Per una ristrutturazione completa a Curti il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Ho una palazzina anni '70 a Curti. Devo sostituire le tubazioni durante la ristrutturazione del bagno?",
-        risposta: "Nelle palazzine degli anni '70 le tubazioni idriche sono quasi certamente in acciaio zincato, che si corrode internamente nel tempo riducendo la portata e rilasciando impurità nell'acqua. Se il bagno è già aperto per la ristrutturazione, la sostituzione dei tratti di tubazione interni all'appartamento ha un costo marginale relativamente basso. Consigliamo quasi sempre di farlo per evitare di riaprire le tracce tra pochi anni.",
-      },],
+        domanda: "Che cosa comprende una ristrutturazione completa a Curti?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
+      },
+      {
+        domanda: "Quanto dura una ristrutturazione completa a Curti?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Curti?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Curti?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["caserta", "marcianise", "santa-maria-capua-vetere", "recale"],
     seoSections: [{
         title: "Costo Ristrutturazione Curti",
@@ -1511,18 +1729,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Canne fumarie in amianto nei condomini degli anni '60-'70",
       "Umidità di risalita nelle abitazioni storiche, accentuata dalla presenza di falde acquifere superficiali",
       "Impianti idrici datati nelle costruzioni più vecchie",],
-    faq: [{
-        domanda: "Ho un appartamento nel centro storico di Santa Maria Capua Vetere. Ci sono vincoli per ristrutturare?",
-        risposta: "A Santa Maria Capua Vetere i vincoli principali sono di natura archeologica: il sottosuolo è ricco di reperti romani e qualsiasi scavo o intervento che interessa le fondazioni può portare a scoperte che sospendono i lavori. Per interventi interni senza impatto sul sottosuolo (bagno, cucina, impianti a traccia) i vincoli sono generalmente limitati. Una verifica preventiva con il Comune è sempre consigliata.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Santa Maria Capua Vetere?",
+        risposta: "Per una ristrutturazione completa a Santa Maria Capua Vetere il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Quanto costa ristrutturare la cucina a Santa Maria Capua Vetere?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Negli appartamenti storici con impianti d'epoca, il costo tende al limite superiore.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Santa Maria Capua Vetere?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Ho umidità diffusa nel mio appartamento storico a Santa Maria Capua Vetere. Come si affronta?",
-        risposta: "Gli edifici storici di Santa Maria Capua Vetere soffrono spesso di umidità da risalita capillare e da falde acquifere superficiali. Il trattamento corretto richiede un'analisi della causa: diversi tipi di umidità hanno soluzioni diverse. I trattamenti superficiali (pitture antimuffa, impermeabilizzanti) non risolvono il problema alla radice. Il sopralluogo include sempre la verifica delle cause.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a Santa Maria Capua Vetere?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Santa Maria Capua Vetere?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Santa Maria Capua Vetere?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["caserta", "marcianise", "curti", "capua"],
     seoSections: [],
     prezzoMq: 550,
@@ -1556,14 +1784,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di risalita nei piani terra delle palazzine più datate",
       "Abusi edilizi nelle zone di espansione",
       "Impianti idrici vetusti nelle costruzioni degli anni '70",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Casapulla?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico quantifica le variabili specifiche.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Casapulla?",
+        risposta: "Per una ristrutturazione completa a Casapulla il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Posso fare la ristrutturazione del bagno senza preavviso al condominio a Casapulla?",
-        risposta: "Puoi iniziare lavori di manutenzione ordinaria (sostituzione sanitari e rivestimenti) senza necessità di comunicazioni formali. Per lavori più invasivi con demolizioni e rumori continuativi, è buona pratica avvisare l'amministratore e i vicini con qualche giorno di anticipo. La maggior parte dei regolamenti condominiali limita i lavori rumorosi a determinati orari.",
-      },],
+        domanda: "Che cosa comprende una ristrutturazione completa a Casapulla?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
+      },
+      {
+        domanda: "Quanto dura una ristrutturazione completa a Casapulla?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Casapulla?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Casapulla?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["caserta", "san-prisco", "recale", "capua"],
     seoSections: [{
         title: "Costo Ristrutturazione Casapulla",
@@ -1649,18 +1891,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di risalita nei piani terra",
       "Abusi edilizi non condonati nelle zone di espansione",
       "Impianti idrici vetusti nelle palazzine più datate",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a San Prisco?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico quantifica le variabili specifiche.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a San Prisco?",
+        risposta: "Per una ristrutturazione completa a San Prisco il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Ho un appartamento con doppio bagno a San Prisco. Conviene rifarli entrambi?",
-        risposta: "In molti casi sì: l'impresa è già mobilizzata, i costi di cantiere si distribuiscono su due interventi, e il risparmio rispetto a due cantieri separati è sensibile. Forniamo sempre preventivi separati e combinati così puoi decidere con i numeri in mano.",
+        domanda: "Che cosa comprende una ristrutturazione completa a San Prisco?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Quali materiali sono più adatti per un bagno in una zona con acqua dura come quella di Caserta?",
-        risposta: "L'acqua della zona di Caserta è tendenzialmente calcarea. Per la rubinetteria, consigliamo modelli con rompigetto anticalcare intercambiabile. Per i rivestimenti, i gres porcellanati levigati mostrano il calcare più degli opachi: tenere presente la manutenzione. Per la doccia, i box con profili minimi (zero profili) sono più facili da pulire. Lo discutiamo in dettaglio durante la scelta dei materiali al sopralluogo.",
-      },],
+        domanda: "Quanto dura una ristrutturazione completa a San Prisco?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a San Prisco?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a San Prisco?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["caserta", "recale", "casapulla", "casagiove"],
     seoSections: [{
         title: "Costo Ristrutturazione San Prisco",
@@ -1705,22 +1957,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di risalita molto diffusa negli edifici storici del centro, spesso accentuata dalla vicinanza al Volturno",
       "Canne fumarie in amianto nei condomini degli anni '60-'70",
       "Impianti idrici e fognari datati nelle abitazioni del centro storico",],
-    faq: [{
-        domanda: "Ho un appartamento nel centro storico di Capua. Posso ristrutturare liberamente gli interni?",
-        risposta: "In linea generale, gli interventi interni (bagno, cucina, rivestimenti) non soggetti a modifiche strutturali sono liberi da vincoli della Soprintendenza, che interviene principalmente sulle facciate e sugli elementi storico-architettonici. Una CILA è di solito sufficiente per lavori di manutenzione straordinaria interna. È sempre consigliabile una verifica preventiva con il Comune prima di iniziare.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Capua?",
+        risposta: "Per una ristrutturazione completa a Capua il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Ho umidità diffusa in un appartamento storico a Capua vicino al Volturno. Come la gestisco?",
-        risposta: "L'umidità negli edifici storici vicino al Volturno può avere più cause: risalita capillare dai muri, infiltrazioni da falde acquifere superficiali, condensa da scarsa ventilazione. Trattarla con interventi superficiali non risolve il problema alla radice. Il sopralluogo permette di identificare la causa e progettare l'intervento corretto.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Capua?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Quanto costa ristrutturare la cucina a Capua?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Negli edifici storici con impianti d'epoca, il costo tende al limite superiore. Il sopralluogo tecnico chiarisce la situazione specifica.",
+        domanda: "Quanto dura una ristrutturazione completa a Capua?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
       },
       {
-        domanda: "La mia cucina nel centro storico di Capua non ha una canna fumaria. Come installo la cappa?",
-        risposta: "In assenza di canna fumaria, le soluzioni sono: cappa a ricircolo (filtra l'aria senza canalizzarla all'esterno, meno efficace ma non richiede tracce), cappa canalizzata verso l'esterno attraverso il muro perimetrale (richiede foratura della facciata e in centro storico va verificata con il Comune), oppure creazione di una nuova canna fumaria interna. Il sopralluogo valuta la soluzione più adatta al tuo spazio.",
-      },],
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Capua?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Capua?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["santa-maria-capua-vetere", "caserta", "marcianise"],
     seoSections: [],
     prezzoMq: 550,
@@ -1754,24 +2012,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Impianti idrici in acciaio zincato nelle palazzine degli anni '70-'80",
       "Abusi edilizi nelle zone di espansione privata degli anni '90",
       "Coperture piane delle villette anni '80: guaine esaurite da sostituire",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Casagiove?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 6-8 mq (tipico delle villette di Casagiove) vanno da circa 5.500 € (base) a 11.000 € (premium). Il costo preciso dipende dall'entità dell'intervento e dallo stato degli impianti, che emergono al sopralluogo.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Casagiove?",
+        risposta: "Per una ristrutturazione completa a Casagiove il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità e finiture.",
       },
       {
-        domanda: "Ho una villetta degli anni '90 a Casagiove con doppio bagno. Conviene rifare entrambi insieme?",
-        risposta: "In molti casi sì: l'impresa è già mobilizzata, i ponteggi interni sono installati, la logistica è organizzata. Il costo marginale del secondo bagno in contemporanea è significativamente inferiore rispetto a due interventi separati. Durante il sopralluogo valutiamo lo stato di entrambi e forniamo un preventivo separato per ognuno e uno combinato, così si può decidere con i numeri in mano.",
+        domanda: "Che cosa comprende una ristrutturazione completa a Casagiove?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture.",
       },
       {
-        domanda: "Voglio aprire cucina e soggiorno nella mia villetta a Casagiove. È possibile?",
-        risposta: "Dipende dalla natura del muro divisorio. Se è portante, l'apertura richiede il progetto di un ingegnere strutturale e il permesso di costruire. Se è una tramezza, basta una CILA. Il nostro sopralluogo include la verifica della struttura e ti fornisce un quadro chiaro di costi e pratiche necessarie prima di qualsiasi preventivo.",
+        domanda: "Quanto dura una ristrutturazione completa a Casagiove?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. Dopo il sopralluogo si può definire un cronoprogramma realistico.",
       },
       {
-        domanda: "Ho la guaina del tetto piatto esaurita a Casagiove. Conviene rifare anche l'isolamento termico?",
-        risposta: "Se il tetto è già da aprire per la guaina, aggiungere lo strato isolante ha un costo marginale basso rispetto al costo totale dell'intervento. L'isolamento termico del tetto è uno degli interventi con il miglior rapporto costo/beneficio in termini energetici, e può beneficiare dell'Ecobonus. Lo valutiamo al sopralluogo insieme al rifacimento della guaina.",
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Casagiove?",
+        risposta: "Umidità, impianti vetusti, materiali da verificare, accessi difficili e problemi di conformità possono richiedere lavorazioni aggiuntive. Il sopralluogo serve a individuarle prima di definire il preventivo.",
       },
-    ]
-    ,
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Casagiove?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Il sopralluogo verifica condizioni della casa, accessi, impianti e distribuzione interna prima della definizione dell'offerta.",
+      },
+    ],
     vicini: ["caserta", "recale", "san-prisco"],
     seoSections: [{
         title: "Costo Ristrutturazione Casagiove",
