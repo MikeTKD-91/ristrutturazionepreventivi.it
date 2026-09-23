@@ -1,7 +1,5 @@
-// File generato automaticamente - NON MODIFICARE DIRETTAMENTE
 
 // Questo file contiene i dati strutturati per le pagine appartamento di ogni comune
-// Generato da: script di unione dati da comuni.ts e comune-content.ts
 
 export interface FaqAppartamento {
   domanda: string;
