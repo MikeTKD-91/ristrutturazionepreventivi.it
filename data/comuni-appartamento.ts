@@ -213,7 +213,18 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
     ],
     vicini: ["aversa", "lusciano", "teverola", "gricignano-di-aversa"],
-    seoSections: [],
+    seoSections: [{
+        title: "Costo Ristrutturazione a Carinaro",
+        text: "Il costo di una ristrutturazione a Carinaro parte da 550 €/mq per interventi completi nelle condizioni più semplici. Il prezzo reale dipende dal tipo di immobile e dallo stato di partenza: nelle villette e case a schiera degli anni '80-'00 possono incidere umidità nei piani terra, coperture da verificare e distribuzioni interne da aggiornare; nelle palazzine del centro anni '60-'70 pesano soprattutto impianti idrici vetusti e finiture datate. Per una stima attendibile servono le caratteristiche concrete dell'abitazione e un sopralluogo tecnico.",
+      },
+      {
+        title: "Impresa di Ristrutturazioni a Carinaro",
+        text: "Affidarsi a un'impresa di ristrutturazioni a Carinaro significa organizzare correttamente lavori su villette, case a schiera e palazzine del nucleo centrale. La verifica iniziale di umidità, impianti, coperture e accessibilità permette di coordinare demolizioni, opere murarie, impianti e finiture evitando imprevisti durante il cantiere. Un unico referente aiuta a mantenere più chiari lavorazioni, tempi e costi.",
+      },
+      {
+        title: "Preventivo Ristrutturazione a Carinaro",
+        text: "Richiedere un preventivo per ristrutturare casa a Carinaro serve a valutare correttamente le lavorazioni necessarie prima di iniziare. Il quadro economico deve considerare metratura, stato degli impianti, eventuale umidità nei piani terra, condizioni delle coperture, distribuzione interna e livello delle finiture. Il preventivo online offre una prima stima indicativa, mentre il costo definitivo viene confermato dopo il sopralluogo tecnico.",
+      },],
     prezzoMq: 550,
     esempioMq: 80,
     esempioPrezzo: 44000,
