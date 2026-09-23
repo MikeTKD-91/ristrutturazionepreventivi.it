@@ -1764,15 +1764,28 @@ export const comuniAppartamento: AppartamentoComune[] = [
       "Umidità di risalita nei piani terra",
       "Abusi edilizi non condonati nelle zone di espansione",
       "Impianti idrici vetusti nelle palazzine più datate",],
-    faq: [{
-        domanda: "Quanto costa ristrutturare la cucina a Recale?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico chiarisce la situazione specifica.",
+    faq: [
+      {
+        domanda: "Quanto costa ristrutturare completamente un appartamento a Recale?",
+        risposta: "Per una ristrutturazione completa a Recale il riferimento indicativo è di circa 550 €/mq. Il costo finale dipende da metratura, stato degli impianti, opere murarie, distribuzione interna, accessibilità, finiture ed eventuali criticità dell'immobile.",
       },
       {
-        domanda: "Ho una villetta degli anni '90 a Recale. Conviene fare cappotto termico durante la ristrutturazione?",
-        risposta: "Il cappotto termico è indipendente dalla ristrutturazione degli interni, ma spesso viene pianificato insieme per ottimizzare il cantiere e accedere alle detrazioni fiscali (Ecobonus). Se stai già ristrutturando gli interni, è un buon momento per valutare anche l'involucro esterno: i costi fissi del cantiere si ammortizzano meglio. Il sopralluogo include anche una valutazione dell'isolamento della facciata.",
-      },],
-    vicini: ["caserta", "casagiove", "san-prisco", "marcianise"],
+        domanda: "Che cosa comprende una ristrutturazione completa a Recale?",
+        risposta: "Una ristrutturazione completa può comprendere demolizioni e smaltimento, opere murarie, rifacimento degli impianti, massetti, pavimenti, rivestimenti, rasature, tinteggiature, porte interne e finiture. Le lavorazioni effettive vengono definite dopo la verifica dell'appartamento.",
+      },
+      {
+        domanda: "Quanto dura una ristrutturazione completa a Recale?",
+        risposta: "La durata dipende da metratura, demolizioni, impianti, modifiche interne e finiture. In presenza di impianti vetusti o materiali da verificare, il sopralluogo consente di definire un cronoprogramma più realistico.",
+      },
+      {
+        domanda: "Quali criticità possono incidere sul preventivo di ristrutturazione a Recale?",
+        risposta: "Canne fumarie in amianto, umidità di risalita, impianti idrici vetusti e possibili problemi di conformità edilizia possono richiedere verifiche e lavorazioni aggiuntive. Questi aspetti devono essere valutati prima di definire il preventivo.",
+      },
+      {
+        domanda: "Come posso ottenere un preventivo per una ristrutturazione completa a Recale?",
+        risposta: "Puoi indicare metratura, tipologia dell'immobile e lavori desiderati. Durante il sopralluogo verifichiamo condizioni della casa, impianti, canne fumarie, accessi e distribuzione interna prima di definire l'offerta.",
+      },
+    ],    vicini: ["caserta", "casagiove", "san-prisco", "marcianise"],
     seoSections: [],
     prezzoMq: 550,
     esempioMq: 80,
