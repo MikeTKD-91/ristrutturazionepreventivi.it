@@ -202,7 +202,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
           <div className="lg:col-span-2 space-y-12">
             <div>
               <h2 className="text-2xl font-bold text-navy mb-4">Descrizione del Servizio</h2>
-              <div className="prose prose-lg max-w-none text-gray-600 whitespace-pre-line">
+              <div className="prose prose-lg max-w-none text-gray-600 ">
                 {getServiceIntro(comune, "ristrutturazione-bagno")}
               </div>
             </div>
@@ -272,7 +272,7 @@ export default async function RistrutturazioneBagnoPage({ params }: PageProps) {
                 {seoSectionsBagno.map((section, i) => (
                   <div key={i}>
                     <h2 className="text-2xl font-bold text-navy mb-4">{section.title}</h2>
-                    <p className="text-gray-600 leading-relaxed whitespace-pre-line">{section.text}</p>
+                    <p className="text-gray-600 leading-relaxed ">{section.text}</p>
                     {section.tableType === "bagno" ? (
                       <>
                         <div className="mt-4 overflow-x-auto rounded-2xl border border-gray-200 bg-white">

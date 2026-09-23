@@ -217,7 +217,7 @@ export default async function ArticoloPage({ params }: Props) {
               )}
 
               {/* Contenuto */}
-              <article className="max-w-none min-w-0 max-w-full overflow-hidden break-words">
+              <article className="max-w-none min-w-0 max-w-full overflow-hidden">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{

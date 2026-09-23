@@ -149,7 +149,7 @@ export default async function RifacimentoTettoComunePage({ params }: PageProps) 
               <div className="lg:col-span-2 space-y-12">
                 <div>
                   <h2 className="text-2xl font-bold text-navy mb-4">Descrizione del Servizio</h2>
-                  <div className="prose prose-lg max-w-none text-gray-600 whitespace-pre-line">
+                  <div className="prose prose-lg max-w-none text-gray-600 ">
                     {getServiceIntro(comune, "rifacimento-tetto")}
                     
                   </div>
