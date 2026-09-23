@@ -11,6 +11,7 @@ import { comuniAppartamento } from "@/data/comuni-appartamento";
 import { getAllArticoli } from "@/lib/blog";
 import { buildHowToSchema } from "@/lib/schema";
 import { getLavoriPerServizio } from "@/lib/lavori";
+import { comuneCopy } from "@/data/comune-copy";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -135,29 +136,7 @@ export default async function ComunePage({ params }: PageProps) {
       }
     : null;
 
-  const inclusioniStandard = [
-    "Rifacimento impianto elettrico, idraulico e termico",
-    "Fornitura e installazione di termosifoni standard in alluminio",
-    "Fornitura e installazione di infissi esterni in PVC",
-    "Fornitura e installazione di portoncino d'ingresso",
-    "Fornitura e posa di pavimenti e rivestimenti",
-    "Fornitura e posa di porte interne complete di telaio e bussole",
-    "Opere murarie, sottofondi, intonaci e rasature",
-    "Controsoffittatura liscia dove prevista dal progetto",
-    "Fornitura e installazione dei sanitari: wc, bidet, lavabo e piatto doccia",
-    "Tinteggiatura finale e finiture standard",
-    "Demolizioni e smaltimento delle rimozioni previste",
-  ];
-
-  const esclusioniExtra = [
-    "Pratiche edilizie, catastali e autorizzazioni eventualmente necessarie",
-    "Arredi su misura, cucina ed elettrodomestici",
-    "Box doccia",
-    "Infissi fuori capitolato e opere non previste nel computo",
-    "Adeguamenti strutturali, consolidamenti o interventi emersi dopo le demolizioni",
-    "Spese condominiali, occupazione suolo pubblico e costi logistici straordinari",
-    "Finiture fuori capitolato e forniture scelte dal cliente",
-  ];
+  const { inclusioniStandard, esclusioniStandard: esclusioniExtra, fasiCantiere } = comuneCopy;
 
   const prezziTabella = [
     ["50 mq", `${(50 * content.prezzoMq).toLocaleString("it-IT")} euro`],
@@ -344,27 +323,18 @@ export default async function ComunePage({ params }: PageProps) {
                 </div>
               )}
               <div className="space-y-2">
-                {[
-                  ["Demolizioni e smaltimento", "4–7 gg", ""],
-                  ["Nuova distribuzione interna e opere murarie", "5–10 gg", ""],
-                  ["Realizzazione nuovi impianti", "7–12 gg", ""],
-                  ["Massetti, sottofondi e preparazioni", "3–5 gg", ""],
-                  ["Posa pavimenti e rivestimenti", "6–10 gg", ""],
-                  ["Rasature, tinteggiatura e finiture", "5–8 gg", ""],
-                  ["Montaggi finali e chiusura lavori", "3–8 gg", ""],
-                ].map((t, i) => (
+                {fasiCantiere.map((t, i) => (
                   <div key={i} className="flex items-center gap-4 py-3 border-b border-gray-100 last:border-0">
                     <span className="flex-shrink-0 w-7 h-7 rounded-full bg-navy text-white text-xs font-bold flex items-center justify-center">{i + 1}</span>
                     <div className="flex-1">
                       <p className="text-sm font-medium text-gray-800">{t[0]}</p>
-                      {t[2] ? <p className="text-xs text-gray-400">{t[2]}</p> : null}
                     </div>
                     <span className="flex-shrink-0 text-sm font-semibold text-navy">{t[1]}</span>
                   </div>
                 ))}
               </div>
               <p className="text-gray-600 mt-5">
-                Per un appartamento standard a {comune.nome}, la durata complessiva dei lavori è in genere compresa tra 45 e 60 giorni lavorativi. I tempi effettivi possono cambiare in base allo stato dell'immobile, alla distribuzione interna, agli impianti da rifare, all'accessibilità del cantiere e al livello di finitura richiesto.
+                {comuneCopy.durataCantiere}
               </p>
             </section>
 

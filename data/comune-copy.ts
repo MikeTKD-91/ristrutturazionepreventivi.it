@@ -1,0 +1,35 @@
+export const comuneCopy = {
+  durataCantiere:
+    "Per un appartamento standard, una ristrutturazione completa richiede in genere tra 45 e 60 giorni lavorativi. I tempi effettivi dipendono dallo stato dell'immobile, dalla distribuzione interna, dagli impianti, dall'accessibilità del cantiere e dal livello delle finiture.",
+  fasiCantiere: [
+    ["Demolizioni e smaltimento", "4–7 giorni"],
+    ["Nuova distribuzione interna e opere murarie", "5–10 giorni"],
+    ["Realizzazione dei nuovi impianti", "7–12 giorni"],
+    ["Massetti, sottofondi e preparazioni", "3–5 giorni"],
+    ["Posa di pavimenti e rivestimenti", "6–10 giorni"],
+    ["Rasature, tinteggiatura e finiture", "5–8 giorni"],
+    ["Montaggi finali e chiusura lavori", "3–8 giorni"],
+  ],
+  inclusioniStandard: [
+    "Rifacimento dell'impianto elettrico, idraulico e termico",
+    "Fornitura e installazione di termosifoni standard in alluminio",
+    "Fornitura e installazione di infissi esterni in PVC",
+    "Fornitura e installazione del portoncino d'ingresso",
+    "Fornitura e posa di pavimenti e rivestimenti",
+    "Fornitura e posa di porte interne complete di telaio e bussole",
+    "Opere murarie, sottofondi, intonaci e rasature",
+    "Controsoffittatura liscia dove prevista dal progetto",
+    "Fornitura e installazione dei sanitari standard",
+    "Tinteggiatura finale e finiture standard",
+    "Demolizioni e smaltimento delle rimozioni previste",
+  ],
+  esclusioniStandard: [
+    "Pratiche edilizie, catastali e autorizzazioni eventualmente necessarie",
+    "Arredi su misura, cucina ed elettrodomestici",
+    "Box doccia",
+    "Infissi fuori capitolato e opere non previste nel computo",
+    "Adeguamenti strutturali o consolidamenti",
+    "Spese condominiali, occupazione suolo pubblico e costi logistici straordinari",
+    "Finiture fuori capitolato e forniture scelte dal cliente",
+  ],
+} as const;
