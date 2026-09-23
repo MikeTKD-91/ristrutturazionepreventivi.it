@@ -66,7 +66,7 @@ export const comuniAgroAversano: Comune[] = [
       },
       {
         domanda: "Quanto tempo serve per ristrutturare un appartamento ad Aversa?",
-        risposta: "Per un appartamento standard ad Aversa, la durata media di una ristrutturazione completa è di circa 6–10 settimane lavorative. I tempi dipendono da metratura, complessità degli impianti, opere murarie necessarie e livello delle finiture. Una ristrutturazione parziale (ad esempio solo bagno o cucina) richiede generalmente meno tempo, mentre interventi più complessi possono allungare il cantiere.",
+        risposta: "Per un appartamento standard ad Aversa, la durata indicativa di una ristrutturazione completa è di 6–10 settimane. I tempi effettivi dipendono da metratura, stato degli impianti, demolizioni, finiture, approvvigionamento dei materiali e criticità eventualmente emerse durante il sopralluogo tecnico.",
       },
       {
         domanda: "Che lavori include una ristrutturazione completa di appartamento ad Aversa?",
@@ -901,7 +901,7 @@ export const comuniNapoli: Comune[] = [
       },
       {
         domanda: "Quanto dura una ristrutturazione completa di un appartamento a Napoli?",
-        risposta: "La durata varia in base a dimensione dell'appartamento, stato iniziale, numero di lavorazioni e tempi di approvvigionamento dei materiali. Un intervento semplice può chiudersi in meno tempo, mentre una ristrutturazione completa con rifacimento impianti, demolizioni, finiture e possibili imprevisti richiede una pianificazione più lunga. La tempistica reale si definisce bene solo dopo il sopralluogo tecnico, perché è lì che si capisce se l'immobile nasconde criticità che possono allungare il lavoro.",
+        risposta: "Per un appartamento standard a Napoli, la durata indicativa di una ristrutturazione completa è di 8–12 settimane. I tempi effettivi dipendono da metratura, stato degli impianti, demolizioni, finiture, approvvigionamento dei materiali e criticità eventualmente emerse durante il sopralluogo tecnico.",
       },
       {
         domanda: "Posso usare il Bonus 50% per ristrutturare un appartamento a Napoli?",

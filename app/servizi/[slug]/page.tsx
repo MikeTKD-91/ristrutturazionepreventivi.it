@@ -153,7 +153,7 @@ export default async function ServizioPage({ params }: Props) {
       },
       {
         domanda: "Quanto dura una ristrutturazione completa?",
-        risposta: "Per un appartamento standard, una ristrutturazione completa richiede in genere tra 45 e 60 giorni lavorativi. I tempi possono allungarsi in presenza di pratiche edilizie, modifiche murarie importanti, lavorazioni straordinarie, ritardi di fornitura o criticità emerse durante le demolizioni.",
+        risposta: "La durata di una ristrutturazione completa viene definita dopo il sopralluogo tecnico e dipende da metratura, stato degli impianti, demolizioni, finiture, approvvigionamento dei materiali e criticità dell'immobile.",
       },
       {
         domanda: "Da cosa dipende il costo finale dei lavori?",
@@ -370,7 +370,7 @@ export default async function ServizioPage({ params }: Props) {
                 </table>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                In un appartamento standard, la durata complessiva dei lavori è in genere compresa tra 45 e 60 giorni lavorativi. I tempi effettivi possono cambiare in base allo stato dell’immobile, alla nuova distribuzione interna, agli impianti da rifare e al livello di finitura richiesto.
+                La durata complessiva dei lavori viene definita dopo il sopralluogo tecnico e dipende da metratura, stato dell’immobile, distribuzione interna, impianti, finiture e condizioni del cantiere.
               </p>
             </section>
 
