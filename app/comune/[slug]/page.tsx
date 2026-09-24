@@ -165,7 +165,7 @@ export default async function ComunePage({ params }: PageProps) {
                   <span className="text-orange">preventivo Lavori e costo Ristrutturazione</span>
                 </h1>
                 <p className="text-white/70 text-lg leading-relaxed mb-6">
-                  {content.testoIntro}
+                  {content.testoIntroHero}
                 </p>
                 <a
                   href="#preventivatore"
