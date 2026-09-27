@@ -14,7 +14,7 @@ const inter = Inter({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ristrutturazionepreventivi.it"),
+  metadataBase: new URL("https://www.ristrutturazionepreventivi.it"),
   title: {
     default: "Ristrutturazioni Napoli, Caserta e Agro Aversano | Preventivo",
     template: "%s | RistrutturazionePreventivi.it",
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "it_IT",
-    url: "https://ristrutturazionepreventivi.it",
+    url: "https://www.ristrutturazionepreventivi.it",
     siteName: "RistrutturazionePreventivi.it",
     title: "Ristrutturazioni Napoli, Caserta e Agro Aversano | Preventivo",
     description:
       "Richiedi un preventivo online per ristrutturazioni a Napoli, Caserta e Agro Aversano. 7 servizi, sopralluogo tecnico e proposta chiara da verificare sul posto. Russo FE Costruzione SRL.",
     images: [
       {
-        url: "https://ristrutturazionepreventivi.it/og-image.jpg",
+        url: "https://www.ristrutturazionepreventivi.it/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Ristrutturazione casa - Russo FE Costruzione SRL",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ristrutturazioni Napoli, Caserta e Agro Aversano",
     description: "Richiedi un preventivo online per ristrutturazioni in Campania, con sopralluogo tecnico.",
-    images: ["https://ristrutturazionepreventivi.it/og-image.jpg"],
+    images: ["https://www.ristrutturazionepreventivi.it/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://ristrutturazionepreventivi.it/",
+    canonical: "https://www.ristrutturazionepreventivi.it/",
   },
 };
 
@@ -84,8 +84,8 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "Russo FE Costruzione SRL",
               alternateName: "RistrutturazionePreventivi.it",
-              url: "https://ristrutturazionepreventivi.it",
-              image: "https://ristrutturazionepreventivi.it/og-image.jpg",
+              url: "https://www.ristrutturazionepreventivi.it",
+              image: "https://www.ristrutturazionepreventivi.it/og-image.jpg",
               description:
                 "Impresa edile specializzata in ristrutturazioni residenziali a Napoli, Caserta e Agro Aversano.",
               address: {
