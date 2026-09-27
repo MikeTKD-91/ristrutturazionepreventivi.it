@@ -5,7 +5,7 @@ import { comuni } from "@/data/comuni";
 import { servizi } from "@/data/servizi";
 import { articoli } from "@/data/blog";
 
-const BASE_URL = "https://ristrutturazionepreventivi.it";
+const BASE_URL = "https://www.ristrutturazionepreventivi.it";
 
 const SERVIZI_PER_COMUNE = [
   "ristrutturazione-bagno",
@@ -21,15 +21,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ── Pagine statiche principali ──────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/`,                        lastModified: now, changeFrequency: "monthly", priority: 1.0 },
-    { url: `${BASE_URL}/servizi/`,                lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE_URL}/zone-servite/`,           lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/`, lastModified: now, changeFrequency: "monthly", priority: 1.0 },
+    { url: `${BASE_URL}/servizi/`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/zone-servite/`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/bonus-ristrutturazione/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE_URL}/blog/`,                   lastModified: now, changeFrequency: "weekly",  priority: 0.6 },
-    { url: `${BASE_URL}/agro-aversano/`,          lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE_URL}/chi-siamo/`,             lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${BASE_URL}/privacy-policy/`,         lastModified: now, changeFrequency: "yearly",  priority: 0.2 },
-    { url: `${BASE_URL}/cookie-policy/`,          lastModified: now, changeFrequency: "yearly",  priority: 0.2 },
+    { url: `${BASE_URL}/blog/`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${BASE_URL}/agro-aversano/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/chi-siamo/`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE_URL}/privacy-policy/`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
+    { url: `${BASE_URL}/cookie-policy/`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     // ⚠️ /napoli/ e /caserta/ ESCLUSE: redirect 301 verso /comune/napoli/ e /comune/caserta/
   ];
 
