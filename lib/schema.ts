@@ -2,7 +2,7 @@
 // Costruttori JSON-LD riutilizzabili per le pagine servizio×comune
 // Usati da tutti e 7 i file in app/comune/[slug]/[servizio]/page.tsx
 
-const BASE_URL = "https://ristrutturazionepreventivi.it";
+const BASE_URL = "https://www.ristrutturazionepreventivi.it";
 
 const PROVIDER = {
   "@type": "HomeAndConstructionBusiness",
