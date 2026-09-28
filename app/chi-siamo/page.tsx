@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Scopri chi c'è dietro Ristrutturazione Preventivi: impresa edile a Lusciano operativa tra Napoli, Caserta e Agro Aversano, con gestione completa della ristrutturazione.",
   alternates: {
-    canonical: "https://ristrutturazionepreventivi.it/chi-siamo/",
+    canonical: "https://www.ristrutturazionepreventivi.it/chi-siamo/",
   },
 };
 

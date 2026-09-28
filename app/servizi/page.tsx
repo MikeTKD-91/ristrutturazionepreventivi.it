@@ -10,15 +10,15 @@ export const metadata: Metadata = {
   title: "Servizi di Ristrutturazione | Napoli Caserta",
   description: "Ristrutturazione completa, bagno, cucina, tetto, impianti e cappotto termico a Napoli e Caserta. Preventivo online e sopralluogo tecnico.",
   alternates: {
-    canonical: "https://ristrutturazionepreventivi.it/servizi/",
+    canonical: "https://www.ristrutturazionepreventivi.it/servizi/",
   },
   openGraph: {
     title: "Servizi di Ristrutturazione | Napoli Caserta",
     description: "7 servizi di ristrutturazione per la tua casa a Napoli e Caserta. Preventivo online e sopralluogo tecnico.",
-    url: "https://ristrutturazionepreventivi.it/servizi/",
+    url: "https://www.ristrutturazionepreventivi.it/servizi/",
     images: [
       {
-        url: "https://ristrutturazionepreventivi.it/images/servizi/ristrutturazione-appartamento-completo.jpg",
+        url: "https://www.ristrutturazionepreventivi.it/images/servizi/ristrutturazione-appartamento-completo.jpg",
         width: 1200,
         height: 630,
         alt: "Ristrutturazione completa appartamento moderno luminoso con open space cucina e soggiorno, finiture di pregio a Napoli e Caserta",

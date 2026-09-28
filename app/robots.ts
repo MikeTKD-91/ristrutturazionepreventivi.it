@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export const dynamic = 'force-static'
 
-const baseUrl = 'https://ristrutturazionepreventivi.it'
+const baseUrl = 'https://www.ristrutturazionepreventivi.it'
 
 export default function robots(): MetadataRoute.Robots {
   return {

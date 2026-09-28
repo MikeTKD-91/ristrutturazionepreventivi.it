@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!comune) return {};
   const title = `Ristrutturazione Cucina a ${comune.nome}: preventivo immediato e costo reale`;
   const description = `Richiedi un preventivo immediato per la ristrutturazione della cucina a ${comune.nome} e ottieni un primo costo reale del tuo intervento. Il preventivo finale viene confermato dopo sopralluogo e verifica tecnica dell’immobile.`;
-  const url = `https://ristrutturazionepreventivi.it/comune/${comune.slug}/ristrutturazione-cucina/`;
+  const url = `https://www.ristrutturazionepreventivi.it/comune/${comune.slug}/ristrutturazione-cucina/`;
   return {
     title,
     description,
@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "website",
       images: [
         {
-          url: `https://ristrutturazionepreventivi.it/images/servizi/ristrutturazione-cucina.jpg`,
+          url: `https://www.ristrutturazionepreventivi.it/images/servizi/ristrutturazione-cucina.jpg`,
           width: 1200,
           height: 630,
           alt: title,

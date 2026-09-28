@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const comune = comuniAppartamento.find((c) => c.slug === slug);
   if (!comune) return {};
-  const url = `https://ristrutturazionepreventivi.it/comune/${slug}/`;
+  const url = `https://www.ristrutturazionepreventivi.it/comune/${slug}/`;
   return {
     title: comune.metaTitle,
     description: comune.metaDescription,
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       locale: "it_IT",
       images: [
         {
-          url: "https://ristrutturazionepreventivi.it/images/servizi/ristrutturazione-appartamento-completo.jpg",
+          url: "https://www.ristrutturazionepreventivi.it/images/servizi/ristrutturazione-appartamento-completo.jpg",
           width: 1200,
           height: 630,
           alt: `Ristrutturazione casa e appartamento completo a ${comune.nome}`,
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title: comune.metaTitle,
       description: comune.metaDescription,
-      images: ["https://ristrutturazionepreventivi.it/images/servizi/ristrutturazione-appartamento-completo.jpg"],
+      images: ["https://www.ristrutturazionepreventivi.it/images/servizi/ristrutturazione-appartamento-completo.jpg"],
     },
   };
 }
@@ -70,9 +70,9 @@ export default async function ComunePage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://ristrutturazionepreventivi.it/" },
-      { "@type": "ListItem", position: 2, name: "Zone Servite", item: "https://ristrutturazionepreventivi.it/zone-servite/" },
-      { "@type": "ListItem", position: 3, name: comune.nome, item: `https://ristrutturazionepreventivi.it/comune/${slug}/` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.ristrutturazionepreventivi.it/" },
+      { "@type": "ListItem", position: 2, name: "Zone Servite", item: "https://www.ristrutturazionepreventivi.it/zone-servite/" },
+      { "@type": "ListItem", position: 3, name: comune.nome, item: `https://www.ristrutturazionepreventivi.it/comune/${slug}/` },
     ],
   };
 
@@ -80,7 +80,7 @@ export default async function ComunePage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     name: "Russo FE Costruzione SRL",
-    url: "https://ristrutturazionepreventivi.it",
+    url: "https://www.ristrutturazionepreventivi.it",
     telephone: "+393339809319",
     address: {
       "@type": "PostalAddress",
@@ -102,17 +102,17 @@ export default async function ComunePage({ params }: PageProps) {
     provider: {
       "@type": "HomeAndConstructionBusiness",
       name: "Russo FE Costruzione SRL",
-      url: "https://ristrutturazionepreventivi.it",
+      url: "https://www.ristrutturazionepreventivi.it",
       telephone: "+393339809319",
     },
     offers: {
       "@type": "Offer",
       priceCurrency: "EUR",
       price: String(content.prezzoMq),
-      url: `https://ristrutturazionepreventivi.it/comune/${slug}/`,
+      url: `https://www.ristrutturazionepreventivi.it/comune/${slug}/`,
       description: `Prezzo base indicativo da ${content.prezzoMq} €/mq per ristrutturazione completa a ${comune.nome}, da confermare dopo sopralluogo e verifica tecnica.`,
     },
-    url: `https://ristrutturazionepreventivi.it/comune/${slug}/`,
+    url: `https://www.ristrutturazionepreventivi.it/comune/${slug}/`,
   };
 
   const faqSchema = comune.faq.length > 0

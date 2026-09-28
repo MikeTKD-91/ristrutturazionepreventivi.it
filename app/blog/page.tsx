@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Blog Ristrutturazione | Guide e Consigli 2026",
   description: "Guide, consigli e novità sul mondo delle ristrutturazioni. Scopri i trend 2026, i bonus fiscali e come pianificare il tuo progetto.",
   alternates: {
-    canonical: "https://ristrutturazionepreventivi.it/blog/",
+    canonical: "https://www.ristrutturazionepreventivi.it/blog/",
   },
   openGraph: {
     title: "Blog Ristrutturazione | Guide e Consigli 2026",
     description: "Guide, consigli e novità sul mondo delle ristrutturazioni.",
-    url: "https://ristrutturazionepreventivi.it/blog/",
+    url: "https://www.ristrutturazionepreventivi.it/blog/",
     images: [
       {
         url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200",

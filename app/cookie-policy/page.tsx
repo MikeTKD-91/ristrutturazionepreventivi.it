@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Cookie Policy | Ristrutturazione Preventivi",
   description: "Informativa sui cookie utilizzati da ristrutturazionepreventivi.it",
   alternates: {
-    canonical: "https://ristrutturazionepreventivi.it/cookie-policy/",
+    canonical: "https://www.ristrutturazionepreventivi.it/cookie-policy/",
   },
 };
 

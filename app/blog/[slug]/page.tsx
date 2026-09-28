@@ -64,11 +64,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: { canonical: `https://ristrutturazionepreventivi.it/blog/${slug}/` },
+    alternates: { canonical: `https://www.ristrutturazionepreventivi.it/blog/${slug}/` },
     openGraph: {
       title,
       description,
-      url: `https://ristrutturazionepreventivi.it/blog/${slug}/`,
+      url: `https://www.ristrutturazionepreventivi.it/blog/${slug}/`,
       images: [{ url: articolo.immagine, width: 1200, height: 630, alt: articolo.titolo }],
       type: "article",
       publishedTime: articolo.data,
@@ -105,19 +105,15 @@ export default async function ArticoloPage({ params }: Props) {
     author: {
       "@type": "Organization",
       name: "Russo FE Costruzione SRL",
-      url: "https://ristrutturazionepreventivi.it",
+      url: "https://www.ristrutturazionepreventivi.it",
     },
     publisher: {
       "@type": "Organization",
       name: "Russo FE Costruzione SRL",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ristrutturazionepreventivi.it/logo.png",
-      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://ristrutturazionepreventivi.it/blog/${slug}/`,
+      "@id": `https://www.ristrutturazionepreventivi.it/blog/${slug}/`,
     },
   };
 

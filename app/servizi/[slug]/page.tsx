@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const url = `https://ristrutturazionepreventivi.it/servizi/${slug}/`;
+  const url = `https://www.ristrutturazionepreventivi.it/servizi/${slug}/`;
 
   const title = `${servizio.titoloBreve} a Napoli, Caserta e Agro Aversano`;
   const description = `${servizio.descrizioneCard ?? servizio.descrizione} Preventivo e sopralluogo tecnico.`;
@@ -88,9 +88,9 @@ export default async function ServizioPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://ristrutturazionepreventivi.it/" },
-      { "@type": "ListItem", position: 2, name: "Servizi", item: "https://ristrutturazionepreventivi.it/servizi/" },
-      { "@type": "ListItem", position: 3, name: servizio.titolo, item: `https://ristrutturazionepreventivi.it/servizi/${slug}/` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.ristrutturazionepreventivi.it/" },
+      { "@type": "ListItem", position: 2, name: "Servizi", item: "https://www.ristrutturazionepreventivi.it/servizi/" },
+      { "@type": "ListItem", position: 3, name: servizio.titolo, item: `https://www.ristrutturazionepreventivi.it/servizi/${slug}/` },
     ],
   };
 
@@ -103,14 +103,14 @@ export default async function ServizioPage({ params }: Props) {
     provider: {
       "@type": "LocalBusiness",
       name: "Russo FE Costruzione SRL",
-      url: "https://ristrutturazionepreventivi.it",
+      url: "https://www.ristrutturazionepreventivi.it",
     },
     areaServed: [
       { "@type": "City", name: "Napoli" },
       { "@type": "City", name: "Caserta" },
       { "@type": "Place", name: "Agro Aversano" },
     ],
-    url: `https://ristrutturazionepreventivi.it/servizi/${slug}/`,
+    url: `https://www.ristrutturazionepreventivi.it/servizi/${slug}/`,
   };
 
   if (slug === "ristrutturazione-appartamento-completo") {

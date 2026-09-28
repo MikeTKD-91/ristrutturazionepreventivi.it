@@ -11,18 +11,18 @@ export const metadata: Metadata = {
   description:
     "Ristrutturazione nell'Agro Aversano: indicazioni di costo, criticità tipiche del territorio, sopralluogo tecnico e preventivo verificato. Russo FE Costruzione SRL.",
   alternates: {
-    canonical: "https://ristrutturazionepreventivi.it/agro-aversano/",
+    canonical: "https://www.ristrutturazionepreventivi.it/agro-aversano/",
   },
   openGraph: {
     title: "Ristrutturazione Agro Aversano | Costi Reali e Preventivo",
     description:
       "Indicazioni di costo per ristrutturazioni nell'Agro Aversano, con verifica tecnica e sopralluogo.",
-    url: "https://ristrutturazionepreventivi.it/agro-aversano/",
+    url: "https://www.ristrutturazionepreventivi.it/agro-aversano/",
     siteName: "RistrutturazionePreventivi.it",
     locale: "it_IT",
     images: [
       {
-        url: "https://ristrutturazionepreventivi.it/og-image.jpg",
+        url: "https://www.ristrutturazionepreventivi.it/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Ristrutturazione Agro Aversano - Russo FE Costruzione SRL",
