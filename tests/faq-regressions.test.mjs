@@ -7,8 +7,8 @@ const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf
 const comuni = read('data/comuni.ts');
 const faqCucina = [...comuni.matchAll(/domanda:\s*[\"'`]Quanto costa ristrutturare la cucina a [^\"'`]+[\"'`],\s*risposta:\s*([\"'`])([^\n]*?)\1/g)].map((match) => match[2]);
 
-test('le 24 risposte sui costi della cucina non descrivono un bagno', () => {
-  assert.equal(faqCucina.length, 24, 'Controllare se il numero di FAQ cucina è cambiato');
+test('le risposte sui costi della cucina non descrivono un bagno', () => {
+  assert.equal(faqCucina.length, 25, 'Controllare se il numero di FAQ cucina è cambiato');
   for (const risposta of faqCucina) {
     assert.match(risposta, /cucina/i);
     assert.doesNotMatch(risposta, /bagno|sanitari|doccia|vasca|\d+[-–]\d+\s*mq/i);
