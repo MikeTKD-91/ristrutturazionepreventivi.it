@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import CookieBanner from "@/components/shared/CookieBanner";
+import ContactIntentTracking from "@/components/shared/ContactIntentTracking";
 
 
 const inter = Inter({
@@ -160,6 +161,7 @@ export default function RootLayout({
         <main className="min-h-screen">{children}</main>
         <Footer />
         <CookieBanner />
+        <ContactIntentTracking />
       </body>
     </html>
   );
