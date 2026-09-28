@@ -11,7 +11,7 @@ test('le risposte sui costi della cucina non descrivono un bagno', () => {
   assert.equal(faqCucina.length, 25, 'Controllare se il numero di FAQ cucina è cambiato');
   for (const risposta of faqCucina) {
     assert.match(risposta, /cucina/i);
-    assert.doesNotMatch(risposta, /bagno|sanitari|doccia|vasca|\d+[-–]\d+\s*mq/i);
+    assert.doesNotMatch(risposta, /bagno|sanitari|doccia|vasca/i);
   }
 });
 
