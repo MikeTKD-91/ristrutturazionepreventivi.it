@@ -1,11 +1,12 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { URL } from 'node:url';
 import { test } from 'node:test';
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 
 const comuni = read('data/comuni.ts');
-const faqCucina = [...comuni.matchAll(/domanda:\s*[\"'`]Quanto costa ristrutturare la cucina a [^\"'`]+[\"'`],\s*risposta:\s*([\"'`])([^\n]*?)\1/g)].map((match) => match[2]);
+const faqCucina = [...comuni.matchAll(/domanda:\s*["'`]Quanto costa ristrutturare la cucina a [^"'`]+["'`],\s*risposta:\s*(["'`])([^\n]*?)\1/g)].map((match) => match[2]);
 
 test('le risposte sui costi della cucina non descrivono un bagno', () => {
   assert.equal(faqCucina.length, 25, 'Controllare se il numero di FAQ cucina è cambiato');
