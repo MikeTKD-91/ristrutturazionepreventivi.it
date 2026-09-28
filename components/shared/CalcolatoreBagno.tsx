@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { formatPrezzo } from "@/lib/utils";
 
@@ -37,6 +37,34 @@ export default function CalcolatoreBagno({
   comuneDefault = "",
 }: CalcolatoreBagnoProps) {
   const [step, setStep] = useState<Step>(1);
+
+  useEffect(() => {
+    let lastTrackedStep: Step | null = null;
+
+    const trackStep = () => {
+      try {
+        const preferences = JSON.parse(
+          localStorage.getItem("cookieConsent") ?? "null"
+        ) as { analytics?: boolean } | null;
+
+        if (preferences?.analytics !== true) return;
+        if (typeof window.gtag !== "function" || lastTrackedStep === step) return;
+
+        window.gtag("event", "estimate_step_view", {
+          estimate_type: "bagno",
+          estimate_step: step,
+        });
+        lastTrackedStep = step;
+      } catch {
+        // Nessun evento se il consenso non è leggibile.
+      }
+    };
+
+    trackStep();
+    window.addEventListener("cookie-consent-changed", trackStep);
+    return () => window.removeEventListener("cookie-consent-changed", trackStep);
+  }, [step]);
+
   const [mq, setMq] = useState(DEFAULT_MQ);
   const [comune, setComune] = useState(comuneDefault);
   const [nome, setNome] = useState("");
