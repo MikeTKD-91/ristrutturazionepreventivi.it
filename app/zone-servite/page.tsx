@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: "Zone servite: Napoli, Caserta e Agro Aversano",
   description: "Ristrutturazioni a Napoli, Caserta e Agro Aversano. Verifica il tuo comune e richiedi un preventivo con sopralluogo tecnico.",
   alternates: {
-    canonical: "https://ristrutturazionepreventivi.it/zone-servite/",
+    canonical: "https://www.ristrutturazionepreventivi.it/zone-servite/",
   },
   openGraph: {
     title: "Zone servite: Napoli, Caserta e Agro Aversano",
     description: "Province di Napoli e Caserta · Agro Aversano. Richiedi un preventivo indicativo e sopralluogo tecnico.",
-    url: "https://ristrutturazionepreventivi.it/zone-servite/",
+    url: "https://www.ristrutturazionepreventivi.it/zone-servite/",
     images: [
       {
         url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200",

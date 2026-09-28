@@ -355,7 +355,7 @@ export const comuniAgroAversano: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Gricignano di Aversa?",
-        risposta: "In base al Prezzario Regionale Campania, i costi orientativi per un bagno di 5-6 mq con rifacimento completo vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine degli anni '60-'70 con impianti originali, il costo tende al limite superiore.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Quanti giorni devo restare senza bagno durante la ristrutturazione?",
@@ -425,7 +425,7 @@ export const comuniAgroAversano: Comune[] = [
       },
       {
         domanda: "Quanto costa ristrutturare la cucina a Trentola Ducenta?",
-        risposta: "In base al Prezzario Regionale Campania, i costi orientativi per un bagno di 5-6 mq con rifacimento completo vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine anni '70 con impianti originali, il costo reale tende al limite superiore.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
     ],
     faqBagno: [
@@ -479,7 +479,7 @@ export const comuniAgroAversano: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a San Marcellino?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 4-5 mq vanno da circa 4.500 € (base) a 9.000 € (premium). Nelle palazzine storiche con impianti originali, il costo tende al limite superiore. Il sopralluogo tecnico chiarisce la situazione specifica.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Il bagno del mio appartamento è molto piccolo (meno di 4 mq). Vale la pena ristrutturarlo?",
@@ -541,7 +541,7 @@ export const comuniAgroAversano: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Casal di Principe?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 4-5 mq vanno da circa 4.500 € (base) a 9.000 € (premium). Nelle abitazioni del centro con impianti d'epoca, il costo tende al limite superiore.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho un appartamento datato con impianti idrici in piombo. Devo sostituirli durante la ristrutturazione?",
@@ -589,7 +589,7 @@ export const comuniAgroAversano: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Casaluce?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 6-7 mq (tipico delle villette di Casaluce) vanno da circa 5.500 € (base) a 10.500 € (premium). Il costo preciso dipende dallo stato degli impianti e dai materiali scelti.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho una villetta degli anni '80 con doppio bagno. Conviene rifarli entrambi nello stesso momento?",
@@ -637,7 +637,7 @@ export const comuniAgroAversano: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Cesa?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il costo preciso dipende dallo stato degli impianti esistenti.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Per la ristrutturazione del bagno serve sempre una CILA a Cesa?",
@@ -681,7 +681,7 @@ export const comuniAgroAversano: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Frignano?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico quantifica le variabili specifiche.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Quanto dura una ristrutturazione bagno completa a Frignano?",
@@ -725,7 +725,7 @@ export const comuniAgroAversano: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Parete?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine degli anni '60-'70 con impianti originali, il costo tende al limite superiore.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho un condominio anni '70 a Parete. Cosa devo sapere prima di ristrutturare il mio appartamento?",
@@ -773,7 +773,7 @@ export const comuniAgroAversano: Comune[] = [
       },
       {
         domanda: "Quanto costa ristrutturare la cucina a Succivo?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle villette con bagni già parzialmente ristrutturati, il costo dipende da quanto degli impianti esistenti è riutilizzabile: lo si capisce al sopralluogo.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho intenzione di installare un riscaldamento a pavimento nel bagno. È compatibile con una ristrutturazione completa?",
@@ -817,7 +817,7 @@ export const comuniAgroAversano: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Villa di Briano?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine storiche con impianti originali, il costo tende al limite superiore. Il sopralluogo tecnico chiarisce la situazione specifica.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Nel mio appartamento storico a Villa di Briano gli scarichi sono condivisi con il vicino. Posso comunque ristrutturare?",
@@ -1087,7 +1087,7 @@ export const comuniNapoli: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Sant'Antimo?",
-        risposta: "I costi orientativi in base al Prezzario Regionale Campania per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). Nei condomini degli anni '70 con impianti originali, il costo reale tende al limite superiore.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho un appartamento in un condominio degli anni '70 a Sant'Antimo con infiltrazioni dal lastrico solare. Prima di ristrutturare, cosa faccio?",
@@ -1149,7 +1149,7 @@ export const comuniNapoli: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Melito di Napoli?",
-        risposta: "In base al Prezzario Regionale Campania, i costi orientativi per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). Nei condomini degli anni '60-'70 con impianti originali da sostituire, il costo tende al limite superiore.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho un seminterrato a Melito di Napoli con problemi di umidità. Posso ristrutturarlo?",
@@ -1211,7 +1211,7 @@ export const comuniNapoli: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Mugnano di Napoli?",
-        risposta: "In base al Prezzario Regionale Campania, i costi orientativi per un bagno 4-5 mq vanno da circa 4.500 € (base) a 8.500 € (premium). Nei condomini degli anni '60-'70 con impianti originali, il costo reale è tendenzialmente nel range superiore.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho un appartamento al quinto piano di un condominio anni '70 a Mugnano. Ho problemi di scarico lento. È un problema condominiale?",
@@ -1273,7 +1273,7 @@ export const comuniNapoli: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Villaricca?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Nelle palazzine degli anni '70 con impianti originali, il costo tende al limite superiore.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Devo fare la CILA per ristrutturare il bagno nella mia palazzina a Villaricca?",
@@ -1335,7 +1335,7 @@ export const comuniNapoli: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Casandrino?",
-        risposta: "In base al Prezzario Regionale Campania, i costi orientativi per un bagno 4-5 mq vanno da circa 4.500 € a 8.500 €. Il sopralluogo tecnico quantifica le variabili specifiche dell'immobile.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Il mio appartamento a Casandrino ha il bagno e la cucina adiacenti. Posso abbatterli e ricavare un bagno più grande?",
@@ -1397,7 +1397,7 @@ faqBagno: [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Grumo Nevano?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico quantifica le variabili specifiche dell'immobile.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Vivo a Grumo Nevano ma il confine comunale è vicino ad Aversa. Intervenite anche nella mia zona?",
@@ -1560,7 +1560,7 @@ export const comuniCaserta: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Marcianise?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico quantifica le variabili specifiche dell'immobile.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho crepe sui muri di casa a Marcianise vicino alla SS7. Cosa faccio prima di ristrutturare?",
@@ -1622,7 +1622,7 @@ export const comuniCaserta: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Curti?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico chiarisce la situazione specifica.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho una palazzina anni '70 a Curti. Devo sostituire le tubazioni durante la ristrutturazione del bagno?",
@@ -1684,7 +1684,7 @@ export const comuniCaserta: Comune[] = [
       },
       {
         domanda: "Quanto costa ristrutturare la cucina a Santa Maria Capua Vetere?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Negli appartamenti storici con impianti d'epoca, il costo tende al limite superiore.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho umidità diffusa nel mio appartamento storico a Santa Maria Capua Vetere. Come si affronta?",
@@ -1728,7 +1728,7 @@ export const comuniCaserta: Comune[] = [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Casapulla?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico quantifica le variabili specifiche.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Posso fare la ristrutturazione del bagno senza preavviso al condominio a Casapulla?",
@@ -1786,7 +1786,7 @@ faqBagno: [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Recale?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico chiarisce la situazione specifica.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho una villetta degli anni '90 a Recale. Conviene fare cappotto termico durante la ristrutturazione?",
@@ -1830,7 +1830,7 @@ faqBagno: [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a San Prisco?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Il sopralluogo tecnico quantifica le variabili specifiche.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho un appartamento con doppio bagno a San Prisco. Conviene rifarli entrambi?",
@@ -1900,7 +1900,7 @@ faqBagno: [
       },
       {
         domanda: "Quanto costa ristrutturare la cucina a Capua?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 5-6 mq vanno da circa 5.000 € (base) a 9.500 € (premium). Negli edifici storici con impianti d'epoca, il costo tende al limite superiore. Il sopralluogo tecnico chiarisce la situazione specifica.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "La mia cucina nel centro storico di Capua non ha una canna fumaria. Come installo la cappa?",
@@ -1944,7 +1944,7 @@ faqBagno: [
     faq: [
       {
         domanda: "Quanto costa ristrutturare la cucina a Casagiove?",
-        risposta: "I costi orientativi basate sul Prezzario Regionale Campania per un bagno 6-8 mq (tipico delle villette di Casagiove) vanno da circa 5.500 € (base) a 11.000 € (premium). Il costo preciso dipende dall'entità dell'intervento e dallo stato degli impianti, che emergono al sopralluogo.",
+        risposta: "Il costo dipende dalle dimensioni della cucina, dallo stato degli impianti, dagli eventuali spostamenti dei punti acqua, gas ed elettrici, dalle opere murarie e da rivestimenti e finiture scelti. Il preventivo distingue le lavorazioni necessarie e viene confermato dopo sopralluogo e verifica tecnica.",
       },
       {
         domanda: "Ho una villetta degli anni '90 a Casagiove con doppio bagno. Conviene rifare entrambi insieme?",

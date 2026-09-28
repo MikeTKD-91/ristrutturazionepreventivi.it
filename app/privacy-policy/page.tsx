@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Ristrutturazione Preventivi",
   description: "Informativa sulla privacy e sul trattamento dei dati personali di ristrutturazionepreventivi.it",
   alternates: {
-    canonical: "https://ristrutturazionepreventivi.it/privacy-policy/",
+    canonical: "https://www.ristrutturazionepreventivi.it/privacy-policy/",
   },
 };
 

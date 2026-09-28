@@ -12,7 +12,6 @@ import {
   buildLocalBusiness,
   buildServiceSchema,
   buildHowToSchema,
-  buildFaqSchema,
 } from "@/lib/schema";
 import { getDataAggiornamento, formatPrezzo, generaLinkWhatsApp } from "@/lib/utils";
 import { getAllArticoli } from "@/lib/blog";
@@ -33,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = `Rifacimento Tetto a ${comune.nome} | Preventivo e Costi`;
   const description = `Richiedi un preventivo per il rifacimento del tetto a ${comune.nome}. Costi indicativi, sopralluogo e conferma finale del preventivo.`;
-  const url = `https://ristrutturazionepreventivi.it/comune/${comune.slug}/rifacimento-tetto/`;
+  const url = `https://www.ristrutturazionepreventivi.it/comune/${comune.slug}/rifacimento-tetto/`;
 
   return {
     title,
@@ -74,8 +73,7 @@ function buildJsonLd(comune: ReturnType<typeof getComuneBySlug>) {
     prezzoMax: "180",
   });
   const howToSchema = buildHowToSchema("Rifacimento Tetto", comune.nome);
-  const faqSchema = buildFaqSchema(comune.faq);
-  return { breadcrumb, localBusiness, serviceSchema, howToSchema, faqSchema };
+  return { breadcrumb, localBusiness, serviceSchema, howToSchema };
 }
 
 export default async function RifacimentoTettoComunePage({ params }: PageProps) {
@@ -95,7 +93,6 @@ export default async function RifacimentoTettoComunePage({ params }: PageProps) 
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.localBusiness) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.serviceSchema) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.howToSchema) }} />
-          {jsonLd.faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.faqSchema) }} />}
         </>
       )}
 
@@ -151,7 +148,7 @@ export default async function RifacimentoTettoComunePage({ params }: PageProps) 
                   <h2 className="text-2xl font-bold text-navy mb-4">Descrizione del Servizio</h2>
                   <div className="prose prose-lg max-w-none text-gray-600 ">
                     {getServiceIntro(comune, "rifacimento-tetto")}
-                    
+
                   </div>
                 </div>
 
@@ -214,22 +211,7 @@ export default async function RifacimentoTettoComunePage({ params }: PageProps) 
                   </div>
                 </div>
 
-                {comune.faq.length > 0 && (
-                  <div>
-                    <h2 className="text-2xl font-bold text-navy mb-6">Domande frequenti su {comune.nome}</h2>
-                    <div className="space-y-4">
-                      {comune.faq.map((faq, i) => (
-                        <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden">
-                          <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none hover:bg-gray-50 transition-colors">
-                            <span className="font-medium text-navy text-sm leading-snug">{faq.domanda}</span>
-                            <span className="flex-shrink-0 w-6 h-6 rounded-full bg-orange/10 text-orange flex items-center justify-center text-sm group-open:rotate-45 transition-transform">+</span>
-                          </summary>
-                          <div className="px-5 pb-5 pt-1"><p className="text-sm text-gray-700 leading-relaxed">{faq.risposta}</p></div>
-                        </details>
-                      ))}
-                    </div>
-                  </div>
-                )}
+
 
                 <div>
                   <h2 className="text-2xl font-bold text-navy mb-4">Dove operiamo</h2>

@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Bonus ristrutturazione 2026: detrazioni casa, efficienza energetica e interventi antisismici. Regole, aliquote e requisiti da verificare.",
   alternates: {
-    canonical: "https://ristrutturazionepreventivi.it/bonus-ristrutturazione/",
+    canonical: "https://www.ristrutturazionepreventivi.it/bonus-ristrutturazione/",
   },
   openGraph: {
     title: "Bonus Ristrutturazione 2026 | Guida Detrazioni Casa",
     description:
       "Bonus casa 2026 spiegati in modo semplice: aliquote, detrazione IRPEF, pagamenti corretti e casi particolari da controllare prima dei lavori.",
-    url: "https://ristrutturazionepreventivi.it/bonus-ristrutturazione/",
+    url: "https://www.ristrutturazionepreventivi.it/bonus-ristrutturazione/",
     images: [
       {
         url: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200",

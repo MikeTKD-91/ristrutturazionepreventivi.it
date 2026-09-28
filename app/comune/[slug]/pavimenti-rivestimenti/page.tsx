@@ -12,7 +12,6 @@ import {
   buildLocalBusiness,
   buildServiceSchema,
   buildHowToSchema,
-  buildFaqSchema,
 } from "@/lib/schema";
 import { getAllArticoli } from "@/lib/blog";
 
@@ -66,7 +65,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!comune) return {};
   const title = `Pavimenti e Rivestimenti a ${comune.nome}: preventivo immediato e costo reale`;
   const description = `Quanto costa la posa di pavimenti e rivestimenti a ${comune.nome}? preventivo immediato e costo reale, materiali, formati, tempistiche reali e sopralluogo tecnico.`;
-  const url = `https://ristrutturazionepreventivi.it/comune/${comune.slug}/pavimenti-rivestimenti/`;
+  const url = `https://www.ristrutturazionepreventivi.it/comune/${comune.slug}/pavimenti-rivestimenti/`;
   return {
     title,
     description,
@@ -80,7 +79,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "website",
       images: [
         {
-          url: `https://ristrutturazionepreventivi.it/images/servizi/pavimenti-rivestimenti.jpg`,
+          url: `https://www.ristrutturazionepreventivi.it/images/servizi/pavimenti-rivestimenti.jpg`,
           width: 1200,
           height: 630,
           alt: title,
@@ -118,10 +117,7 @@ function buildJsonLd(comune: ReturnType<typeof getComuneBySlug>) {
   });
 
   const howToSchema = buildHowToSchema("Pavimenti e Rivestimenti", comune.nome);
-
-  const faqSchema = buildFaqSchema(comune.faq);
-
-  return { breadcrumb, localBusiness, serviceSchema, howToSchema, faqSchema };
+  return { breadcrumb, localBusiness, serviceSchema, howToSchema };
 }
 
 export default async function PavimentiRivestimentiPage({ params }: PageProps) {
@@ -139,9 +135,6 @@ export default async function PavimentiRivestimentiPage({ params }: PageProps) {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.localBusiness) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.serviceSchema) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.howToSchema) }} />
-          {jsonLd.faqSchema && (
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.faqSchema) }} />
-          )}
         </>
       )}
       <main className="min-h-screen bg-white">
@@ -317,23 +310,7 @@ export default async function PavimentiRivestimentiPage({ params }: PageProps) {
               </div>
             </section>
 
-            {comune.faq.length > 0 && (
-              <section>
-                <h2 className="text-2xl font-bold text-navy mb-2">Domande frequenti su pavimenti e rivestimenti a {comune.nome}</h2>
-                <p className="text-gray-600 mb-6">Le domande che ci vengono poste più spesso da chi ci contatta da {comune.nome}.</p>
-                <div className="space-y-4">
-                  {comune.faq.map((faq, i) => (
-                    <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden">
-                      <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none hover:bg-gray-50 transition-colors">
-                        <span className="font-medium text-navy text-sm leading-snug">{faq.domanda}</span>
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-orange/10 text-orange flex items-center justify-center text-sm group-open:rotate-45 transition-transform">+</span>
-                      </summary>
-                      <div className="px-5 pb-5 pt-1"><p className="text-sm text-gray-700 leading-relaxed">{faq.risposta}</p></div>
-                    </details>
-                  ))}
-                </div>
-              </section>
-            )}
+
 
             {comune.vicini.length > 0 && (
               <section>

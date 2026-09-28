@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = `Ristrutturazione Bagno a ${comune.nome} | Preventivo e Costi`;
   const description = `Richiedi un preventivo per ristrutturare il bagno a ${comune.nome}. Costi indicativi, sopralluogo e conferma finale del preventivo.`;
-  const url = `https://ristrutturazionepreventivi.it/comune/${comune.slug}/ristrutturazione-bagno/`;
+  const url = `https://www.ristrutturazionepreventivi.it/comune/${comune.slug}/ristrutturazione-bagno/`;
 
   return {
     title,
@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "website",
       images: [
         {
-          url: "https://ristrutturazionepreventivi.it/images/servizi/ristrutturazione-bagno.jpg",
+          url: "https://www.ristrutturazionepreventivi.it/images/servizi/ristrutturazione-bagno.jpg",
           width: 1200,
           height: 630,
           alt: title,
