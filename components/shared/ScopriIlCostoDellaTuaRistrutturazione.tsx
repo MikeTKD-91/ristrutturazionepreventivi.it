@@ -179,7 +179,8 @@ export default function ScopriIlCostoDellaTuaRistrutturazione({
         </label>
 
         <a
-          href={isValid ? whatsappHref : "#"}
+          href={isValid ? whatsappHref : undefined}
+          tabIndex={isValid ? undefined : -1}
           target={isValid ? "_blank" : undefined}
           rel={isValid ? "noopener noreferrer" : undefined}
           aria-disabled={!isValid}
