@@ -45,6 +45,7 @@ export default function CookieBanner() {
 
   const saveConsent = (prefs: CookiePreferences) => {
     localStorage.setItem("cookieConsent", JSON.stringify(prefs));
+    window.dispatchEvent(new Event("cookie-consent-changed"));
     setPreferences(prefs);
     setAnalyticsEnabled(prefs.analytics);
     setIsVisible(false);

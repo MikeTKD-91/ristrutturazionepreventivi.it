@@ -46,6 +46,34 @@ export default function CalcolatoreAppartamento({
   comuneDefault = "",
 }: CalcolatoreAppartamentoProps) {
   const [step, setStep] = useState<Step>(1);
+
+  useEffect(() => {
+    let lastTrackedStep: Step | null = null;
+
+    const trackStep = () => {
+      try {
+        const preferences = JSON.parse(
+          localStorage.getItem("cookieConsent") ?? "null"
+        ) as { analytics?: boolean } | null;
+
+        if (preferences?.analytics !== true) return;
+        if (typeof window.gtag !== "function" || lastTrackedStep === step) return;
+
+        window.gtag("event", "estimate_step_view", {
+          estimate_type: "appartamento",
+          estimate_step: step,
+        });
+        lastTrackedStep = step;
+      } catch {
+        // Nessun evento se il consenso non è leggibile.
+      }
+    };
+
+    trackStep();
+    window.addEventListener("cookie-consent-changed", trackStep);
+    return () => window.removeEventListener("cookie-consent-changed", trackStep);
+  }, [step]);
+
   const [mqInput, setMqInput] = useState<string>(String(DEFAULT_MQ));
   const [bagniInput, setBagniInput] = useState<string>(String(DEFAULT_BAGNI));
   const [comune, setComune] = useState(comuneDefault);
