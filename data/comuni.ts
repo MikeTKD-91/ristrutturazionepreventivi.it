@@ -1481,7 +1481,7 @@ export const comuniCaserta: Comune[] = [
       },
       {
         domanda: "Quanto tempo ci vuole per ristrutturare un appartamento a Caserta?",
-        risposta: "Per un appartamento standard a Caserta, una ristrutturazione completa richiede generalmente tra 7 e 11 settimane di cantiere, equivalenti a circa 45-60 giorni lavorativi. I tempi dipendono dal numero di lavorazioni, dalla metratura, dallo stato degli impianti, dalle modifiche interne, dall'accessibilità e dalla disponibilità dei materiali. Il cronoprogramma viene definito dopo il sopralluogo.",
+        risposta: "Per un appartamento standard a Caserta, una ristrutturazione completa richiede indicativamente 7–11 settimane di cantiere. I tempi dipendono dal numero di lavorazioni, dalla metratura, dallo stato degli impianti, dalle modifiche interne, dall'accessibilità e dalla disponibilità dei materiali. Il cronoprogramma viene definito dopo il sopralluogo.",
       },
       {
         domanda: "Come posso richiedere un preventivo per ristrutturare casa a Caserta?",
