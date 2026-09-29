@@ -38,6 +38,7 @@ export interface AppartamentoComune {
   testoPreventivo: string;
   immagineHero: string;
   noteCantiere: string[];
+  testoDurataCantiere?: string;
 }
 
 export const comuniAppartamento: AppartamentoComune[] = [
@@ -99,6 +100,8 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Se stai valutando una ristrutturazione completa ad Aversa, richiedere un preventivo è il primo passo per trasformare l'idea in un progetto con costi chiari. Il preventivo tiene conto di metratura, stato degli impianti, accessibilità dell'immobile, distribuzione interna, eventuali lavori su bagno e cucina e finiture scelte — oltre a fattori locali come il centro storico normanno. Con Ristrutturazionepreventivi.it richiedi subito una stima gratuita: il prezzo definitivo viene confermato dopo il sopralluogo tecnico, con tutte le lavorazioni esplicitate in modo trasparente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere:
+      "Ad Aversa, l'organizzazione del cantiere cambia soprattutto tra gli appartamenti del centro storico, dove accessi e vincoli possono richiedere verifiche preliminari, e le abitazioni nelle zone di espansione. Lo stato degli impianti e le eventuali demolizioni incidono sulla sequenza dei lavori: dopo il sopralluogo tecnico definiamo un programma coerente con gli interventi previsti.",
   },
   {
     slug: "lusciano",
@@ -158,6 +161,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Richiedere un preventivo per ristrutturare casa a Lusciano è il modo più concreto per capire come si compone davvero la spesa prima di aprire il cantiere. Il quadro economico considera metratura, condizioni degli impianti, distribuzione interna, bagno e cucina, finiture e aspetti specifici del territorio come il mix tra PEEP comunali e villette private. Su Ristrutturazionepreventivi.it la stima è immediata e gratuita, con conferma finale dopo sopralluogo tecnico.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Lusciano, tra villette e palazzine del nucleo centrale, le verifiche su umidità e vecchi impianti possono incidere sulla sequenza dei lavori. Il sopralluogo chiarisce gli interventi necessari prima di fissare il cronoprogramma.",
   },
   {
     slug: "carinaro",
@@ -217,6 +221,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Un preventivo serio a Carinaro non si limita a un numero, ma indica le lavorazioni che incidono davvero sul costo: impianti, distribuzione interna, bagno, cucina, finiture e criticità locali come la prevalenza di villette unifamiliari. Tramite Ristrutturazionepreventivi.it ottieni una prima stima online gratuita, che diventa definitiva dopo il sopralluogo tecnico di Russo FE Costruzione.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Carinaro, le villette nelle zone di espansione e le palazzine più datate del centro richiedono controlli diversi. Verificare umidità nei piani terra e impianti esistenti aiuta a programmare correttamente demolizioni e nuove installazioni.",
   },
   {
     slug: "teverola",
@@ -276,6 +281,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Se stai valutando una ristrutturazione completa a Teverola, richiedere un preventivo è il primo passo per trasformare l'idea in un progetto con costi chiari. Il preventivo tiene conto di metratura, stato degli impianti, accessibilità dell'immobile, distribuzione interna, eventuali lavori su bagno e cucina e finiture scelte — oltre a fattori locali come la vicinanza alla SS7bis. Con Ristrutturazionepreventivi.it richiedi subito una stima gratuita: il prezzo definitivo viene confermato dopo il sopralluogo tecnico, con tutte le lavorazioni esplicitate in modo trasparente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Teverola, prima di organizzare una ristrutturazione completa conviene valutare accessi, condizioni delle murature e possibili infiltrazioni. Se emergono lavori aggiuntivi, il calendario viene ridefinito dopo la verifica tecnica dell'immobile.",
   },
   {
     slug: "gricignano-di-aversa",
@@ -335,6 +341,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Richiedere un preventivo per ristrutturare casa a Gricignano di Aversa è il modo più concreto per capire come si compone davvero la spesa prima di aprire il cantiere. Il quadro economico considera metratura, condizioni degli impianti, distribuzione interna, bagno e cucina, finiture e aspetti specifici del territorio come il doppio volto tra nucleo storico ed espansione. Su Ristrutturazionepreventivi.it la stima è immediata e gratuita, con conferma finale dopo sopralluogo tecnico.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Gricignano di Aversa, gli appartamenti del nucleo storico possono richiedere controlli preliminari su umidità e impianti idrici. Nelle abitazioni più recenti cambia invece la sequenza delle lavorazioni in base alle modifiche interne previste.",
   },
   {
     slug: "trentola-ducenta",
@@ -394,6 +401,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Un preventivo serio a Trentola Ducenta non si limita a un numero, ma indica le lavorazioni che incidono davvero sul costo: impianti, distribuzione interna, bagno, cucina, finiture e criticità locali come la varietà tra centro e nuovi complessi residenziali. Tramite Ristrutturazionepreventivi.it ottieni una prima stima online gratuita, che diventa definitiva dopo il sopralluogo tecnico di Russo FE Costruzione.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Trentola Ducenta, il programma cambia tra palazzine del centro e abitazioni nelle aree di espansione. La verifica degli impianti e di eventuali materiali da bonificare precede la definizione delle fasi operative.",
   },
   {
     slug: "san-marcellino",
@@ -453,6 +461,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Se stai valutando una ristrutturazione completa a San Marcellino, richiedere un preventivo è il primo passo per trasformare l'idea in un progetto con costi chiari. Il preventivo tiene conto di metratura, stato degli impianti, accessibilità dell'immobile, distribuzione interna, eventuali lavori su bagno e cucina e finiture scelte — oltre a fattori locali come gli spazi compatti del nucleo storico. Con Ristrutturazionepreventivi.it richiedi subito una stima gratuita: il prezzo definitivo viene confermato dopo il sopralluogo tecnico, con tutte le lavorazioni esplicitate in modo trasparente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A San Marcellino, negli edifici più datati del nucleo storico occorre verificare umidità e condizioni degli impianti prima di fissare le fasi del cantiere. Accessibilità e modifiche alla distribuzione interna possono influire sul programma.",
   },
   {
     slug: "casal-di-principe",
@@ -512,6 +521,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Richiedere un preventivo per ristrutturare casa a Casal di Principe è il modo più concreto per capire come si compone davvero la spesa prima di aprire il cantiere. Il quadro economico considera metratura, condizioni degli impianti, distribuzione interna, bagno e cucina, finiture e aspetti specifici del territorio come il contrasto tra centro storico e periferia. Su Ristrutturazionepreventivi.it la stima è immediata e gratuita, con conferma finale dopo sopralluogo tecnico.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Casal di Principe, un appartamento nel centro e una casa nelle aree periferiche possono richiedere organizzazioni differenti. Prima di definire il calendario verifichiamo impianti esistenti, accessi ed eventuali interventi preliminari.",
   },
   {
     slug: "casaluce",
@@ -571,6 +581,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Un preventivo serio a Casaluce non si limita a un numero, ma indica le lavorazioni che incidono davvero sul costo: impianti, distribuzione interna, bagno, cucina, finiture e criticità locali come il tessuto quasi interamente di villette unifamiliari. Tramite Ristrutturazionepreventivi.it ottieni una prima stima online gratuita, che diventa definitiva dopo il sopralluogo tecnico di Russo FE Costruzione.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Casaluce, nelle villette la presenza di umidità ai piani terra va verificata prima di programmare massetti e finiture. Nelle palazzine del nucleo centrale incidono anche lo stato degli impianti e le condizioni di accesso al cantiere.",
   },
   {
     slug: "cesa",
@@ -630,6 +641,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Se stai valutando una ristrutturazione completa a Cesa, richiedere un preventivo è il primo passo per trasformare l'idea in un progetto con costi chiari. Il preventivo tiene conto di metratura, stato degli impianti, accessibilità dell'immobile, distribuzione interna, eventuali lavori su bagno e cucina e finiture scelte — oltre a fattori locali come gli impianti fognari datati del nucleo storico. Con Ristrutturazionepreventivi.it richiedi subito una stima gratuita: il prezzo definitivo viene confermato dopo il sopralluogo tecnico, con tutte le lavorazioni esplicitate in modo trasparente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Cesa, le abitazioni del nucleo storico possono richiedere verifiche su umidità e scarichi prima di rifare pavimenti e impianti. Il cronoprogramma viene definito in base alle opere effettivamente necessarie nell'immobile.",
   },
   {
     slug: "frignano",
@@ -689,6 +701,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Richiedere un preventivo per ristrutturare casa a Frignano è il modo più concreto per capire come si compone davvero la spesa prima di aprire il cantiere. Il quadro economico considera metratura, condizioni degli impianti, distribuzione interna, bagno e cucina, finiture e aspetti specifici del territorio come il nucleo storico compatto. Su Ristrutturazionepreventivi.it la stima è immediata e gratuita, con conferma finale dopo sopralluogo tecnico.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Frignano, la logistica di un appartamento nel nucleo storico può essere diversa da quella di una villetta nelle zone più recenti. La verifica di umidità e impianti esistenti aiuta a stabilire l'ordine delle lavorazioni.",
   },
   {
     slug: "parete",
@@ -748,6 +761,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Un preventivo serio a Parete non si limita a un numero, ma indica le lavorazioni che incidono davvero sul costo: impianti, distribuzione interna, bagno, cucina, finiture e criticità locali come la fascia di palazzine anni '60-'80 del centro. Tramite Ristrutturazionepreventivi.it ottieni una prima stima online gratuita, che diventa definitiva dopo il sopralluogo tecnico di Russo FE Costruzione.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Parete, nelle palazzine del centro è utile controllare gli impianti idrici prima di programmare demolizioni e rifacimenti. Negli immobili più datati anche umidità e accessibilità possono modificare le fasi previste.",
   },
   {
     slug: "succivo",
@@ -807,6 +821,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Se stai valutando una ristrutturazione completa a Succivo, richiedere un preventivo è il primo passo per trasformare l'idea in un progetto con costi chiari. Il preventivo tiene conto di metratura, stato degli impianti, accessibilità dell'immobile, distribuzione interna, eventuali lavori su bagno e cucina e finiture scelte — oltre a fattori locali come il tessuto di villette unifamiliari. Con Ristrutturazionepreventivi.it richiedi subito una stima gratuita: il prezzo definitivo viene confermato dopo il sopralluogo tecnico, con tutte le lavorazioni esplicitate in modo trasparente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Succivo, villette e palazzine richiedono verifiche differenti, soprattutto su umidità nei piani terra e impianti idrici nelle case più datate. Solo dopo il sopralluogo è possibile ordinare le lavorazioni e definire un calendario attendibile.",
   },
   {
     slug: "villa-di-briano",
@@ -866,6 +881,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Richiedere un preventivo per ristrutturare casa a Villa di Briano è il modo più concreto per capire come si compone davvero la spesa prima di aprire il cantiere. Il quadro economico considera metratura, condizioni degli impianti, distribuzione interna, bagno e cucina, finiture e aspetti specifici del territorio come gli scarichi fognari condivisi del nucleo storico. Su Ristrutturazionepreventivi.it la stima è immediata e gratuita, con conferma finale dopo sopralluogo tecnico.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Villa di Briano, nel nucleo storico occorre valutare lo stato degli scarichi e l'eventuale umidità prima di programmare nuove finiture. Per le villette periferiche contano soprattutto accessi, distribuzione interna e impianti da sostituire.",
   },
   {
     slug: "napoli",
@@ -925,6 +941,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Un preventivo serio a Napoli non si limita a un numero, ma indica le lavorazioni che incidono davvero sul costo: impianti, distribuzione interna, bagno, cucina, finiture e criticità locali come i grandi condomini della periferia nord. Tramite Ristrutturazionepreventivi.it ottieni una prima stima online gratuita, che diventa definitiva dopo il sopralluogo tecnico di Russo FE Costruzione.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Napoli, nei condomini dell'area servita il coordinamento con l'edificio e la verifica delle colonne idriche possono influire sull'avvio degli impianti. Anche accessi e smaltimento dei materiali vanno considerati nel calendario del cantiere.",
   },
   {
     slug: "giugliano-in-campania",
@@ -984,6 +1001,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Se stai valutando una ristrutturazione completa a Giugliano in Campania, richiedere un preventivo è il primo passo per trasformare l'idea in un progetto con costi chiari. Il preventivo tiene conto di metratura, stato degli impianti, accessibilità dell'immobile, distribuzione interna, eventuali lavori su bagno e cucina e finiture scelte — oltre a fattori locali come la rapida espansione edilizia degli ultimi decenni. Con Ristrutturazionepreventivi.it richiedi subito una stima gratuita: il prezzo definitivo viene confermato dopo il sopralluogo tecnico, con tutte le lavorazioni esplicitate in modo trasparente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Giugliano in Campania, le palazzine delle zone di espansione e gli immobili del nucleo storico presentano esigenze diverse. Prima di stabilire la sequenza dei lavori verifichiamo stato degli impianti, accessi e documentazione dell'immobile.",
   },
   {
     slug: "sant-antimo",
@@ -1043,6 +1061,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Richiedere un preventivo per ristrutturare casa a Sant'Antimo è il modo più concreto per capire come si compone davvero la spesa prima di aprire il cantiere. Il quadro economico considera metratura, condizioni degli impianti, distribuzione interna, bagno e cucina, finiture e aspetti specifici del territorio come le infiltrazioni dai lastrici solari condominiali. Su Ristrutturazionepreventivi.it la stima è immediata e gratuita, con conferma finale dopo sopralluogo tecnico.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Sant'Antimo, nei condomini e nelle palazzine più datate è importante controllare montanti e possibili infiltrazioni prima di rifare gli ambienti. Queste verifiche aiutano a coordinare gli interventi sugli impianti con le finiture.",
   },
   {
     slug: "melito-di-napoli",
@@ -1102,6 +1121,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Un preventivo serio a Melito di Napoli non si limita a un numero, ma indica le lavorazioni che incidono davvero sul costo: impianti, distribuzione interna, bagno, cucina, finiture e criticità locali come i condomini costruiti tra anni '60 e '90. Tramite Ristrutturazionepreventivi.it ottieni una prima stima online gratuita, che diventa definitiva dopo il sopralluogo tecnico di Russo FE Costruzione.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Melito di Napoli, negli appartamenti condominiali la verifica degli impianti comuni e degli scarichi può condizionare l'ordine delle lavorazioni. Eventuali infiltrazioni vanno chiarite prima di chiudere pareti e posare le finiture.",
   },
   {
     slug: "mugnano-di-napoli",
@@ -1161,6 +1181,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Se stai valutando una ristrutturazione completa a Mugnano di Napoli, richiedere un preventivo è il primo passo per trasformare l'idea in un progetto con costi chiari. Il preventivo tiene conto di metratura, stato degli impianti, accessibilità dell'immobile, distribuzione interna, eventuali lavori su bagno e cucina e finiture scelte — oltre a fattori locali come l'edilizia compatta e i condomini di vecchia data. Con Ristrutturazionepreventivi.it richiedi subito una stima gratuita: il prezzo definitivo viene confermato dopo il sopralluogo tecnico, con tutte le lavorazioni esplicitate in modo trasparente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Mugnano di Napoli, nelle palazzine più datate è utile controllare scarichi e montanti idrici prima di definire il rifacimento di bagno e cucina. Il programma tiene conto anche degli accessi e delle fasi che richiedono coordinamento con il condominio.",
   },
   {
     slug: "villaricca",
@@ -1220,6 +1241,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Richiedere un preventivo per ristrutturare casa a Villaricca è il modo più concreto per capire come si compone davvero la spesa prima di aprire il cantiere. Il quadro economico considera metratura, condizioni degli impianti, distribuzione interna, bagno e cucina, finiture e aspetti specifici del territorio come il passaggio dalle palazzine storiche ai condomini più recenti. Su Ristrutturazionepreventivi.it la stima è immediata e gratuita, con conferma finale dopo sopralluogo tecnico.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Villaricca, il cantiere va organizzato in modo diverso nelle palazzine del centro e nelle abitazioni dell'espansione. Nei fabbricati più datati, la verifica di umidità e tubazioni precede la pianificazione di massetti e finiture.",
   },
   {
     slug: "casandrino",
@@ -1279,6 +1301,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Un preventivo serio a Casandrino non si limita a un numero, ma indica le lavorazioni che incidono davvero sul costo: impianti, distribuzione interna, bagno, cucina, finiture e criticità locali come la vicinanza a Napoli e Giugliano in Campania. Tramite Ristrutturazionepreventivi.it ottieni una prima stima online gratuita, che diventa definitiva dopo il sopralluogo tecnico di Russo FE Costruzione.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Casandrino, nelle palazzine più vecchie controllare gli impianti condominiali prima di intervenire su bagno e cucina aiuta a evitare riprese dei lavori. Accessibilità e condizioni dei piani terra vanno valutate durante il sopralluogo.",
   },
   {
     slug: "grumo-nevano",
@@ -1338,6 +1361,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Se stai valutando una ristrutturazione completa a Grumo Nevano, richiedere un preventivo è il primo passo per trasformare l'idea in un progetto con costi chiari. Il preventivo tiene conto di metratura, stato degli impianti, accessibilità dell'immobile, distribuzione interna, eventuali lavori su bagno e cucina e finiture scelte — oltre a fattori locali come la posizione di confine tra le province di Napoli e Caserta. Con Ristrutturazionepreventivi.it richiedi subito una stima gratuita: il prezzo definitivo viene confermato dopo il sopralluogo tecnico, con tutte le lavorazioni esplicitate in modo trasparente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Grumo Nevano, la sequenza dei lavori cambia tra gli edifici del nucleo storico e quelli delle aree più recenti. Nei piani terra occorre verificare l'eventuale umidità prima della posa di sottofondi e pavimenti.",
   },
   {
     slug: "caserta",
@@ -1397,6 +1421,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Richiedere un preventivo per ristrutturare casa a Caserta è il modo più concreto per capire come si compone davvero la spesa prima di aprire il cantiere. Il quadro economico considera metratura, condizioni degli impianti, distribuzione interna, bagno e cucina, finiture e aspetti specifici del territorio come la vicinanza alla Reggia e al Belvedere. Su Ristrutturazionepreventivi.it la stima è immediata e gratuita, con conferma finale dopo sopralluogo tecnico.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Caserta, un appartamento in un edificio d'epoca e uno in una palazzina residenziale possono richiedere verifiche preliminari diverse. Eventuali vincoli sull'immobile e lo stato degli impianti vanno chiariti prima di definire le fasi del cantiere.",
   },
   {
     slug: "marcianise",
@@ -1456,6 +1481,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Un preventivo serio a Marcianise non si limita a un numero, ma indica le lavorazioni che incidono davvero sul costo: impianti, distribuzione interna, bagno, cucina, finiture e criticità locali come la vicinanza alla SS7 Appia. Tramite Ristrutturazionepreventivi.it ottieni una prima stima online gratuita, che diventa definitiva dopo il sopralluogo tecnico di Russo FE Costruzione.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Marcianise, negli appartamenti delle palazzine centrali conviene verificare lo stato degli impianti prima di programmare demolizioni e finiture. Nelle abitazioni periferiche incidono anche accessibilità e modifiche alla distribuzione interna.",
   },
   {
     slug: "curti",
@@ -1515,6 +1541,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Se stai valutando una ristrutturazione completa a Curti, richiedere un preventivo è il primo passo per trasformare l'idea in un progetto con costi chiari. Il preventivo tiene conto di metratura, stato degli impianti, accessibilità dell'immobile, distribuzione interna, eventuali lavori su bagno e cucina e finiture scelte — oltre a fattori locali come il confine diretto con il centro di Caserta. Con Ristrutturazionepreventivi.it richiedi subito una stima gratuita: il prezzo definitivo viene confermato dopo il sopralluogo tecnico, con tutte le lavorazioni esplicitate in modo trasparente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Curti, tra palazzine del centro e case a schiera nelle aree di espansione cambiano accessi e organizzazione del cantiere. La verifica di tubazioni e possibili problemi di umidità permette di ordinare meglio le lavorazioni.",
   },
   {
     slug: "santa-maria-capua-vetere",
@@ -1574,6 +1601,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Richiedere un preventivo per ristrutturare casa a Santa Maria Capua Vetere è il modo più concreto per capire come si compone davvero la spesa prima di aprire il cantiere. Il quadro economico considera metratura, condizioni degli impianti, distribuzione interna, bagno e cucina, finiture e aspetti specifici del territorio come i vincoli archeologici del sottosuolo. Su Ristrutturazionepreventivi.it la stima è immediata e gratuita, con conferma finale dopo sopralluogo tecnico.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Santa Maria Capua Vetere, negli edifici d'epoca è importante verificare eventuali vincoli e condizioni dell'immobile prima di programmare demolizioni. Nelle palazzine residenziali lo stato degli impianti incide invece sulla sequenza dei lavori.",
   },
   {
     slug: "casapulla",
@@ -1633,6 +1661,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Un preventivo serio a Casapulla non si limita a un numero, ma indica le lavorazioni che incidono davvero sul costo: impianti, distribuzione interna, bagno, cucina, finiture e criticità locali come la posizione favorevole rispetto ai centri della provincia. Tramite Ristrutturazionepreventivi.it ottieni una prima stima online gratuita, che diventa definitiva dopo il sopralluogo tecnico di Russo FE Costruzione.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Casapulla, nelle palazzine più datate la verifica di impianti e possibili problemi di umidità ai piani terra precede la posa delle finiture. Nelle villette delle aree di espansione, accessi e distribuzione degli spazi orientano il programma.",
   },
   {
     slug: "recale",
@@ -1692,6 +1721,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Se stai valutando una ristrutturazione completa a Recale, richiedere un preventivo è il primo passo per trasformare l'idea in un progetto con costi chiari. Il preventivo tiene conto di metratura, stato degli impianti, accessibilità dell'immobile, distribuzione interna, eventuali lavori su bagno e cucina e finiture scelte — oltre a fattori locali come il mix tra palazzine datate e nuove costruzioni. Con Ristrutturazionepreventivi.it richiedi subito una stima gratuita: il prezzo definitivo viene confermato dopo il sopralluogo tecnico, con tutte le lavorazioni esplicitate in modo trasparente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Recale, il cantiere di un appartamento in palazzina può richiedere controlli diversi rispetto a una villetta recente. Verificare gli impianti nelle costruzioni più datate aiuta a coordinare demolizioni, nuove installazioni e finiture.",
   },
   {
     slug: "san-prisco",
@@ -1751,6 +1781,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Richiedere un preventivo per ristrutturare casa a San Prisco è il modo più concreto per capire come si compone davvero la spesa prima di aprire il cantiere. Il quadro economico considera metratura, condizioni degli impianti, distribuzione interna, bagno e cucina, finiture e aspetti specifici del territorio come la vicinanza alla Cattedrale paleocristiana. Su Ristrutturazionepreventivi.it la stima è immediata e gratuita, con conferma finale dopo sopralluogo tecnico.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A San Prisco, nelle palazzine del centro è opportuno controllare gli impianti prima di definire le fasi della ristrutturazione. Per i piani terra vanno valutate anche eventuali tracce di umidità, così da non anticipare massetti e finiture.",
   },
   {
     slug: "capua",
@@ -1810,6 +1841,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Un preventivo serio a Capua non si limita a un numero, ma indica le lavorazioni che incidono davvero sul costo: impianti, distribuzione interna, bagno, cucina, finiture e criticità locali come la vicinanza al fiume Volturno. Tramite Ristrutturazionepreventivi.it ottieni una prima stima online gratuita, che diventa definitiva dopo il sopralluogo tecnico di Russo FE Costruzione.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Capua, nel centro storico la verifica di eventuali vincoli e dello stato delle murature precede la pianificazione delle opere. La presenza di umidità negli edifici più datati può modificare la sequenza di sottofondi e finiture.",
   },
   {
     slug: "casagiove",
@@ -1869,5 +1901,6 @@ export const comuniAppartamento: AppartamentoComune[] = [
     testoPreventivo: "Se stai valutando una ristrutturazione completa a Casagiove, richiedere un preventivo è il primo passo per trasformare l'idea in un progetto con costi chiari. Il preventivo tiene conto di metratura, stato degli impianti, accessibilità dell'immobile, distribuzione interna, eventuali lavori su bagno e cucina e finiture scelte — oltre a fattori locali come il tenore abitativo medio-alto e le villette di qualità. Con Ristrutturazionepreventivi.it richiedi subito una stima gratuita: il prezzo definitivo viene confermato dopo il sopralluogo tecnico, con tutte le lavorazioni esplicitate in modo trasparente.",
     immagineHero: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
     noteCantiere: [],
+    testoDurataCantiere: "A Casagiove, nelle palazzine più datate è utile verificare le tubazioni prima di coordinare i nuovi impianti. Per villette e appartamenti ai piani terra, eventuali problemi di umidità vanno valutati prima delle finiture.",
   },
 ];

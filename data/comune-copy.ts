@@ -1,6 +1,9 @@
 export const comuneCopy = {
-  durataCantiere:
-    "Per un appartamento standard, una ristrutturazione completa richiede in genere tra 45 e 60 giorni lavorativi. I tempi effettivi dipendono dallo stato dell'immobile, dalla distribuzione interna, dagli impianti, dall'accessibilità del cantiere e dal livello delle finiture.",
+  durataCantierePerZona: {
+    "agro-aversano": "6–10 settimane",
+    caserta: "7–11 settimane",
+    napoli: "8–12 settimane",
+  },
   fasiCantiere: [
     ["Demolizioni e smaltimento", "4–7 giorni"],
     ["Nuova distribuzione interna e opere murarie", "5–10 giorni"],
