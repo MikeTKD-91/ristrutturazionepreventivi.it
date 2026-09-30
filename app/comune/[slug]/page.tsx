@@ -362,7 +362,7 @@ export default async function ComunePage({ params }: PageProps) {
                           <p className="text-xs font-semibold uppercase tracking-widest text-orange">Russo FE Costruzione SRL</p>
                           <p className="mt-2 text-lg font-bold text-navy">Un referente per la ristrutturazione del tuo appartamento</p>
                           <p className="mt-2 text-sm leading-relaxed text-gray-700">
-                            Coordiniamo sopralluogo, lavorazioni e figure coinvolte, dalla valutazione iniziale alle finiture. Scopri l’impresa che realizza i lavori richiesti tramite Ristrutturazione Preventivi.
+                            Coordiniamo sopralluogo, lavorazioni e figure coinvolte, dalla valutazione iniziale alle finiture. Scopri l’impresa che realizza i lavori richiesti tramite Ristrutturazionepreventivi.it.
                           </p>
                           <Link href="/chi-siamo/" className="mt-4 inline-flex min-h-11 items-center rounded-xl bg-navy px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange">
                             Scopri chi siamo <span aria-hidden="true" className="ml-2">→</span>
