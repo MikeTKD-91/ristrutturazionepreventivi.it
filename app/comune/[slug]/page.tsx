@@ -357,12 +357,19 @@ export default async function ComunePage({ params }: PageProps) {
                   {seoSectionsCasa.map((section, i) => (
                     <div key={i}>
                       <h2 className="text-2xl font-bold text-navy mb-2">{section.title}</h2>
-                      <p className="text-gray-600 leading-relaxed ">{section.text}</p>
-                  {(comune.slug === "caserta" || comune.slug === "giugliano-in-campania") && section.title.startsWith("Impresa di Ristrutturazioni") && (
-                    <p className="mt-4 text-sm text-gray-600">
-                      Vuoi conoscere meglio Russo FE Costruzione SRL e il nostro metodo di lavoro? <Link href="/chi-siamo/" className="text-navy underline underline-offset-2 hover:text-orange transition-colors">Scopri chi siamo</Link>.
-                    </p>
-                  )}
+                      {section.title.startsWith("Impresa di Ristrutturazioni") && (
+                        <div className="my-5 rounded-2xl border border-orange/25 bg-orange/5 p-5 sm:p-6">
+                          <p className="text-xs font-semibold uppercase tracking-widest text-orange">Russo FE Costruzione SRL</p>
+                          <p className="mt-2 text-lg font-bold text-navy">Un referente per la ristrutturazione del tuo appartamento</p>
+                          <p className="mt-2 text-sm leading-relaxed text-gray-700">
+                            Coordiniamo sopralluogo, lavorazioni e figure coinvolte, dalla valutazione iniziale alle finiture. Scopri l’impresa che realizza i lavori richiesti tramite Ristrutturazionepreventivi.it.
+                          </p>
+                          <Link href="/chi-siamo/" className="mt-4 inline-flex min-h-11 items-center rounded-xl bg-navy px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange">
+                            Scopri chi siamo <span aria-hidden="true" className="ml-2">→</span>
+                          </Link>
+                        </div>
+                      )}
+                      <p className="text-gray-600 leading-relaxed">{section.text}</p>
                       {section.title.startsWith("Costo Ristrutturazione") ? (
                         <>
                           <div className="mt-4 overflow-x-auto rounded-2xl border border-gray-200 bg-white">

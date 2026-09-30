@@ -80,7 +80,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni ad Aversa",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni ad Aversa vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di il centro storico normanno. In un patrimonio edilizio composto da palazzi storici anni '50-'70 nel centro (alcuni con vincolo Soprintendenza), villette unifamiliari e case a schiera nelle zone di espansione anni '80-'00, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "Per ristrutturare un appartamento ad Aversa, Russo FE Costruzione parte dalle condizioni dell'immobile prima di definire le opere. In un edificio del centro storico può essere necessario approfondire lo stato degli impianti e verificare eventuali vincoli pertinenti all'intervento; nelle zone di espansione possono contare di più distribuzione interna e accessibilità del cantiere. Coordinare queste verifiche con demolizioni, impianti e finiture aiuta a formulare un preventivo fondato sui lavori effettivi.",
       },
       {
         title: "Preventivo Ristrutturazione ad Aversa",
@@ -141,7 +141,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Lusciano",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Lusciano significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di villette unifamiliari e case a schiera anni '80-'00 nella zona di espansione, PEEP comunali anni '80 e palazzi anni '50-'60 nel nucleo centrale, è importante verificare in anticipo aspetti come canne fumarie in amianto nei condomini più datati, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "A Lusciano una ristrutturazione completa può riguardare tanto un appartamento in palazzina quanto un'abitazione in un complesso residenziale più recente. Russo FE Costruzione verifica quali impianti e quali spazi vengono davvero coinvolti, distinguendo le opere interne dagli eventuali interventi sulle parti condivise. Il cliente ottiene così un percorso di lavori organizzato intorno all'immobile, non un capitolato identico per case diverse.",
       },
       {
         title: "Preventivo Ristrutturazione a Lusciano",
@@ -201,7 +201,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Carinaro",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Carinaro vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di la prevalenza di villette unifamiliari. In un patrimonio edilizio composto da prevalenza di villette anni '80-'00 e case a schiera, con un nucleo centrale di palazzine anni '60-'70, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "A Carinaro il confronto tra abitazioni nelle zone di espansione e appartamenti nelle palazzine del centro cambia le priorità della ristrutturazione. Russo FE Costruzione valuta distribuzione degli ambienti, impianti esistenti e accessi prima di coordinare le lavorazioni. È il modo più utile per capire se il preventivo debba concentrarsi sul rifacimento degli interni, sull'adeguamento degli impianti o su entrambi.",
       },
       {
         title: "Preventivo Ristrutturazione a Carinaro",
@@ -261,7 +261,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Teverola",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Teverola significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di mix di villette anni '80-'00 e palazzine anni '70, con edilizia residenziale lungo le arterie principali, è importante verificare in anticipo aspetti come canne fumarie in amianto nei condomini anni '70, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "Per un appartamento a Teverola, la posizione dell'edificio e l'organizzazione degli accessi possono incidere sulla gestione quotidiana del cantiere, specialmente nelle palazzine lungo le arterie principali. Russo FE Costruzione considera questi aspetti insieme allo stato degli impianti e alle opere richieste. Demolizioni, forniture e finiture possono così essere programmate in una sequenza coerente con l'abitazione.",
       },
       {
         title: "Preventivo Ristrutturazione a Teverola",
@@ -321,7 +321,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Gricignano di Aversa",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Gricignano di Aversa vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di il doppio volto tra nucleo storico ed espansione. In un patrimonio edilizio composto da nucleo storico con palazzine anni '50-'70 ed espansione con villette e case a schiera anni '80-'00, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "A Gricignano di Aversa, intervenire in una palazzina del nucleo più antico non comporta necessariamente le stesse scelte di una casa nelle aree di espansione. Russo FE Costruzione verifica prima impianti, disposizione degli spazi e condizioni da approfondire nel sopralluogo. Su questa base coordina le lavorazioni della ristrutturazione completa e chiarisce quali interventi incidono davvero sul preventivo.",
       },
       {
         title: "Preventivo Ristrutturazione a Gricignano di Aversa",
@@ -381,7 +381,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Trentola Ducenta",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Trentola Ducenta significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di palazzine anni '70-'80 nel centro, villette e case a schiera anni '90-2000 nell'espansione, nuovi complessi residenziali in periferia, è importante verificare in anticipo aspetti come impianti idrici in acciaio zincato da sostituire nei bagni, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "A Trentola Ducenta il progetto può cambiare molto tra una palazzina del centro e un'abitazione in un complesso residenziale più recente. Russo FE Costruzione parte dalla verifica degli impianti e delle modifiche interne richieste, evitando di includere o escludere opere sulla sola base dell'età dell'edificio. Il coordinamento del cantiere segue quindi il capitolato concordato e le condizioni riscontrate.",
       },
       {
         title: "Preventivo Ristrutturazione a Trentola Ducenta",
@@ -441,7 +441,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a San Marcellino",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a San Marcellino vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di gli spazi compatti del nucleo storico. In un patrimonio edilizio composto da nucleo storico con palazzine anni '50-'70 ed espansione con villette unifamiliari e case a schiera anni '80-'00, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "In una ristrutturazione a San Marcellino, gli spazi e gli accessi di una palazzina del nucleo centrale richiedono valutazioni diverse rispetto a un'abitazione nelle zone di espansione. Russo FE Costruzione controlla come organizzare demolizioni, movimentazione dei materiali e rifacimento degli impianti. Questa valutazione preliminare rende più chiaro il perimetro dei lavori prima di fissare tempi e costo.",
       },
       {
         title: "Preventivo Ristrutturazione a San Marcellino",
@@ -501,7 +501,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Casal di Principe",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Casal di Principe significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di centro con palazzi storici e palazzine anni '60-'80, periferia con villette e case a schiera anni '80-'00, è importante verificare in anticipo aspetti come impianti idrici in piombo o acciaio zincato nelle palazzine più datate, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "A Casal di Principe, gli appartamenti negli edifici del centro e le abitazioni delle aree più recenti possono richiedere interventi molto diversi. Russo FE Costruzione verifica lo stato degli impianti e la distribuzione interna prima di programmare demolizioni e nuove finiture. Se emergono elementi da approfondire, vengono considerati nel progetto invece di trasformare una stima iniziale in una promessa di prezzo non fondata.",
       },
       {
         title: "Preventivo Ristrutturazione a Casal di Principe",
@@ -561,7 +561,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Casaluce",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Casaluce vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di il tessuto quasi interamente di villette unifamiliari. In un patrimonio edilizio composto da prevalenza di villette unifamiliari anni '80-'00, con alcune palazzine nel nucleo centrale, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "A Casaluce molte richieste di ristrutturazione riguardano abitazioni in villette, ma il lavoro su un appartamento in palazzina va impostato diversamente. Russo FE Costruzione distingue le opere all'interno dell'unità da quelle che potrebbero coinvolgere coperture, esterni o impianti condivisi. Definire subito questo confine aiuta a costruire un preventivo comprensibile e a coordinare soltanto le lavorazioni necessarie.",
       },
       {
         title: "Preventivo Ristrutturazione a Casaluce",
@@ -621,7 +621,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Cesa",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Cesa significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di nucleo storico con palazzine anni '50-'70 ed espansione con villette anni '80-'00, è importante verificare in anticipo aspetti come impianti fognari datati nel nucleo storico, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "A Cesa, prima di rinnovare un appartamento in un edificio del nucleo centrale, è utile verificare come gli impianti dell'unità si collegano a quelli esistenti. Russo FE Costruzione integra questa valutazione con le modifiche agli ambienti, le opere murarie e le finiture richieste. Il risultato è una ristrutturazione impostata sulle condizioni dell'abitazione, non sull'idea che tutti gli edifici della stessa zona abbiano gli stessi problemi.",
       },
       {
         title: "Preventivo Ristrutturazione a Cesa",
@@ -681,7 +681,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Frignano",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Frignano vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di il nucleo storico compatto. In un patrimonio edilizio composto da mix di palazzine anni '70-'80 e villette anni '90-2000, con un nucleo storico compatto, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "Una palazzina del centro di Frignano e una casa nelle zone di espansione possono avere esigenze differenti di accesso, impianti e distribuzione degli spazi. Russo FE Costruzione usa il sopralluogo per stabilire quali opere servano realmente e in quale ordine eseguirle. Questo permette di coordinare la ristrutturazione completa con un quadro più chiaro di lavorazioni e costi.",
       },
       {
         title: "Preventivo Ristrutturazione a Frignano",
@@ -741,7 +741,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Parete",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Parete significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di palazzine anni '60-'80 nel centro, villette e case a schiera anni '80-'00 nell'espansione, è importante verificare in anticipo aspetti come impianti idrici vetusti nelle palazzine del centro, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "A Parete, il rifacimento di un appartamento in una palazzina del centro può richiedere una verifica impiantistica diversa da quella necessaria in un'abitazione più recente. Russo FE Costruzione valuta l'unità e gli eventuali collegamenti con le parti comuni prima di definire demolizioni, nuovi impianti e finiture. Così il preventivo distingue ciò che riguarda davvero l'appartamento da ciò che richiede ulteriori accertamenti.",
       },
       {
         title: "Preventivo Ristrutturazione a Parete",
@@ -801,7 +801,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Succivo",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Succivo vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di il tessuto di villette unifamiliari. In un patrimonio edilizio composto da prevalenza di villette unifamiliari e palazzine anni '80-'00, nucleo storico con edifici anni '60-'70, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "Per ristrutturare casa a Succivo, Russo FE Costruzione non tratta allo stesso modo una villetta e un appartamento in palazzina. La verifica iniziale chiarisce distribuzione degli ambienti, impianti da rifare e possibile coinvolgimento di coperture o spazi condivisi. Separare questi interventi aiuta a organizzare il cantiere e a rendere leggibile il costo della ristrutturazione completa.",
       },
       {
         title: "Preventivo Ristrutturazione a Succivo",
@@ -861,7 +861,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Villa di Briano",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Villa di Briano significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di nucleo storico con palazzine anni '50-'70, periferia con villette anni '80-'00, è importante verificare in anticipo aspetti come impianti fognari datati e spesso condivisi tra più abitazioni nel nucleo storico, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "Negli edifici del nucleo centrale di Villa di Briano può essere importante capire, prima delle demolizioni, quali collegamenti impiantistici siano esclusivi dell'appartamento e quali eventualmente condivisi. Russo FE Costruzione verifica questo punto insieme allo stato degli ambienti e alle finiture desiderate. Il preventivo può così distinguere le opere interne da quelle che richiedono verifiche o accordi ulteriori.",
       },
       {
         title: "Preventivo Ristrutturazione a Villa di Briano",
@@ -921,7 +921,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Napoli",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Napoli vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di i grandi condomini della periferia nord. In un patrimonio edilizio composto da condomini anni '60-'80 nelle periferie nord, edilizia popolare IACP e palazzine anni '50 nei quartieri più centrali dell'area servita, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "Per un appartamento a Napoli, soprattutto nei condomini dell'area nord servita, l'organizzazione del cantiere dipende anche da accessi, orari condominiali e collegamenti agli impianti comuni. Russo FE Costruzione valuta questi aspetti insieme alla nuova distribuzione degli spazi e alle lavorazioni richieste. Il cliente ha un referente che coordina le opere interne senza dare per scontato che un intervento sull'appartamento autorizzi modifiche alle parti comuni.",
       },
       {
         title: "Preventivo Ristrutturazione a Napoli",
@@ -981,7 +981,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Giugliano in Campania",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Giugliano in Campania significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di palazzine e condomini anni '80-'00 nelle zone di espansione, nucleo storico anni '50-'70 e alcune ville nelle zone periferiche, è importante verificare in anticipo aspetti come impianti condominiali di 30-40 anni con pressione idrica insufficiente ai piani alti, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "A Giugliano in Campania gli appartamenti nelle palazzine delle zone di espansione e quelli del nucleo più datato non partono sempre dalle stesse condizioni. Russo FE Costruzione verifica impianti, scarichi e distribuzione interna prima di definire il capitolato; negli edifici condominiali considera anche gli eventuali collegamenti alle parti comuni. È una distinzione importante per costruire un preventivo realistico e organizzare le squadre in cantiere.",
       },
       {
         title: "Preventivo Ristrutturazione a Giugliano in Campania",
@@ -1041,7 +1041,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Sant'Antimo",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Sant'Antimo vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di le infiltrazioni dai lastrici solari condominiali. In un patrimonio edilizio composto da condomini e palazzine anni '70-'90, alcune aree di edilizia popolare e un nucleo storico anni '50-'60, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "A Sant'Antimo, quando si ristruttura un appartamento in condominio, individuare l'origine di un'eventuale infiltrazione è diverso dal rifare semplicemente intonaco e tinteggiatura. Russo FE Costruzione valuta le condizioni dell'unità prima di programmare impianti e finiture, distinguendo le opere interne da possibili interventi sul lastrico o su altre parti comuni. Questo evita di includere nel preventivo soluzioni che non risolverebbero la causa del problema.",
       },
       {
         title: "Preventivo Ristrutturazione a Sant'Antimo",
@@ -1101,7 +1101,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Melito di Napoli",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Melito di Napoli significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di condomini anni '60-'90, palazzine di media altezza e alcune aree di edilizia popolare, è importante verificare in anticipo aspetti come abusi edilizi non condonati, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "In una palazzina di Melito di Napoli, il rifacimento di bagno e cucina va valutato anche rispetto ai collegamenti idrici e agli scarichi esistenti. Russo FE Costruzione verifica l'appartamento prima di coordinare demolizioni, nuovi impianti e ripristini. Il cliente può così capire quali opere rientrano nella ristrutturazione completa e quali eventuali condizioni richiedono un approfondimento specifico.",
       },
       {
         title: "Preventivo Ristrutturazione a Melito di Napoli",
@@ -1161,7 +1161,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Mugnano di Napoli",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Mugnano di Napoli vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di l'edilizia compatta e i condomini di vecchia data. In un patrimonio edilizio composto da condomini anni '60-'80, palazzine di media altezza ed edilizia compatta, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "A Mugnano di Napoli, lavorare in un condominio con spazi di accesso compatti richiede attenzione alla sequenza delle demolizioni, alla movimentazione dei materiali e al rifacimento degli impianti. Russo FE Costruzione considera questi vincoli pratici nel sopralluogo, insieme alle modifiche desiderate per l'appartamento. Una pianificazione basata sull'edificio rende il preventivo più utile di un semplice prezzo al metro quadrato.",
       },
       {
         title: "Preventivo Ristrutturazione a Mugnano di Napoli",
@@ -1221,7 +1221,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Villaricca",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Villaricca significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di palazzine anni '70-'80 nel centro, villette e condomini anni '90-2000 nell'espansione, è importante verificare in anticipo aspetti come impianti idrici in acciaio zincato nelle palazzine anni '70-'80, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "A Villaricca, una palazzina del centro e un'abitazione nelle espansioni più recenti possono richiedere priorità differenti. Russo FE Costruzione verifica gli impianti esistenti e la distribuzione degli spazi prima di stabilire quali demolizioni e finiture inserire nel progetto. In questo modo il preventivo chiarisce cosa serve all'appartamento concreto, senza attribuire automaticamente criticità a tutti gli immobili della zona.",
       },
       {
         title: "Preventivo Ristrutturazione a Villaricca",
@@ -1281,7 +1281,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Casandrino",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Casandrino vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di la vicinanza a Napoli e Giugliano in Campania. In un patrimonio edilizio composto da palazzine anni '60-'80 nel centro ed espansione recente con condomini di qualità media, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "A Casandrino, prima di aprire un cantiere in palazzina è utile distinguere il rifacimento degli impianti dell'appartamento dai possibili interventi sui collegamenti condominiali. Russo FE Costruzione controlla questo confine durante la valutazione iniziale e coordina di conseguenza opere murarie, impianti e finiture. Per il cliente significa sapere quali lavori sono compresi nel proprio preventivo e quali richiedono ulteriori verifiche.",
       },
       {
         title: "Preventivo Ristrutturazione a Casandrino",
@@ -1341,7 +1341,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Grumo Nevano",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Grumo Nevano significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di palazzine anni '70-'90, nucleo storico più datato ed edilizia recente nelle zone periferiche, è importante verificare in anticipo aspetti come impianti idrici vetusti nelle palazzine più datate, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "A Grumo Nevano, un appartamento in un edificio del nucleo più datato e uno nelle aree di espansione non richiedono necessariamente lo stesso capitolato. Russo FE Costruzione verifica lo stato degli impianti, le modifiche agli ambienti e l'accessibilità del cantiere. Da queste informazioni organizza le lavorazioni e definisce un preventivo legato all'abitazione, anziché a una descrizione generica del comune.",
       },
       {
         title: "Preventivo Ristrutturazione a Grumo Nevano",
@@ -1401,7 +1401,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Caserta",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Caserta vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di la vicinanza alla Reggia e al Belvedere. In un patrimonio edilizio composto da centro storico con edifici d'epoca e palazzi signorili, palazzine anni '60-'80 nelle zone residenziali e villette anni '90-2000 in periferia, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "A Caserta, ristrutturare un appartamento in un edificio d'epoca del centro richiede valutazioni diverse rispetto a un'unità in una palazzina residenziale più recente. Russo FE Costruzione verifica le condizioni dell'immobile e, se pertinenti all'intervento, eventuali tutele prima di programmare le opere. Questo consente di coordinare impianti, murature e finiture con un preventivo che non presume vincoli per ogni edificio vicino alla Reggia o al Belvedere.",
       },
       {
         title: "Preventivo Ristrutturazione a Caserta",
@@ -1461,7 +1461,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Marcianise",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Marcianise significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di palazzine anni '60-'80 nel centro, villette anni '80-'00 nelle zone periferiche ed edilizia mista, è importante verificare in anticipo aspetti come vibrazioni da traffico pesante sulla SS7 Appia con possibili lesioni nei muri, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "A Marcianise, prima di intervenire in una palazzina del centro o in una casa delle aree periferiche, Russo FE Costruzione distingue le opere interne dalle condizioni dell'edificio da verificare. Se sono presenti lesioni o infiltrazioni, ne va accertata la causa prima di coprirle con nuove finiture. La ristrutturazione viene quindi programmata attorno alle verifiche necessarie e ai lavori effettivamente concordati, non a una diagnosi basata sulla sola posizione.",
       },
       {
         title: "Preventivo Ristrutturazione a Marcianise",
@@ -1521,7 +1521,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Curti",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Curti vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di il confine diretto con il centro di Caserta. In un patrimonio edilizio composto da palazzine anni '70-'80 nel centro, villette e case a schiera anni '90-2000 nell'espansione, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "Per un appartamento a Curti, le esigenze di una palazzina del centro possono essere diverse da quelle di un'abitazione nelle zone di espansione. Russo FE Costruzione valuta lo stato degli impianti e la nuova distribuzione degli ambienti prima di definire le opere murarie. Questo ordine di lavoro aiuta a costruire un preventivo in cui demolizioni, impianti e finiture corrispondano alle scelte reali del proprietario.",
       },
       {
         title: "Preventivo Ristrutturazione a Curti",
@@ -1581,7 +1581,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Santa Maria Capua Vetere",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Santa Maria Capua Vetere significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di centro storico con edifici d'epoca e zone di interesse archeologico, palazzine anni '60-'80 e villette in periferia, è importante verificare in anticipo aspetti come impianti idrici datati nelle costruzioni più vecchie, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "Nel centro di Santa Maria Capua Vetere, un intervento su un edificio d'epoca può richiedere verifiche diverse da quelle previste per un appartamento in una palazzina residenziale. Russo FE Costruzione considera le caratteristiche dell'immobile e gli eventuali vincoli pertinenti alle opere richieste, senza attribuirli automaticamente a ogni casa. Su questa base coordina impianti, murature e finiture e definisce il perimetro del preventivo.",
       },
       {
         title: "Preventivo Ristrutturazione a Santa Maria Capua Vetere",
@@ -1641,7 +1641,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Casapulla",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Casapulla vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di la posizione favorevole rispetto ai centri della provincia. In un patrimonio edilizio composto da palazzine anni '70-'80 nel centro e villette anni '90-2000 nelle zone di espansione, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "A Casapulla, Russo FE Costruzione imposta la ristrutturazione partendo dal tipo di immobile: appartamento in palazzina del centro oppure abitazione nelle zone di espansione. Verifica quali impianti rifare, se cambiare la distribuzione interna e come organizzare l'accesso al cantiere. Il cliente può così confrontare una stima iniziale con un elenco di lavorazioni definito sulle condizioni reali della casa.",
       },
       {
         title: "Preventivo Ristrutturazione a Casapulla",
@@ -1701,7 +1701,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Recale",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Recale significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di mix di palazzine anni '70-'80 e villette anni '90-2000, con alcune costruzioni recenti nelle zone di espansione, è importante verificare in anticipo aspetti come impianti idrici vetusti nelle palazzine più datate, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "A Recale, l'età dell'edificio non basta a stabilire se rifare integralmente gli impianti o intervenire soltanto su alcune parti dell'appartamento. Russo FE Costruzione valuta impianti, distribuzione interna e finiture desiderate prima di coordinare le squadre. Questo consente di motivare le voci del preventivo, sia in una palazzina esistente sia in un'abitazione delle aree di espansione.",
       },
       {
         title: "Preventivo Ristrutturazione a Recale",
@@ -1761,7 +1761,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a San Prisco",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a San Prisco vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di la vicinanza alla Cattedrale paleocristiana. In un patrimonio edilizio composto da palazzine anni '70-'80 nel centro e villette anni '80-'00 nelle zone periferiche, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "A San Prisco, prima di ristrutturare un appartamento in palazzina o una casa nelle zone periferiche, Russo FE Costruzione chiarisce quali interventi coinvolgono soltanto gli interni. La verifica di impianti e distribuzione degli spazi precede la scelta delle demolizioni e delle finiture. Il preventivo può così riflettere le opere realmente previste, senza collegare automaticamente l'immobile alla presenza di edifici storici nelle vicinanze.",
       },
       {
         title: "Preventivo Ristrutturazione a San Prisco",
@@ -1821,7 +1821,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Capua",
-        text: "Affidarsi a Russo FE Costruzione SRL come impresa di ristrutturazioni a Capua significa avere un unico referente per l'intero cantiere. Nel contesto locale, fatto di centro storico medievale con palazzi d'epoca, palazzine anni '70-'80 nelle zone residenziali e villette in periferia, è importante verificare in anticipo aspetti come impianti idrici e fognari datati nel centro storico, così da coordinare correttamente demolizioni, impianti, opere murarie e finiture, riducendo imprevisti e tempi morti.",
+        text: "In un appartamento del centro di Capua, le caratteristiche dell'edificio possono incidere sulle scelte impiantistiche e sulle opere murarie più che in un'abitazione recente. Russo FE Costruzione verifica lo stato della casa e l'eventuale pertinenza di tutele prima di definire l'intervento. Coordinare queste valutazioni con demolizioni e finiture permette di presentare un preventivo che distingua i lavori interni dalle verifiche necessarie sull'edificio.",
       },
       {
         title: "Preventivo Ristrutturazione a Capua",
@@ -1881,7 +1881,7 @@ export const comuniAppartamento: AppartamentoComune[] = [
       },
       {
         title: "Impresa di Ristrutturazioni a Casagiove",
-        text: "Scegliere Russo FE Costruzione come impresa di ristrutturazioni a Casagiove vuol dire gestire con un solo referente demolizioni, impianti, opere murarie e finiture, tenendo conto di il tenore abitativo medio-alto e le villette di qualità. In un patrimonio edilizio composto da villette unifamiliari e palazzine di qualità medio-alta anni '80-2000, con alcuni condomini anni '70 nel centro, la verifica tecnica preliminare permette di programmare meglio priorità e tempi del cantiere.",
+        text: "A Casagiove, una villetta e un appartamento in condominio possono avere perimetri di lavoro diversi anche quando il proprietario chiede la stessa ristrutturazione completa. Russo FE Costruzione valuta impianti, distribuzione degli ambienti e possibili opere su coperture o parti condivise, senza includerle automaticamente. Il cliente vede così quali lavori riguardano la propria unità e come vengono coordinati nel preventivo.",
       },
       {
         title: "Preventivo Ristrutturazione a Casagiove",
