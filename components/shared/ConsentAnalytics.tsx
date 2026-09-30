@@ -43,10 +43,6 @@ export default function ConsentAnalytics({ enabled }: { enabled: boolean }) {
     } else {
       window.gtag("consent", "update", { ...DENIED, analytics_storage: "granted" });
     }
-
-    return () => {
-      window[DISABLE_KEY as keyof Window] = true as never;
-    };
   }, [enabled]);
 
   return null;
