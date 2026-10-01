@@ -14,6 +14,96 @@
       "source": "/comune/:slug/ristrutturazione-appartamento-completo/",
       "destination": "/comune/:slug/",
       "permanent": true
+    },
+    {
+      "source": "/ristrutturazione-casa-a-caserta/",
+      "destination": "/comune/caserta/",
+      "permanent": true
+    },
+    {
+      "source": "/ristrutturazione-casa-a-napoli/",
+      "destination": "/comune/napoli/",
+      "permanent": true
+    },
+    {
+      "source": "/ristrutturazione-casa-a-aversa/",
+      "destination": "/comune/aversa/",
+      "permanent": true
+    },
+    {
+      "source": "/ristrutturazione-casa-a-caserta/ristrutturazione-casa-a-aversa/",
+      "destination": "/comune/aversa/",
+      "permanent": true
+    },
+    {
+      "source": "/ristrutturazione-casa-a-teverola/",
+      "destination": "/comune/teverola/",
+      "permanent": true
+    },
+    {
+      "source": "/ristrutturazione-casa-a-marcianise/",
+      "destination": "/comune/marcianise/",
+      "permanent": true
+    },
+    {
+      "source": "/ristrutturazione-casa-a-trentola-ducenta/",
+      "destination": "/comune/trentola-ducenta/",
+      "permanent": true
+    },
+    {
+      "source": "/ristrutturazione-casa-a-giugliano-in-campania/",
+      "destination": "/comune/giugliano-in-campania/",
+      "permanent": true
+    },
+    {
+      "source": "/ristrutturazione-casa-a-caserta/ristrutturazione-casa-a-lusciano/",
+      "destination": "/comune/lusciano/",
+      "permanent": true
+    },
+    {
+      "source": "/ristrutturazione-casa-a-caserta/ristrutturazione-casa-a-trentola-ducenta/",
+      "destination": "/comune/trentola-ducenta/",
+      "permanent": true
+    },
+    {
+      "source": "/preventivo-ristrutturazione-casa-aversa/",
+      "destination": "/comune/aversa/",
+      "permanent": true
+    },
+    {
+      "source": "/preventivo-ristrutturazione-lusciano/",
+      "destination": "/comune/lusciano/",
+      "permanent": true
+    },
+    {
+      "source": "/preventivo-ristrutturazione-trentola-ducenta/",
+      "destination": "/comune/trentola-ducenta/",
+      "permanent": true
+    },
+    {
+      "source": "/preventivo-ristrutturazione-marcianise/",
+      "destination": "/comune/marcianise/",
+      "permanent": true
+    },
+    {
+      "source": "/preventivo-ristrutturazione-teverola/",
+      "destination": "/comune/teverola/",
+      "permanent": true
+    },
+    {
+      "source": "/ristrutturazioni-agro-aversano/",
+      "destination": "/agro-aversano/",
+      "permanent": true
+    },
+    {
+      "source": "/ristrutturazione-bagno/",
+      "destination": "/servizi/ristrutturazione-bagno/",
+      "permanent": true
+    },
+    {
+      "source": "/ristrutturazione-cucina/",
+      "destination": "/servizi/ristrutturazione-cucina/",
+      "permanent": true
     }
   ]
 }
