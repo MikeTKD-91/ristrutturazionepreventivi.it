@@ -16,6 +16,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ristrutturazionepreventivi.it"),
+  verification: {
+    yandex: "67e5f2e20d00cc5f",
+  },
   title: {
     default: "Ristrutturazioni Napoli, Caserta e Agro Aversano | Preventivo",
     template: "%s | RistrutturazionePreventivi.it",
