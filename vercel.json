@@ -104,6 +104,26 @@
       "source": "/ristrutturazione-cucina/",
       "destination": "/servizi/ristrutturazione-cucina/",
       "permanent": true
+    },
+    {
+      "source": "/bonus-ristrutturazione-2026/",
+      "destination": "/bonus-ristrutturazione/",
+      "permanent": true
+    },
+    {
+      "source": "/servizi-ristrutturazione/",
+      "destination": "/servizi/",
+      "permanent": true
+    },
+    {
+      "source": "/zone-intervento-ristrutturazioni/",
+      "destination": "/zone-servite/",
+      "permanent": true
+    },
+    {
+      "source": "/2025/05/11/quanto-costa-ristrutturare-casa-a-napoli/",
+      "destination": "/blog/quanto-costa-ristrutturare-appartamento-napoli-2026/",
+      "permanent": true
     }
   ]
 }
