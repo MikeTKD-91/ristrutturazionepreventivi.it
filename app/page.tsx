@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, MapPin, Shield, Clock, Award, ChevronDown } from "lucide-react";
+import { ArrowRight, MapPin, Shield, Clock, Award, ChevronDown, UserCheck, DraftingCompass, FileCheck2 } from "lucide-react";
 import CalcolatoreAppartamento from "@/components/shared/CalcolatoreAppartamento";
 import { RecensioniClienti } from "@/components/shared/RecensioniClienti";
 import { servizi } from "@/data/servizi";
@@ -175,23 +175,35 @@ const servicePriceLabels: Record<string, string> = {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white p-7 rounded-2xl shadow-sm">
-                <h3 className="text-lg font-bold text-navy mb-2">Un unico referente</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+              <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange/30 hover:shadow-xl">
+                <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-orange/10 transition-colors duration-300 group-hover:bg-orange/20" />
+                <div className="relative mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange/10 text-orange transition-colors duration-300 group-hover:bg-orange group-hover:text-white">
+                  <UserCheck className="h-7 w-7" />
+                </div>
+                <h3 className="relative text-xl font-bold text-navy">Un unico referente</h3>
+                <p className="relative mt-3 text-sm leading-relaxed text-gray-600">
                   Segui la ristrutturazione dalla prima stima alla consegna, senza passaggi frammentati tra più interlocutori.
                 </p>
               </div>
 
-              <div className="bg-white p-7 rounded-2xl shadow-sm">
-                <h3 className="text-lg font-bold text-navy mb-2">Progettazione quando serve</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+              <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange/30 hover:shadow-xl">
+                <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-orange/10 transition-colors duration-300 group-hover:bg-orange/20" />
+                <div className="relative mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange/10 text-orange transition-colors duration-300 group-hover:bg-orange group-hover:text-white">
+                  <DraftingCompass className="h-7 w-7" />
+                </div>
+                <h3 className="relative text-xl font-bold text-navy">Progettazione quando serve</h3>
+                <p className="relative mt-3 text-sm leading-relaxed text-gray-600">
                   Geometra e architetto collaboratore valutano spazi, fattibilità e soluzioni progettuali per gli interventi che lo richiedono.
                 </p>
               </div>
 
-              <div className="bg-white p-7 rounded-2xl shadow-sm">
-                <h3 className="text-lg font-bold text-navy mb-2">Preventivo trasparente</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+              <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange/30 hover:shadow-xl">
+                <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-orange/10 transition-colors duration-300 group-hover:bg-orange/20" />
+                <div className="relative mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange/10 text-orange transition-colors duration-300 group-hover:bg-orange group-hover:text-white">
+                  <FileCheck2 className="h-7 w-7" />
+                </div>
+                <h3 className="relative text-xl font-bold text-navy">Preventivo trasparente</h3>
+                <p className="relative mt-3 text-sm leading-relaxed text-gray-600">
                   Prezzi, lavorazioni e tempistiche vengono definiti per iscritto prima dell’avvio del cantiere.
                 </p>
               </div>
