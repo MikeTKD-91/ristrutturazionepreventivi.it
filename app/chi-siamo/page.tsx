@@ -39,7 +39,7 @@ const puntiForza = [
 
 const numeri = [
   { valore: "Napoli + Caserta", label: "Aree in cui operiamo ogni giorno" },
-  { valore: "7 servizi", label: "Interventi principali già strutturati sul sito" },
+  { valore: "8 servizi", label: "Interventi principali già strutturati sul sito" },
   { valore: "360°", label: "Supporto dalla progettazione alla realizzazione" },
 ];
 

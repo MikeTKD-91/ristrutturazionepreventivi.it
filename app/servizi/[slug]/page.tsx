@@ -73,6 +73,7 @@ export default async function ServizioPage({ params }: Props) {
   const { slug } = await params;
   const servizio = getServizioBySlug(slug);
   const isBagno = slug === "ristrutturazione-bagno";
+  const isSuRichiesta = servizio?.tipoPrezzo === "su_richiesta";
   const dataAggiornamento = getDataAggiornamento();
 
   if (!servizio) {
@@ -648,6 +649,21 @@ export default async function ServizioPage({ params }: Props) {
                     </p>
                   </div>
                 </div>
+              ) : isSuRichiesta ? (
+                <div>
+                  <h2 className="text-2xl font-bold text-navy mb-6">
+                    Proposta tecnica su richiesta
+                  </h2>
+                  <div className="rounded-2xl border-2 border-orange bg-orange/5 p-6">
+                    <p className="text-lg font-bold text-navy mb-2">
+                      Progettazione e pratiche edilizie vengono valutate caso per caso
+                    </p>
+                    <p className="text-sm leading-relaxed text-gray-600">
+                      Il costo viene definito dopo la valutazione tecnica dell&apos;immobile,
+                      dell&apos;intervento e delle pratiche necessarie.
+                    </p>
+                  </div>
+                </div>
               ) : (
                 <div>
                   <h2 className="text-2xl font-bold text-navy mb-6">
@@ -727,7 +743,9 @@ export default async function ServizioPage({ params }: Props) {
                     servizio.titolo,
                     80,
                     "Napoli",
-                    `${formatPrezzo(servizio.prezzoMq.standard * 80 * 0.9)} - ${formatPrezzo(servizio.prezzoMq.standard * 80 * 1.1)}`,
+                    isSuRichiesta
+                      ? "Da definire dopo valutazione tecnica"
+                      : `${formatPrezzo(servizio.prezzoMq.standard * 80 * 0.9)} - ${formatPrezzo(servizio.prezzoMq.standard * 80 * 1.1)}`,
                     "Standard"
                   )}
                   target="_blank"

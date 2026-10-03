@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Servizi di Ristrutturazione | Napoli Caserta",
-    description: "7 servizi di ristrutturazione per la tua casa a Napoli e Caserta. Preventivo online e sopralluogo tecnico.",
+    description: "8 servizi di ristrutturazione per la tua casa a Napoli e Caserta. Preventivo online e sopralluogo tecnico.",
     url: "https://www.ristrutturazionepreventivi.it/servizi/",
     images: [
       {

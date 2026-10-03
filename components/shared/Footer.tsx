@@ -13,6 +13,7 @@ const footerLinks = {
     { label: "Pavimenti", href: "/servizi/pavimenti-rivestimenti/" },
     { label: "Impianti", href: "/servizi/impianti-elettrici-idraulici-termici/" },
     { label: "Cappotto Termico", href: "/servizi/cappotto-termico/" },
+    { label: "Progettazione e pratiche edilizie", href: "/servizi/progettazione-pratiche-edilizie/" },
   ],
   zone: [
     { label: "Napoli", href: "/comune/napoli/" },

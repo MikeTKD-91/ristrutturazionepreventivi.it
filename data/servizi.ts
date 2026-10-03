@@ -9,6 +9,7 @@ export interface Servizio {
   immagine: string;
   alt: string;                    // ← AGGIUNTO
   prezzoMq: { base: number; standard: number; premium: number };
+  tipoPrezzo?: "mq" | "su_richiesta";
   caratteristiche: string[];
   vantaggi: string[];
   galleria?: string[];
@@ -263,6 +264,43 @@ Il cappotto termico permette di ridurre fino al 30% i consumi per riscaldamento 
       "Protezione della struttura",
       "Detrazioni fiscali Ecobonus",
       "Valorizzazione immobile",
+    ],
+  },
+  {
+    slug: "progettazione-pratiche-edilizie",
+    descrizioneCard: "Progettazione tecnica e pratiche edilizie valutate in base all’intervento e coordinate con i lavori.",
+    titolo: "Progettazione e pratiche edilizie per ristrutturazioni",
+    titoloBreve: "Progettazione e pratiche edilizie",
+    sottotitolo: "Valutazione tecnica, progetto e gestione delle pratiche necessarie prima dell’avvio del cantiere.",
+    descrizione: "Affianchiamo il cliente nella valutazione tecnica, nella progettazione e nelle pratiche edilizie necessarie per ristrutturare casa in modo più chiaro e organizzato.",
+    descrizioneLunga: `Una ristrutturazione ben organizzata parte dalla conoscenza dell’immobile e dalla definizione delle opere da realizzare. Quando l’intervento modifica la distribuzione degli spazi, coinvolge impianti o richiede autorizzazioni, la progettazione e la verifica tecnica devono precedere l’avvio del cantiere.
+
+    Il servizio comprende una prima valutazione delle esigenze, l’analisi degli spazi e della fattibilità, il confronto sulle soluzioni progettuali e il coordinamento con il preventivo dei lavori. Quando necessarie, le pratiche edilizie vengono definite e predisposte dal professionista abilitato incaricato.
+
+    Il cliente viene seguito da un geometra referente e, in base alla prestazione richiesta, dall’architetto collaboratore che firma gli elaborati di propria competenza. Attività comprese, incarichi professionali, costi e responsabilità vengono specificati nella proposta prima dell’avvio.
+
+    La progettazione non sostituisce il sopralluogo: serve a trasformare le esigenze del cliente in un percorso tecnico e operativo coerente con l’immobile e con il cantiere.`,
+    immagine: "/images/servizi/ristrutturazione-appartamento-completo.jpg",
+    alt: "Progettazione tecnica per ristrutturazione di casa e appartamento",
+    prezzoMq: { base: 0, standard: 0, premium: 0 },
+    tipoPrezzo: "su_richiesta",
+    caratteristiche: [
+      "Valutazione tecnica iniziale",
+      "Analisi degli spazi e delle esigenze",
+      "Studio della distribuzione interna",
+      "Coordinamento con il preventivo dei lavori",
+      "Valutazione delle pratiche edilizie necessarie",
+      "Elaborati del professionista incaricato",
+      "Confronto su materiali e soluzioni",
+      "Supporto tecnico prima dell’avvio del cantiere",
+    ],
+    vantaggi: [
+      "Percorso tecnico definito prima dei lavori",
+      "Maggiore chiarezza su opere e costi",
+      "Coordinamento tra progetto e cantiere",
+      "Geometra referente e architetto collaboratore",
+      "Pratiche valutate in base all’intervento",
+      "Meno varianti e imprevisti durante i lavori",
     ],
   },
 ];

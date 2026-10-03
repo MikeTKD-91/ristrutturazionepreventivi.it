@@ -153,6 +153,7 @@ export default function RootLayout({
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pavimenti e Rivestimenti" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Impianti Elettrici, Idraulici e Termici" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cappotto Termico" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Progettazione e pratiche edilizie" } },
                 ],
               },
             }),
