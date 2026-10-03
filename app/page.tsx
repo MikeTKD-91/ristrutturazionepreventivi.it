@@ -163,6 +163,42 @@ const servicePriceLabels: Record<string, string> = {
       </section>
 
       <RecensioniClienti />
+        {/* ── PERCHÉ SCEGLIERCI ── */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <p className="text-orange text-sm font-semibold uppercase tracking-widest mb-2">Il nostro metodo</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Perché scegliere Russo FE Costruzione</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Non ti lasciamo con una stima generica: verifichiamo l’immobile, definiamo le lavorazioni necessarie e ti consegniamo un preventivo scritto prima di iniziare i lavori. Per gli interventi che lo richiedono, affianchiamo geometra e architetto collaboratore per progettazione, pratiche edilizie e supporto tecnico.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white p-7 rounded-2xl shadow-sm">
+                <h3 className="text-lg font-bold text-navy mb-2">Un unico referente</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Segui la ristrutturazione dalla prima stima alla consegna, senza passaggi frammentati tra più interlocutori.
+                </p>
+              </div>
+
+              <div className="bg-white p-7 rounded-2xl shadow-sm">
+                <h3 className="text-lg font-bold text-navy mb-2">Progettazione quando serve</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Geometra e architetto collaboratore valutano spazi, fattibilità e soluzioni progettuali per gli interventi che lo richiedono.
+                </p>
+              </div>
+
+              <div className="bg-white p-7 rounded-2xl shadow-sm">
+                <h3 className="text-lg font-bold text-navy mb-2">Preventivo trasparente</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Prezzi, lavorazioni e tempistiche vengono definiti per iscritto prima dell’avvio del cantiere.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
       {/* ── SERVIZI ── */}
       <section className="py-20">
