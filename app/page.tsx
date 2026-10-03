@@ -97,22 +97,18 @@ const servicePriceLabels: Record<string, string> = {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div className="text-white">
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-5">
-                Ristrutturazioni nell&apos;
-                <span className="text-orange">Agro Aversano</span>,{" "}
-                <span className="text-orange">Napoli</span> e{" "}
-                <span className="text-orange">Caserta</span>
+                Preventivo online per la <span className="text-orange">ristrutturazione</span> della tua casa
               </h1>
               <p className="text-lg text-white/80 mb-8 max-w-xl leading-relaxed">
-                Richiedi un preventivo online per la ristrutturazione
-                e capisci se la spesa è in linea con il tuo budget. Il preventivo finale
-                si conferma dopo verifica tecnica e sopralluogo.
+                Ottieni una prima stima, verifica le lavorazioni con il sopralluogo tecnico
+                e ricevi un preventivo scritto prima di iniziare i lavori.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <a
                   href="#preventivatore"
                   className="inline-flex w-full items-center justify-center text-center bg-orange hover:bg-orange-600 text-white px-7 py-4 rounded-xl font-semibold shadow-lg shadow-orange/20 transition-colors"
                 >
-                  Preventivo Online
+                  Calcola il preventivo della tua ristrutturazione
                 </a>
               </div>
               <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-3 lg:gap-4">
@@ -175,8 +171,8 @@ const servicePriceLabels: Record<string, string> = {
             <p className="text-orange text-sm font-semibold uppercase tracking-widest mb-2">Cosa facciamo</p>
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">I Nostri Servizi</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              7 servizi di ristrutturazione residenziale. Ogni pagina servizio include
-              indicazioni di costo, criticità locali e FAQ specifiche per ogni comune.
+              Ristrutturazioni complete, bagni, cucine, impianti, tetti, pavimenti e
+                efficientamento energetico: un unico referente dalla prima stima al cantiere.
             </p>
           </div>
 
@@ -251,11 +247,23 @@ const servicePriceLabels: Record<string, string> = {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-orange text-sm font-semibold uppercase tracking-widest mb-2">Dove operiamo</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">+33 Comuni Serviti</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Clicca sul tuo comune per vedere indicazioni di costo, criticità locali e FAQ specifiche.
-            </p>
+            <p className="text-orange text-sm font-semibold uppercase tracking-widest mb-2">Zone servite</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Operiamo a Napoli, Caserta e nell’Agro Aversano</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Consulta la pagina del tuo comune per costi indicativi, criticità locali e richiesta di preventivo.
+              </p>
+
+              <div className="flex flex-wrap justify-center gap-3 mb-10">
+                <Link href="/comune/aversa/" className="bg-navy text-white px-5 py-3 rounded-xl font-semibold hover:bg-navy/90 transition-colors">
+                  Ristrutturazione casa ad Aversa
+                </Link>
+                <Link href="/comune/caserta/" className="bg-white text-navy border border-gray-200 px-5 py-3 rounded-xl font-semibold hover:bg-gray-50 transition-colors">
+                  Ristrutturazioni a Caserta
+                </Link>
+                <Link href="/comune/napoli/" className="bg-white text-navy border border-gray-200 px-5 py-3 rounded-xl font-semibold hover:bg-gray-50 transition-colors">
+                  Ristrutturazioni a Napoli
+                </Link>
+              </div>
           </div>
 
           {[

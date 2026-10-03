@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     yandex: "67e5f2e20d00cc5f",
   },
   title: {
-    default: "Ristrutturazioni Napoli, Caserta e Agro Aversano | Preventivo",
+    default: "Preventivo Ristrutturazione Casa Online | Russo FE Costruzione",
     template: "%s | RistrutturazionePreventivi.it",
   },
   description:
-    "Ristrutturazioni complete a Napoli, Caserta e Agro Aversano. Preventivo online, sopralluogo tecnico e lavori per casa, bagno, cucina e appartamento.",
+    "Richiedi un preventivo online per ristrutturare casa o appartamento. Stima immediata, sopralluogo tecnico e proposta chiara con Russo FE Costruzione.",
   keywords: [
     "ristrutturazione", "preventivi", "Napoli", "Caserta", "Agro Aversano",
     "appartamento", "cucina", "bagno", "tetto", "cappotto termico", "Lusciano", "Aversa",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     locale: "it_IT",
     url: "https://www.ristrutturazionepreventivi.it",
     siteName: "RistrutturazionePreventivi.it",
-    title: "Ristrutturazioni Napoli, Caserta e Agro Aversano | Preventivo",
+    title: "Preventivo Ristrutturazione Casa Online | Russo FE Costruzione",
     description:
-      "Richiedi un preventivo online per ristrutturazioni a Napoli, Caserta e Agro Aversano. 7 servizi, sopralluogo tecnico e proposta chiara da verificare sul posto. Russo FE Costruzione SRL.",
+      "Richiedi un preventivo online per ristrutturare casa o appartamento. Stima immediata, sopralluogo tecnico e proposta chiara con Russo FE Costruzione.",
     images: [
       {
         url: "https://www.ristrutturazionepreventivi.it/og-image.jpg",
@@ -52,8 +52,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ristrutturazioni Napoli, Caserta e Agro Aversano",
-    description: "Richiedi un preventivo online per ristrutturazioni in Campania, con sopralluogo tecnico.",
+    title: "Preventivo Ristrutturazione Casa Online | Russo FE Costruzione",
+    description: "Stima immediata, sopralluogo tecnico e preventivo scritto per ristrutturare casa o appartamento.",
     images: ["https://www.ristrutturazionepreventivi.it/og-image.jpg"],
   },
   robots: {
