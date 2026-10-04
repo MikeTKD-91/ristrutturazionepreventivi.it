@@ -146,9 +146,9 @@ export default function RootLayout({
                 "@type": "OfferCatalog",
                 name: "Servizi di Ristrutturazione",
                 itemListElement: [
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ristrutturazione Appartamento Completo" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ristrutturazione Appartamento Completo", description: "Ristrutturazione chiavi in mano da 550 €/mq" }, priceSpecification: { "@type": "PriceSpecification", price: "550", priceCurrency: "EUR", unitCode: "E37", unitText: "per metro quadrato" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ristrutturazione Cucina" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ristrutturazione Bagno" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ristrutturazione Bagno", description: "Rifacimento completo bagno da 5.000 €" }, priceSpecification: { "@type": "PriceSpecification", price: "5000", priceCurrency: "EUR" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Rifacimento Tetto" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pavimenti e Rivestimenti" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Impianti Elettrici, Idraulici e Termici" } },
