@@ -1,81 +1,20 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
-import CookieBanner from "@/components/shared/CookieBanner";
-import ContactIntentTracking from "@/components/shared/ContactIntentTracking";
+import ConsentAnalytics from "@/components/shared/ConsentAnalytics";
 
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.ristrutturazionepreventivi.it"),
-  verification: {
-    yandex: "67e5f2e20d00cc5f",
-  },
-  title: {
-    default: "Preventivo Ristrutturazione Casa Online | Russo FE Costruzione",
-    template: "%s | RistrutturazionePreventivi.it",
-  },
-  description:
-    "Richiedi un preventivo online per ristrutturare casa o appartamento. Stima immediata, sopralluogo tecnico e proposta chiara con Russo FE Costruzione.",
-  keywords: [
-    "ristrutturazione", "preventivi", "Napoli", "Caserta", "Agro Aversano",
-    "appartamento", "cucina", "bagno", "tetto", "cappotto termico", "Lusciano", "Aversa",
-  ],
-  authors: [{ name: "Russo FE Costruzione SRL" }],
-  creator: "Russo FE Costruzione SRL",
-  publisher: "Russo FE Costruzione SRL",
-  formatDetection: { email: false, address: false, telephone: false },
-  openGraph: {
-    type: "website",
-    locale: "it_IT",
-    url: "https://www.ristrutturazionepreventivi.it",
-    siteName: "RistrutturazionePreventivi.it",
-    title: "Preventivo Ristrutturazione Casa Online | Russo FE Costruzione",
-    description:
-      "Richiedi un preventivo online per ristrutturare casa o appartamento. Stima immediata, sopralluogo tecnico e proposta chiara con Russo FE Costruzione.",
-    images: [
-      {
-        url: "https://www.ristrutturazionepreventivi.it/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Ristrutturazione casa - Russo FE Costruzione SRL",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Preventivo Ristrutturazione Casa Online | Russo FE Costruzione",
-    description: "Stima immediata, sopralluogo tecnico e preventivo scritto per ristrutturare casa o appartamento.",
-    images: ["https://www.ristrutturazionepreventivi.it/og-image.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: "https://www.ristrutturazionepreventivi.it/",
-  },
+  title: "Preventivo Ristrutturazione Casa Online | Russo FE Costruzione",
+  description: "Ristrutturazione casa a Napoli, Caserta e Agro Aversano. Preventivo online immediato da 550 €/mq. Impresa certificata, sopralluogo tecnico e preventivo scritto prima di iniziare.",
 };
-
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="it" className={inter.variable}>
       <head>
@@ -146,9 +85,35 @@ export default function RootLayout({
                 "@type": "OfferCatalog",
                 name: "Servizi di Ristrutturazione",
                 itemListElement: [
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ristrutturazione Appartamento Completo" } },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Ristrutturazione Appartamento Completo",
+                      description: "Ristrutturazione chiavi in mano da 550 €/mq",
+                    },
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      price: "550",
+                      priceCurrency: "EUR",
+                      unitCode: "E37",
+                      unitText: "per metro quadrato",
+                    },
+                  },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ristrutturazione Cucina" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ristrutturazione Bagno" } },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Ristrutturazione Bagno",
+                      description: "Rifacimento completo bagno da 5.000 €",
+                    },
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      price: "5000",
+                      priceCurrency: "EUR",
+                    },
+                  },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Rifacimento Tetto" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pavimenti e Rivestimenti" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Impianti Elettrici, Idraulici e Termici" } },
@@ -160,12 +125,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} antialiased`}>
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-        <CookieBanner />
-        <ContactIntentTracking />
+      <body
+        className={`${inter.variable} antialiased`}
+      >
+        {children}
+        <ConsentAnalytics />
       </body>
     </html>
   );
