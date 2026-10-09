@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           url: "https://www.ristrutturazionepreventivi.it/images/servizi/ristrutturazione-appartamento-completo.jpg",
           width: 1200,
           height: 630,
-          alt: `Ristrutturazione casa e appartamento completo a ${comune.nome}`,
+          alt: `Ristrutturazione Casa e Appartamento completo a ${comune.nome}`,
         },
       ],
     },
@@ -96,7 +96,7 @@ export default async function ComunePage({ params }: PageProps) {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: `Ristrutturazione casa e appartamento a ${comune.nome}`,
+    serviceType: `Ristrutturazione Casa e Appartamento a ${comune.nome}`,
     name: `Ristrutturazione Casa a ${comune.nome}`,
     areaServed: { "@type": "City", name: comune.nome },
     provider: {
@@ -161,8 +161,8 @@ export default async function ComunePage({ params }: PageProps) {
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-5">
-                  Ristrutturazione casa e appartamento {comune.nome === "Aversa" ? "ad" : "a"} {comune.nome}:{" "}
-                  <span className="text-orange">costo e preventivo</span>
+                  Ristrutturazione Casa e Appartamento {comune.nome === "Aversa" ? "ad" : "a"} {comune.nome}:{" "}
+                  <span className="text-orange">Costo e Preventivo</span>
                 </h1>
                 <p className="text-white/70 text-lg leading-relaxed mb-6">
                   {content.testoIntroHero}
