@@ -77,8 +77,20 @@ const servicePriceLabels: Record<string, string> = {
   "impianti-elettrici-idraulici-termici": "Preventivo dopo verifica tecnica",
 };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "RistrutturazionePreventivi.it",
+    alternateName: "ristrutturazionepreventivi.it",
+    url: "https://www.ristrutturazionepreventivi.it/",
+  };
+
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
 
       {/* ── HERO ── */}
       <section className="relative bg-navy overflow-hidden">
